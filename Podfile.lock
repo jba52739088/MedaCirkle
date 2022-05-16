@@ -9,12 +9,16 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
   - SwiftyJSON (5.0.0)
+  - Then (3.0.0)
+  - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
   - R.swift
   - RxCocoa (~> 5.1)
   - RxSwift (~> 5.1)
   - SwiftyJSON
+  - Then
+  - TinyConstraints (~> 4.0)
 
 SPEC REPOS:
   trunk:
@@ -24,6 +28,8 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftyJSON
+    - Then
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
@@ -32,7 +38,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 735ab80f90a98c24d3933ffe00047bcf4ab2368e
+PODFILE CHECKSUM: 55963fef10e7b9c80c0ec23853d62ab4905a170f
 
 COCOAPODS: 1.10.2

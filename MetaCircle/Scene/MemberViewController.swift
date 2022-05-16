@@ -1,18 +1,17 @@
 //
-//  MainViewController.swift
+//  MemberViewController.swift
 //  MetaCircle
 //
-//  Created by 黃恩祐 on 2022/5/14.
+//  Created by 黃恩祐 on 2022/5/15.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MemberViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      self.view.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         // Do any additional setup after loading the view.
     }
     

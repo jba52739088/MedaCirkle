@@ -10,4 +10,6 @@ target 'MetaCircle' do
   pod 'RxCocoa', '~> 5.1'
   pod 'SwiftyJSON'
   pod 'R.swift'
+  pod 'TinyConstraints', '~> 4.0'
+  pod 'Then'
 end
