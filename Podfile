@@ -12,4 +12,7 @@ target 'MetaCircle' do
   pod 'R.swift'
   pod 'TinyConstraints', '~> 4.0'
   pod 'Then'
+  pod 'SwiftRichString'
+  pod 'IQKeyboardManagerSwift'
+  pod 'ActiveLabel'
 end

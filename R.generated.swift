@@ -85,34 +85,9 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
-
-  #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
-  struct storyboard {
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
-    }
-    #endif
-
-    fileprivate init() {}
-  }
-  #endif
 
   /// This `R.color` struct is generated, and contains static references to 1 colors.
   struct color {
@@ -139,10 +114,472 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.file` struct is generated, and contains static references to 24 files.
+  struct file {
+    /// Resource file `NotoSansTC-Black.otf`.
+    static let notoSansTCBlackOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Black", pathExtension: "otf")
+    /// Resource file `NotoSansTC-Bold.otf`.
+    static let notoSansTCBoldOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Bold", pathExtension: "otf")
+    /// Resource file `NotoSansTC-Light.otf`.
+    static let notoSansTCLightOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Light", pathExtension: "otf")
+    /// Resource file `NotoSansTC-Medium.otf`.
+    static let notoSansTCMediumOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Medium", pathExtension: "otf")
+    /// Resource file `NotoSansTC-Regular.otf`.
+    static let notoSansTCRegularOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Regular", pathExtension: "otf")
+    /// Resource file `NotoSansTC-Thin.otf`.
+    static let notoSansTCThinOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NotoSansTC-Thin", pathExtension: "otf")
+    /// Resource file `Prompt-Black.ttf`.
+    static let promptBlackTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Black", pathExtension: "ttf")
+    /// Resource file `Prompt-BlackItalic.ttf`.
+    static let promptBlackItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-BlackItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-Bold.ttf`.
+    static let promptBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Bold", pathExtension: "ttf")
+    /// Resource file `Prompt-BoldItalic.ttf`.
+    static let promptBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-BoldItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-ExtraBold.ttf`.
+    static let promptExtraBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-ExtraBold", pathExtension: "ttf")
+    /// Resource file `Prompt-ExtraBoldItalic.ttf`.
+    static let promptExtraBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-ExtraBoldItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-ExtraLight.ttf`.
+    static let promptExtraLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-ExtraLight", pathExtension: "ttf")
+    /// Resource file `Prompt-ExtraLightItalic.ttf`.
+    static let promptExtraLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-ExtraLightItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-Italic.ttf`.
+    static let promptItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Italic", pathExtension: "ttf")
+    /// Resource file `Prompt-Light.ttf`.
+    static let promptLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Light", pathExtension: "ttf")
+    /// Resource file `Prompt-LightItalic.ttf`.
+    static let promptLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-LightItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-Medium.ttf`.
+    static let promptMediumTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Medium", pathExtension: "ttf")
+    /// Resource file `Prompt-MediumItalic.ttf`.
+    static let promptMediumItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-MediumItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-Regular.ttf`.
+    static let promptRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Regular", pathExtension: "ttf")
+    /// Resource file `Prompt-SemiBold.ttf`.
+    static let promptSemiBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-SemiBold", pathExtension: "ttf")
+    /// Resource file `Prompt-SemiBoldItalic.ttf`.
+    static let promptSemiBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-SemiBoldItalic", pathExtension: "ttf")
+    /// Resource file `Prompt-Thin.ttf`.
+    static let promptThinTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-Thin", pathExtension: "ttf")
+    /// Resource file `Prompt-ThinItalic.ttf`.
+    static let promptThinItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Prompt-ThinItalic", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "NotoSansTC-Black", withExtension: "otf")`
+    static func notoSansTCBlackOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCBlackOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NotoSansTC-Bold", withExtension: "otf")`
+    static func notoSansTCBoldOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCBoldOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NotoSansTC-Light", withExtension: "otf")`
+    static func notoSansTCLightOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCLightOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NotoSansTC-Medium", withExtension: "otf")`
+    static func notoSansTCMediumOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCMediumOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NotoSansTC-Regular", withExtension: "otf")`
+    static func notoSansTCRegularOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCRegularOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NotoSansTC-Thin", withExtension: "otf")`
+    static func notoSansTCThinOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.notoSansTCThinOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Black", withExtension: "ttf")`
+    static func promptBlackTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptBlackTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-BlackItalic", withExtension: "ttf")`
+    static func promptBlackItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptBlackItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Bold", withExtension: "ttf")`
+    static func promptBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-BoldItalic", withExtension: "ttf")`
+    static func promptBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-ExtraBold", withExtension: "ttf")`
+    static func promptExtraBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptExtraBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-ExtraBoldItalic", withExtension: "ttf")`
+    static func promptExtraBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptExtraBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-ExtraLight", withExtension: "ttf")`
+    static func promptExtraLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptExtraLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-ExtraLightItalic", withExtension: "ttf")`
+    static func promptExtraLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptExtraLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Italic", withExtension: "ttf")`
+    static func promptItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Light", withExtension: "ttf")`
+    static func promptLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-LightItalic", withExtension: "ttf")`
+    static func promptLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Medium", withExtension: "ttf")`
+    static func promptMediumTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptMediumTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-MediumItalic", withExtension: "ttf")`
+    static func promptMediumItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptMediumItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Regular", withExtension: "ttf")`
+    static func promptRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-SemiBold", withExtension: "ttf")`
+    static func promptSemiBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptSemiBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-SemiBoldItalic", withExtension: "ttf")`
+    static func promptSemiBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptSemiBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-Thin", withExtension: "ttf")`
+    static func promptThinTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptThinTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Prompt-ThinItalic", withExtension: "ttf")`
+    static func promptThinItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.promptThinItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 24 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `NotoSansTC-Black`.
+    static let notoSansTCBlack = Rswift.FontResource(fontName: "NotoSansTC-Black")
+    /// Font `NotoSansTC-Bold`.
+    static let notoSansTCBold = Rswift.FontResource(fontName: "NotoSansTC-Bold")
+    /// Font `NotoSansTC-Light`.
+    static let notoSansTCLight = Rswift.FontResource(fontName: "NotoSansTC-Light")
+    /// Font `NotoSansTC-Medium`.
+    static let notoSansTCMedium = Rswift.FontResource(fontName: "NotoSansTC-Medium")
+    /// Font `NotoSansTC-Regular`.
+    static let notoSansTCRegular = Rswift.FontResource(fontName: "NotoSansTC-Regular")
+    /// Font `NotoSansTC-Thin`.
+    static let notoSansTCThin = Rswift.FontResource(fontName: "NotoSansTC-Thin")
+    /// Font `Prompt-BlackItalic`.
+    static let promptBlackItalic = Rswift.FontResource(fontName: "Prompt-BlackItalic")
+    /// Font `Prompt-Black`.
+    static let promptBlack = Rswift.FontResource(fontName: "Prompt-Black")
+    /// Font `Prompt-BoldItalic`.
+    static let promptBoldItalic = Rswift.FontResource(fontName: "Prompt-BoldItalic")
+    /// Font `Prompt-Bold`.
+    static let promptBold = Rswift.FontResource(fontName: "Prompt-Bold")
+    /// Font `Prompt-ExtraBoldItalic`.
+    static let promptExtraBoldItalic = Rswift.FontResource(fontName: "Prompt-ExtraBoldItalic")
+    /// Font `Prompt-ExtraBold`.
+    static let promptExtraBold = Rswift.FontResource(fontName: "Prompt-ExtraBold")
+    /// Font `Prompt-ExtraLightItalic`.
+    static let promptExtraLightItalic = Rswift.FontResource(fontName: "Prompt-ExtraLightItalic")
+    /// Font `Prompt-ExtraLight`.
+    static let promptExtraLight = Rswift.FontResource(fontName: "Prompt-ExtraLight")
+    /// Font `Prompt-Italic`.
+    static let promptItalic = Rswift.FontResource(fontName: "Prompt-Italic")
+    /// Font `Prompt-LightItalic`.
+    static let promptLightItalic = Rswift.FontResource(fontName: "Prompt-LightItalic")
+    /// Font `Prompt-Light`.
+    static let promptLight = Rswift.FontResource(fontName: "Prompt-Light")
+    /// Font `Prompt-MediumItalic`.
+    static let promptMediumItalic = Rswift.FontResource(fontName: "Prompt-MediumItalic")
+    /// Font `Prompt-Medium`.
+    static let promptMedium = Rswift.FontResource(fontName: "Prompt-Medium")
+    /// Font `Prompt-Regular`.
+    static let promptRegular = Rswift.FontResource(fontName: "Prompt-Regular")
+    /// Font `Prompt-SemiBoldItalic`.
+    static let promptSemiBoldItalic = Rswift.FontResource(fontName: "Prompt-SemiBoldItalic")
+    /// Font `Prompt-SemiBold`.
+    static let promptSemiBold = Rswift.FontResource(fontName: "Prompt-SemiBold")
+    /// Font `Prompt-ThinItalic`.
+    static let promptThinItalic = Rswift.FontResource(fontName: "Prompt-ThinItalic")
+    /// Font `Prompt-Thin`.
+    static let promptThin = Rswift.FontResource(fontName: "Prompt-Thin")
+
+    /// `UIFont(name: "NotoSansTC-Black", size: ...)`
+    static func notoSansTCBlack(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCBlack, size: size)
+    }
+
+    /// `UIFont(name: "NotoSansTC-Bold", size: ...)`
+    static func notoSansTCBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCBold, size: size)
+    }
+
+    /// `UIFont(name: "NotoSansTC-Light", size: ...)`
+    static func notoSansTCLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCLight, size: size)
+    }
+
+    /// `UIFont(name: "NotoSansTC-Medium", size: ...)`
+    static func notoSansTCMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCMedium, size: size)
+    }
+
+    /// `UIFont(name: "NotoSansTC-Regular", size: ...)`
+    static func notoSansTCRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCRegular, size: size)
+    }
+
+    /// `UIFont(name: "NotoSansTC-Thin", size: ...)`
+    static func notoSansTCThin(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: notoSansTCThin, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Black", size: ...)`
+    static func promptBlack(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptBlack, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-BlackItalic", size: ...)`
+    static func promptBlackItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptBlackItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Bold", size: ...)`
+    static func promptBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptBold, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-BoldItalic", size: ...)`
+    static func promptBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-ExtraBold", size: ...)`
+    static func promptExtraBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptExtraBold, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-ExtraBoldItalic", size: ...)`
+    static func promptExtraBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptExtraBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-ExtraLight", size: ...)`
+    static func promptExtraLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptExtraLight, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-ExtraLightItalic", size: ...)`
+    static func promptExtraLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptExtraLightItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Italic", size: ...)`
+    static func promptItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Light", size: ...)`
+    static func promptLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptLight, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-LightItalic", size: ...)`
+    static func promptLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptLightItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Medium", size: ...)`
+    static func promptMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptMedium, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-MediumItalic", size: ...)`
+    static func promptMediumItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptMediumItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Regular", size: ...)`
+    static func promptRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptRegular, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-SemiBold", size: ...)`
+    static func promptSemiBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptSemiBold, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-SemiBoldItalic", size: ...)`
+    static func promptSemiBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptSemiBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-Thin", size: ...)`
+    static func promptThin(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptThin, size: size)
+    }
+
+    /// `UIFont(name: "Prompt-ThinItalic", size: ...)`
+    static func promptThinItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: promptThinItalic, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.notoSansTCBlack(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Black' could not be loaded, is 'NotoSansTC-Black.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.notoSansTCBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Bold' could not be loaded, is 'NotoSansTC-Bold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.notoSansTCLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Light' could not be loaded, is 'NotoSansTC-Light.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.notoSansTCMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Medium' could not be loaded, is 'NotoSansTC-Medium.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.notoSansTCRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Regular' could not be loaded, is 'NotoSansTC-Regular.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.notoSansTCThin(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NotoSansTC-Thin' could not be loaded, is 'NotoSansTC-Thin.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptBlack(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Black' could not be loaded, is 'Prompt-Black.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptBlackItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-BlackItalic' could not be loaded, is 'Prompt-BlackItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Bold' could not be loaded, is 'Prompt-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-BoldItalic' could not be loaded, is 'Prompt-BoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptExtraBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-ExtraBold' could not be loaded, is 'Prompt-ExtraBold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptExtraBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-ExtraBoldItalic' could not be loaded, is 'Prompt-ExtraBoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptExtraLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-ExtraLight' could not be loaded, is 'Prompt-ExtraLight.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptExtraLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-ExtraLightItalic' could not be loaded, is 'Prompt-ExtraLightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Italic' could not be loaded, is 'Prompt-Italic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Light' could not be loaded, is 'Prompt-Light.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-LightItalic' could not be loaded, is 'Prompt-LightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Medium' could not be loaded, is 'Prompt-Medium.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptMediumItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-MediumItalic' could not be loaded, is 'Prompt-MediumItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Regular' could not be loaded, is 'Prompt-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptSemiBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-SemiBold' could not be loaded, is 'Prompt-SemiBold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptSemiBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-SemiBoldItalic' could not be loaded, is 'Prompt-SemiBoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptThin(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-Thin' could not be loaded, is 'Prompt-Thin.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.promptThinItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Prompt-ThinItalic' could not be loaded, is 'Prompt-ThinItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
+    /// Image `icon_arrow_left_w10_h16`.
+    static let icon_arrow_left_w10_h16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_left_w10_h16")
+    /// Image `icon_error_1`.
+    static let icon_error_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_error_1")
+    /// Image `icon_eyes_2`.
+    static let icon_eyes_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_eyes_2")
+    /// Image `icon_eyes_3`.
+    static let icon_eyes_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_eyes_3")
+    /// Image `icon_social_media_facebook`.
+    static let icon_social_media_facebook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_facebook")
+    /// Image `icon_social_media_google`.
+    static let icon_social_media_google = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_google")
+    /// Image `icon_social_media_twitter`.
+    static let icon_social_media_twitter = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_twitter")
     /// Image `launchImageTemp`.
     static let launchImageTemp = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchImageTemp")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_arrow_left_w10_h16", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_left_w10_h16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_left_w10_h16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_error_1", bundle: ..., traitCollection: ...)`
+    static func icon_error_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_error_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_eyes_2", bundle: ..., traitCollection: ...)`
+    static func icon_eyes_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_eyes_2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_eyes_3", bundle: ..., traitCollection: ...)`
+    static func icon_eyes_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_eyes_3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_social_media_facebook", bundle: ..., traitCollection: ...)`
+    static func icon_social_media_facebook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_social_media_facebook, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_social_media_google", bundle: ..., traitCollection: ...)`
+    static func icon_social_media_google(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_social_media_google, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_social_media_twitter", bundle: ..., traitCollection: ...)`
+    static func icon_social_media_twitter(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_social_media_twitter, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "launchImageTemp", bundle: ..., traitCollection: ...)`
@@ -154,21 +591,196 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
-    struct launchScreen {
-      fileprivate init() {}
-    }
-
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
-      /// en translation: 
+      /// en translation: Hi, 歡迎回來 ~
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_subtitle = Rswift.StringResource(key: "login_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 不是有效的電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_password_error = Rswift.StringResource(key: "login_vc_login_password_error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 Facebook 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_by_facebook = Rswift.StringResource(key: "login_vc_login_by_facebook", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 Google 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_by_google = Rswift.StringResource(key: "login_vc_login_by_google", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 twitter 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_by_twitter = Rswift.StringResource(key: "login_vc_login_by_twitter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_password_title = Rswift.StringResource(key: "login_vc_login_password_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 忘記密碼?
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_password_forgot = Rswift.StringResource(key: "login_vc_login_password_forgot", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 或
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_mid_label = Rswift.StringResource(key: "login_vc_login_mid_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 準備開始
       ///
       /// Locales: en, zh-Hant
       static let ready_to_begin = Rswift.StringResource(key: "ready_to_begin", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_button = Rswift.StringResource(key: "login_vc_login_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_title = Rswift.StringResource(key: "login_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 立即註冊
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_register_button = Rswift.StringResource(key: "login_vc_register_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 輸入密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_password_placeholder = Rswift.StringResource(key: "login_vc_login_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 輸入電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_mail_placeholder = Rswift.StringResource(key: "login_vc_login_mail_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 還不是會員 ? 立即註冊
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_register_label = Rswift.StringResource(key: "login_vc_register_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static let login_vc_login_mail_title = Rswift.StringResource(key: "login_vc_login_mail_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
 
-      /// en translation: 
+      /// en translation: Hi, 歡迎回來 ~
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_subtitle"
+        }
+
+        return NSLocalizedString("login_vc_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 不是有效的電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_password_error(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_password_error", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_password_error"
+        }
+
+        return NSLocalizedString("login_vc_login_password_error", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 以 Facebook 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_by_facebook(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_by_facebook", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_by_facebook"
+        }
+
+        return NSLocalizedString("login_vc_login_by_facebook", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 以 Google 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_by_google(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_by_google", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_by_google"
+        }
+
+        return NSLocalizedString("login_vc_login_by_google", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 以 twitter 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_by_twitter(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_by_twitter", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_by_twitter"
+        }
+
+        return NSLocalizedString("login_vc_login_by_twitter", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_password_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_password_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_password_title"
+        }
+
+        return NSLocalizedString("login_vc_login_password_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 忘記密碼?
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_password_forgot(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_password_forgot", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_password_forgot"
+        }
+
+        return NSLocalizedString("login_vc_login_password_forgot", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 或
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_mid_label(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_mid_label", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_mid_label"
+        }
+
+        return NSLocalizedString("login_vc_login_mid_label", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 準備開始
       ///
       /// Locales: en, zh-Hant
       static func ready_to_begin(preferredLanguages: [String]? = nil) -> String {
@@ -183,11 +795,111 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("ready_to_begin", bundle: bundle, comment: "")
       }
 
-      fileprivate init() {}
-    }
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_button", bundle: hostingBundle, comment: "")
+        }
 
-    /// This `R.string.main` struct is generated, and contains static references to 0 localization keys.
-    struct main {
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_button"
+        }
+
+        return NSLocalizedString("login_vc_login_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_title"
+        }
+
+        return NSLocalizedString("login_vc_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 立即註冊
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_register_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_register_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_register_button"
+        }
+
+        return NSLocalizedString("login_vc_register_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 輸入密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_password_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_password_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_password_placeholder"
+        }
+
+        return NSLocalizedString("login_vc_login_password_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 輸入電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_mail_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_mail_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_mail_placeholder"
+        }
+
+        return NSLocalizedString("login_vc_login_mail_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 還不是會員 ? 立即註冊
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_register_label(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_register_label", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_register_label"
+        }
+
+        return NSLocalizedString("login_vc_register_label", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 電子郵件
+      ///
+      /// Locales: en, zh-Hant
+      static func login_vc_login_mail_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_vc_login_mail_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_vc_login_mail_title"
+        }
+
+        return NSLocalizedString("login_vc_login_mail_title", bundle: bundle, comment: "")
+      }
+
       fileprivate init() {}
     }
 
@@ -196,7 +908,7 @@ struct R: Rswift.Validatable {
 
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      try _R.validate()
+      // There are no resources to validate
     }
 
     fileprivate init() {}
@@ -207,60 +919,6 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R: Rswift.Validatable {
-  static func validate() throws {
-    #if os(iOS) || os(tvOS)
-    try storyboard.validate()
-    #endif
-  }
-
-  #if os(iOS) || os(tvOS)
-  struct storyboard: Rswift.Validatable {
-    static func validate() throws {
-      #if os(iOS) || os(tvOS)
-      try launchScreen.validate()
-      #endif
-      #if os(iOS) || os(tvOS)
-      try main.validate()
-      #endif
-    }
-
-    #if os(iOS) || os(tvOS)
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UIViewController
-
-      let bundle = R.hostingBundle
-      let name = "LaunchScreen"
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "launchImageTemp", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'launchImageTemp' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
-
-      let bundle = R.hostingBundle
-      let name = "Main"
-
-      static func validate() throws {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    fileprivate init() {}
-  }
-  #endif
-
+struct _R {
   fileprivate init() {}
 }

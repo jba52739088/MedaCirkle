@@ -1,0 +1,14 @@
+<svg id="icon_eyes_2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="bg" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="20" height="20" stroke="none"/>
+    <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+  </g>
+  <g id="Group_6910" data-name="Group 6910" transform="translate(-268.447 -285.223)">
+    <path id="Path_9773" data-name="Path 9773" d="M.447.223A8.853,8.853,0,0,0,8.3,5.12a8.855,8.855,0,0,0,7.854-4.9" transform="translate(270 291)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_383" data-name="Line 383" y2="2.404" transform="translate(278.302 296.121)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_384" data-name="Line 384" x2="1.849" y2="1.535" transform="translate(284.488 293.894)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_385" data-name="Line 385" x1="1.849" y2="1.535" transform="translate(270.448 293.894)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_386" data-name="Line 386" x2="1.335" y2="2.134" transform="translate(281.235 295.597)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_387" data-name="Line 387" x1="1.335" y2="2.134" transform="translate(273.621 295.597)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

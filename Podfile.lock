@@ -1,4 +1,6 @@
 PODS:
+  - ActiveLabel (1.1.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -8,39 +10,49 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
+  - SwiftRichString (3.7.2)
   - SwiftyJSON (5.0.0)
   - Then (3.0.0)
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
+  - ActiveLabel
+  - IQKeyboardManagerSwift
   - R.swift
   - RxCocoa (~> 5.1)
   - RxSwift (~> 5.1)
+  - SwiftRichString
   - SwiftyJSON
   - Then
   - TinyConstraints (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - ActiveLabel
+    - IQKeyboardManagerSwift
     - R.swift
     - R.swift.Library
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftRichString
     - SwiftyJSON
     - Then
     - TinyConstraints
 
 SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 55963fef10e7b9c80c0ec23853d62ab4905a170f
+PODFILE CHECKSUM: 98158fa776f727ea4a61b60c5f16841a113367b6
 
 COCOAPODS: 1.10.2

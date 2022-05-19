@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
   }
 
   private func configView() {
-
+    view.do {
+      $0.applyGradient(isVertical: false, colorArray: [.backgroundGradientYellow, .backgroundGradientPurple, .backgroundGradientBlue])
+    }
   }
 }

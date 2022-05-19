@@ -6,3 +6,18 @@
   
 */
 "ready_to_begin" = "準備開始";
+"login_vc_register_label" = "還不是會員 ? 立即註冊";
+"login_vc_register_button" = "立即註冊";
+"login_vc_title" = "登入";
+"login_vc_subtitle" = "Hi, 歡迎回來 ~";
+"login_vc_login_by_facebook" = "以 Facebook 登入";
+"login_vc_login_by_twitter" = "以 twitter 登入";
+"login_vc_login_by_google" = "以 Google 登入";
+"login_vc_login_mid_label" = "或";
+"login_vc_login_mail_title" = "電子郵件";
+"login_vc_login_mail_placeholder" = "輸入電子郵件";
+"login_vc_login_password_title" = "密碼";
+"login_vc_login_password_placeholder" = "輸入密碼";
+"login_vc_login_password_error" = "不是有效的電子郵件";
+"login_vc_login_password_forgot" = "忘記密碼?";
+"login_vc_login_button" = "登入";
