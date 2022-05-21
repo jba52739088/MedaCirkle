@@ -9,7 +9,7 @@ import UIKit
 
 class TopGradientViewController: BaseViewController {
 
-  let gradientView = UIView()
+  let gradientView = UIImageView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,20 +20,22 @@ class TopGradientViewController: BaseViewController {
   private func configGradientView() {
     gradientView.do {
       view.addSubview($0)
+      $0.image = R.image.bg_top_light()
+      $0.contentMode = .scaleAspectFill
       $0.topToSuperview()
       $0.leftToSuperview()
       $0.rightToSuperview()
       $0.height(212)
     }
-    view.layoutIfNeeded()
-    gradientView.applyGradient(isVertical: false, colorArray: [.backgroundGradientYellow, .backgroundGradientPurple, .backgroundGradientBlue])
-
-    let gradientLayer = CAGradientLayer()
-    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
-    gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.9)
-    gradientLayer.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
-    gradientLayer.locations = [0, 0.6, 1]
-    gradientLayer.frame = gradientView.bounds
-    gradientView.layer.mask = gradientLayer
+//    view.layoutIfNeeded()
+//    gradientView.applyGradient(isVertical: false, colorArray: [.backgroundGradientYellow, .backgroundGradientPurple, .backgroundGradientBlue])
+//
+//    let gradientLayer = CAGradientLayer()
+//    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+//    gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.9)
+//    gradientLayer.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+//    gradientLayer.locations = [0, 0.6, 1]
+//    gradientLayer.frame = gradientView.bounds
+//    gradientView.layer.mask = gradientLayer
   }
 }

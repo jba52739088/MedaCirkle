@@ -25,4 +25,5 @@ extension UIColor {
   static let textFieldErrorBg = "#FFECE9".color
   static let textFieldError = "#D93F21".color
   static let placeholderColor = "#838588".color
+  static let hintTextGray = "#5A5C5F".color
 }

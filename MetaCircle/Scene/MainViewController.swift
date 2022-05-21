@@ -29,6 +29,12 @@ class MainViewController: UITabBarController {
     super.viewDidAppear(animated)
     self.tabBar.isTranslucent = false
     UITabBar.appearance().barTintColor = .white
+
+    let introVC = RegisterViewController(RegisterViewModel())
+    introVC.modalPresentationStyle = .fullScreen
+    present(introVC, animated: false)
+
+
     if !didShowInrto {
 //      presentInrtoView()
 //      didShowInrto = true
@@ -92,8 +98,7 @@ extension MainViewController {
       case .Message:
         return MassageViewController()
       case .Member:
-        return LoginViewController(LoginViewModel())
-//        return MemberViewController()
+        return MemberViewController()
       }
     }
   }

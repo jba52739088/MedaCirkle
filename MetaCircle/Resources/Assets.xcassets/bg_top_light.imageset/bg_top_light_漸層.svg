@@ -1,0 +1,18 @@
+<svg id="bg_top_light_漸層" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="212" viewBox="0 0 375 212">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.17" x2="1" y2="0.171" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8f7e2"/>
+      <stop offset="0.463" stop-color="#edd9f4"/>
+      <stop offset="1" stop-color="#dcf1f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_4228" data-name="Rectangle 4228" width="375" height="193" fill="url(#linear-gradient)"/>
+  <g id="Group_6907" data-name="Group 6907">
+    <rect id="Rectangle_4256" data-name="Rectangle 4256" width="375" height="130" transform="translate(0 63)" fill="url(#linear-gradient-2)"/>
+    <rect id="Rectangle_4257" data-name="Rectangle 4257" width="375" height="22" transform="translate(0 190)" fill="#fff"/>
+  </g>
+</svg>

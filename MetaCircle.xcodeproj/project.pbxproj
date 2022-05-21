@@ -18,6 +18,8 @@
 		F973DE682830BD110075FDC2 /* PrivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE672830BD110075FDC2 /* PrivateViewController.swift */; };
 		F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE692830BD1C0075FDC2 /* MassageViewController.swift */; };
 		F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE6B2830BD300075FDC2 /* MemberViewController.swift */; };
+		F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00A2838C9C70087567C /* RegisterViewController.swift */; };
+		F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00C2838C9D10087567C /* RegisterViewModel.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		F973DE672830BD110075FDC2 /* PrivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateViewController.swift; sourceTree = "<group>"; };
 		F973DE692830BD1C0075FDC2 /* MassageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
 		F973DE6B2830BD300075FDC2 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		F976C00A2838C9C70087567C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F976C00C2838C9D10087567C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 			children = (
 				F9D6BB3128340BA5005D57F2 /* LoginViewController.swift */,
 				F9D6BB75283499D5005D57F2 /* LoginViewModel.swift */,
+				F976C00A2838C9C70087567C /* RegisterViewController.swift */,
+				F976C00C2838C9D10087567C /* RegisterViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
+				F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */,
 				F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
@@ -490,6 +497,7 @@
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
+				F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

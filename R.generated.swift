@@ -513,8 +513,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 8 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
+    /// Image `bg_top_light`.
+    static let bg_top_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_top_light")
     /// Image `icon_arrow_left_w10_h16`.
     static let icon_arrow_left_w10_h16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_left_w10_h16")
     /// Image `icon_error_1`.
@@ -531,6 +533,13 @@ struct R: Rswift.Validatable {
     static let icon_social_media_twitter = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_twitter")
     /// Image `launchImageTemp`.
     static let launchImageTemp = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchImageTemp")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "bg_top_light", bundle: ..., traitCollection: ...)`
+    static func bg_top_light(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_top_light, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_arrow_left_w10_h16", bundle: ..., traitCollection: ...)`
@@ -593,7 +602,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 27 localization keys.
     struct localizable {
       /// en translation: Hi, 歡迎回來 ~
       ///
@@ -607,26 +616,58 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_by_facebook = Rswift.StringResource(key: "login_vc_login_by_facebook", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 Facebook 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_login_by_facebook = Rswift.StringResource(key: "register_vc_login_by_facebook", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 以 Google 登入
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_by_google = Rswift.StringResource(key: "login_vc_login_by_google", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 Google 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_login_by_google = Rswift.StringResource(key: "register_vc_login_by_google", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 以 twitter 登入
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_by_twitter = Rswift.StringResource(key: "login_vc_login_by_twitter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 以 twitter 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_login_by_twitter = Rswift.StringResource(key: "register_vc_login_by_twitter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 傳送驗證信
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_submit_button = Rswift.StringResource(key: "register_vc_submit_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 再次確認密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_register_re_password_placeholder = Rswift.StringResource(key: "register_vc_register_re_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 密碼
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_password_title = Rswift.StringResource(key: "login_vc_login_password_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 已有帳號 ? 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_login_label = Rswift.StringResource(key: "register_vc_login_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 忘記密碼?
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_password_forgot = Rswift.StringResource(key: "login_vc_login_password_forgot", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_password_hint = Rswift.StringResource(key: "register_vc_password_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 或
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_mid_label = Rswift.StringResource(key: "login_vc_login_mid_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 歡迎加入我們
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_subtitle = Rswift.StringResource(key: "register_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 準備開始
       ///
       /// Locales: en, zh-Hant
@@ -639,10 +680,22 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_title = Rswift.StringResource(key: "login_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_login_button = Rswift.StringResource(key: "register_vc_login_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
       static let login_vc_register_button = Rswift.StringResource(key: "login_vc_register_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_register_password_title = Rswift.StringResource(key: "register_vc_register_password_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 註冊
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_title = Rswift.StringResource(key: "register_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 輸入密碼
       ///
       /// Locales: en, zh-Hant
@@ -705,6 +758,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_by_facebook", bundle: bundle, comment: "")
       }
 
+      /// en translation: 以 Facebook 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_login_by_facebook(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_login_by_facebook", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_login_by_facebook"
+        }
+
+        return NSLocalizedString("register_vc_login_by_facebook", bundle: bundle, comment: "")
+      }
+
       /// en translation: 以 Google 登入
       ///
       /// Locales: en, zh-Hant
@@ -718,6 +786,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_by_google", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 以 Google 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_login_by_google(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_login_by_google", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_login_by_google"
+        }
+
+        return NSLocalizedString("register_vc_login_by_google", bundle: bundle, comment: "")
       }
 
       /// en translation: 以 twitter 登入
@@ -735,6 +818,51 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_by_twitter", bundle: bundle, comment: "")
       }
 
+      /// en translation: 以 twitter 繼續
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_login_by_twitter(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_login_by_twitter", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_login_by_twitter"
+        }
+
+        return NSLocalizedString("register_vc_login_by_twitter", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 傳送驗證信
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_submit_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_submit_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_submit_button"
+        }
+
+        return NSLocalizedString("register_vc_submit_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 再次確認密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_register_re_password_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_register_re_password_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_register_re_password_placeholder"
+        }
+
+        return NSLocalizedString("register_vc_register_re_password_placeholder", bundle: bundle, comment: "")
+      }
+
       /// en translation: 密碼
       ///
       /// Locales: en, zh-Hant
@@ -748,6 +876,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_password_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 已有帳號 ? 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_login_label(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_login_label", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_login_label"
+        }
+
+        return NSLocalizedString("register_vc_login_label", bundle: bundle, comment: "")
       }
 
       /// en translation: 忘記密碼?
@@ -765,6 +908,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_password_forgot", bundle: bundle, comment: "")
       }
 
+      /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_password_hint(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_password_hint", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_password_hint"
+        }
+
+        return NSLocalizedString("register_vc_password_hint", bundle: bundle, comment: "")
+      }
+
       /// en translation: 或
       ///
       /// Locales: en, zh-Hant
@@ -778,6 +936,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_mid_label", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 歡迎加入我們
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_subtitle"
+        }
+
+        return NSLocalizedString("register_vc_subtitle", bundle: bundle, comment: "")
       }
 
       /// en translation: 準備開始
@@ -825,6 +998,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: 登入
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_login_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_login_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_login_button"
+        }
+
+        return NSLocalizedString("register_vc_login_button", bundle: bundle, comment: "")
+      }
+
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
@@ -838,6 +1026,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_register_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_register_password_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_register_password_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_register_password_title"
+        }
+
+        return NSLocalizedString("register_vc_register_password_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 註冊
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_title"
+        }
+
+        return NSLocalizedString("register_vc_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 輸入密碼

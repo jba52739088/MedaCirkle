@@ -28,4 +28,12 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
     }
 
+  func removeGradient() {
+    layer.sublayers?.forEach({ subLayer in
+      if subLayer is CAGradientLayer {
+        subLayer.removeFromSuperlayer()
+      }
+    })
+  }
+
 }

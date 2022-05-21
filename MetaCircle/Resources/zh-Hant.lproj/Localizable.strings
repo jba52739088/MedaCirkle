@@ -1,9 +1,9 @@
-/* 
+/*
   Localizable.strings
   MetaCircle
 
   Created by 黃恩祐 on 2022/5/14.
-  
+
 */
 "ready_to_begin" = "準備開始";
 "login_vc_register_label" = "還不是會員 ? 立即註冊";
@@ -21,3 +21,14 @@
 "login_vc_login_password_error" = "不是有效的電子郵件";
 "login_vc_login_password_forgot" = "忘記密碼?";
 "login_vc_login_button" = "登入";
+"register_vc_login_label" = "已有帳號 ? 登入";
+"register_vc_login_button" = "登入";
+"register_vc_title" = "註冊";
+"register_vc_subtitle" = "歡迎加入我們";
+"register_vc_login_by_facebook" = "以 Facebook 繼續";
+"register_vc_login_by_twitter" = "以 twitter 繼續";
+"register_vc_login_by_google" = "以 Google 繼續";
+"register_vc_register_password_title" = "設定密碼";
+"register_vc_register_re_password_placeholder" = "再次確認密碼";
+"register_vc_password_hint" = "您的密碼必須包含英文、數字 <b>8-20</b> 個字元";
+"register_vc_submit_button" = "傳送驗證信";
