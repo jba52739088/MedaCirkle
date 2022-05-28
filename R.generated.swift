@@ -89,6 +89,23 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
+  #if os(iOS) || os(tvOS)
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
+  struct storyboard {
+    /// Storyboard `LaunchScreen`.
+    static let launchScreen = _R.storyboard.launchScreen()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
+    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+  #endif
+
   /// This `R.color` struct is generated, and contains static references to 1 colors.
   struct color {
     /// Color `AccentColor`.
@@ -513,26 +530,48 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 20 images.
   struct image {
     /// Image `bg_top_light`.
     static let bg_top_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_top_light")
+    /// Image `icon_arrow_2_right`.
+    static let icon_arrow_2_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_2_right")
     /// Image `icon_arrow_left_w10_h16`.
     static let icon_arrow_left_w10_h16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_left_w10_h16")
+    /// Image `icon_calendar_1`.
+    static let icon_calendar_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_calendar_1")
+    /// Image `icon_check_1`.
+    static let icon_check_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_1")
     /// Image `icon_error_1`.
     static let icon_error_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_error_1")
     /// Image `icon_eyes_2`.
     static let icon_eyes_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_eyes_2")
     /// Image `icon_eyes_3`.
     static let icon_eyes_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_eyes_3")
+    /// Image `icon_gender_female`.
+    static let icon_gender_female = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_female")
+    /// Image `icon_gender_male`.
+    static let icon_gender_male = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_male")
+    /// Image `icon_gender_third`.
+    static let icon_gender_third = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_third")
+    /// Image `icon_share_w25_mail`.
+    static let icon_share_w25_mail = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_share_w25_mail")
+    /// Image `icon_share_w25_phone`.
+    static let icon_share_w25_phone = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_share_w25_phone")
     /// Image `icon_social_media_facebook`.
     static let icon_social_media_facebook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_facebook")
     /// Image `icon_social_media_google`.
     static let icon_social_media_google = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_google")
     /// Image `icon_social_media_twitter`.
     static let icon_social_media_twitter = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_twitter")
+    /// Image `icon_success_h30`.
+    static let icon_success_h30 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_success_h30")
+    /// Image `img_avatar_1`.
+    static let img_avatar_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_1")
     /// Image `launchImageTemp`.
     static let launchImageTemp = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchImageTemp")
+    /// Image `loading`.
+    static let loading = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "bg_top_light", bundle: ..., traitCollection: ...)`
@@ -542,9 +581,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_arrow_2_right", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_2_right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_2_right, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_arrow_left_w10_h16", bundle: ..., traitCollection: ...)`
     static func icon_arrow_left_w10_h16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_arrow_left_w10_h16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_calendar_1", bundle: ..., traitCollection: ...)`
+    static func icon_calendar_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_calendar_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_check_1", bundle: ..., traitCollection: ...)`
+    static func icon_check_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_check_1, compatibleWith: traitCollection)
     }
     #endif
 
@@ -570,6 +630,41 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_gender_female", bundle: ..., traitCollection: ...)`
+    static func icon_gender_female(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_gender_female, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_gender_male", bundle: ..., traitCollection: ...)`
+    static func icon_gender_male(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_gender_male, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_gender_third", bundle: ..., traitCollection: ...)`
+    static func icon_gender_third(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_gender_third, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_share_w25_mail", bundle: ..., traitCollection: ...)`
+    static func icon_share_w25_mail(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_share_w25_mail, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_share_w25_phone", bundle: ..., traitCollection: ...)`
+    static func icon_share_w25_phone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_share_w25_phone, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_social_media_facebook", bundle: ..., traitCollection: ...)`
     static func icon_social_media_facebook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_social_media_facebook, compatibleWith: traitCollection)
@@ -591,9 +686,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_success_h30", bundle: ..., traitCollection: ...)`
+    static func icon_success_h30(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_success_h30, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_1", bundle: ..., traitCollection: ...)`
+    static func img_avatar_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "launchImageTemp", bundle: ..., traitCollection: ...)`
     static func launchImageTemp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchImageTemp, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "loading", bundle: ..., traitCollection: ...)`
+    static func loading(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loading, compatibleWith: traitCollection)
     }
     #endif
 
@@ -602,12 +718,16 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 27 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 60 localization keys.
     struct localizable {
       /// en translation: Hi, 歡迎回來 ~
       ///
       /// Locales: en, zh-Hant
       static let login_vc_subtitle = Rswift.StringResource(key: "login_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: YYYY /  MM /  DD /
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_birth_placeholder = Rswift.StringResource(key: "verify_vc_birth_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 不是有效的電子郵件
       ///
       /// Locales: en, zh-Hant
@@ -636,6 +756,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_login_by_twitter = Rswift.StringResource(key: "register_vc_login_by_twitter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 修改密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_re_submit_button = Rswift.StringResource(key: "resetPwd_vc_re_submit_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 傳送認證碼
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_phone_send_verify_code = Rswift.StringResource(key: "verify_vc_phone_send_verify_code", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 傳送驗證信
       ///
       /// Locales: en, zh-Hant
@@ -644,6 +772,22 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_register_re_password_placeholder = Rswift.StringResource(key: "register_vc_register_re_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 再次確認密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_re_password_placeholder = Rswift.StringResource(key: "resetPwd_vc_re_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 女性
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_gender_female = Rswift.StringResource(key: "verify_vc_gender_female", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 姓名
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_name = Rswift.StringResource(key: "verify_vc_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 寄出認證信
+      ///
+      /// Locales: en, zh-Hant
+      static let forgetPwd_vc_submit = Rswift.StringResource(key: "forgetPwd_vc_submit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 密碼
       ///
       /// Locales: en, zh-Hant
@@ -652,10 +796,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_login_label = Rswift.StringResource(key: "register_vc_login_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 忘記密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let forgetPwd_vc_title = Rswift.StringResource(key: "forgetPwd_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 忘記密碼?
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_password_forgot = Rswift.StringResource(key: "login_vc_login_password_forgot", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 性別
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_gender = Rswift.StringResource(key: "verify_vc_gender", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
       ///
       /// Locales: en, zh-Hant
@@ -664,14 +816,34 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_mid_label = Rswift.StringResource(key: "login_vc_login_mid_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 手機安全認證
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_phone_title = Rswift.StringResource(key: "verify_vc_phone_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 手機號碼
+      ///
+      /// Locales: en, zh-Hant
+      static let forgetPwd_vc_phone_title = Rswift.StringResource(key: "forgetPwd_vc_phone_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 歡迎加入我們
       ///
       /// Locales: en, zh-Hant
       static let register_vc_subtitle = Rswift.StringResource(key: "register_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 沒收到驗證碼? 重新傳送
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_resend_with_button = Rswift.StringResource(key: "verify_vc_resend_with_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 準備開始
       ///
       /// Locales: en, zh-Hant
       static let ready_to_begin = Rswift.StringResource(key: "ready_to_begin", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 生日
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_birth = Rswift.StringResource(key: "verify_vc_birth", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 男性
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_gender_male = Rswift.StringResource(key: "verify_vc_gender_male", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 登入
       ///
       /// Locales: en, zh-Hant
@@ -684,34 +856,110 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_login_button = Rswift.StringResource(key: "register_vc_login_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 確定
+      ///
+      /// Locales: en, zh-Hant
+      static let confirm = Rswift.StringResource(key: "confirm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
       static let login_vc_register_button = Rswift.StringResource(key: "login_vc_register_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 第三性
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_gender_intersex = Rswift.StringResource(key: "verify_vc_gender_intersex", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 設定密碼
       ///
       /// Locales: en, zh-Hant
       static let register_vc_register_password_title = Rswift.StringResource(key: "register_vc_register_password_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_pwd_title = Rswift.StringResource(key: "resetPwd_vc_pwd_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 註冊
       ///
       /// Locales: en, zh-Hant
       static let register_vc_title = Rswift.StringResource(key: "register_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 請填寫個人資料
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_succeed_subtitle = Rswift.StringResource(key: "verify_vc_succeed_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 請輸入手機號碼與生日，讓我們確認身份與傳送驗證信，方便您重新設定密碼。
+      ///
+      /// Locales: en, zh-Hant
+      static let forgetPwd_vc_subtitle = Rswift.StringResource(key: "forgetPwd_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 請輸入電話號碼，我們將做為增加帳號的 安全性，及取回密碼時使用。
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_phone_subtitle = Rswift.StringResource(key: "verify_vc_phone_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 請選擇
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_gender_placeholder = Rswift.StringResource(key: "verify_vc_gender_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 輸入密碼
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_password_placeholder = Rswift.StringResource(key: "login_vc_login_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 輸入密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_password_placeholder = Rswift.StringResource(key: "resetPwd_vc_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 輸入手機號碼
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_phone_placeholder = Rswift.StringResource(key: "verify_vc_phone_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 輸入電子郵件
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_mail_placeholder = Rswift.StringResource(key: "login_vc_login_mail_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 選擇生日
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_birth_selection = Rswift.StringResource(key: "verify_vc_birth_selection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 還不是會員 ? 立即註冊
       ///
       /// Locales: en, zh-Hant
       static let login_vc_register_label = Rswift.StringResource(key: "login_vc_register_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 重新傳送
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_resend_button = Rswift.StringResource(key: "verify_vc_resend_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 重新傳送驗證碼 <b>%@</b>
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_resend = Rswift.StringResource(key: "verify_vc_resend", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 重新設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_title = Rswift.StringResource(key: "resetPwd_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 長度需為 8-20 個字元
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_password_hint2 = Rswift.StringResource(key: "register_vc_password_hint2", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 電子郵件
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_mail_title = Rswift.StringResource(key: "login_vc_login_mail_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 需包含英文與數字
+      ///
+      /// Locales: en, zh-Hant
+      static let register_vc_password_hint3 = Rswift.StringResource(key: "register_vc_password_hint3", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 驗證完成!
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_succeed_title = Rswift.StringResource(key: "verify_vc_succeed_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 驗證成功
+      ///
+      /// Locales: en, zh-Hant
+      static let resetPwd_vc_verify_succeed_hint = Rswift.StringResource(key: "resetPwd_vc_verify_succeed_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 驗證碼已傳送至
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_subtitle = Rswift.StringResource(key: "verify_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 驗證電子郵件信箱
+      ///
+      /// Locales: en, zh-Hant
+      static let verify_vc_mail_title = Rswift.StringResource(key: "verify_vc_mail_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
 
       /// en translation: Hi, 歡迎回來 ~
       ///
@@ -726,6 +974,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: YYYY /  MM /  DD /
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_birth_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_birth_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_birth_placeholder"
+        }
+
+        return NSLocalizedString("verify_vc_birth_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 不是有效的電子郵件
@@ -833,6 +1096,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_login_by_twitter", bundle: bundle, comment: "")
       }
 
+      /// en translation: 修改密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_re_submit_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_re_submit_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_re_submit_button"
+        }
+
+        return NSLocalizedString("resetPwd_vc_re_submit_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 傳送認證碼
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_phone_send_verify_code(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_phone_send_verify_code", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_phone_send_verify_code"
+        }
+
+        return NSLocalizedString("verify_vc_phone_send_verify_code", bundle: bundle, comment: "")
+      }
+
       /// en translation: 傳送驗證信
       ///
       /// Locales: en, zh-Hant
@@ -861,6 +1154,66 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_register_re_password_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 再次確認密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_re_password_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_re_password_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_re_password_placeholder"
+        }
+
+        return NSLocalizedString("resetPwd_vc_re_password_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 女性
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_gender_female(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_gender_female", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_gender_female"
+        }
+
+        return NSLocalizedString("verify_vc_gender_female", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 姓名
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_name(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_name"
+        }
+
+        return NSLocalizedString("verify_vc_name", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 寄出認證信
+      ///
+      /// Locales: en, zh-Hant
+      static func forgetPwd_vc_submit(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("forgetPwd_vc_submit", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "forgetPwd_vc_submit"
+        }
+
+        return NSLocalizedString("forgetPwd_vc_submit", bundle: bundle, comment: "")
       }
 
       /// en translation: 密碼
@@ -893,6 +1246,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_login_label", bundle: bundle, comment: "")
       }
 
+      /// en translation: 忘記密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func forgetPwd_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("forgetPwd_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "forgetPwd_vc_title"
+        }
+
+        return NSLocalizedString("forgetPwd_vc_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 忘記密碼?
       ///
       /// Locales: en, zh-Hant
@@ -906,6 +1274,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_password_forgot", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 性別
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_gender(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_gender", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_gender"
+        }
+
+        return NSLocalizedString("verify_vc_gender", bundle: bundle, comment: "")
       }
 
       /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
@@ -938,6 +1321,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_mid_label", bundle: bundle, comment: "")
       }
 
+      /// en translation: 手機安全認證
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_phone_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_phone_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_phone_title"
+        }
+
+        return NSLocalizedString("verify_vc_phone_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 手機號碼
+      ///
+      /// Locales: en, zh-Hant
+      static func forgetPwd_vc_phone_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("forgetPwd_vc_phone_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "forgetPwd_vc_phone_title"
+        }
+
+        return NSLocalizedString("forgetPwd_vc_phone_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 歡迎加入我們
       ///
       /// Locales: en, zh-Hant
@@ -953,6 +1366,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_subtitle", bundle: bundle, comment: "")
       }
 
+      /// en translation: 沒收到驗證碼? 重新傳送
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_resend_with_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_resend_with_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_resend_with_button"
+        }
+
+        return NSLocalizedString("verify_vc_resend_with_button", bundle: bundle, comment: "")
+      }
+
       /// en translation: 準備開始
       ///
       /// Locales: en, zh-Hant
@@ -966,6 +1394,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("ready_to_begin", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 生日
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_birth(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_birth", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_birth"
+        }
+
+        return NSLocalizedString("verify_vc_birth", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 男性
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_gender_male(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_gender_male", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_gender_male"
+        }
+
+        return NSLocalizedString("verify_vc_gender_male", bundle: bundle, comment: "")
       }
 
       /// en translation: 登入
@@ -1013,6 +1471,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_login_button", bundle: bundle, comment: "")
       }
 
+      /// en translation: 確定
+      ///
+      /// Locales: en, zh-Hant
+      static func confirm(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("confirm", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "confirm"
+        }
+
+        return NSLocalizedString("confirm", bundle: bundle, comment: "")
+      }
+
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
@@ -1026,6 +1499,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_register_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 第三性
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_gender_intersex(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_gender_intersex", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_gender_intersex"
+        }
+
+        return NSLocalizedString("verify_vc_gender_intersex", bundle: bundle, comment: "")
       }
 
       /// en translation: 設定密碼
@@ -1043,6 +1531,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_register_password_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: 設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_pwd_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_pwd_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_pwd_title"
+        }
+
+        return NSLocalizedString("resetPwd_vc_pwd_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 註冊
       ///
       /// Locales: en, zh-Hant
@@ -1056,6 +1559,66 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 請填寫個人資料
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_succeed_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_succeed_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_succeed_subtitle"
+        }
+
+        return NSLocalizedString("verify_vc_succeed_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 請輸入手機號碼與生日，讓我們確認身份與傳送驗證信，方便您重新設定密碼。
+      ///
+      /// Locales: en, zh-Hant
+      static func forgetPwd_vc_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("forgetPwd_vc_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "forgetPwd_vc_subtitle"
+        }
+
+        return NSLocalizedString("forgetPwd_vc_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 請輸入電話號碼，我們將做為增加帳號的 安全性，及取回密碼時使用。
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_phone_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_phone_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_phone_subtitle"
+        }
+
+        return NSLocalizedString("verify_vc_phone_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 請選擇
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_gender_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_gender_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_gender_placeholder"
+        }
+
+        return NSLocalizedString("verify_vc_gender_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 輸入密碼
@@ -1073,6 +1636,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_password_placeholder", bundle: bundle, comment: "")
       }
 
+      /// en translation: 輸入密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_password_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_password_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_password_placeholder"
+        }
+
+        return NSLocalizedString("resetPwd_vc_password_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 輸入手機號碼
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_phone_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_phone_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_phone_placeholder"
+        }
+
+        return NSLocalizedString("verify_vc_phone_placeholder", bundle: bundle, comment: "")
+      }
+
       /// en translation: 輸入電子郵件
       ///
       /// Locales: en, zh-Hant
@@ -1086,6 +1679,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_mail_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 選擇生日
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_birth_selection(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_birth_selection", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_birth_selection"
+        }
+
+        return NSLocalizedString("verify_vc_birth_selection", bundle: bundle, comment: "")
       }
 
       /// en translation: 還不是會員 ? 立即註冊
@@ -1103,6 +1711,68 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_register_label", bundle: bundle, comment: "")
       }
 
+      /// en translation: 重新傳送
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_resend_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_resend_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_resend_button"
+        }
+
+        return NSLocalizedString("verify_vc_resend_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 重新傳送驗證碼 <b>%@</b>
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_resend(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("verify_vc_resend", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_resend"
+        }
+
+        let format = NSLocalizedString("verify_vc_resend", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
+      /// en translation: 重新設定密碼
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_title"
+        }
+
+        return NSLocalizedString("resetPwd_vc_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 長度需為 8-20 個字元
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_password_hint2(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_password_hint2", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_password_hint2"
+        }
+
+        return NSLocalizedString("register_vc_password_hint2", bundle: bundle, comment: "")
+      }
+
       /// en translation: 電子郵件
       ///
       /// Locales: en, zh-Hant
@@ -1118,6 +1788,81 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_mail_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: 需包含英文與數字
+      ///
+      /// Locales: en, zh-Hant
+      static func register_vc_password_hint3(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("register_vc_password_hint3", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "register_vc_password_hint3"
+        }
+
+        return NSLocalizedString("register_vc_password_hint3", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 驗證完成!
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_succeed_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_succeed_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_succeed_title"
+        }
+
+        return NSLocalizedString("verify_vc_succeed_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 驗證成功
+      ///
+      /// Locales: en, zh-Hant
+      static func resetPwd_vc_verify_succeed_hint(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("resetPwd_vc_verify_succeed_hint", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "resetPwd_vc_verify_succeed_hint"
+        }
+
+        return NSLocalizedString("resetPwd_vc_verify_succeed_hint", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 驗證碼已傳送至
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_subtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_subtitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_subtitle"
+        }
+
+        return NSLocalizedString("verify_vc_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 驗證電子郵件信箱
+      ///
+      /// Locales: en, zh-Hant
+      static func verify_vc_mail_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("verify_vc_mail_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "verify_vc_mail_title"
+        }
+
+        return NSLocalizedString("verify_vc_mail_title", bundle: bundle, comment: "")
+      }
+
       fileprivate init() {}
     }
 
@@ -1126,7 +1871,7 @@ struct R: Rswift.Validatable {
 
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
 
     fileprivate init() {}
@@ -1137,6 +1882,47 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    #if os(iOS) || os(tvOS)
+    try storyboard.validate()
+    #endif
+  }
+
+  #if os(iOS) || os(tvOS)
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      #if os(iOS) || os(tvOS)
+      try launchScreen.validate()
+      #endif
+    }
+
+    #if os(iOS) || os(tvOS)
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UIViewController
+
+      let bundle = R.hostingBundle
+      let launchScreen = StoryboardViewControllerResource<UIKit.UIViewController>(identifier: "LaunchScreen")
+      let name = "LaunchScreen"
+
+      func launchScreen(_: Void = ()) -> UIKit.UIViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: launchScreen)
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "launchImageTemp", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'launchImageTemp' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.launchScreen().launchScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'launchScreen' could not be loaded from storyboard 'LaunchScreen' as 'UIKit.UIViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+  #endif
+
   fileprivate init() {}
 }

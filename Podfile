@@ -6,8 +6,8 @@ target 'MetaCircle' do
   use_frameworks!
 
   # Pods for MetaCircle
-  pod 'RxSwift', '~> 5.1'
-  pod 'RxCocoa', '~> 5.1'
+  pod 'RxSwift', '~> 6'
+  pod 'RxCocoa', '~> 6'
   pod 'SwiftyJSON'
   pod 'R.swift'
   pod 'TinyConstraints', '~> 4.0'

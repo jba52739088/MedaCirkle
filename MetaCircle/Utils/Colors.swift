@@ -10,6 +10,7 @@ import SwiftRichString
 
 extension UIColor {
   static let btnBlue = "#35C4F3".color
+  static let btnGray = "#EDEFF2".color
   static let backgroundGradientYellow = "#F8F7E2".color
   static let backgroundGradientPurple = "#EDD9F4".color
   static let backgroundGradientBlue = "#DCF1F8".color

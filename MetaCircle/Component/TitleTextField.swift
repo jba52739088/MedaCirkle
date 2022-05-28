@@ -52,11 +52,11 @@ class TitleTextField: UIView {
     $0.backgroundColor = .textFieldNormalBg
   }
 
-  private let txtView = UIView().then {
+  private(set) var txtView = UIView().then {
     $0.backgroundColor = .clear
   }
 
-  private let eyeButton = UIButton(type: .custom)
+  private(set) var eyeButton = UIButton(type: .custom)
 
   private(set) var txtField = UITextField().then {
     $0.borderStyle = .none
@@ -95,9 +95,10 @@ class TitleTextField: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     setupViews()
+    configFieldEvent()
   }
 
-  private func setupViews() {
+  func setupViews() {
     backgroundColor = .clear
     titleLabel.do {
       self.addSubview($0)
@@ -155,6 +156,7 @@ class TitleTextField: UIView {
       $0.bottomToSuperview(offset: -9.5)
       $0.textAlignment = .left
       $0.contentVerticalAlignment = .center
+      $0.isSecureTextEntry = showEye && !eyeButton.isSelected
     }
 
     hintView.do {
@@ -190,10 +192,13 @@ class TitleTextField: UIView {
     }
 
     errorImgView.isHidden = errorString == nil
+  }
+
+  func configFieldEvent() {
 
     txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.txtBgView.applyGradient(isVertical: false, colorArray: [.tabbarGradientYellow, .tabbarGradientPurple, .tabbarGradientBlue])
@@ -203,19 +208,12 @@ class TitleTextField: UIView {
 
     txtField.rx.controlEvent(.editingDidEnd)
       .asObservable()
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.txtBgView.removeGradient()
         self.txtBgView.backgroundColor = .textFieldNormalBg
         self.txtView.backgroundColor = .clear
-      })
-      .disposed(by: disposeBag)
-
-    txtField.rx.text.orEmpty.changed
-      .observeOn(MainScheduler.instance)
-      .subscribe(onNext: {
-        print("您输入的是：\($0)")
       })
       .disposed(by: disposeBag)
   }

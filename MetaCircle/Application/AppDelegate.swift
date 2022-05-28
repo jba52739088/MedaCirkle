@@ -11,16 +11,33 @@ import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  static var shared: AppDelegate! {
+    return UIApplication.shared.delegate as! AppDelegate
+  }
+  
   var window: UIWindow?
+
+  private(set) var sceneCoordinator: SceneCoordinator!
+
+  // MARK: - Services
+  let mainAppService = MainAppService.shared
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     UITabBar.appearance().backgroundColor = .white
     IQKeyboardManager.shared.enable = true
 
-    self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.window?.rootViewController = MainViewController()
-    self.window?.makeKeyAndVisible()
+
+    sceneCoordinator = PhoneSceneCoordinator()
+
+    sceneCoordinator.launchInitialScene { [weak self] in
+      guard let self = self else { return }
+      self.finishSetup()
+    }
+
+//    self.window = sceneCoordinator.window
+//    self.window?.rootViewController = MainViewController()
+//    self.window?.makeKeyAndVisible()
     return true
   }
 
@@ -29,3 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
+// TODO: temporarily make finishSetup for iPad. Later the state should not maintained in AppDelegate
+extension AppDelegate {
+  func finishSetup() {
+    mainAppService.isSetupCompleted = true
+  }
+}

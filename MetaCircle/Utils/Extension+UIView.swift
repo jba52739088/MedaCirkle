@@ -8,6 +8,34 @@
 import UIKit
 
 extension UIView {
+  /// Helper to configure layouts: subview's frame == self.bounds
+  func embedSubview(_ subview: UIView) {
+    // do nothing if this view is already in the right place
+    if subview.superview == self { return }
+
+    if subview.superview != nil {
+      subview.removeFromSuperview()
+    }
+
+    subview.translatesAutoresizingMaskIntoConstraints = false
+
+    subview.frame = bounds
+    addSubview(subview)
+
+    NSLayoutConstraint.activate(
+      [
+        subview.leadingAnchor.constraint(equalTo: leadingAnchor),
+        trailingAnchor.constraint(equalTo: subview.trailingAnchor),
+
+        subview.topAnchor.constraint(equalTo: topAnchor),
+        bottomAnchor.constraint(equalTo: subview.bottomAnchor)
+      ]
+    )
+  }
+}
+
+//MARK: Gradient
+extension UIView {
 
     func applyGradient(isVertical: Bool, colorArray: [UIColor]) {
         layer.sublayers?.filter({ $0 is CAGradientLayer }).forEach({ $0.removeFromSuperlayer() })

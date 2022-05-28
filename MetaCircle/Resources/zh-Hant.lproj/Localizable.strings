@@ -5,6 +5,7 @@
   Created by 黃恩祐 on 2022/5/14.
 
 */
+"confirm" = "確定";
 "ready_to_begin" = "準備開始";
 "login_vc_register_label" = "還不是會員 ? 立即註冊";
 "login_vc_register_button" = "立即註冊";
@@ -31,4 +32,37 @@
 "register_vc_register_password_title" = "設定密碼";
 "register_vc_register_re_password_placeholder" = "再次確認密碼";
 "register_vc_password_hint" = "您的密碼必須包含英文、數字 <b>8-20</b> 個字元";
+"register_vc_password_hint2" = "長度需為 8-20 個字元";
+"register_vc_password_hint3" = "需包含英文與數字";
 "register_vc_submit_button" = "傳送驗證信";
+"verify_vc_mail_title" = "驗證電子郵件信箱";
+"verify_vc_subtitle" = "驗證碼已傳送至";
+"verify_vc_resend" = "重新傳送驗證碼 <b>%@</b>";
+"verify_vc_resend_with_button" = "沒收到驗證碼? 重新傳送";
+"verify_vc_resend_button" = "重新傳送";
+"verify_vc_phone_title" = "手機安全認證";
+"verify_vc_phone_subtitle" = "請輸入電話號碼，我們將做為增加帳號的\n安全性，及取回密碼時使用。";
+"verify_vc_phone_placeholder" = "輸入手機號碼";
+"verify_vc_phone_send_verify_code" = "傳送認證碼";
+"verify_vc_succeed_title" = "驗證完成!";
+"verify_vc_succeed_subtitle" = "請填寫個人資料";
+"verify_vc_name" = "姓名";
+"verify_vc_gender" = "性別";
+"verify_vc_gender_placeholder" = "請選擇";
+"verify_vc_gender_male" = "男性";
+"verify_vc_gender_female" = "女性";
+"verify_vc_gender_intersex" = "第三性";
+"verify_vc_gender_placeholder" = "請選擇";
+"verify_vc_birth" = "生日";
+"verify_vc_birth_placeholder" = "YYYY /  MM /  DD /";
+"verify_vc_birth_selection" = "選擇生日";
+"forgetPwd_vc_title" = "忘記密碼";
+"forgetPwd_vc_subtitle" = "請輸入手機號碼與生日，讓我們確認身份與傳送驗證信，方便您重新設定密碼。";
+"forgetPwd_vc_submit" = "寄出認證信";
+"forgetPwd_vc_phone_title" = "手機號碼";
+"resetPwd_vc_title" = "重新設定密碼";
+"resetPwd_vc_verify_succeed_hint" = "驗證成功";
+"resetPwd_vc_pwd_title" = "設定密碼";
+"resetPwd_vc_password_placeholder" = "輸入密碼";
+"resetPwd_vc_re_password_placeholder" = "再次確認密碼";
+"resetPwd_vc_re_submit_button" = "修改密碼";

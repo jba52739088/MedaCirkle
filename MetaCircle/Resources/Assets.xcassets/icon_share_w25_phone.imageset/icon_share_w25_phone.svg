@@ -1,0 +1,13 @@
+<svg id="icon_share_w25_phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dd4b9b"/>
+      <stop offset="1" stop-color="#35c4f3"/>
+    </linearGradient>
+  </defs>
+  <g id="bg" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="25" height="25" stroke="none"/>
+    <rect x="0.5" y="0.5" width="24" height="24" fill="none"/>
+  </g>
+  <path id="Union_23" data-name="Union 23" d="M-303-1638a4,4,0,0,1-4-4v-15a4,4,0,0,1,4-4h7a4,4,0,0,1,4,4v15a4,4,0,0,1-4,4Zm-2-19v15a2,2,0,0,0,2,2h7a2,2,0,0,0,2-2v-15a2,2,0,0,0-2-2h-7A2,2,0,0,0-305-1657Zm5.5,15.5a1,1,0,0,1-1-1,1,1,0,0,1,1-1h1a1,1,0,0,1,1,1,1,1,0,0,1-1,1Zm-3-14a1,1,0,0,1-1-1,1,1,0,0,1,1-1h6a1,1,0,0,1,1,1,1,1,0,0,1-1,1Z" transform="translate(312 1662)" fill="url(#linear-gradient)"/>
+</svg>

@@ -20,6 +20,25 @@
 		F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE6B2830BD300075FDC2 /* MemberViewController.swift */; };
 		F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00A2838C9C70087567C /* RegisterViewController.swift */; };
 		F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00C2838C9D10087567C /* RegisterViewModel.swift */; };
+		F976C00F28394FBA0087567C /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00E28394FBA0087567C /* NumberTextField.swift */; };
+		F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C0102839D8A20087567C /* VerifyViewController.swift */; };
+		F976C0132839D8AF0087567C /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C0122839D8AF0087567C /* VerifyViewModel.swift */; };
+		F976C015283C78F70087567C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C014283C78F70087567C /* Extension+String.swift */; };
+		F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C016283E76A60087567C /* SceneCoordinator.swift */; };
+		F976C019283E76DC0087567C /* SceneTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C018283E76DC0087567C /* SceneTransition.swift */; };
+		F976C01B283E78C80087567C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C01A283E78C80087567C /* Scene.swift */; };
+		F976C01D283E80000087567C /* PhoneSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C01C283E80000087567C /* PhoneSceneCoordinator.swift */; };
+		F976C01F283E88300087567C /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C01E283E88300087567C /* Extension+Array.swift */; };
+		F976C021283E89CB0087567C /* PhoneRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C020283E89CB0087567C /* PhoneRootViewController.swift */; };
+		F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C022283E8A160087567C /* UIViewController+Reactive.swift */; };
+		F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C024283E8C890087567C /* UIViewController+ChildTransition.swift */; };
+		F976C028283E91820087567C /* MainAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C027283E91820087567C /* MainAppService.swift */; };
+		F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C029283E941A0087567C /* PreferenceManager.swift */; };
+		F976C02C283E94780087567C /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C02B283E94780087567C /* UserDefaultsStore.swift */; };
+		F976C02F283E99E80087567C /* UserDefaultsStore+Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C02E283E99E80087567C /* UserDefaultsStore+Preference.swift */; };
+		F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C030283E9C8E0087567C /* Scene+ViewController.swift */; };
+		F976C033283E9E260087567C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C032283E9E260087567C /* NavigationController.swift */; };
+		F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C034283EA1730087567C /* Extension+UINavigationController.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -58,6 +77,13 @@
 		F9D6BB7428348100005D57F2 /* Prompt-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D6BB5A28348100005D57F2 /* Prompt-Black.ttf */; };
 		F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB75283499D5005D57F2 /* LoginViewModel.swift */; };
 		F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB7D28356A1E005D57F2 /* TitleTextField.swift */; };
+		F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2D8283FBB8900172508 /* ForgetPwdViewController.swift */; };
+		F9EBD2DB283FBB9200172508 /* ForgetPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2DA283FBB9200172508 /* ForgetPwdViewModel.swift */; };
+		F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */; };
+		F9EBD2E1283FCB2B00172508 /* BirthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E0283FCB2B00172508 /* BirthTextField.swift */; };
+		F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */; };
+		F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E42841D34E00172508 /* ResetPwdViewController.swift */; };
+		F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E62841D35800172508 /* ResetPwdViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +102,25 @@
 		F973DE6B2830BD300075FDC2 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		F976C00A2838C9C70087567C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F976C00C2838C9D10087567C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		F976C00E28394FBA0087567C /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
+		F976C0102839D8A20087567C /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		F976C0122839D8AF0087567C /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
+		F976C014283C78F70087567C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		F976C016283E76A60087567C /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		F976C018283E76DC0087567C /* SceneTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransition.swift; sourceTree = "<group>"; };
+		F976C01A283E78C80087567C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F976C01C283E80000087567C /* PhoneSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSceneCoordinator.swift; sourceTree = "<group>"; };
+		F976C01E283E88300087567C /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
+		F976C020283E89CB0087567C /* PhoneRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRootViewController.swift; sourceTree = "<group>"; };
+		F976C022283E8A160087567C /* UIViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reactive.swift"; sourceTree = "<group>"; };
+		F976C024283E8C890087567C /* UIViewController+ChildTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildTransition.swift"; sourceTree = "<group>"; };
+		F976C027283E91820087567C /* MainAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppService.swift; sourceTree = "<group>"; };
+		F976C029283E941A0087567C /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		F976C02B283E94780087567C /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		F976C02E283E99E80087567C /* UserDefaultsStore+Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaultsStore+Preference.swift"; sourceTree = "<group>"; };
+		F976C030283E9C8E0087567C /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		F976C032283E9E260087567C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		F976C034283EA1730087567C /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,9 +160,15 @@
 		F9D6BB5928348100005D57F2 /* Prompt-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prompt-Italic.ttf"; sourceTree = "<group>"; };
 		F9D6BB5A28348100005D57F2 /* Prompt-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prompt-Black.ttf"; sourceTree = "<group>"; };
 		F9D6BB75283499D5005D57F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		F9D6BB772834A0F6005D57F2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "../zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		F9D6BB7C2834A269005D57F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D6BB7D28356A1E005D57F2 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
+		F9EBD2D8283FBB8900172508 /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
+		F9EBD2DA283FBB9200172508 /* ForgetPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewModel.swift; sourceTree = "<group>"; };
+		F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		F9EBD2E0283FCB2B00172508 /* BirthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthTextField.swift; sourceTree = "<group>"; };
+		F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthSelectionView.swift; sourceTree = "<group>"; };
+		F9EBD2E42841D34E00172508 /* ResetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPwdViewController.swift; sourceTree = "<group>"; };
+		F9EBD2E62841D35800172508 /* ResetPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPwdViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */,
+				F976C026283E91700087567C /* Scene */,
+				F976C020283E89CB0087567C /* PhoneRootViewController.swift */,
+				F976C02D283E962D0087567C /* Manager */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -181,6 +235,29 @@
 				F9D6BB3428340EEB005D57F2 /* Login */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		F976C026283E91700087567C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F976C01A283E78C80087567C /* Scene.swift */,
+				F976C016283E76A60087567C /* SceneCoordinator.swift */,
+				F976C018283E76DC0087567C /* SceneTransition.swift */,
+				F976C01C283E80000087567C /* PhoneSceneCoordinator.swift */,
+				F976C030283E9C8E0087567C /* Scene+ViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F976C02D283E962D0087567C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F976C027283E91820087567C /* MainAppService.swift */,
+				F976C029283E941A0087567C /* PreferenceManager.swift */,
+				F976C02B283E94780087567C /* UserDefaultsStore.swift */,
+				F976C02E283E99E80087567C /* UserDefaultsStore+Preference.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		F9CDD193282F88CD002CEEEA = {
@@ -223,7 +300,12 @@
 				F9D6BB282832B487005D57F2 /* Int+DataSize.swift */,
 				F9D6BB2D2833EE7E005D57F2 /* Colors.swift */,
 				F9D6BB2F28340304005D57F2 /* Extension+UIView.swift */,
+				F976C014283C78F70087567C /* Extension+String.swift */,
+				F976C01E283E88300087567C /* Extension+Array.swift */,
+				F976C034283EA1730087567C /* Extension+UINavigationController.swift */,
 				F9D6BB3C28341AC0005D57F2 /* UIView+Factory.swift */,
+				F976C022283E8A160087567C /* UIViewController+Reactive.swift */,
+				F976C024283E8C890087567C /* UIViewController+ChildTransition.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -243,6 +325,8 @@
 				F9CDD1A3282F88CD002CEEEA /* ViewController.swift */,
 				F9D6BB38283411F1005D57F2 /* BaseViewController.swift */,
 				F9D6BB3A28341837005D57F2 /* TopGradientViewController.swift */,
+				F976C032283E9E260087567C /* NavigationController.swift */,
+				F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -254,6 +338,12 @@
 				F9D6BB75283499D5005D57F2 /* LoginViewModel.swift */,
 				F976C00A2838C9C70087567C /* RegisterViewController.swift */,
 				F976C00C2838C9D10087567C /* RegisterViewModel.swift */,
+				F976C0102839D8A20087567C /* VerifyViewController.swift */,
+				F976C0122839D8AF0087567C /* VerifyViewModel.swift */,
+				F9EBD2D8283FBB8900172508 /* ForgetPwdViewController.swift */,
+				F9EBD2DA283FBB9200172508 /* ForgetPwdViewModel.swift */,
+				F9EBD2E42841D34E00172508 /* ResetPwdViewController.swift */,
+				F9EBD2E62841D35800172508 /* ResetPwdViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -262,6 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				F9D6BB7D28356A1E005D57F2 /* TitleTextField.swift */,
+				F976C00E28394FBA0087567C /* NumberTextField.swift */,
+				F9EBD2E0283FCB2B00172508 /* BirthTextField.swift */,
+				F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -475,29 +568,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F976C02F283E99E80087567C /* UserDefaultsStore+Preference.swift in Sources */,
+				F976C02C283E94780087567C /* UserDefaultsStore.swift in Sources */,
+				F976C033283E9E260087567C /* NavigationController.swift in Sources */,
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
+				F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */,
+				F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */,
 				F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */,
+				F976C028283E91820087567C /* MainAppService.swift in Sources */,
+				F976C01D283E80000087567C /* PhoneSceneCoordinator.swift in Sources */,
+				F976C01B283E78C80087567C /* Scene.swift in Sources */,
+				F976C00F28394FBA0087567C /* NumberTextField.swift in Sources */,
 				F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */,
+				F976C019283E76DC0087567C /* SceneTransition.swift in Sources */,
+				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
+				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
+				F976C0132839D8AF0087567C /* VerifyViewModel.swift in Sources */,
+				F9EBD2DB283FBB9200172508 /* ForgetPwdViewModel.swift in Sources */,
 				F9D6BB262832AA9B005D57F2 /* LayoutAnchor.swift in Sources */,
 				F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */,
 				F9D6BB3D28341AC0005D57F2 /* UIView+Factory.swift in Sources */,
 				F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */,
+				F976C021283E89CB0087567C /* PhoneRootViewController.swift in Sources */,
 				F9D6BB39283411F1005D57F2 /* BaseViewController.swift in Sources */,
 				F973DE642830B84C0075FDC2 /* HomeViewController.swift in Sources */,
 				F9D6BB292832B487005D57F2 /* Int+DataSize.swift in Sources */,
 				F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */,
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
+				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
+				F976C01F283E88300087567C /* Extension+Array.swift in Sources */,
+				F9EBD2E1283FCB2B00172508 /* BirthTextField.swift in Sources */,
+				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
+				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
+				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
 				F973DE682830BD110075FDC2 /* PrivateViewController.swift in Sources */,
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
+				F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */,
+				F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */,
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
+				F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */,
+				F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */,
 				F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */,
+				F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +626,6 @@
 		F973DE47282F96180075FDC2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F9D6BB772834A0F6005D57F2 /* zh-Hant */,
 				F9D6BB7C2834A269005D57F2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;

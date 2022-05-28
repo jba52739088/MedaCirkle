@@ -30,10 +30,10 @@ class MainViewController: UITabBarController {
     self.tabBar.isTranslucent = false
     UITabBar.appearance().barTintColor = .white
 
-    let introVC = RegisterViewController(RegisterViewModel())
-    introVC.modalPresentationStyle = .fullScreen
-    present(introVC, animated: false)
-
+//    let introVC = VerifyViewController(VerifyViewModel(theme: .init(pageType: .Succeed)))
+//    introVC.modalPresentationStyle = .fullScreen
+//    present(introVC, animated: false)
+    sceneCoordinator.transit(to: Scene.resetPassword, by: .root, completion: nil)
 
     if !didShowInrto {
 //      presentInrtoView()

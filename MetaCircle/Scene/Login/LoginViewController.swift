@@ -205,7 +205,7 @@ class LoginViewController: TopGradientViewController {
       view.addSubview($0)
       $0.width(240)
       $0.height(44)
-      $0.backgroundColor = "#EDEFF2".color
+      $0.backgroundColor = .btnGray
       $0.topToBottom(of: forgetButton, offset: 35.5)
       $0.centerXToSuperview()
       $0.layer.cornerRadius = 22
