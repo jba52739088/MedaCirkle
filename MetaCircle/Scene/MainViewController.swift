@@ -13,7 +13,6 @@ class MainViewController: UITabBarController {
   var didShowInrto: Bool = false
   let topLine = UIView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
-    $0.backgroundColor = .btnBlue
   }
 
   override func viewDidLoad() {
@@ -30,10 +29,7 @@ class MainViewController: UITabBarController {
     self.tabBar.isTranslucent = false
     UITabBar.appearance().barTintColor = .white
 
-//    let introVC = VerifyViewController(VerifyViewModel(theme: .init(pageType: .Succeed)))
-//    introVC.modalPresentationStyle = .fullScreen
-//    present(introVC, animated: false)
-    sceneCoordinator.transit(to: Scene.resetPassword, by: .root, completion: nil)
+//    sceneCoordinator.transit(to: Scene.resetPassword, by: .root, completion: nil)
 
     if !didShowInrto {
 //      presentInrtoView()
@@ -62,19 +58,19 @@ class MainViewController: UITabBarController {
 
   private func setupVCs() {
     viewControllers = BarPageType.allCases.map({
-      self.createNavController(for: $0.viewController, title: $0.rawValue, image: nil)
+      self.createNavController(for: $0)
     })
   }
 
-  private func createNavController(for rootViewController: UIViewController,
-                                       title: String,
-                                       image: UIImage?) -> UIViewController {
-    let navController = UINavigationController(rootViewController: rootViewController)
-    navController.tabBarItem.title = title
-    navController.tabBarItem.image = image
+  private func createNavController(for pageType: BarPageType) -> UIViewController {
+    let vc = pageType.viewController
+    let navController = UINavigationController(rootViewController: vc)
+    navController.tabBarItem.title = pageType.rawValue
+    navController.tabBarItem.image = pageType.tabBarImage
+    navController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
     navController.navigationBar.prefersLargeTitles = false
     navController.navigationBar.isHidden = true
-    rootViewController.navigationItem.title = title
+    vc.navigationItem.title = pageType.rawValue
     return navController
   }
 }
@@ -92,13 +88,28 @@ extension MainViewController {
       case .Home:
         return HomeViewController()
       case .Circle:
-        return PrivateViewController()
+        return CircleViewController()
       case .BigCircle:
         return PublicViewController()
       case .Message:
         return MassageViewController()
       case .Member:
         return MemberViewController()
+      }
+    }
+
+    var tabBarImage: UIImage? {
+      switch self {
+      case .Home:
+        return R.image.icon_success_h30()
+      case .Circle:
+        return R.image.icon_success_h30()
+      case .BigCircle:
+        return R.image.icon_success_h30()
+      case .Message:
+        return R.image.icon_success_h30()
+      case .Member:
+        return R.image.icon_success_h30()
       }
     }
   }

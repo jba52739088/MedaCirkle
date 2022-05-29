@@ -9,6 +9,8 @@ import UIKit
 import SwiftRichString
 
 extension UIColor {
+  static let normalLightBg = UIColor.white
+  static let normalText = UIColor.black
   static let btnBlue = "#35C4F3".color
   static let btnGray = "#EDEFF2".color
   static let backgroundGradientYellow = "#F8F7E2".color
@@ -27,4 +29,5 @@ extension UIColor {
   static let textFieldError = "#D93F21".color
   static let placeholderColor = "#838588".color
   static let hintTextGray = "#5A5C5F".color
+  static let categoryTextGray = "#5A5C5F".color
 }

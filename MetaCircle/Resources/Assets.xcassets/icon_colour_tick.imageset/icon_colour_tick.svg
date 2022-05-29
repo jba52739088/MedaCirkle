@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.832" height="17.111" viewBox="0 0 17.832 17.111">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="0.983" y2="0.521" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dddc1f"/>
+      <stop offset="0.517" stop-color="#dd4b9b"/>
+      <stop offset="1" stop-color="#35c4f3"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4081" data-name="Rectangle 4081" width="17.141" height="16.384" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <filter id="Path_4573" x="0" y="1.703" width="17.832" height="15.408" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.424"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon_認證藍勾勾" transform="translate(0.576)">
+    <path id="Path_9311" data-name="Path 9311" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0Z" transform="translate(0.523 0.384)" fill="#22b0de" opacity="0"/>
+    <g id="Group_6534" data-name="Group 6534" transform="translate(0.025 0.408)">
+      <g id="Group_6533" data-name="Group 6533" transform="translate(-0.025 -0.408)" clip-path="url(#clip-path)">
+        <path id="Path_9312" data-name="Path 9312" d="M17.141,8.192c0-.841-1.655-1.411-1.9-2.17-.255-.787.741-2.219.265-2.875s-2.153-.154-2.813-.634S12.006.285,11.22.029c-.759-.247-1.809,1.144-2.649,1.144S6.68-.218,5.922.029C5.136.285,5.1,2.036,4.45,2.513s-2.333-.027-2.814.634.52,2.088.265,2.875C1.655,6.781,0,7.351,0,8.192S1.655,9.6,1.9,10.362c.255.787-.741,2.22-.265,2.875s2.153.154,2.814.634.685,2.228,1.471,2.484c.758.247,1.809-1.144,2.649-1.144s1.891,1.391,2.649,1.144c.786-.255.817-2.007,1.471-2.483s2.333.027,2.814-.635-.52-2.088-.265-2.875c.246-.759,1.9-1.328,1.9-2.17" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -0.58, 0)" filter="url(#Path_4573)">
+      <path id="Path_4573-2" data-name="Path 4573" d="M-6564.605-20761.316l1.822,1.967,4.183-3.994" transform="translate(6570.52 20769.96)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

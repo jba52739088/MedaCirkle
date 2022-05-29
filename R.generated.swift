@@ -530,7 +530,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 26 images.
   struct image {
     /// Image `bg_top_light`.
     static let bg_top_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_top_light")
@@ -538,10 +538,16 @@ struct R: Rswift.Validatable {
     static let icon_arrow_2_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_2_right")
     /// Image `icon_arrow_left_w10_h16`.
     static let icon_arrow_left_w10_h16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_left_w10_h16")
+    /// Image `icon_btn_pluss`.
+    static let icon_btn_pluss = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_btn_pluss")
     /// Image `icon_calendar_1`.
     static let icon_calendar_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_calendar_1")
     /// Image `icon_check_1`.
     static let icon_check_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_1")
+    /// Image `icon_colour_tick`.
+    static let icon_colour_tick = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_colour_tick")
+    /// Image `icon_down_01`.
+    static let icon_down_01 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_down_01")
     /// Image `icon_error_1`.
     static let icon_error_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_error_1")
     /// Image `icon_eyes_2`.
@@ -554,6 +560,12 @@ struct R: Rswift.Validatable {
     static let icon_gender_male = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_male")
     /// Image `icon_gender_third`.
     static let icon_gender_third = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_third")
+    /// Image `icon_header_bell`.
+    static let icon_header_bell = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_header_bell")
+    /// Image `icon_privacy_public`.
+    static let icon_privacy_public = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_public")
+    /// Image `icon_searchbar_search_w20`.
+    static let icon_searchbar_search_w20 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_searchbar_search_w20")
     /// Image `icon_share_w25_mail`.
     static let icon_share_w25_mail = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_share_w25_mail")
     /// Image `icon_share_w25_phone`.
@@ -595,6 +607,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_btn_pluss", bundle: ..., traitCollection: ...)`
+    static func icon_btn_pluss(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_btn_pluss, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_calendar_1", bundle: ..., traitCollection: ...)`
     static func icon_calendar_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_calendar_1, compatibleWith: traitCollection)
@@ -605,6 +624,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_check_1", bundle: ..., traitCollection: ...)`
     static func icon_check_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_check_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_colour_tick", bundle: ..., traitCollection: ...)`
+    static func icon_colour_tick(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_colour_tick, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_down_01", bundle: ..., traitCollection: ...)`
+    static func icon_down_01(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_down_01, compatibleWith: traitCollection)
     }
     #endif
 
@@ -647,6 +680,27 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_gender_third", bundle: ..., traitCollection: ...)`
     static func icon_gender_third(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_gender_third, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_header_bell", bundle: ..., traitCollection: ...)`
+    static func icon_header_bell(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_header_bell, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_privacy_public", bundle: ..., traitCollection: ...)`
+    static func icon_privacy_public(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_privacy_public, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_searchbar_search_w20", bundle: ..., traitCollection: ...)`
+    static func icon_searchbar_search_w20(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_searchbar_search_w20, compatibleWith: traitCollection)
     }
     #endif
 
@@ -718,7 +772,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 60 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 64 localization keys.
     struct localizable {
       /// en translation: Hi, 歡迎回來 ~
       ///
@@ -776,6 +830,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let resetPwd_vc_re_password_placeholder = Rswift.StringResource(key: "resetPwd_vc_re_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 圈圈
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_title = Rswift.StringResource(key: "circle_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 女性
       ///
       /// Locales: en, zh-Hant
@@ -792,10 +850,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_password_title = Rswift.StringResource(key: "login_vc_login_password_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 已加入
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_joined = Rswift.StringResource(key: "circle_vc_joined", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 已有帳號 ? 登入
       ///
       /// Locales: en, zh-Hant
       static let register_vc_login_label = Rswift.StringResource(key: "register_vc_login_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 建立
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_add_button = Rswift.StringResource(key: "circle_vc_add_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 忘記密碼
       ///
       /// Locales: en, zh-Hant
@@ -812,6 +878,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_password_hint = Rswift.StringResource(key: "register_vc_password_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我建立的
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_created = Rswift.StringResource(key: "circle_vc_created", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 或
       ///
       /// Locales: en, zh-Hant
@@ -1171,6 +1241,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("resetPwd_vc_re_password_placeholder", bundle: bundle, comment: "")
       }
 
+      /// en translation: 圈圈
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_title"
+        }
+
+        return NSLocalizedString("circle_vc_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 女性
       ///
       /// Locales: en, zh-Hant
@@ -1231,6 +1316,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_login_password_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: 已加入
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_joined(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_vc_joined", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_joined"
+        }
+
+        return NSLocalizedString("circle_vc_joined", bundle: bundle, comment: "")
+      }
+
       /// en translation: 已有帳號 ? 登入
       ///
       /// Locales: en, zh-Hant
@@ -1244,6 +1344,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_login_label", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 建立
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_add_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_vc_add_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_add_button"
+        }
+
+        return NSLocalizedString("circle_vc_add_button", bundle: bundle, comment: "")
       }
 
       /// en translation: 忘記密碼
@@ -1304,6 +1419,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_password_hint", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 我建立的
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_created(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_vc_created", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_created"
+        }
+
+        return NSLocalizedString("circle_vc_created", bundle: bundle, comment: "")
       }
 
       /// en translation: 或

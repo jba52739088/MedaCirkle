@@ -66,3 +66,7 @@
 "resetPwd_vc_password_placeholder" = "輸入密碼";
 "resetPwd_vc_re_password_placeholder" = "再次確認密碼";
 "resetPwd_vc_re_submit_button" = "修改密碼";
+"circle_vc_title" = "圈圈";
+"circle_vc_add_button" = "建立";
+"circle_vc_joined" = "已加入";
+"circle_vc_created" = "我建立的";

@@ -15,7 +15,7 @@
 		F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE58282FA1990075FDC2 /* IntroViewController.swift */; };
 		F973DE642830B84C0075FDC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE632830B84C0075FDC2 /* HomeViewController.swift */; };
 		F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE652830BD030075FDC2 /* PublicViewController.swift */; };
-		F973DE682830BD110075FDC2 /* PrivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE672830BD110075FDC2 /* PrivateViewController.swift */; };
+		F973DE682830BD110075FDC2 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE672830BD110075FDC2 /* CircleViewController.swift */; };
 		F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE692830BD1C0075FDC2 /* MassageViewController.swift */; };
 		F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE6B2830BD300075FDC2 /* MemberViewController.swift */; };
 		F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C00A2838C9C70087567C /* RegisterViewController.swift */; };
@@ -84,6 +84,8 @@
 		F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */; };
 		F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E42841D34E00172508 /* ResetPwdViewController.swift */; };
 		F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E62841D35800172508 /* ResetPwdViewModel.swift */; };
+		F9EBD2EA2843435000172508 /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2E92843434F00172508 /* CircleViewModel.swift */; };
+		F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2EB28434AC100172508 /* Extension+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +99,7 @@
 		F973DE58282FA1990075FDC2 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		F973DE632830B84C0075FDC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F973DE652830BD030075FDC2 /* PublicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicViewController.swift; sourceTree = "<group>"; };
-		F973DE672830BD110075FDC2 /* PrivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateViewController.swift; sourceTree = "<group>"; };
+		F973DE672830BD110075FDC2 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		F973DE692830BD1C0075FDC2 /* MassageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
 		F973DE6B2830BD300075FDC2 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		F976C00A2838C9C70087567C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,8 @@
 		F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthSelectionView.swift; sourceTree = "<group>"; };
 		F9EBD2E42841D34E00172508 /* ResetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPwdViewController.swift; sourceTree = "<group>"; };
 		F9EBD2E62841D35800172508 /* ResetPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPwdViewModel.swift; sourceTree = "<group>"; };
+		F9EBD2E92843434F00172508 /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		F9EBD2EB28434AC100172508 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,10 +233,10 @@
 				F9D6BB2A2833BDE6005D57F2 /* Tutorial */,
 				F973DE632830B84C0075FDC2 /* HomeViewController.swift */,
 				F973DE652830BD030075FDC2 /* PublicViewController.swift */,
-				F973DE672830BD110075FDC2 /* PrivateViewController.swift */,
 				F973DE692830BD1C0075FDC2 /* MassageViewController.swift */,
 				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
 				F9D6BB3428340EEB005D57F2 /* Login */,
+				F9EBD2E82842AA3F00172508 /* Circle */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 				F976C014283C78F70087567C /* Extension+String.swift */,
 				F976C01E283E88300087567C /* Extension+Array.swift */,
 				F976C034283EA1730087567C /* Extension+UINavigationController.swift */,
+				F9EBD2EB28434AC100172508 /* Extension+UIImage.swift */,
 				F9D6BB3C28341AC0005D57F2 /* UIView+Factory.swift */,
 				F976C022283E8A160087567C /* UIViewController+Reactive.swift */,
 				F976C024283E8C890087567C /* UIViewController+ChildTransition.swift */,
@@ -404,6 +409,15 @@
 				F9D6BB5A28348100005D57F2 /* Prompt-Black.ttf */,
 			);
 			path = Prompt;
+			sourceTree = "<group>";
+		};
+		F9EBD2E82842AA3F00172508 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				F973DE672830BD110075FDC2 /* CircleViewController.swift */,
+				F9EBD2E92843434F00172508 /* CircleViewModel.swift */,
+			);
+			path = Circle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +597,7 @@
 				F976C019283E76DC0087567C /* SceneTransition.swift in Sources */,
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
+				F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
@@ -602,12 +617,13 @@
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
 				F976C01F283E88300087567C /* Extension+Array.swift in Sources */,
 				F9EBD2E1283FCB2B00172508 /* BirthTextField.swift in Sources */,
+				F9EBD2EA2843435000172508 /* CircleViewModel.swift in Sources */,
 				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
 				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
-				F973DE682830BD110075FDC2 /* PrivateViewController.swift in Sources */,
+				F973DE682830BD110075FDC2 /* CircleViewController.swift in Sources */,
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
 				F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */,
 				F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */,

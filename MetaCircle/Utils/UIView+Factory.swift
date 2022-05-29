@@ -49,6 +49,26 @@ extension UIView {
     return backButton
   }
 
+  static func searchButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.setImage(R.image.icon_searchbar_search_w20(), for: .normal)
+      $0.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
+  static func bellButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.setImage(R.image.icon_header_bell(), for: .normal)
+      $0.imageEdgeInsets = .zero
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
   static func normalSubmitButton(title: String? = nil, target: Any? = nil,  action: Selector? = nil) -> UIButton {
     let button = UIButton(type: .custom)
     let _title = title ?? R.string.localizable.confirm()
