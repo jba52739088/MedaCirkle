@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "icon_privacy_public.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "icon_privacy_公開@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

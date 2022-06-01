@@ -30,4 +30,5 @@ extension UIColor {
   static let placeholderColor = "#838588".color
   static let hintTextGray = "#5A5C5F".color
   static let categoryTextGray = "#5A5C5F".color
+  static let badgeRed = "#FF0001".color
 }

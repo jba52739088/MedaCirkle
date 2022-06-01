@@ -29,12 +29,15 @@ class MainViewController: UITabBarController {
     self.tabBar.isTranslucent = false
     UITabBar.appearance().barTintColor = .white
 
-//    sceneCoordinator.transit(to: Scene.resetPassword, by: .root, completion: nil)
+//    sceneCoordinator.transit(to: Scene.forgetPassword, by: .root, completion: nil)
 
-    if !didShowInrto {
+//    let vc = RegisterViewController(RegisterViewModel())
+//    vc.modalPresentationStyle = .fullScreen
+//    present(vc, animated: false)
+//    if !didShowInrto {
 //      presentInrtoView()
 //      didShowInrto = true
-    }
+//    }
 
   }
 

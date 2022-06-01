@@ -530,8 +530,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 26 images.
+  /// This `R.image` struct is generated, and contains static references to 50 images.
   struct image {
+    /// Image `Group 5031`.
+    static let group5031 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 5031")
     /// Image `bg_top_light`.
     static let bg_top_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_top_light")
     /// Image `icon_arrow_2_right`.
@@ -564,6 +566,10 @@ struct R: Rswift.Validatable {
     static let icon_header_bell = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_header_bell")
     /// Image `icon_privacy_public`.
     static let icon_privacy_public = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_public")
+    /// Image `icon_searchbar_clear_w19`.
+    static let icon_searchbar_clear_w19 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_searchbar_clear_w19")
+    /// Image `icon_searchbar_search_w20-1`.
+    static let icon_searchbar_search_w201 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_searchbar_search_w20-1")
     /// Image `icon_searchbar_search_w20`.
     static let icon_searchbar_search_w20 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_searchbar_search_w20")
     /// Image `icon_share_w25_mail`.
@@ -578,12 +584,61 @@ struct R: Rswift.Validatable {
     static let icon_social_media_twitter = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_social_media_twitter")
     /// Image `icon_success_h30`.
     static let icon_success_h30 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_success_h30")
-    /// Image `img_avatar_1`.
-    static let img_avatar_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_1")
+    /// Image `icon_tools_tag`.
+    static let icon_tools_tag = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tools_tag")
+    /// Image `img_avatar_2`.
+    static let img_avatar_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_2")
+    /// Image `img_avatar_3`.
+    static let img_avatar_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_3")
+    /// Image `img_avatar_4`.
+    static let img_avatar_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_4")
+    /// Image `img_avatar_5`.
+    static let img_avatar_5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_5")
+    /// Image `img_avatar_6`.
+    static let img_avatar_6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_avatar_6")
+    /// Image `img_circle_avatar_1`.
+    static let img_circle_avatar_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_1")
+    /// Image `img_circle_avatar_2`.
+    static let img_circle_avatar_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_2")
+    /// Image `img_circle_avatar_3`.
+    static let img_circle_avatar_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_3")
+    /// Image `img_circle_avatar_4`.
+    static let img_circle_avatar_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_4")
+    /// Image `img_circle_avatar_5`.
+    static let img_circle_avatar_5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_5")
+    /// Image `img_circle_avatar_6`.
+    static let img_circle_avatar_6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_6")
+    /// Image `img_circle_avatar_7`.
+    static let img_circle_avatar_7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_7")
+    /// Image `img_circle_avatar_cats_1`.
+    static let img_circle_avatar_cats_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_cats_1")
+    /// Image `img_circle_avatar_cats_2`.
+    static let img_circle_avatar_cats_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_cats_2")
+    /// Image `img_circle_avatar_cats_3`.
+    static let img_circle_avatar_cats_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_cats_3")
+    /// Image `img_circle_avatar_cats_4`.
+    static let img_circle_avatar_cats_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_cats_4")
+    /// Image `img_circle_avatar_cats_5`.
+    static let img_circle_avatar_cats_5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_circle_avatar_cats_5")
+    /// Image `img_talk_avatar_cats_1`.
+    static let img_talk_avatar_cats_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_talk_avatar_cats_1")
+    /// Image `img_talk_avatar_cats_2`.
+    static let img_talk_avatar_cats_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_talk_avatar_cats_2")
+    /// Image `img_talk_avatar_cats_3`.
+    static let img_talk_avatar_cats_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_talk_avatar_cats_3")
+    /// Image `img_talk_avatar_cats_4`.
+    static let img_talk_avatar_cats_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "img_talk_avatar_cats_4")
     /// Image `launchImageTemp`.
     static let launchImageTemp = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchImageTemp")
     /// Image `loading`.
     static let loading = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Group 5031", bundle: ..., traitCollection: ...)`
+    static func group5031(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.group5031, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "bg_top_light", bundle: ..., traitCollection: ...)`
@@ -698,9 +753,23 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_searchbar_clear_w19", bundle: ..., traitCollection: ...)`
+    static func icon_searchbar_clear_w19(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_searchbar_clear_w19, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_searchbar_search_w20", bundle: ..., traitCollection: ...)`
     static func icon_searchbar_search_w20(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_searchbar_search_w20, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_searchbar_search_w20-1", bundle: ..., traitCollection: ...)`
+    static func icon_searchbar_search_w201(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_searchbar_search_w201, compatibleWith: traitCollection)
     }
     #endif
 
@@ -747,9 +816,156 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "img_avatar_1", bundle: ..., traitCollection: ...)`
-    static func img_avatar_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.img_avatar_1, compatibleWith: traitCollection)
+    /// `UIImage(named: "icon_tools_tag", bundle: ..., traitCollection: ...)`
+    static func icon_tools_tag(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_tools_tag, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_2", bundle: ..., traitCollection: ...)`
+    static func img_avatar_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_3", bundle: ..., traitCollection: ...)`
+    static func img_avatar_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_4", bundle: ..., traitCollection: ...)`
+    static func img_avatar_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_4, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_5", bundle: ..., traitCollection: ...)`
+    static func img_avatar_5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_5, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_avatar_6", bundle: ..., traitCollection: ...)`
+    static func img_avatar_6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_avatar_6, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_1", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_2", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_3", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_4", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_4, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_5", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_5, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_6", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_6, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_7", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_7, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_cats_1", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_cats_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_cats_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_cats_2", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_cats_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_cats_2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_cats_3", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_cats_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_cats_3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_cats_4", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_cats_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_cats_4, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_circle_avatar_cats_5", bundle: ..., traitCollection: ...)`
+    static func img_circle_avatar_cats_5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_circle_avatar_cats_5, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_talk_avatar_cats_1", bundle: ..., traitCollection: ...)`
+    static func img_talk_avatar_cats_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_talk_avatar_cats_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_talk_avatar_cats_2", bundle: ..., traitCollection: ...)`
+    static func img_talk_avatar_cats_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_talk_avatar_cats_2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_talk_avatar_cats_3", bundle: ..., traitCollection: ...)`
+    static func img_talk_avatar_cats_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_talk_avatar_cats_3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "img_talk_avatar_cats_4", bundle: ..., traitCollection: ...)`
+    static func img_talk_avatar_cats_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.img_talk_avatar_cats_4, compatibleWith: traitCollection)
     }
     #endif
 
@@ -772,7 +988,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 64 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 66 localization keys.
     struct localizable {
       /// en translation: Hi, 歡迎回來 ~
       ///
@@ -854,6 +1070,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_vc_joined = Rswift.StringResource(key: "circle_vc_joined", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 已加入圈圈 <b>%@</b>
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_joined_count_label = Rswift.StringResource(key: "circle_vc_joined_count_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 已有帳號 ? 登入
       ///
       /// Locales: en, zh-Hant
@@ -894,6 +1114,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let forgetPwd_vc_phone_title = Rswift.StringResource(key: "forgetPwd_vc_phone_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 排序
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_vc_sort_button = Rswift.StringResource(key: "circle_vc_sort_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 歡迎加入我們
       ///
       /// Locales: en, zh-Hant
@@ -1331,6 +1555,23 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_vc_joined", bundle: bundle, comment: "")
       }
 
+      /// en translation: 已加入圈圈 <b>%@</b>
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_joined_count_label(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("circle_vc_joined_count_label", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_joined_count_label"
+        }
+
+        let format = NSLocalizedString("circle_vc_joined_count_label", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
       /// en translation: 已有帳號 ? 登入
       ///
       /// Locales: en, zh-Hant
@@ -1479,6 +1720,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("forgetPwd_vc_phone_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 排序
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_vc_sort_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_vc_sort_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_vc_sort_button"
+        }
+
+        return NSLocalizedString("circle_vc_sort_button", bundle: bundle, comment: "")
       }
 
       /// en translation: 歡迎加入我們

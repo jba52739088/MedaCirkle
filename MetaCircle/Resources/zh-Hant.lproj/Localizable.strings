@@ -70,3 +70,5 @@
 "circle_vc_add_button" = "建立";
 "circle_vc_joined" = "已加入";
 "circle_vc_created" = "我建立的";
+"circle_vc_joined_count_label" = "已加入圈圈 <b>%@</b>";
+"circle_vc_sort_button" = "排序";

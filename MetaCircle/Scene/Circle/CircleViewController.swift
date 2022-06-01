@@ -30,10 +30,15 @@ class CircleViewController: BaseViewController {
   var barLeftConstraint: Constraint?
   var barRightConstraint: Constraint?
 
+  let joinedContentVC: CircleContentViewController
+  let createdContentVC: CircleContentViewController
+
   let viewModel: CircleViewModel
 
   init(_ viewModel: CircleViewModel = CircleViewModel()) {
     self.viewModel = viewModel
+    joinedContentVC = CircleContentViewController(CircleContentViewModel(type: .Joined))
+    createdContentVC = CircleContentViewController(CircleContentViewModel(type: .Created))
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -48,6 +53,12 @@ class CircleViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+
+    self.addChild(joinedContentVC)
+    joinedContentVC.didMove(toParent: self)
+    self.addChild(createdContentVC)
+    createdContentVC.didMove(toParent: self)
+
     configView()
     bindViewModel()
   }
@@ -58,12 +69,38 @@ class CircleViewController: BaseViewController {
   }
 
   private func configView() {
-    view.backgroundColor = .gray
+    view.normalBackgroundGradient()
     navView.do {
       view.addSubview($0)
       $0.topToSuperview()
       $0.leadingToSuperview(offset: 0)
       $0.trailingToSuperview(offset: 0)
+    }
+
+    mainContain.do {
+      view.addSubview($0)
+      $0.backgroundColor = .clear
+      $0.topToBottom(of: navView)
+      $0.leadingToSuperview(offset: 0)
+      $0.trailingToSuperview(offset: 0)
+      $0.bottomToSuperview()
+      let mainView = $0
+      joinedContentVC.view.do {
+        mainView.addSubview($0)
+        $0.topToSuperview()
+        $0.leadingToSuperview(offset: 0)
+        $0.trailingToSuperview(offset: 0)
+        $0.bottomToSuperview()
+        $0.isHidden = true
+      }
+      createdContentVC.view.do {
+        mainView.addSubview($0)
+        $0.topToSuperview()
+        $0.leadingToSuperview(offset: 0)
+        $0.trailingToSuperview(offset: 0)
+        $0.bottomToSuperview()
+        $0.isHidden = true
+      }
     }
 
     logoImgView.do {
@@ -99,13 +136,16 @@ class CircleViewController: BaseViewController {
     addBtn.do {
       navView.addSubview($0)
       $0.setImage(R.image.icon_btn_pluss(), for: .normal)
+      $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: -3, bottom: 0, right: 3)
+      $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 3, bottom: 0, right: -3)
+      $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
       $0.backgroundColor = .btnBlue
       $0.height(30)
       $0.centerY(to: titleLabel)
       $0.rightToSuperview(offset: -13)
       $0.layer.cornerRadius = 15
       $0.layer.masksToBounds = true
-      $0.contentEdgeInsets = UIEdgeInsets(top: 2, left: 13, bottom: 2, right: 13)
+
     }
 
     joinedBtn.do {
@@ -131,6 +171,8 @@ class CircleViewController: BaseViewController {
       navView.addSubview($0)
       $0.bottomToSuperview()
       $0.height(3)
+      $0.layer.cornerRadius = 1.5
+      $0.layer.masksToBounds = true
     }
   }
 
@@ -141,6 +183,7 @@ class CircleViewController: BaseViewController {
     joinedBtn.setAttributedTitle(viewModel.joinedButtonSelectedAttributedString, for: .selected)
     createdBtn.setAttributedTitle(viewModel.createdButtonNormalAttributedString, for: .normal)
     createdBtn.setAttributedTitle(viewModel.createdButtonSelectedAttributedString, for: .selected)
+
   }
 }
 
@@ -165,6 +208,8 @@ extension CircleViewController {
       self.navView.layoutSubviews()
     }
 
+    joinedContentVC.view.isHidden = createdBtn.isSelected
+    createdContentVC.view.isHidden = joinedBtn.isSelected
     //    navView.layoutIfNeeded()
     //    selectedBar.applyGradient(isVertical: false, colorArray: [.tabbarGradientYellow, .tabbarGradientPurple, .tabbarGradientBlue])
   }
