@@ -33,6 +33,7 @@ class BirthTextField: TitleTextField {
     
     txtField.delegate = self
     txtField.keyboardType = .numberPad
+    txtField.isSecureTextEntry = false
 
     eyeButton.do {
       $0.height(20)
@@ -40,7 +41,7 @@ class BirthTextField: TitleTextField {
       $0.rightToSuperview(offset: -17)
       $0.centerYToSuperview()
       $0.setImage(R.image.icon_calendar_1(), for: .normal)
-      $0.removeTarget(self, action: nil, for: .touchUpInside)
+      $0.removeTarget(self, action: #selector(onClickEyeButton(_:)), for: .touchUpInside)
       $0.addTarget(self, action: #selector(onClickBirthButton), for: .touchUpInside)
     }
   }

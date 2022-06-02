@@ -219,7 +219,7 @@ class TitleTextField: UIView {
   }
 
   @objc
-  private func onClickEyeButton(_ sender: UIButton) {
+  func onClickEyeButton(_ sender: UIButton) {
     sender.isSelected = !sender.isSelected
     txtField.isSecureTextEntry = !sender.isSelected
   }
