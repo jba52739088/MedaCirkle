@@ -530,12 +530,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 50 images.
+  /// This `R.image` struct is generated, and contains static references to 57 images.
   struct image {
     /// Image `Group 5031`.
     static let group5031 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 5031")
     /// Image `bg_top_light`.
     static let bg_top_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_top_light")
+    /// Image `checkbox_selected`.
+    static let checkbox_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkbox_selected")
+    /// Image `checkbox`.
+    static let checkbox = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkbox")
     /// Image `icon_arrow_2_right`.
     static let icon_arrow_2_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_2_right")
     /// Image `icon_arrow_left_w10_h16`.
@@ -564,6 +568,12 @@ struct R: Rswift.Validatable {
     static let icon_gender_third = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_third")
     /// Image `icon_header_bell`.
     static let icon_header_bell = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_header_bell")
+    /// Image `icon_privacy_option_optional`.
+    static let icon_privacy_option_optional = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_option_optional")
+    /// Image `icon_privacy_option_private`.
+    static let icon_privacy_option_private = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_option_private")
+    /// Image `icon_privacy_option_public`.
+    static let icon_privacy_option_public = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_option_public")
     /// Image `icon_privacy_public`.
     static let icon_privacy_public = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_privacy_public")
     /// Image `icon_searchbar_clear_w19`.
@@ -632,6 +642,10 @@ struct R: Rswift.Validatable {
     static let launchImageTemp = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchImageTemp")
     /// Image `loading`.
     static let loading = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading")
+    /// Image `radio_button_1_selected`.
+    static let radio_button_1_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "radio_button_1_selected")
+    /// Image `radio_button_1`.
+    static let radio_button_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "radio_button_1")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Group 5031", bundle: ..., traitCollection: ...)`
@@ -644,6 +658,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bg_top_light", bundle: ..., traitCollection: ...)`
     static func bg_top_light(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_top_light, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "checkbox", bundle: ..., traitCollection: ...)`
+    static func checkbox(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.checkbox, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "checkbox_selected", bundle: ..., traitCollection: ...)`
+    static func checkbox_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.checkbox_selected, compatibleWith: traitCollection)
     }
     #endif
 
@@ -742,6 +770,27 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_header_bell", bundle: ..., traitCollection: ...)`
     static func icon_header_bell(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_header_bell, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_privacy_option_optional", bundle: ..., traitCollection: ...)`
+    static func icon_privacy_option_optional(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_privacy_option_optional, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_privacy_option_private", bundle: ..., traitCollection: ...)`
+    static func icon_privacy_option_private(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_privacy_option_private, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_privacy_option_public", bundle: ..., traitCollection: ...)`
+    static func icon_privacy_option_public(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_privacy_option_public, compatibleWith: traitCollection)
     }
     #endif
 
@@ -983,12 +1032,26 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "radio_button_1", bundle: ..., traitCollection: ...)`
+    static func radio_button_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.radio_button_1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "radio_button_1_selected", bundle: ..., traitCollection: ...)`
+    static func radio_button_1_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.radio_button_1_selected, compatibleWith: traitCollection)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 66 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 81 localization keys.
     struct localizable {
       /// en translation: Hi, 歡迎回來 ~
       ///
@@ -1026,6 +1089,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_login_by_twitter = Rswift.StringResource(key: "register_vc_login_by_twitter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 任何人都能搜尋，觀看內容
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_public_description = Rswift.StringResource(key: "circle_create_vc_circle_privacy_public_description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 修改密碼
       ///
       /// Locales: en, zh-Hant
@@ -1038,6 +1105,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_submit_button = Rswift.StringResource(key: "register_vc_submit_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 公開
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_public = Rswift.StringResource(key: "circle_create_vc_circle_privacy_public", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 再次確認密碼
       ///
       /// Locales: en, zh-Hant
@@ -1050,6 +1121,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_vc_title = Rswift.StringResource(key: "circle_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 圈圈名稱
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_name = Rswift.StringResource(key: "circle_create_vc_circle_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 女性
       ///
       /// Locales: en, zh-Hant
@@ -1081,7 +1156,15 @@ struct R: Rswift.Validatable {
       /// en translation: 建立
       ///
       /// Locales: en, zh-Hant
+      static let circle_create_vc_add_button = Rswift.StringResource(key: "circle_create_vc_add_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 建立
+      ///
+      /// Locales: en, zh-Hant
       static let circle_vc_add_button = Rswift.StringResource(key: "circle_vc_add_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 建立圈圈
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_title = Rswift.StringResource(key: "circle_create_vc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 忘記密碼
       ///
       /// Locales: en, zh-Hant
@@ -1118,10 +1201,22 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_vc_sort_button = Rswift.StringResource(key: "circle_vc_sort_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 搜尋不到，加入才能看內容
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_private_description = Rswift.StringResource(key: "circle_create_vc_circle_privacy_private_description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 搜尋得到，加入才能看內容
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_optional_description = Rswift.StringResource(key: "circle_create_vc_circle_privacy_optional_description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 歡迎加入我們
       ///
       /// Locales: en, zh-Hant
       static let register_vc_subtitle = Rswift.StringResource(key: "register_vc_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 此圈圈的內容，為成未滿18歲不得瀏覽之內容。
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_18y_limit = Rswift.StringResource(key: "circle_create_vc_circle_18y_limit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 沒收到驗證碼? 重新傳送
       ///
       /// Locales: en, zh-Hant
@@ -1130,6 +1225,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let ready_to_begin = Rswift.StringResource(key: "ready_to_begin", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 為你的圈圈取名子
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_name_placeholder = Rswift.StringResource(key: "circle_create_vc_circle_name_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 生日
       ///
       /// Locales: en, zh-Hant
@@ -1154,6 +1253,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let confirm = Rswift.StringResource(key: "confirm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 私密
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_private = Rswift.StringResource(key: "circle_create_vc_circle_privacy_private", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
@@ -1162,6 +1265,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_gender_intersex = Rswift.StringResource(key: "verify_vc_gender_intersex", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 網路內容分級
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_level = Rswift.StringResource(key: "circle_create_vc_circle_level", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 設定密碼
       ///
       /// Locales: en, zh-Hant
@@ -1186,6 +1293,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_phone_subtitle = Rswift.StringResource(key: "verify_vc_phone_subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 請選擇
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_category_placeholder = Rswift.StringResource(key: "circle_create_vc_circle_category_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 請選擇
       ///
       /// Locales: en, zh-Hant
@@ -1214,6 +1325,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_register_label = Rswift.StringResource(key: "login_vc_register_label", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 部份公開
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy_optional = Rswift.StringResource(key: "circle_create_vc_circle_privacy_optional", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 重新傳送
       ///
       /// Locales: en, zh-Hant
@@ -1230,6 +1345,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_password_hint2 = Rswift.StringResource(key: "register_vc_password_hint2", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 隱私設定
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_privacy = Rswift.StringResource(key: "circle_create_vc_circle_privacy", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 電子郵件
       ///
       /// Locales: en, zh-Hant
@@ -1238,6 +1357,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let register_vc_password_hint3 = Rswift.StringResource(key: "register_vc_password_hint3", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 類別
+      ///
+      /// Locales: en, zh-Hant
+      static let circle_create_vc_circle_category = Rswift.StringResource(key: "circle_create_vc_circle_category", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 驗證完成!
       ///
       /// Locales: en, zh-Hant
@@ -1390,6 +1513,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_login_by_twitter", bundle: bundle, comment: "")
       }
 
+      /// en translation: 任何人都能搜尋，觀看內容
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_public_description(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_public_description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_public_description"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_public_description", bundle: bundle, comment: "")
+      }
+
       /// en translation: 修改密碼
       ///
       /// Locales: en, zh-Hant
@@ -1435,6 +1573,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_submit_button", bundle: bundle, comment: "")
       }
 
+      /// en translation: 公開
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_public(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_public", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_public"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_public", bundle: bundle, comment: "")
+      }
+
       /// en translation: 再次確認密碼
       ///
       /// Locales: en, zh-Hant
@@ -1478,6 +1631,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_vc_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 圈圈名稱
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_name(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_name"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_name", bundle: bundle, comment: "")
       }
 
       /// en translation: 女性
@@ -1590,6 +1758,21 @@ struct R: Rswift.Validatable {
       /// en translation: 建立
       ///
       /// Locales: en, zh-Hant
+      static func circle_create_vc_add_button(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_add_button", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_add_button"
+        }
+
+        return NSLocalizedString("circle_create_vc_add_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 建立
+      ///
+      /// Locales: en, zh-Hant
       static func circle_vc_add_button(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("circle_vc_add_button", bundle: hostingBundle, comment: "")
@@ -1600,6 +1783,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_vc_add_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 建立圈圈
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_title"
+        }
+
+        return NSLocalizedString("circle_create_vc_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 忘記密碼
@@ -1737,6 +1935,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_vc_sort_button", bundle: bundle, comment: "")
       }
 
+      /// en translation: 搜尋不到，加入才能看內容
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_private_description(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_private_description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_private_description"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_private_description", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 搜尋得到，加入才能看內容
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_optional_description(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_optional_description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_optional_description"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_optional_description", bundle: bundle, comment: "")
+      }
+
       /// en translation: 歡迎加入我們
       ///
       /// Locales: en, zh-Hant
@@ -1750,6 +1978,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 此圈圈的內容，為成未滿18歲不得瀏覽之內容。
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_18y_limit(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_18y_limit", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_18y_limit"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_18y_limit", bundle: bundle, comment: "")
       }
 
       /// en translation: 沒收到驗證碼? 重新傳送
@@ -1780,6 +2023,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("ready_to_begin", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 為你的圈圈取名子
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_name_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_name_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_name_placeholder"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_name_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 生日
@@ -1872,6 +2130,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("confirm", bundle: bundle, comment: "")
       }
 
+      /// en translation: 私密
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_private(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_private", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_private"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_private", bundle: bundle, comment: "")
+      }
+
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
@@ -1900,6 +2173,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("verify_vc_gender_intersex", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 網路內容分級
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_level(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_level", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_level"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_level", bundle: bundle, comment: "")
       }
 
       /// en translation: 設定密碼
@@ -1990,6 +2278,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("verify_vc_phone_subtitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 請選擇
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_category_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_category_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_category_placeholder"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_category_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 請選擇
@@ -2097,6 +2400,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_vc_register_label", bundle: bundle, comment: "")
       }
 
+      /// en translation: 部份公開
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy_optional(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy_optional", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy_optional"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy_optional", bundle: bundle, comment: "")
+      }
+
       /// en translation: 重新傳送
       ///
       /// Locales: en, zh-Hant
@@ -2159,6 +2477,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("register_vc_password_hint2", bundle: bundle, comment: "")
       }
 
+      /// en translation: 隱私設定
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_privacy(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_privacy", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_privacy"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_privacy", bundle: bundle, comment: "")
+      }
+
       /// en translation: 電子郵件
       ///
       /// Locales: en, zh-Hant
@@ -2187,6 +2520,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("register_vc_password_hint3", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 類別
+      ///
+      /// Locales: en, zh-Hant
+      static func circle_create_vc_circle_category(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("circle_create_vc_circle_category", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "circle_create_vc_circle_category"
+        }
+
+        return NSLocalizedString("circle_create_vc_circle_category", bundle: bundle, comment: "")
       }
 
       /// en translation: 驗證完成!

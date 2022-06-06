@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="28" viewBox="0 0 27 28">
+  <defs>
+    <filter id="Rectangle_4286">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_4287" x="0" y="1" width="27" height="27" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="radio_button_1" transform="translate(1)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, -1, 0)" filter="url(#Rectangle_4286)">
+        <rect id="Rectangle_4286-2" data-name="Rectangle 4286" width="25" height="25" rx="12.5" transform="translate(1)" fill="#fff"/>
+      </g>
+      <g id="Rectangle_4286-3" data-name="Rectangle 4286" fill="none" stroke="#16b2e5" stroke-width="2">
+        <rect width="25" height="25" rx="12.5" stroke="none"/>
+        <rect x="1" y="1" width="23" height="23" rx="11.5" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -1, 0)" filter="url(#Rectangle_4287)">
+      <rect id="Rectangle_4287-2" data-name="Rectangle 4287" width="15" height="15" rx="7.5" transform="translate(6 5)" fill="#16b2e5"/>
+    </g>
+  </g>
+</svg>

@@ -7,6 +7,9 @@ PODS:
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - R.swift
   - RxCocoa (~> 6)
+  - RxGesture
   - RxSwift (~> 6)
   - SwiftRichString
   - SwiftyJSON
@@ -33,6 +37,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RxCocoa
+    - RxGesture
     - RxRelay
     - RxSwift
     - SwiftRichString
@@ -46,6 +51,7 @@ SPEC CHECKSUMS:
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
@@ -53,6 +59,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 013d5dfa13ecad3db7fbcadef54311ee21a44d22
+PODFILE CHECKSUM: 70a47df96ffee0913f5c5487387a21636d7acd31
 
 COCOAPODS: 1.10.2

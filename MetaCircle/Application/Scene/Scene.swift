@@ -12,6 +12,7 @@ internal enum Scene {
   case home
   case forgetPassword
   case resetPassword
+  case createCircle
 //  #if DEBUG
 //  case debug
 //  #endif
@@ -25,7 +26,8 @@ extension Scene: Equatable {
     case (.welcome, .welcome),
          (.home, .home),
          (.forgetPassword, .forgetPassword),
-         (.resetPassword, .resetPassword):
+         (.resetPassword, .resetPassword),
+         (.createCircle, .createCircle):
     return true
 //    case let (.section(s1, _, _), .section(s2, _, _)):
 //      return s1.isEqualTo(s2)

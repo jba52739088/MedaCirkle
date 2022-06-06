@@ -39,6 +39,8 @@
 		F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C030283E9C8E0087567C /* Scene+ViewController.swift */; };
 		F976C033283E9E260087567C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C032283E9E260087567C /* NavigationController.swift */; };
 		F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C034283EA1730087567C /* Extension+UINavigationController.swift */; };
+		F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9B284C502B00337F30 /* NormalTextField.swift */; };
+		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D87F6A2846664A0033343F /* TableViewCell.swift */; };
 		F9D87F6E284668CA0033343F /* CircleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D87F6D284668CA0033343F /* CircleCellViewModel.swift */; };
 		F9D87F7028466C440033343F /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D87F6F28466C440033343F /* CircleCell.swift */; };
+		F9D87F722849DC520033343F /* CircleCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D87F712849DC520033343F /* CircleCreateViewController.swift */; };
+		F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */; };
 		F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2D8283FBB8900172508 /* ForgetPwdViewController.swift */; };
 		F9EBD2DB283FBB9200172508 /* ForgetPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2DA283FBB9200172508 /* ForgetPwdViewModel.swift */; };
 		F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */; };
@@ -128,6 +132,8 @@
 		F976C030283E9C8E0087567C /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
 		F976C032283E9E260087567C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F976C034283EA1730087567C /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
+		F9941E9B284C502B00337F30 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
+		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 		F9D87F6A2846664A0033343F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F9D87F6D284668CA0033343F /* CircleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCellViewModel.swift; sourceTree = "<group>"; };
 		F9D87F6F28466C440033343F /* CircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
+		F9D87F712849DC520033343F /* CircleCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateViewController.swift; sourceTree = "<group>"; };
+		F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateViewModel.swift; sourceTree = "<group>"; };
 		F9EBD2D8283FBB8900172508 /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
 		F9EBD2DA283FBB9200172508 /* ForgetPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewModel.swift; sourceTree = "<group>"; };
 		F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
@@ -371,6 +379,8 @@
 				F976C00E28394FBA0087567C /* NumberTextField.swift */,
 				F9EBD2E0283FCB2B00172508 /* BirthTextField.swift */,
 				F9EBD2E2283FD7FA00172508 /* BirthSelectionView.swift */,
+				F9941E9B284C502B00337F30 /* NormalTextField.swift */,
+				F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -439,6 +449,8 @@
 				F9EBD2EF2843CFCB00172508 /* CircleContentViewModel.swift */,
 				F9D87F6D284668CA0033343F /* CircleCellViewModel.swift */,
 				F9D87F6F28466C440033343F /* CircleCell.swift */,
+				F9D87F712849DC520033343F /* CircleCreateViewController.swift */,
+				F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -623,6 +635,7 @@
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
 				F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */,
+				F9D87F722849DC520033343F /* CircleCreateViewController.swift in Sources */,
 				F9EBD2EE2843CEB800172508 /* CircleContentViewController.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
@@ -635,6 +648,7 @@
 				F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */,
 				F976C021283E89CB0087567C /* PhoneRootViewController.swift in Sources */,
 				F9D6BB39283411F1005D57F2 /* BaseViewController.swift in Sources */,
+				F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */,
 				F973DE642830B84C0075FDC2 /* HomeViewController.swift in Sources */,
 				F9D6BB292832B487005D57F2 /* Int+DataSize.swift in Sources */,
 				F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */,
@@ -648,6 +662,7 @@
 				F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
+				F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */,
 				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
 				F973DE682830BD110075FDC2 /* CircleViewController.swift in Sources */,
@@ -657,6 +672,7 @@
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,
 				F9D87F6E284668CA0033343F /* CircleCellViewModel.swift in Sources */,
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
+				F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */,
 				F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */,
 				F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */,
 				F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */,

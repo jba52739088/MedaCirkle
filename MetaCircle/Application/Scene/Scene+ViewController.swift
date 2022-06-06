@@ -36,6 +36,8 @@ extension Scene {
       return ForgetPwdViewController(ForgetPwdViewModel())
     case .resetPassword:
       return ResetPwdViewController()
+    case .createCircle:
+      return CircleCreateViewController()
     }
   }
 }

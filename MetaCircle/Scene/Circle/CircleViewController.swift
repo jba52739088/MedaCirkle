@@ -145,6 +145,7 @@ class CircleViewController: BaseViewController {
       $0.rightToSuperview(offset: -13)
       $0.layer.cornerRadius = 15
       $0.layer.masksToBounds = true
+      $0.addTarget(self, action: #selector(didTapAddBtn), for: .touchUpInside)
 
     }
 
@@ -212,5 +213,10 @@ extension CircleViewController {
     createdContentVC.view.isHidden = joinedBtn.isSelected
     //    navView.layoutIfNeeded()
     //    selectedBar.applyGradient(isVertical: false, colorArray: [.tabbarGradientYellow, .tabbarGradientPurple, .tabbarGradientBlue])
+  }
+
+  @objc
+  private func didTapAddBtn() {
+    sceneCoordinator.transit(to: .createCircle, by: .overFullScreen, completion: nil)
   }
 }
