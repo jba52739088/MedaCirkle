@@ -282,6 +282,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		F9A1D74E284DBD2C00A15BEF /* CircleCreate */ = {
+			isa = PBXGroup;
+			children = (
+				F9D87F712849DC520033343F /* CircleCreateViewController.swift */,
+				F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */,
+			);
+			path = CircleCreate;
+			sourceTree = "<group>";
+		};
 		F9CDD193282F88CD002CEEEA = {
 			isa = PBXGroup;
 			children = (
@@ -449,8 +458,7 @@
 				F9EBD2EF2843CFCB00172508 /* CircleContentViewModel.swift */,
 				F9D87F6D284668CA0033343F /* CircleCellViewModel.swift */,
 				F9D87F6F28466C440033343F /* CircleCell.swift */,
-				F9D87F712849DC520033343F /* CircleCreateViewController.swift */,
-				F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */,
+				F9A1D74E284DBD2C00A15BEF /* CircleCreate */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
