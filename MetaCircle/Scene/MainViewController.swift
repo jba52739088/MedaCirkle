@@ -34,10 +34,10 @@ class MainViewController: UITabBarController {
 //    let vc = RegisterViewController(RegisterViewModel())
 //    vc.modalPresentationStyle = .fullScreen
 //    present(vc, animated: false)
-//    if !didShowInrto {
-//      presentInrtoView()
-//      didShowInrto = true
-//    }
+    if !didShowInrto {
+      presentInrtoView()
+      didShowInrto = true
+    }
 
   }
 

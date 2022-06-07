@@ -1,5 +1,5 @@
 //
-//  CircleCreateViewController.swift
+//  CircleCreateProfileViewController.swift
 //  MetaCircle
 //
 //  Created by 黃恩祐 on 2022/6/3.
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-class CircleCreateViewController: BaseViewController {
+class CircleCreateProfileViewController: BaseViewController {
 
   private let topView = UIView().then {
     $0.backgroundColor = .clear
@@ -21,6 +21,9 @@ class CircleCreateViewController: BaseViewController {
   private let titleLabel = UILabel()
   private let scrollView = UIScrollView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
+//    $0.bounces = false
+//    $0.showsVerticalScrollIndicator = false
+//    $0.showsHorizontalScrollIndicator = false
   }
   let nameTextField = NormalTextField()
   let categoryTextField = NormalTextField()
@@ -241,7 +244,7 @@ class CircleCreateViewController: BaseViewController {
 }
 
 //MARK: PrivacyCheckBoxDelegate
-extension CircleCreateViewController: PrivacyCheckBoxDelegate {
+extension CircleCreateProfileViewController: PrivacyCheckBoxDelegate {
   func didSelect(_ view: PrivacyCheckBoxView) {
     let privacyOptions = [self.privacyPublicView, self.privacyOptionalView, self.privacyPrivateView]
     privacyOptions.forEach { privacyView in

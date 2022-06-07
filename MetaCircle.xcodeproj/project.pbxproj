@@ -43,6 +43,7 @@
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */; };
 		F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */; };
+		F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -138,6 +139,7 @@
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewController.swift; sourceTree = "<group>"; };
 		F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewModel.swift; sourceTree = "<group>"; };
+		F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				F973DE45282F93730075FDC2 /* MainViewController.swift */,
-				F9D6BB2A2833BDE6005D57F2 /* Tutorial */,
+				F9D6BB2A2833BDE6005D57F2 /* Leading */,
 				F973DE632830B84C0075FDC2 /* HomeViewController.swift */,
 				F973DE652830BD030075FDC2 /* PublicViewController.swift */,
 				F973DE692830BD1C0075FDC2 /* MassageViewController.swift */,
@@ -348,13 +350,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		F9D6BB2A2833BDE6005D57F2 /* Tutorial */ = {
+		F9D6BB2A2833BDE6005D57F2 /* Leading */ = {
 			isa = PBXGroup;
 			children = (
 				F973DE58282FA1990075FDC2 /* IntroViewController.swift */,
+				F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */,
 				F9D6BB2B2833BF45005D57F2 /* TopicViewController.swift */,
 			);
-			path = Tutorial;
+			path = Leading;
 			sourceTree = "<group>";
 		};
 		F9D6BB3328340E15005D57F2 /* Common */ = {
@@ -683,6 +686,7 @@
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
 				F973DE682830BD110075FDC2 /* CircleViewController.swift in Sources */,
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
+				F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */,
 				F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */,
 				F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */,
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,

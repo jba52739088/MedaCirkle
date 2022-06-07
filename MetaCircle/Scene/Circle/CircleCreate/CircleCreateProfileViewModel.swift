@@ -1,5 +1,5 @@
 //
-//  CircleCreateViewModel.swift
+//  CircleCreateProfileViewModel.swift
 //  MetaCircle
 //
 //  Created by 黃恩祐 on 2022/6/3.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftRichString
 
-class CircleCreateViewModel {
+class CircleCreateProfileViewModel {
 
   struct Theme {
     init() {
@@ -25,102 +25,48 @@ class CircleCreateViewModel {
       .set(style: theme.titleTextStyle)
   }
 
-  var addButtonNormalAttributedString: NSAttributedString {
+  var nextButtonNormalAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_add_button()
-      .set(style: theme.addButtonTextStyle)
+      .set(style: theme.nextButtonNormalTextStyle)
   }
 
-  var addButtonDisableAttributedString: NSAttributedString {
+  var nextButtonHighlightAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_add_button()
-      .set(style: theme.addButtonDisableTextStyle)
+      .set(style: theme.nextButtonHighlightTextStyle)
   }
 
-  var circleNameAttributedString: NSAttributedString {
+  var bannerButtonNormalAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_circle_name()
-      .set(style: theme.textFieldTitleTextStyle)
+      .set(style: theme.bannerButtonNormalTextStyle)
   }
 
-  var circleNamePlaceholderAttributedString: NSAttributedString {
+  var bannerButtonHighlightAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_circle_name_placeholder()
-      .set(style: theme.textFieldPlaceholderTextStyle)
+      .set(style: theme.bannerButtonHighlightTextStyle)
   }
 
-  var categoryAttributedString: NSAttributedString {
+  var avartTextAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_circle_category()
-      .set(style: theme.textFieldTitleTextStyle)
+      .set(style: theme.avartTextStyle)
   }
 
-  var categoryPlaceholderAttributedString: NSAttributedString {
-    return R.string.localizable.circle_create_vc_circle_category_placeholder()
-      .set(style: theme.textFieldPlaceholderTextStyle)
+  func nameAttributedString(_ name: String) -> NSAttributedString {
+    return name.set(style: theme.nameTextStyle)
   }
 
-  var privacyAttributedString: NSAttributedString {
-    return R.string.localizable.circle_create_vc_circle_privacy()
-      .set(style: theme.textFieldTitleTextStyle)
-  }
-
-  func privacyOptionAttributedString(_ privacy: Privacy) -> NSAttributedString {
-    return privacy.string.set(style: theme.privacyOptionsTitleTextStyle)
-  }
-
-  func privacyOptionDescriptionAttributedString(_ privacy: Privacy) -> NSAttributedString {
-    return privacy.string.set(style: theme.privacyOptionsDescriptionTextStyle)
-  }
-
-  var privacyLevelAttributedString: NSAttributedString {
+  var textViewAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_circle_level()
-      .set(style: theme.textFieldTitleTextStyle)
+      .set(style: theme.textViewStyle)
   }
 
-  var privacyLevelOptionAttributedString: NSAttributedString {
+  var ptextViewPlaceholderAttributedString: NSAttributedString {
     return R.string.localizable.circle_create_vc_circle_18y_limit()
-      .set(style: theme.privacyLevel18LimitTextStyle )
+      .set(style: theme.textViewPlaceholderStyle )
   }
+  
 }
 
-extension CircleCreateViewModel {
-  enum Privacy: CaseIterable {
-    case Public
-    case Optional
-    case Private
-
-    var string: String {
-      switch self {
-      case .Public:
-        return R.string.localizable.circle_create_vc_circle_privacy_public()
-      case .Optional:
-        return R.string.localizable.circle_create_vc_circle_privacy_optional()
-      case .Private:
-        return R.string.localizable.circle_create_vc_circle_privacy_private()
-      }
-    }
-
-    var description: String {
-      switch self {
-      case .Public:
-        return R.string.localizable.circle_create_vc_circle_privacy_public_description()
-      case .Optional:
-        return R.string.localizable.circle_create_vc_circle_privacy_optional_description()
-      case .Private:
-        return R.string.localizable.circle_create_vc_circle_privacy_private_description()
-      }
-    }
-
-    var image: UIImage? {
-      switch self {
-      case .Public:
-        return R.image.icon_privacy_option_public()
-      case .Optional:
-        return R.image.icon_privacy_option_optional()
-      case .Private:
-        return R.image.icon_privacy_option_private()
-      }
-    }
-  }
-}
-
-extension CircleCreateViewModel.Theme {
+extension CircleCreateProfileViewModel.Theme {
 
 
   var titleTextStyle: StyleProtocol {
@@ -132,7 +78,16 @@ extension CircleCreateViewModel.Theme {
     }
   }
 
-  var addButtonTextStyle: StyleProtocol {
+  var nextButtonNormalTextStyle: StyleProtocol {
+    Style {
+      $0.font = R.font.notoSansTCMedium(size: 15)
+      $0.maximumLineHeight = 22
+      $0.minimumLineHeight = 22
+      $0.color = UIColor.tappableText
+    }
+  }
+
+  var nextButtonHighlightTextStyle: StyleProtocol {
     Style {
       $0.font = R.font.notoSansTCMedium(size: 15)
       $0.maximumLineHeight = 22
@@ -141,59 +96,58 @@ extension CircleCreateViewModel.Theme {
     }
   }
 
-  var addButtonDisableTextStyle: StyleProtocol {
+  var bannerButtonNormalTextStyle: StyleProtocol {
     Style {
-      $0.font = R.font.notoSansTCMedium(size: 15)
-      $0.maximumLineHeight = 22
-      $0.minimumLineHeight = 22
-      $0.color = UIColor.disableBtn
+      $0.font = R.font.notoSansTCRegular(size: 13)
+      $0.maximumLineHeight = 19
+      $0.minimumLineHeight = 19
+      $0.color = UIColor.hintTextGray
     }
   }
 
-  var textFieldPlaceholderTextStyle: StyleProtocol {
+  var bannerButtonHighlightTextStyle: StyleProtocol {
     Style {
-      $0.font = R.font.notoSansTCRegular(size: 17)
-      $0.maximumLineHeight = 25
-      $0.minimumLineHeight = 25
-      $0.color = UIColor.placeholderColor
+      $0.font = R.font.notoSansTCRegular(size: 12)
+      $0.maximumLineHeight = 18
+      $0.minimumLineHeight = 18
+      $0.color = UIColor.normalLightBg
     }
   }
 
-  var textFieldTitleTextStyle: StyleProtocol {
+  var avartTextStyle: StyleProtocol {
     Style {
-      $0.font = R.font.notoSansTCRegular(size: 15)
-      $0.maximumLineHeight = 22
-      $0.minimumLineHeight = 22
-      $0.color = UIColor.textFieldTitle
+      $0.font = R.font.notoSansTCRegular(size: 11)
+      $0.maximumLineHeight = 17
+      $0.minimumLineHeight = 17
+      $0.color = UIColor.hintTextGray
     }
   }
 
-  var privacyOptionsTitleTextStyle: StyleProtocol {
+  var nameTextStyle: StyleProtocol {
     Style {
-      $0.font = R.font.notoSansTCMedium(size: 18)
-      $0.maximumLineHeight = 27
-      $0.minimumLineHeight = 27
+      $0.font = R.font.notoSansTCMedium(size: 24)
+      $0.maximumLineHeight = 36
+      $0.minimumLineHeight = 36
       $0.color = UIColor.normalText
     }
   }
 
-  var privacyOptionsDescriptionTextStyle: StyleProtocol {
+  var textViewPlaceholderStyle: StyleProtocol {
     Style {
       $0.font = R.font.notoSansTCRegular(size: 16)
       $0.maximumLineHeight = 24
       $0.minimumLineHeight = 24
-      $0.color = UIColor.categoryTextGray
+      $0.color = UIColor.placeholderColor
     }
   }
 
-  var privacyLevel18LimitTextStyle: StyleProtocol {
+  var textViewStyle: StyleProtocol {
     Style {
-      $0.font = R.font.notoSansTCRegular(size: 17)
-      $0.maximumLineHeight = 25
-      $0.minimumLineHeight = 25
+      $0.font = R.font.notoSansTCRegular(size: 16)
+      $0.maximumLineHeight = 24
+      $0.minimumLineHeight = 24
       $0.color = UIColor.normalText
     }
   }
-
 }
 

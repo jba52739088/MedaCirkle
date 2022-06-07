@@ -1,5 +1,5 @@
 //
-//  CircleCreateViewController.swift
+//  CircleCreateProfileViewController.swift
 //  MetaCircle
 //
 //  Created by 黃恩祐 on 2022/6/3.
@@ -11,39 +11,34 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-class CircleCreateViewController: BaseViewController {
+class CircleCreateProfileViewController: BaseViewController {
 
   private let topView = UIView().then {
     $0.backgroundColor = .clear
   }
   private lazy var backButton: UIButton = .backButton(target: self, action: #selector(didTapBackButton))
-  private let addBtn = UIButton(type: .custom)
+  private let nextBtn = UIButton(type: .custom)
   private let titleLabel = UILabel()
   private let scrollView = UIScrollView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
-//    $0.bounces = false
-//    $0.showsVerticalScrollIndicator = false
-//    $0.showsHorizontalScrollIndicator = false
   }
-  let nameTextField = NormalTextField()
-  let categoryTextField = NormalTextField()
-  let privacyLabel = UILabel()
-  private lazy var privacyPublicView = PrivacyCheckBoxView(privacy: .Public, delegate: self)
-  private lazy var privacyOptionalView = PrivacyCheckBoxView(privacy: .Optional, delegate: self)
-  private lazy var privacyPrivateView = PrivacyCheckBoxView(privacy: .Private, delegate: self)
-  let privacyLevelLabel = UILabel()
-  let privacyOptionView = UIView()
-  let privacyOptionCheckBtn = UIButton().then {
-    $0.isUserInteractionEnabled = false
+  private let bannerView = UIView().then {
+    $0.backgroundColor = .btnGray
   }
-  let privacyOptionLabel = UILabel().then {
-    $0.numberOfLines = 0
+  private let bannerBtn = UIButton(type: .custom)
+  private let avatarBtn = UIButton(type: .custom)
+  private let nameLabel = UILabel()
+  private let infoView = UIView().then {
+    $0.backgroundColor = .textFieldNormalBg
+  }
+  let textView = UITextView().then {
+    $0.backgroundColor = .clear
+    $0.textContainerInset = UIEdgeInsets(top: 13, left: 22, bottom: 13, right: 22)
   }
 
-  var didSelectPrivacy: CircleCreateViewModel.Privacy? = nil
-  let viewModel: CircleCreateViewModel
+  let viewModel: CircleCreateProfileViewModel
 
-  init(_ viewModel: CircleCreateViewModel = CircleCreateViewModel()) {
+  init(_ viewModel: CircleCreateProfileViewModel = CircleCreateProfileViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
@@ -87,7 +82,7 @@ class CircleCreateViewController: BaseViewController {
       $0.centerXToSuperview()
     }
 
-    addBtn.do {
+    nextBtn.do {
       topView.addSubview($0)
       $0.contentEdgeInsets = UIEdgeInsets(top: 2, left: 18, bottom: 2, right: 18)
       $0.height(26)
@@ -95,7 +90,7 @@ class CircleCreateViewController: BaseViewController {
       $0.rightToSuperview(offset: -15)
       $0.layer.cornerRadius = 13
       $0.layer.masksToBounds = true
-      $0.addTarget(self, action: #selector(didTapAddBtn), for: .touchUpInside)
+      $0.addTarget(self, action: #selector(didTapnextBtn), for: .touchUpInside)
       $0.setBackgroundImage(.withColor(.btnGray), for: .disabled)
       $0.setBackgroundImage(.withColor(.btnBlue), for: .normal)
       $0.isEnabled = false
@@ -120,116 +115,90 @@ class CircleCreateViewController: BaseViewController {
       $0.width(UIScreen.main.bounds.width)
     }
 
-    nameTextField.do {
+    bannerView.do {
       contentView.addSubview($0)
-      $0.topToSuperview(offset: 29)
+      $0.topToSuperview()
+      $0.leadingToSuperview()
+      $0.trailingToSuperview()
+      $0.height(184)
+    }
+
+    bannerBtn.do {
+      bannerView.addSubview($0)
+      $0.topToSuperview(offset: 63.75)
+      $0.centerXToSuperview()
+      $0.height(40)
+    }
+
+    avatarBtn.do {
+      contentView.addSubview($0)
+      $0.topToBottom(of: bannerView, offset: -36)
+      $0.centerXToSuperview()
+      $0.width(72)
+    }
+
+    nameLabel.do {
+      contentView.addSubview($0)
+      $0.topToBottom(of: avatarBtn, offset: 23)
+      $0.centerXToSuperview()
+    }
+
+    infoView.do {
+      contentView.addSubview($0)
+      $0.topToBottom(of: nameLabel, offset: 15)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
-    }
-
-    categoryTextField.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: nameTextField, offset: 35)
-      $0.leadingToSuperview(offset: 38)
-      $0.trailingToSuperview(offset: 38)
-    }
-
-    privacyLabel.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: categoryTextField, offset: 35)
-      $0.leadingToSuperview(offset: 38)
-    }
-
-    privacyPublicView.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: privacyLabel, offset: 6)
-      $0.leadingToSuperview(offset: 38)
-      $0.trailingToSuperview(offset: 38)
-      $0.height(75)
-      $0.layer.cornerRadius = 10.f
-      $0.layer.masksToBounds = true
-      $0.layer.borderColor = UIColor.optionCheckBtnBorder.cgColor
-      $0.layer.borderWidth = 1.f
-    }
-
-    privacyOptionalView.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: privacyPublicView, offset: 10)
-      $0.leadingToSuperview(offset: 38)
-      $0.trailingToSuperview(offset: 38)
-      $0.height(75)
-      $0.layer.cornerRadius = 10.f
-      $0.layer.masksToBounds = true
-      $0.layer.borderColor = UIColor.optionCheckBtnBorder.cgColor
-      $0.layer.borderWidth = 1.f
-    }
-
-    privacyPrivateView.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: privacyOptionalView, offset: 10)
-      $0.leadingToSuperview(offset: 38)
-      $0.trailingToSuperview(offset: 38)
-      $0.height(75)
-      $0.layer.cornerRadius = 10.f
-      $0.layer.masksToBounds = true
-      $0.layer.borderColor = UIColor.optionCheckBtnBorder.cgColor
-      $0.layer.borderWidth = 1.f
-    }
-
-    privacyLevelLabel.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: privacyPrivateView, offset: 35)
-      $0.leadingToSuperview(offset: 38)
-    }
-
-    privacyOptionView.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: privacyLevelLabel, offset: 12)
-      $0.leadingToSuperview(offset: 38)
-      $0.trailingToSuperview(offset: 38)
+      $0.height(150)
       $0.bottomToSuperview(offset: 30, relation: .equalOrLess)
-    }
-
-    privacyOptionCheckBtn.do {
-      privacyOptionView.addSubview($0)
-      $0.setImage(R.image.checkbox(), for: .normal)
-      $0.setImage(R.image.checkbox_selected(), for: .selected)
-      $0.topToSuperview()
-      $0.leftToSuperview()
-      $0.height(25)
-      $0.width(25)
-    }
-
-    privacyOptionLabel.do {
-      privacyOptionView.addSubview($0)
-      $0.topToSuperview()
-      $0.leftToRight(of: privacyOptionCheckBtn, offset: 12)
-      $0.rightToSuperview()
-      $0.bottomToSuperview(relation: .equalOrLess)
+      $0.layer.cornerRadius = 15
+      $0.layer.masksToBounds = true
     }
   }
 
 
   private func bindViewModel() {
-    addBtn.setAttributedTitle(viewModel.addButtonNormalAttributedString, for: .normal)
-    addBtn.setAttributedTitle(viewModel.addButtonDisableAttributedString, for: .disabled)
-    titleLabel.attributedText = viewModel.titleAttributedString
-    nameTextField.title = viewModel.circleNameAttributedString
-    nameTextField.placeholder = viewModel.circleNamePlaceholderAttributedString
-    categoryTextField.title = viewModel.categoryAttributedString
-    categoryTextField.placeholder = viewModel.categoryPlaceholderAttributedString
-    privacyLabel.attributedText = viewModel.privacyAttributedString
-    privacyLevelLabel.attributedText = viewModel.privacyLevelAttributedString
-    privacyOptionLabel.attributedText = viewModel.privacyLevelOptionAttributedString
+//    nextBtn.setAttributedTitle(viewModel.addButtonNormalAttributedString, for: .normal)
+//    nextBtn.setAttributedTitle(viewModel.addButtonDisableAttributedString, for: .disabled)
+//    titleLabel.attributedText = viewModel.titleAttributedString
 
-    privacyOptionView.rx.tapGesture()
+    bannerView.rx.tapGesture()
       .when(.recognized)
       .subscribe(onNext: { [weak self] _ in
         guard let self = self else { return }
-        self.privacyOptionCheckBtn.isSelected = !self.privacyOptionCheckBtn.isSelected
+//        self.privacyOptionCheckBtn.isSelected = !self.privacyOptionCheckBtn.isSelected
       })
       .disposed(by: disposeBag)
   }
+
+//  private func configTextViewEvent() {
+//    textView.rx.didBeginEditing
+//      .observe(on: MainScheduler.instance)
+//      .subscribe(onNext: { [weak self] in
+//        guard let self = self else { return }
+//        if self.textView.attributedText == self.viewModel.feedbackPlaceholderAttributedString {
+//          self.textView.text = ""
+//          self.textView.attributedText = nil
+//        }
+//      })
+//      .disposed(by: disposeBag)
+//
+//    textView.rx.didChange
+//      .observe(on: MainScheduler.instance)
+//      .subscribe(onNext: { [weak self] in
+//        guard let self = self else { return }
+//
+//      })
+//      .disposed(by: disposeBag)
+//
+//    textView.rx.text.orEmpty.changed
+//      .observe(on: MainScheduler.instance)
+//      .subscribe(onNext: { [weak self] _ in
+//        guard let self = self else { return }
+//        self.configSubmitButtonState()
+//      })
+//      .disposed(by: disposeBag)
+//
+//  }
 
   @objc
   private func didTapBackButton() {
@@ -237,23 +206,8 @@ class CircleCreateViewController: BaseViewController {
   }
 
   @objc
-  private func didTapAddBtn() {
+  private func didTapnextBtn() {
   }
 
 
-}
-
-//MARK: PrivacyCheckBoxDelegate
-extension CircleCreateViewController: PrivacyCheckBoxDelegate {
-  func didSelect(_ view: PrivacyCheckBoxView) {
-    let privacyOptions = [self.privacyPublicView, self.privacyOptionalView, self.privacyPrivateView]
-    privacyOptions.forEach { privacyView in
-      if privacyView == view {
-        view.didSelected = !view.didSelected
-      } else {
-        privacyView.didSelected = false
-      }
-    }
-    self.didSelectPrivacy = privacyOptions.first(where: { $0.didSelected == true })?.privacy
-  }
 }

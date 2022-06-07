@@ -6,7 +6,13 @@
 
 */
 "confirm" = "確定";
-"ready_to_begin" = "準備開始";
+"leading_ready_to_begin" = "準備開始";
+"leading_skip" = "略過";
+"leading_tutorial_feature_text_1" = "也可以經營\n自己的粉絲圈";
+"leading_tutorial_feature_text_2" = "支持你創作\n優質內容的動力";
+"leading_tutorial_feature_text_3" = "多樣的編輯工具，\n讓你進行創作。";
+"leading_tutorial_feature_text_4" = "問卷、投票、活動報\n名、測驗互動功能 免\n費使用";
+"leading_tutorial_begin" = "開始體驗";
 "login_vc_register_label" = "還不是會員 ? 立即註冊";
 "login_vc_register_button" = "立即註冊";
 "login_vc_title" = "登入";
@@ -87,3 +93,21 @@
 "circle_create_vc_circle_privacy_private_description" = "搜尋不到，加入才能看內容";
 "circle_create_vc_circle_level" = "網路內容分級";
 "circle_create_vc_circle_18y_limit" = "此圈圈的內容，為成未滿18歲不得瀏覽之內容。";
+"circle_create_vc_circle_profile_title" = "簡介";
+"circle_create_vc_circle_profile_skip" = "略過";
+"circle_create_vc_circle_profile_banner" = "簡介橫幅";
+"circle_create_vc_circle_profile_avatar" = "圈圈頭像";
+"circle_create_vc_circle_profile_placeholder" = "介紹你的圈圈，讓圈友了解圈圈內容。";
+"circle_create_vc_circle_profile_modify" = "修改";
+"circle_create_vc_circle_profile_clip" = "剪裁照片";
+"circle_create_vc_circle_profile_save" = "儲存";
+"circle_create_vc_circle_profile_next" = "下一步";
+"circle_create_vc_circle_verify_title" = "是否要為圈圈正名？";
+"circle_create_vc_circle_verify_description" = "正名通過後，您將可以選擇\n<b>贊助制、訂閱制</b> 來支持你的創作";
+"circle_create_vc_circle_verify_known_button" = "了解獲利模式";
+"circle_create_vc_circle_verify_step_title" = "正名只需 <b>3</b> 步驟";
+"circle_create_vc_circle_verify_step_1" = "<b>1.</b> 填寫圈圈正名資料";
+"circle_create_vc_circle_verify_step_2" = "<b>2.</b> 上傳個人身分證明";
+"circle_create_vc_circle_verify_step_3" = "<b>3.</b> 綁定銀行帳戶";
+"circle_create_vc_circle_verify_cancel" = "暫時不要";
+"circle_create_vc_circle_verify_apply" = "提出申請";

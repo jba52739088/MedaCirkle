@@ -33,4 +33,5 @@ extension UIColor {
   static let badgeRed = "#FF0001".color
   static let disableBtn = "#CDCFD2".color
   static let optionCheckBtnBorder = "#D8DBE5".color
+  static let grayBlue = "#EDF3FD".color
 }
