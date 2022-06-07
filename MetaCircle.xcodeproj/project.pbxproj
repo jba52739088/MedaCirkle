@@ -41,6 +41,8 @@
 		F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C034283EA1730087567C /* Extension+UINavigationController.swift */; };
 		F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9B284C502B00337F30 /* NormalTextField.swift */; };
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
+		F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */; };
+		F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -134,6 +136,8 @@
 		F976C034283EA1730087567C /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
 		F9941E9B284C502B00337F30 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
+		F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewController.swift; sourceTree = "<group>"; };
+		F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 			children = (
 				F9D87F712849DC520033343F /* CircleCreateViewController.swift */,
 				F9D87F732849DC5B0033343F /* CircleCreateViewModel.swift */,
+				F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */,
+				F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */,
 			);
 			path = CircleCreate;
 			sourceTree = "<group>";
@@ -639,6 +645,7 @@
 				F976C01B283E78C80087567C /* Scene.swift in Sources */,
 				F976C00F28394FBA0087567C /* NumberTextField.swift in Sources */,
 				F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */,
+				F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */,
 				F976C019283E76DC0087567C /* SceneTransition.swift in Sources */,
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
@@ -668,6 +675,7 @@
 				F9EBD2EA2843435000172508 /* CircleViewModel.swift in Sources */,
 				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
 				F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */,
+				F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
 				F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */,
