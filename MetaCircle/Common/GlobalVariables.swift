@@ -11,3 +11,8 @@ import UIKit
 internal var sceneCoordinator: SceneCoordinator = AppDelegate.shared.sceneCoordinator
 
 public let isPad = UIDevice.current.userInterfaceIdiom == .pad
+
+enum VerticalLocation: String {
+    case bottom
+    case top
+}

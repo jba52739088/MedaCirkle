@@ -57,7 +57,7 @@ internal class PhoneSceneCoordinator: SceneCoordinator {
 
   // Transit to content after interstitial
   private func transitToInitialScene(by transition: SceneTransition = .root, completion: VoidBlock?) {
-    let initialScene: Scene = shouldShowWelcomePageOnboarding ? .welcome : .home
+    let initialScene: Scene = shouldShowWelcomePageOnboarding ? .leading : .home
     if shouldShowWelcomePageOnboarding {
       deferredInitialAction = { [weak self] in self?.deferredInitialAction?(); completion?(); } // FIXIT
       transit(to: initialScene, by: transition, completion: nil)

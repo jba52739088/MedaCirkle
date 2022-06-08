@@ -11,7 +11,7 @@ import UIKit
 extension Scene {
   var defaultTransitionOptions: [SceneTransitionOption] {
     switch self {
-    case .home, .welcome:
+    case .home, .leading:
       return [.wrapWithNavigationController(NavigationController.self)]
     default:
       return []
@@ -30,8 +30,12 @@ extension Scene {
     switch self {
     case .home:
       return MainViewController()
-    case .welcome:
+    case .leading:
       return IntroViewController()
+    case .chooseTopic:
+      return TopicViewController()
+    case let .chooseTopicFeature(vm):
+      return TopicFeatureViewController(vm)
     case .forgetPassword:
       return ForgetPwdViewController(ForgetPwdViewModel())
     case .resetPassword:

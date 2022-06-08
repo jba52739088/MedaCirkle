@@ -17,7 +17,8 @@ class CircleViewController: BaseViewController {
   }
   let mainContain = UIView()
   let logoImgView = UIImageView() .then {
-    $0.image = UIImage.withColor(.lightGray)
+    $0.image = R.image.logo_2()
+    $0.contentMode = .scaleAspectFit
   }
   let searchBtn: UIButton = UIView.searchButton()
   let bellBtn: UIButton = UIView.bellButton()

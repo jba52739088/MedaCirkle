@@ -6,6 +6,11 @@
 
 */
 "confirm" = "確定";
+"tool_bar_big_circle" = "話題";
+"tool_bar_circle" = "圈圈";
+"tool_bar_home" = "探索";
+"tool_bar_message" = "私訊";
+"tool_bar_member" = "登入";
 "leading_ready_to_begin" = "準備開始";
 "leading_skip" = "略過";
 "leading_tutorial_feature_text_1" = "也可以經營\n自己的粉絲圈";
@@ -13,6 +18,11 @@
 "leading_tutorial_feature_text_3" = "多樣的編輯工具，\n讓你進行創作。";
 "leading_tutorial_feature_text_4" = "問卷、投票、活動報\n名、測驗互動功能 免\n費使用";
 "leading_tutorial_begin" = "開始體驗";
+"topic_options_title" = "你對什麼感興趣呢？";
+"topic_options_subtitle" = "無論對什麼有興趣，Meta Circle都有！\n點選以下話題來追蹤最新討論。";
+"topic_options_count_label" = "至少3項";
+"topic_options_selected_count" = "已選 <b>(%@)</b>";
+"topic_options_next" = "下一步";
 "login_vc_register_label" = "還不是會員 ? 立即註冊";
 "login_vc_register_button" = "立即註冊";
 "login_vc_title" = "登入";

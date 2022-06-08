@@ -8,7 +8,9 @@
 import Foundation
 
 internal enum Scene {
-  case welcome
+  case leading
+  case chooseTopic
+  case chooseTopicFeature(TopicFeatureViewModel)
   case home
   case forgetPassword
   case resetPassword
@@ -23,7 +25,8 @@ internal enum Scene {
 extension Scene: Equatable {
   static func == (lhs: Scene, rhs: Scene) -> Bool {
     switch (lhs, rhs) {
-    case (.welcome, .welcome),
+    case (.leading, .leading),
+         (.chooseTopic, .chooseTopic),
          (.home, .home),
          (.forgetPassword, .forgetPassword),
          (.resetPassword, .resetPassword),
@@ -31,8 +34,8 @@ extension Scene: Equatable {
     return true
 //    case let (.section(s1, _, _), .section(s2, _, _)):
 //      return s1.isEqualTo(s2)
-//    case let (.promotePage(vm1), .promotePage(vm2)):
-//      return vm1 == vm2
+    case let (.chooseTopicFeature(vm1), .chooseTopicFeature(vm2)):
+      return vm1.model.title == vm2.model.title
 //    case let (.inAppBrowser(u1, _), .inAppBrowser(u2, _)):
 //      return u1 == u2
 //    #if DEBUG

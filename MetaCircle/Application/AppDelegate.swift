@@ -18,13 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   private(set) var sceneCoordinator: SceneCoordinator!
+  var didShowInrto: Bool = false
 
   // MARK: - Services
   let mainAppService = MainAppService.shared
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    UITabBar.appearance().backgroundColor = .white
+    UITabBar.appearance().backgroundColor = .normalLightBg
+    UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
+    UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.tappableText,
+                                                      .font: R.font.notoSansTCRegular(size: 10) as Any],
+                                                     for: .selected)
+    UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.categoryTextGray,
+                                                      .font: R.font.notoSansTCRegular(size: 10) as Any],
+                                                     for: .normal)
+
     IQKeyboardManager.shared.enable = true
 
 

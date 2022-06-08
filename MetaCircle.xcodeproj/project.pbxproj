@@ -44,6 +44,16 @@
 		F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */; };
 		F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */; };
 		F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */; };
+		F9A1D756285039F100A15BEF /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D755285039F100A15BEF /* TopicViewModel.swift */; };
+		F9A1D7582850788300A15BEF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7572850788300A15BEF /* CollectionViewCell.swift */; };
+		F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D75928507ADA00A15BEF /* TopicItem.swift */; };
+		F9A1D75C28507AE400A15BEF /* TopicItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D75B28507AE400A15BEF /* TopicItemViewModel.swift */; };
+		F9A1D75F28508E5E00A15BEF /* TempCircleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D75E28508E5E00A15BEF /* TempCircleModel.swift */; };
+		F9A1D7612850908D00A15BEF /* TempTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7602850908D00A15BEF /* TempTopicModel.swift */; };
+		F9A1D7642850FE1100A15BEF /* TopicFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7632850FE1100A15BEF /* TopicFeatureViewController.swift */; };
+		F9A1D7662850FE1F00A15BEF /* TopicFeatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7652850FE1F00A15BEF /* TopicFeatureViewModel.swift */; };
+		F9A1D76B2851056D00A15BEF /* TopicFeatureItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D76A2851056D00A15BEF /* TopicFeatureItemViewModel.swift */; };
+		F9A1D76C2851056D00A15BEF /* TopicFeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7692851056D00A15BEF /* TopicFeatureItem.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -140,6 +150,16 @@
 		F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewController.swift; sourceTree = "<group>"; };
 		F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewModel.swift; sourceTree = "<group>"; };
 		F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		F9A1D755285039F100A15BEF /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
+		F9A1D7572850788300A15BEF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F9A1D75928507ADA00A15BEF /* TopicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicItem.swift; sourceTree = "<group>"; };
+		F9A1D75B28507AE400A15BEF /* TopicItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicItemViewModel.swift; sourceTree = "<group>"; };
+		F9A1D75E28508E5E00A15BEF /* TempCircleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempCircleModel.swift; sourceTree = "<group>"; };
+		F9A1D7602850908D00A15BEF /* TempTopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTopicModel.swift; sourceTree = "<group>"; };
+		F9A1D7632850FE1100A15BEF /* TopicFeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicFeatureViewController.swift; sourceTree = "<group>"; };
+		F9A1D7652850FE1F00A15BEF /* TopicFeatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicFeatureViewModel.swift; sourceTree = "<group>"; };
+		F9A1D7692851056D00A15BEF /* TopicFeatureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicFeatureItem.swift; sourceTree = "<group>"; };
+		F9A1D76A2851056D00A15BEF /* TopicFeatureItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicFeatureItemViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +319,26 @@
 			path = CircleCreate;
 			sourceTree = "<group>";
 		};
+		F9A1D75D28508E0700A15BEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9A1D75E28508E5E00A15BEF /* TempCircleModel.swift */,
+				F9A1D7602850908D00A15BEF /* TempTopicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9A1D7622850FD3C00A15BEF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F9A1D75928507ADA00A15BEF /* TopicItem.swift */,
+				F9A1D75B28507AE400A15BEF /* TopicItemViewModel.swift */,
+				F9A1D7692851056D00A15BEF /* TopicFeatureItem.swift */,
+				F9A1D76A2851056D00A15BEF /* TopicFeatureItemViewModel.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		F9CDD193282F88CD002CEEEA = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +368,7 @@
 				F9CDD1AD282F88D0002CEEEA /* Info.plist */,
 				F9D6BB3528340FA4005D57F2 /* Component */,
 				F9D6BB272832AA9F005D57F2 /* Utils */,
+				F9A1D75D28508E0700A15BEF /* Model */,
 			);
 			path = MetaCircle;
 			sourceTree = "<group>";
@@ -356,6 +397,10 @@
 				F973DE58282FA1990075FDC2 /* IntroViewController.swift */,
 				F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */,
 				F9D6BB2B2833BF45005D57F2 /* TopicViewController.swift */,
+				F9A1D755285039F100A15BEF /* TopicViewModel.swift */,
+				F9A1D7632850FE1100A15BEF /* TopicFeatureViewController.swift */,
+				F9A1D7652850FE1F00A15BEF /* TopicFeatureViewModel.swift */,
+				F9A1D7622850FD3C00A15BEF /* view */,
 			);
 			path = Leading;
 			sourceTree = "<group>";
@@ -454,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D87F6A2846664A0033343F /* TableViewCell.swift */,
+				F9A1D7572850788300A15BEF /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -640,6 +686,7 @@
 				F9EBD2F02843CFCB00172508 /* CircleContentViewModel.swift in Sources */,
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
 				F9D87F7028466C440033343F /* CircleCell.swift in Sources */,
+				F9A1D7612850908D00A15BEF /* TempTopicModel.swift in Sources */,
 				F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */,
 				F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */,
 				F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */,
@@ -653,6 +700,7 @@
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
 				F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */,
+				F9A1D7642850FE1100A15BEF /* TopicFeatureViewController.swift in Sources */,
 				F9D87F722849DC520033343F /* CircleCreateViewController.swift in Sources */,
 				F9EBD2EE2843CEB800172508 /* CircleContentViewController.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
@@ -669,15 +717,20 @@
 				F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */,
 				F973DE642830B84C0075FDC2 /* HomeViewController.swift in Sources */,
 				F9D6BB292832B487005D57F2 /* Int+DataSize.swift in Sources */,
+				F9A1D76B2851056D00A15BEF /* TopicFeatureItemViewModel.swift in Sources */,
+				F9A1D76C2851056D00A15BEF /* TopicFeatureItem.swift in Sources */,
 				F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */,
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
+				F9A1D7662850FE1F00A15BEF /* TopicFeatureViewModel.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
+				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
 				F976C01F283E88300087567C /* Extension+Array.swift in Sources */,
 				F9EBD2E1283FCB2B00172508 /* BirthTextField.swift in Sources */,
 				F9EBD2EA2843435000172508 /* CircleViewModel.swift in Sources */,
 				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
 				F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */,
+				F9A1D75C28507AE400A15BEF /* TopicItemViewModel.swift in Sources */,
 				F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
@@ -692,9 +745,12 @@
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,
 				F9D87F6E284668CA0033343F /* CircleCellViewModel.swift in Sources */,
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
+				F9A1D756285039F100A15BEF /* TopicViewModel.swift in Sources */,
 				F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */,
+				F9A1D7582850788300A15BEF /* CollectionViewCell.swift in Sources */,
 				F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */,
 				F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */,
+				F9A1D75F28508E5E00A15BEF /* TempCircleModel.swift in Sources */,
 				F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */,
 				F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */,
 			);
