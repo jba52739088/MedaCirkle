@@ -23,7 +23,7 @@ class RegisterViewController: TopGradientViewController {
       tappableColor: .tappableText,
       action: { [weak self] in
         guard let this = self else { return }
-        this.didTapRegister()
+        this.didTapLogin()
       })
   }()
 
@@ -80,7 +80,7 @@ class RegisterViewController: TopGradientViewController {
 
   var viewModel: RegisterViewModel
 
-  init(_ viewModel: RegisterViewModel) {
+  init(_ viewModel: RegisterViewModel = RegisterViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
@@ -211,7 +211,7 @@ class RegisterViewController: TopGradientViewController {
       $0.centerXToSuperview()
       $0.layer.cornerRadius = 22
       $0.layer.masksToBounds = true
-      $0.addTarget(self, action: #selector(didTapLogin), for: .touchUpInside)
+      $0.addTarget(self, action: #selector(didTapSubmit), for: .touchUpInside)
     }
 
   }
@@ -239,11 +239,13 @@ class RegisterViewController: TopGradientViewController {
   @objc
   private func didTapBackButton() {
     print("didTapBackButton")
+    sceneCoordinator.transit(to: .home, by: .root, completion: nil)
   }
 
   @objc
-  private func didTapRegister() {
-    print("didTapRegister")
+  private func didTapLogin() {
+    print("didTapLogin")
+    sceneCoordinator.dismiss(animated: false, completion: nil)
   }
 
   @objc
@@ -267,7 +269,7 @@ class RegisterViewController: TopGradientViewController {
   }
 
   @objc
-  private func didTapLogin() {
-    print("didTapLogin")
+  private func didTapSubmit() {
+    print("didTapSubmit")
   }
 }

@@ -321,17 +321,20 @@ private extension VerifyViewController {
   @objc
   private func didTapBackButton() {
     print("didTapBackButton")
+    sceneCoordinator.dismiss(animated: false, completion: nil)
   }
 
   @objc
   private func didTapConfirmButton() {
     print("didTapConfirmButton")
+    sceneCoordinator.transit(to: .resetPassword, by: .overFullScreen, completion: nil)
   }
 
   @objc
   private func didTapReSendButton() {
     print("didTapReSendButton")
     self.configHintTimer()
+    self.confirmButton.isEnabled = true
   }
 
   /// time formate

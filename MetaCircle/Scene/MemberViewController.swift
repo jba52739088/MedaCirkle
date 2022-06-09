@@ -9,21 +9,17 @@ import UIKit
 
 class MemberViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configView()
+    sceneCoordinator.transit(to: .login, by: .overFullScreen, completion: nil)
 
-        // Do any additional setup after loading the view.
+  }
+
+  private func configView() {
+    view.do {
+      $0.normalBackgroundGradient()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  }
 
 }

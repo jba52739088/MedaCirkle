@@ -224,6 +224,7 @@ class CircleCreateViewController: BaseViewController {
       .subscribe(onNext: { [weak self] _ in
         guard let self = self else { return }
         self.privacyOptionCheckBtn.isSelected = !self.privacyOptionCheckBtn.isSelected
+        self.addBtn.isEnabled = true
       })
       .disposed(by: disposeBag)
   }
@@ -235,6 +236,7 @@ class CircleCreateViewController: BaseViewController {
 
   @objc
   private func didTapAddBtn() {
+    sceneCoordinator.transit(to: .circleCreateProfile, by: .overFullScreen, completion: nil)
   }
 
 

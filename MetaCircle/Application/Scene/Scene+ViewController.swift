@@ -40,8 +40,16 @@ extension Scene {
       return ForgetPwdViewController(ForgetPwdViewModel())
     case .resetPassword:
       return ResetPwdViewController()
+    case let .verify(vm):
+      return VerifyViewController(vm)
     case .createCircle:
       return CircleCreateViewController()
+    case .circleCreateProfile:
+      return CircleCreateProfileViewController()
+    case .login:
+      return LoginViewController()
+    case .register:
+      return RegisterViewController()
     }
   }
 }

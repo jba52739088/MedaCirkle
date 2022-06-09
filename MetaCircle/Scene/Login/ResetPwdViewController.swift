@@ -109,6 +109,15 @@ class ResetPwdViewController: TopGradientViewController {
     pwdTextField.placeholder = viewModel.pwdPlaceholderAttributedString
     pwdTextField.hintString = viewModel.pwdHintAttributedString
     rePwdTextField.placeholder = viewModel.rePwdPlaceholderAttributedString
+
+    pwdTextField.txtField.rx.controlEvent(.editingDidBegin)
+      .asObservable()
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] in
+        guard let self = self else { return }
+        self.submitButton.isEnabled = true
+      })
+      .disposed(by: disposeBag)
   }
 }
 
@@ -122,6 +131,7 @@ extension ResetPwdViewController {
 
   @objc func didTapSubmitButton() {
     print("didTapSubmitButton")
+    sceneCoordinator.transit(to: .login, by: .root, completion: nil)
   }
 
 }

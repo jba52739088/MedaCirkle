@@ -98,6 +98,15 @@ class ForgetPwdViewController: TopGradientViewController {
     phoneTextField.placeholder = viewModel.phonePlaceholderAttributedString
     birthTextField.title = viewModel.birthAttributedString
     birthTextField.placeholder = viewModel.birthPlaceholderAttributedString
+
+    phoneTextField.txtField.rx.controlEvent(.editingDidBegin)
+      .asObservable()
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] in
+        guard let self = self else { return }
+        self.submitButton.isEnabled = true
+      })
+      .disposed(by: disposeBag)
   }
 }
 
@@ -106,11 +115,13 @@ extension ForgetPwdViewController {
 
   @objc func didTapBackButton() {
     print("didTapBackButton")
+    sceneCoordinator.dismiss(animated: false, completion: nil)
   }
 
 
   @objc func didTapSubmitButton() {
     print("didTapSubmitButton")
+    sceneCoordinator.transit(to: .verify(VerifyViewModel(theme: VerifyViewModel.Theme(pageType: .Phone))), by: .overFullScreen, completion: nil)
   }
 
 }

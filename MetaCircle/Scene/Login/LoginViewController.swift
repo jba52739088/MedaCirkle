@@ -80,7 +80,7 @@ class LoginViewController: TopGradientViewController {
 
   var viewModel: LoginViewModel
 
-  init(_ viewModel: LoginViewModel) {
+  init(_ viewModel: LoginViewModel = LoginViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
@@ -237,11 +237,13 @@ class LoginViewController: TopGradientViewController {
   @objc
   private func didTapBackButton() {
     print("didTapBackButton")
+    sceneCoordinator.transit(to: .home, by: .root, completion: nil)
   }
 
   @objc
   private func didTapRegister() {
     print("didTapRegister")
+    sceneCoordinator.transit(to: .register, by: .overFullScreen, completion: nil)
   }
 
   @objc
@@ -261,7 +263,7 @@ class LoginViewController: TopGradientViewController {
 
   @objc
   private func didTapForgotPwd() {
-    print("didTapForgotPwd")
+    sceneCoordinator.transit(to: .forgetPassword, by: .overFullScreen, completion: nil)
   }
 
   @objc
