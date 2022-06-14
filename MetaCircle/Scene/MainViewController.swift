@@ -102,7 +102,7 @@ extension MainViewController {
       case .Home:
         return HomeViewController()
       case .Circle:
-        return CircleViewController()
+        return CircleMainViewController()
       case .BigCircle:
         return PublicViewController()
       case .Message:

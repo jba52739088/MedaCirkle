@@ -9,7 +9,7 @@ import UIKit
 import SwiftRichString
 
 
-class CircleViewModel {
+class CircleMainViewModel {
 
   struct Theme {
     init() {
@@ -53,7 +53,7 @@ class CircleViewModel {
 
 }
 
-extension CircleViewModel.Theme {
+extension CircleMainViewModel.Theme {
 
 
   var titleTextStyle: StyleProtocol {

@@ -10,7 +10,7 @@ import TinyConstraints
 import RxSwift
 import RxCocoa
 
-class CircleViewController: BaseViewController {
+class CircleMainViewController: BaseViewController {
 
   let navView = UIView().then {
     $0.backgroundColor = .normalLightBg
@@ -34,9 +34,9 @@ class CircleViewController: BaseViewController {
   let joinedContentVC: CircleListViewController
   let createdContentVC: CircleListViewController
 
-  let viewModel: CircleViewModel
+  let viewModel: CircleMainViewModel
 
-  init(_ viewModel: CircleViewModel = CircleViewModel()) {
+  init(_ viewModel: CircleMainViewModel = CircleMainViewModel()) {
     self.viewModel = viewModel
     joinedContentVC = CircleListViewController(CircleListViewModel(type: .Joined))
     createdContentVC = CircleListViewController(CircleListViewModel(type: .Created))
@@ -189,7 +189,7 @@ class CircleViewController: BaseViewController {
   }
 }
 
-extension CircleViewController {
+extension CircleMainViewController {
   @objc
   private func didTapCategoryBtn(_ sender: UIButton) {
     if sender.isSelected { return }
