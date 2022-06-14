@@ -20,7 +20,7 @@ class CircleViewController: BaseViewController {
     $0.image = R.image.logo_2()
     $0.contentMode = .scaleAspectFit
   }
-  let searchBtn: UIButton = UIView.searchButton()
+  let searchBtn: UIButton = UIView.searchBarButton()
   let bellBtn: UIButton = UIView.bellButton()
   let titleLabel = UILabel()
   let addBtn = UIButton()
@@ -31,15 +31,15 @@ class CircleViewController: BaseViewController {
   var barLeftConstraint: Constraint?
   var barRightConstraint: Constraint?
 
-  let joinedContentVC: CircleContentViewController
-  let createdContentVC: CircleContentViewController
+  let joinedContentVC: CircleListViewController
+  let createdContentVC: CircleListViewController
 
   let viewModel: CircleViewModel
 
   init(_ viewModel: CircleViewModel = CircleViewModel()) {
     self.viewModel = viewModel
-    joinedContentVC = CircleContentViewController(CircleContentViewModel(type: .Joined))
-    createdContentVC = CircleContentViewController(CircleContentViewModel(type: .Created))
+    joinedContentVC = CircleListViewController(CircleListViewModel(type: .Joined))
+    createdContentVC = CircleListViewController(CircleListViewModel(type: .Created))
     super.init(nibName: nil, bundle: nil)
   }
 

@@ -39,6 +39,17 @@ extension UIView {
       }
     }
 
+  static func searchBarButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.setImage(R.image.icon_searchbar_search_w20(), for: .normal)
+      $0.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
+
   static func backButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
     let backButton = UIButton(type: .custom).then {
       $0.setImage(R.image.icon_arrow_left_w10_h16(), for: .normal)
@@ -51,7 +62,17 @@ extension UIView {
 
   static func searchButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
     let backButton = UIButton(type: .custom).then {
-      $0.setImage(R.image.icon_searchbar_search_w20(), for: .normal)
+      $0.setImage(R.image.icon_search_w22(), for: .normal)
+      $0.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
+  static func menuButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.setImage(R.image.icon_more_1_w16(), for: .normal)
       $0.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
       $0.imageView?.contentMode = .scaleAspectFit
     }
@@ -79,6 +100,16 @@ extension UIView {
     button.setBackgroundColor(.btnBlue, forState: .normal)
     button.setBackgroundColor(.btnGray, forState: .disabled)
     return button
+  }
+
+  static func circleContentButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: -3, bottom: 0, right: 3)
+      $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 3, bottom: 0, right: -3)
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
   }
 }
 

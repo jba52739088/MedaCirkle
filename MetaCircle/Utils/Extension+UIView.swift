@@ -123,3 +123,30 @@ extension UIView {
     self.layer.shadowRadius = radius
   }
 }
+
+//MARK: Mask Radian
+extension UIView {
+  func maskRadian() {
+    let size = bounds.size
+    let curveRadius    = size.width * 0.010 // Adjust curve of the image view here
+            let invertedRadius = 1.0 / curveRadius
+
+    let rect = CGRect(x: 0,
+                      y: 0,
+                  width: bounds.width + size.width * 2 * invertedRadius,
+                 height: bounds.height)
+
+    let ellipsePath = UIBezierPath(ovalIn: rect)
+    let transform = CGAffineTransform(translationX: -size.width * invertedRadius, y: 0)
+    ellipsePath.apply(transform)
+
+    let rectanglePath = UIBezierPath(rect: bounds)
+    rectanglePath.apply(CGAffineTransform(translationX: 0, y: -size.height * 0.5))
+    ellipsePath.append(rectanglePath)
+
+    let maskShapeLayer   = CAShapeLayer()
+    maskShapeLayer.frame = bounds
+    maskShapeLayer.path  = ellipsePath.cgPath
+    layer.mask = maskShapeLayer
+  }
+}

@@ -50,6 +50,8 @@ extension Scene {
       return LoginViewController()
     case .register:
       return RegisterViewController()
+    case let .circleContent(vm):
+      return  CircleContentViewController(vm)
     }
   }
 }

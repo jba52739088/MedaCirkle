@@ -33,6 +33,10 @@ extension UIColor {
   static let badgeRed = "#FF0001".color
   static let disableBtn = "#CDCFD2".color
   static let optionCheckBtnBorder = "#D8DBE5".color
+  static let separator = "#D8DBE5".color
   static let grayBlue = "#EDF3FD".color
   static let textBlue = "#16B2E5".color
+  static let timeGray = "#6F6F6F".color
+  static let dotBlack = "#363636".color
+  static let tagBlue = "#D3EDFD".color
 }

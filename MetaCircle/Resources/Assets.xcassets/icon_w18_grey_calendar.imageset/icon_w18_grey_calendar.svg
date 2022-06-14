@@ -1,0 +1,20 @@
+<svg id="icon_w18_grey_calendar" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19">
+  <g id="bg" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="18" height="19" stroke="none"/>
+    <rect x="0.5" y="0.5" width="17" height="18" fill="none"/>
+  </g>
+  <line id="Line_167" data-name="Line 167" x2="0.651" transform="translate(5.5 12.139)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_447" data-name="Line 447" x2="0.651" transform="translate(8.5 12.139)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_460" data-name="Line 460" x2="0.651" transform="translate(11.5 12.139)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_460-2" data-name="Line 460" x2="0.651" transform="translate(11.5 12.139)" fill="none" stroke="#7c849b" stroke-linecap="round" stroke-width="1.5"/>
+  <g id="Path_9991" data-name="Path 9991" transform="translate(1 4)" fill="none">
+    <path d="M2,0H14a2.081,2.081,0,0,1,2,2.154v9.692A2.081,2.081,0,0,1,14,14H2a2.081,2.081,0,0,1-2-2.154V2.154A2.081,2.081,0,0,1,2,0Z" stroke="none"/>
+    <path d="M 2.044621467590332 2.000000953674316 C 2.02734375 2.02219295501709 2 2.070504188537598 2 2.153850555419922 L 2 11.84615039825439 C 2 11.92949676513672 2.02734375 11.97780799865723 2.044621467590332 12 L 13.95537853240967 12 C 13.97265625 11.97780799865723 14 11.92949676513672 14 11.84615039825439 L 14 2.153850555419922 C 14 2.070504188537598 13.97265625 2.02219295501709 13.95537853240967 2.000000953674316 L 2.044621467590332 2.000000953674316 M 2 9.5367431640625e-07 L 14 9.5367431640625e-07 C 15.10457038879395 9.5367431640625e-07 16 0.9643106460571289 16 2.153850555419922 L 16 11.84615039825439 C 16 13.03569030761719 15.10457038879395 14 14 14 L 2 14 C 0.8954296112060547 14 0 13.03569030761719 0 11.84615039825439 L 0 2.153850555419922 C 0 0.9643106460571289 0.8954296112060547 9.5367431640625e-07 2 9.5367431640625e-07 Z" stroke="none" fill="#58abe1"/>
+  </g>
+  <rect id="Rectangle_4425" data-name="Rectangle 4425" width="14" height="2" rx="1" transform="translate(2 8)" fill="#58abe1"/>
+  <line id="Line_463" data-name="Line 463" x2="0.651" transform="translate(5.5 12.139)" fill="none" stroke="#58abe1" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_464" data-name="Line 464" x2="0.651" transform="translate(8.5 12.139)" fill="none" stroke="#58abe1" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_465" data-name="Line 465" x2="0.651" transform="translate(11.5 12.139)" fill="none" stroke="#58abe1" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_466" data-name="Line 466" y1="2" transform="translate(5.5 2.5)" fill="none" stroke="#58abe1" stroke-linecap="round" stroke-width="2"/>
+  <line id="Line_467" data-name="Line 467" y1="2" transform="translate(12.5 2.5)" fill="none" stroke="#58abe1" stroke-linecap="round" stroke-width="2"/>
+</svg>

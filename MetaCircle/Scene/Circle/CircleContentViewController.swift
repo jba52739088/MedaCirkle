@@ -12,8 +12,9 @@ import RxCocoa
 
 class CircleContentViewController: BaseViewController {
 
-  let joinedLabel = UILabel()
-  let sortButton = UIButton(type: .custom)
+  var shortTopHeightConstraint: Constraint?
+
+  let shortTopView = UIView()
   let tableView = UITableView()
 
   let viewModel: CircleContentViewModel
@@ -39,67 +40,70 @@ class CircleContentViewController: BaseViewController {
   }
 
   private func configView() {
-    view.backgroundColor = .clear
+    view.normalBackgroundGradient()
 
-    joinedLabel.do {
+    shortTopView.do {
       view.addSubview($0)
-      $0.leadingToSuperview(offset: 18)
-      $0.topToSuperview(offset: 16)
-    }
-
-    sortButton.do {
-      view.addSubview($0)
-      $0.rightToSuperview(offset: -15, usingSafeArea: true)
-      $0.centerY(to: joinedLabel)
-      $0.setImage(R.image.icon_down_01(), for: .normal)
-      $0.semanticContentAttribute = .forceRightToLeft
-      $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 2.5, bottom: 0, right: -2.5)
-      $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: -2.5, bottom: 0, right: 2.5)
-      $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 2.5, bottom: 0, right: 2.5)
+      $0.backgroundColor = .normalLightBg
+      $0.rightToSuperview()
+      $0.leftToSuperview()
+      $0.topToSuperview()
+      self.shortTopHeightConstraint = $0.height(50)
     }
 
     tableView.do {
       view.addSubview($0)
       $0.backgroundColor = .clear
-      $0.topToBottom(of: joinedLabel, offset: 15)
-      $0.leadingToSuperview(offset: 17.5)
-      $0.rightToSuperview(offset: -17.5)
+      $0.topToBottom(of: shortTopView, offset: 0)
+      $0.leadingToSuperview()
+      $0.rightToSuperview()
       $0.bottomToSuperview()
       $0.separatorColor = .clear
-      $0.register(CircleCell.self, forCellReuseIdentifier: "Cell")
+      $0.register(CircleContentTopCell.self, forCellReuseIdentifier: "topCell")
+      $0.register(CircleContentCategoryCell.self, forCellReuseIdentifier: "categoryCell")
+      $0.register(CircleContentPinCell.self, forCellReuseIdentifier: "pinCell")
+      $0.register(CircleContentCell.self, forCellReuseIdentifier: "cell")
     }
   }
 
   private func bindViewModel() {
-    joinedLabel.attributedText = viewModel.joinedCountAttributedString
-    sortButton.setAttributedTitle(viewModel.sortLabelAttributedString, for: .normal)
-
-    sortButton.rx.tap
-      .subscribe(onNext: { [weak self] in
-        guard let self = self,
-        let btnImgView = self.sortButton.imageView
-        else { return }
-        btnImgView.transform = btnImgView.transform.rotated(by: .pi)
-      })
-      .disposed(by: disposeBag)
-
-    viewModel.dataRelay
-      .map { $0.compactMap { CircleCellViewModel(data: $0) }}
+    viewModel.cellVMsRelay
+//      .map { $0.compactMap { CircleContentTopCellViewModel(data: $0) }}
       .bind(to: tableView.rx.items) { (tableView, row, element) in
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CircleCell
-        cell.viewModel = element
-        return cell
+        switch element.type {
+        case .top:
+          if let cell = tableView.dequeueReusableCell(withIdentifier: "topCell") as? CircleContentTopCell {
+            cell.viewModel = element
+            return cell
+          }
+        case .category:
+          if let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") as? CircleContentCategoryCell {
+            cell.viewModel = element
+            return cell
+          }
+        case .pin:
+          if let cell = tableView.dequeueReusableCell(withIdentifier: "pinCell") as? CircleContentPinCell {
+            cell.viewModel = element
+            return cell
+          }
+        default:
+          if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CircleContentCell {
+            cell.viewModel = element
+            return cell
+          }
+        }
+        return UITableViewCell()
       }
       .disposed(by: disposeBag)
 
-    tableView
-      .rx.setDelegate(self)
-      .disposed(by: disposeBag)
+//    tableView
+//      .rx.setDelegate(self)
+//      .disposed(by: disposeBag)
   }
 }
 
-extension CircleContentViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 88
-  }
-}
+//extension CircleContentViewController: UITableViewDelegate {
+//  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//    return 88
+//  }
+//}

@@ -19,6 +19,7 @@ internal enum Scene {
   case verify(VerifyViewModel)
   case createCircle
   case circleCreateProfile
+  case circleContent(CircleContentViewModel)
 //  #if DEBUG
 //  case debug
 //  #endif
@@ -37,7 +38,8 @@ extension Scene: Equatable {
          (.forgetPassword, .forgetPassword),
          (.resetPassword, .resetPassword),
          (.createCircle, .createCircle),
-         (.circleCreateProfile, .circleCreateProfile):
+         (.circleCreateProfile, .circleCreateProfile),
+         (.circleContent, .circleContent):
     return true
 //    case let (.section(s1, _, _), .section(s2, _, _)):
 //      return s1.isEqualTo(s2)

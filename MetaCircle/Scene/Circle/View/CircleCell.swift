@@ -37,10 +37,12 @@ class CircleCell: TableViewCell<CircleCellViewModel> {
 
   override func setup() {
     self.backgroundColor = .clear
+    self.selectionStyle = .none
 
     container.do {
       $0.translatesAutoresizingMaskIntoConstraints = false
       contentView.addSubview($0)
+      $0.height(80, relation: .equalOrGreater)
       $0.topToSuperview()
       $0.leftToSuperview()
       $0.rightToSuperview()
