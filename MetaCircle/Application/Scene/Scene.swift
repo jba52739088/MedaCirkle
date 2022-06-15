@@ -20,6 +20,7 @@ internal enum Scene {
   case createCircle
   case circleCreateProfile
   case circleContent(CircleContentViewModel)
+  case circle(CircleViewModel)
 //  #if DEBUG
 //  case debug
 //  #endif
@@ -47,6 +48,9 @@ extension Scene: Equatable {
       return vm1.model.title == vm2.model.title
     case let (.verify(vm1), .verify(vm2)):
       return vm1.theme.type == vm2.theme.type
+    case let (.circle(vm1), .circle(vm2)):
+        return true
+//      return vm1.theme.type == vm2.theme.type
 //    case let (.inAppBrowser(u1, _), .inAppBrowser(u2, _)):
 //      return u1 == u2
 //    #if DEBUG

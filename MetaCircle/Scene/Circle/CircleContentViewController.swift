@@ -74,6 +74,7 @@ class CircleContentViewController: BaseViewController {
         case .top:
           if let cell = tableView.dequeueReusableCell(withIdentifier: "topCell") as? CircleContentTopCell {
             cell.viewModel = element
+            cell.delegate = self
             return cell
           }
         case .category:
@@ -89,6 +90,7 @@ class CircleContentViewController: BaseViewController {
         default:
           if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CircleContentCell {
             cell.viewModel = element
+            cell.delegate = self
             return cell
           }
         }
@@ -102,8 +104,41 @@ class CircleContentViewController: BaseViewController {
   }
 }
 
-//extension CircleContentViewController: UITableViewDelegate {
-//  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//    return 88
-//  }
-//}
+extension CircleContentViewController: CircleContentTopCellDelegate {
+    func didClickBackButton(in view: CircleContentTopCell) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+//MARK: CircleContentCellDelegate
+
+extension CircleContentViewController: CircleContentCellDelegate {
+    func didClickReadMore(in view: CircleContentCell) {
+//        sceneCoordinator.transit(to: .circle(CircleViewModel()), by: .present(transitionStyle: .coverVertical, animated: true), completion: nil)
+//        self.navigationController?.pushViewController(Scene.circle(CircleViewModel()).viewController(), animated: true)
+        
+        sceneCoordinator.transit(to: .circle(CircleViewModel()), by: .overFullScreen, completion: nil)
+    }
+    
+    func didClickAwesome(in view: CircleContentCell) {
+        
+    }
+    
+    func didClickMenu(in view: CircleContentCell) {
+        
+    }
+    
+    func didClickBookmark(in view: CircleContentCell) {
+        
+    }
+    
+    func didClickShare(in view: CircleContentCell) {
+        
+    }
+    
+    func didClickReply(in view: CircleContentCell) {
+        
+    }
+    
+  
+}

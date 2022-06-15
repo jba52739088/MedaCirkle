@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import RxSwift
-import SwiftRichString
+import UIKit
 
 class CircleContentBaseCellViewModel: TableViewCellViewModel {
 
@@ -29,7 +28,6 @@ class CircleContentBaseCellViewModel: TableViewCellViewModel {
     self.data = data
     self.type = type
   }
-
 }
 
 

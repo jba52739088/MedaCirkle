@@ -52,6 +52,8 @@ extension Scene {
       return RegisterViewController()
     case let .circleContent(vm):
       return  CircleContentViewController(vm)
+    case let .circle(vm):
+      return CircleViewController()
     }
   }
 }

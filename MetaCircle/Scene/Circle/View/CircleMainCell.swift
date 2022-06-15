@@ -8,7 +8,7 @@
 import UIKit
 import TinyConstraints
 
-class CircleCell: TableViewCell<CircleCellViewModel> {
+class CircleMainCell: TableViewCell<CircleMainCellViewModel> {
   let container = UIView().then {
     $0.backgroundColor = .normalLightBg
   }
@@ -117,7 +117,7 @@ class CircleCell: TableViewCell<CircleCellViewModel> {
     badgeView.layer.masksToBounds = true
   }
 
-  override func didUpdate(viewModel: CircleCellViewModel?) {
+  override func didUpdate(viewModel: CircleMainCellViewModel?) {
     guard let viewModel = viewModel else { return }
     avatarImgView.image = viewModel.data.image
     privacyImgView.image = viewModel.data.privacyType.image

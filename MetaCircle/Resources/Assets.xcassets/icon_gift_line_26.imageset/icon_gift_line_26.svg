@@ -1,0 +1,13 @@
+<svg id="icon_gift_line_26" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="bg" fill="none" stroke="rgba(112,112,112,0)" stroke-width="1" opacity="0.454">
+    <rect width="26" height="26" stroke="none"/>
+    <rect x="0.5" y="0.5" width="25" height="25" fill="none"/>
+  </g>
+  <g id="Group_8073" data-name="Group 8073" transform="translate(-795.5 -2649.028)">
+    <rect id="Rectangle_4512" data-name="Rectangle 4512" width="20" height="16" rx="4" transform="translate(798.5 2657.5)" fill="#fff" stroke="#000" stroke-width="1.5"/>
+    <path id="Path_10145" data-name="Path 10145" d="M4.474,5.769A3.089,3.089,0,0,1,2.37,4.2,2.284,2.284,0,0,1,2.3,2.12a3.084,3.084,0,0,1,.65-.9A2.582,2.582,0,0,1,4.748.5,3.053,3.053,0,0,1,7.7,2.8l.847,3.8Z" transform="translate(799.627 2650.056)" fill="#fff" stroke="#000" stroke-width="1.5"/>
+    <path id="Path_10147" data-name="Path 10147" d="M7.922,2.806A3.054,3.054,0,0,1,10.873.5a2.551,2.551,0,0,1,1.764.688,3.15,3.15,0,0,1,.688.933A2.292,2.292,0,0,1,13.25,4.2a3.09,3.09,0,0,1-2.1,1.566l-4.071.839Z" transform="translate(802.264 2650.056)" fill="#fff" stroke="#000" stroke-width="1.5"/>
+    <line id="Line_502" data-name="Line 502" x2="20.338" transform="translate(798.5 2665.5)" fill="none" stroke="#000" stroke-width="1.5"/>
+    <line id="Line_503" data-name="Line 503" y2="15.911" transform="translate(808.5 2657.589)" fill="none" stroke="#000" stroke-width="1.5"/>
+  </g>
+</svg>

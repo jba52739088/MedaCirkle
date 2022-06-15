@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftRichString
+import RxSwift
+import RxRelay
 
 
 class CircleViewModel {
@@ -15,6 +17,7 @@ class CircleViewModel {
     init() {
     }
   }
+    let datasRelay = BehaviorRelay<[Int]>(value: [1])
 
   let theme: Theme
   init(theme: Theme = Theme()) {

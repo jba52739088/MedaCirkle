@@ -530,7 +530,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 97 images.
+  /// This `R.image` struct is generated, and contains static references to 99 images.
   struct image {
     /// Image `Group 5031`.
     static let group5031 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 5031")
@@ -592,6 +592,8 @@ struct R: Rswift.Validatable {
     static let icon_check_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_1")
     /// Image `icon_check_round`.
     static let icon_check_round = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_round")
+    /// Image `icon_close_1_w14`.
+    static let icon_close_1_w14 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_close_1_w14")
     /// Image `icon_colour_tick`.
     static let icon_colour_tick = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_colour_tick")
     /// Image `icon_down_01`.
@@ -608,6 +610,8 @@ struct R: Rswift.Validatable {
     static let icon_gender_male = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_male")
     /// Image `icon_gender_third`.
     static let icon_gender_third = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gender_third")
+    /// Image `icon_gift_line_26`.
+    static let icon_gift_line_26 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_gift_line_26")
     /// Image `icon_header_bell`.
     static let icon_header_bell = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_header_bell")
     /// Image `icon_medal_1`.
@@ -938,6 +942,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_close_1_w14", bundle: ..., traitCollection: ...)`
+    static func icon_close_1_w14(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_close_1_w14, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_colour_tick", bundle: ..., traitCollection: ...)`
     static func icon_colour_tick(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_colour_tick, compatibleWith: traitCollection)
@@ -990,6 +1001,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_gender_third", bundle: ..., traitCollection: ...)`
     static func icon_gender_third(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_gender_third, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_gift_line_26", bundle: ..., traitCollection: ...)`
+    static func icon_gift_line_26(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_gift_line_26, compatibleWith: traitCollection)
     }
     #endif
 

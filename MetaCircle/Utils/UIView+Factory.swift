@@ -89,6 +89,16 @@ extension UIView {
     backButton.addNormalTouch(target, action: action)
     return backButton
   }
+    
+    static func closeButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+      let backButton = UIButton(type: .custom).then {
+        $0.setImage(R.image.icon_close_1_w14(), for: .normal)
+        $0.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        $0.imageView?.contentMode = .scaleAspectFit
+      }
+      backButton.addNormalTouch(target, action: action)
+      return backButton
+    }
 
   static func normalSubmitButton(title: String? = nil, target: Any? = nil,  action: Selector? = nil) -> UIButton {
     let button = UIButton(type: .custom)

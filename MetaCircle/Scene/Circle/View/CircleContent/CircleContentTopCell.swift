@@ -8,6 +8,10 @@
 import UIKit
 import TinyConstraints
 
+protocol CircleContentTopCellDelegate: AnyObject {
+    func didClickBackButton(in view: CircleContentTopCell)
+}
+
 class CircleContentTopCell: CircleContentBaseCell {
   let container = UIView().then {
     $0.backgroundColor = .normalLightBg
@@ -38,6 +42,8 @@ class CircleContentTopCell: CircleContentBaseCell {
   private lazy var calendarButton: UIButton = .circleContentButton(target: self, action: #selector(didTapCalendarButton))
   private lazy var fileButton: UIButton = .circleContentButton(target: self, action: #selector(didTapFileButton))
   private lazy var introButton: UIButton = .circleContentButton(target: self, action: #selector(didTapIntroButton))
+    
+  weak var delegate: CircleContentTopCellDelegate?
 
   override func setup() {
     self.backgroundColor = .clear
@@ -237,7 +243,8 @@ extension CircleContentTopCell {
 
   @objc func didTapBackButton() {
     print("didTapBackButton")
-    sceneCoordinator.dismiss(animated: true, completion: nil)
+//    sceneCoordinator.dismiss(animated: true, completion: nil)
+      self.delegate?.didClickBackButton(in: self)
   }
 
   @objc func didTapSearchButton() {

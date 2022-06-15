@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import SwiftRichString
 
-class CircleCellViewModel: TableViewCellViewModel {
+class CircleMainCellViewModel: TableViewCellViewModel {
 
   struct Theme {
     init() {
@@ -45,7 +45,7 @@ class CircleCellViewModel: TableViewCellViewModel {
   }
 }
 
-extension CircleCellViewModel.Theme {
+extension CircleMainCellViewModel.Theme {
 
 
   var titleTextStyle: StyleProtocol {

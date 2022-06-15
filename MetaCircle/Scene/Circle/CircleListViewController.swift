@@ -66,7 +66,7 @@ class CircleListViewController: BaseViewController {
       $0.rightToSuperview(offset: -17.5)
       $0.bottomToSuperview()
       $0.separatorColor = .clear
-      $0.register(CircleCell.self, forCellReuseIdentifier: "Cell")
+      $0.register(CircleMainCell.self, forCellReuseIdentifier: "Cell")
     }
   }
 
@@ -84,16 +84,16 @@ class CircleListViewController: BaseViewController {
       .disposed(by: disposeBag)
 
     viewModel.dataRelay
-      .map { $0.compactMap { CircleCellViewModel(data: $0) }}
+      .map { $0.compactMap { CircleMainCellViewModel(data: $0) }}
       .bind(to: tableView.rx.items) { (tableView, row, element) in
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CircleCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CircleMainCell
         cell.viewModel = element
         return cell
       }
       .disposed(by: disposeBag)
 
     Observable
-      .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(CircleCellViewModel.self))
+      .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(CircleMainCellViewModel.self))
       .bind { [unowned self] indexPath, model in
 //        self.tableView.deselectRow(at: indexPath, animated: true)
         print("Selected " + model.data.title + " at \(indexPath)")
