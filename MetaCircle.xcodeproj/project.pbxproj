@@ -70,6 +70,8 @@
 		F9A1D78E2858237000A15BEF /* CircleContentPinItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D78D2858237000A15BEF /* CircleContentPinItemViewModel.swift */; };
 		F9A1D79028585FB900A15BEF /* CircleContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D78F28585FB900A15BEF /* CircleContentCell.swift */; };
 		F9A1D79228585FC600A15BEF /* CircleContentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D79128585FC600A15BEF /* CircleContentCellViewModel.swift */; };
+		F9A1D7982858E46B00A15BEF /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7972858E46B00A15BEF /* CircleViewController.swift */; };
+		F9A1D79A2858E59000A15BEF /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7992858E59000A15BEF /* CircleViewModel.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -192,6 +194,8 @@
 		F9A1D78D2858237000A15BEF /* CircleContentPinItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleContentPinItemViewModel.swift; sourceTree = "<group>"; };
 		F9A1D78F28585FB900A15BEF /* CircleContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleContentCell.swift; sourceTree = "<group>"; };
 		F9A1D79128585FC600A15BEF /* CircleContentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleContentCellViewModel.swift; sourceTree = "<group>"; };
+		F9A1D7972858E46B00A15BEF /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		F9A1D7992858E59000A15BEF /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -568,6 +572,8 @@
 				F9EBD2EF2843CFCB00172508 /* CircleListViewModel.swift */,
 				F9A1D76E2852619A00A15BEF /* CircleContentViewController.swift */,
 				F9A1D7702852619E00A15BEF /* CircleContentViewModel.swift */,
+				F9A1D7972858E46B00A15BEF /* CircleViewController.swift */,
+				F9A1D7992858E59000A15BEF /* CircleViewModel.swift */,
 				F9A1D76D2852618C00A15BEF /* View */,
 				F9A1D74E284DBD2C00A15BEF /* CircleCreate */,
 			);
@@ -738,6 +744,7 @@
 			files = (
 				F976C02F283E99E80087567C /* UserDefaultsStore+Preference.swift in Sources */,
 				F976C02C283E94780087567C /* UserDefaultsStore.swift in Sources */,
+				F9A1D7982858E46B00A15BEF /* CircleViewController.swift in Sources */,
 				F976C033283E9E260087567C /* NavigationController.swift in Sources */,
 				F9EBD2F02843CFCB00172508 /* CircleListViewModel.swift in Sources */,
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
@@ -787,6 +794,7 @@
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
 				F9A1D78C2858235A00A15BEF /* CircleContentPinItem.swift in Sources */,
 				F9A1D7662850FE1F00A15BEF /* TopicFeatureViewModel.swift in Sources */,
+				F9A1D79A2858E59000A15BEF /* CircleViewModel.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
 				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
