@@ -24,11 +24,12 @@ class MainViewController: UITabBarController {
     super.viewDidAppear(animated)
     self.tabBar.isTranslucent = false
 
-    if !AppDelegate.shared.didShowInrto {
-//      sceneCoordinator.transit(to: .circleContent(CircleContentViewModel(type: .Created)), by: .overFullScreen, completion: nil)
+          sceneCoordinator.transit(to: .circle(CircleViewModel(data: tempCircleModel)), by: .overFullScreen, completion: nil)
+
+//    if !AppDelegate.shared.didShowInrto {
+//      sceneCoordinator.transit(to: .leading, by: .overFullScreen, completion: nil)
 //        AppDelegate.shared.didShowInrto = true
-//      }
-    }
+//    }
   }
 
   override func viewWillLayoutSubviews() {

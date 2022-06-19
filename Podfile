@@ -9,6 +9,7 @@ target 'MetaCircle' do
   pod 'RxSwift', '~> 6'
   pod 'RxCocoa', '~> 6'
   pod "RxGesture"
+  pod "RxDataSources"
   pod 'SwiftyJSON'
   pod 'R.swift'
   pod 'TinyConstraints', '~> 4.0'

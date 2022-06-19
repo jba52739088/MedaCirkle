@@ -117,7 +117,7 @@ extension CircleContentViewController: CircleContentCellDelegate {
 //        sceneCoordinator.transit(to: .circle(CircleViewModel()), by: .present(transitionStyle: .coverVertical, animated: true), completion: nil)
 //        self.navigationController?.pushViewController(Scene.circle(CircleViewModel()).viewController(), animated: true)
         
-        sceneCoordinator.transit(to: .circle(CircleViewModel()), by: .overFullScreen, completion: nil)
+        sceneCoordinator.transit(to: .circle(CircleViewModel(data: tempCircleModel)), by: .overFullScreen, completion: nil)
     }
     
     func didClickAwesome(in view: CircleContentCell) {
