@@ -7,12 +7,14 @@
 
 import UIKit
 import SwiftRichString
-
+import RxSwift
 
 class RegisterViewModel {
+
   struct Theme {}
 
   let theme = Theme()
+
 
   var registerAttributedString: NSAttributedString {
     return R.string.localizable.register_vc_login_label()

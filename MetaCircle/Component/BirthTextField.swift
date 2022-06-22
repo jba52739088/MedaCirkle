@@ -50,7 +50,7 @@ class BirthTextField: TitleTextField {
 
     txtField.rx.text.orEmpty.changed
       .asObservable()
-      .observe(on: MainScheduler.instance)
+      .observeOn(MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         if $0 == "" || $0 == "YYYY /  MM /  DD /" {
@@ -63,7 +63,7 @@ class BirthTextField: TitleTextField {
 
     txtField.rx.controlEvent(.editingDidEnd)
       .asObservable()
-      .observe(on: MainScheduler.instance)
+      .observeOn(MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         if self.txtField.text == ""

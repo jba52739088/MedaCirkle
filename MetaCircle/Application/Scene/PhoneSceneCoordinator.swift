@@ -109,7 +109,7 @@ internal class PhoneSceneCoordinator: SceneCoordinator {
     _replaceSceneWithCheckPath(scene: _scene, transition: _transition)
       .takeLast(1)
       .asSingle()
-      .observe(on: MainScheduler.instance)
+      .observeOn(MainScheduler.instance)
       .subscribe(onSuccess: { [weak self] scene, transition in
         guard let self = self else {
           completion()

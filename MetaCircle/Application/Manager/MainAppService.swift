@@ -16,6 +16,7 @@ class MainAppService: NSObject, ApplicationService {
 
   static let shared = MainAppService()
 
+  let userSessionRequestManager = UserSessionRequestManager(userSessionManager: UserSessionManager.shared)
   let preferenceManager = PreferenceManager(dataSource: UserDefaultsStore.shared)
   private let isSetupCompletedRelay = BehaviorRelay<Bool>(value: false)
 

@@ -12,6 +12,17 @@
 		64781D01285A13C20075BC09 /* CircleArticleBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64781D00285A13C20075BC09 /* CircleArticleBaseItem.swift */; };
 		64781D03285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64781D02285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift */; };
 		E7E36455985BF0938CB3EF3F /* Pods_MetaCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F48190C9A2F31C65421B61 /* Pods_MetaCircle.framework */; };
+		F9424F722862D9C500D4D0CD /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F712862D9C500D4D0CD /* Globals.swift */; };
+		F9424F742862E99B00D4D0CD /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F732862E99B00D4D0CD /* EnvironmentConfiguration.swift */; };
+		F9424F7628634CB000D4D0CD /* ServerDateFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */; };
+		F9424F7828634E5700D4D0CD /* UserSessionRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7728634E5700D4D0CD /* UserSessionRequestManager.swift */; };
+		F9424F7A28634E8700D4D0CD /* EnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7928634E8700D4D0CD /* EnvironmentManager.swift */; };
+		F9424F7C28634F3D00D4D0CD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7B28634F3D00D4D0CD /* UserProfile.swift */; };
+		F9424F7E2863507700D4D0CD /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7D2863507700D4D0CD /* KeychainStore.swift */; };
+		F9424F80286356F700D4D0CD /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7F286356F600D4D0CD /* UserSessionManager.swift */; };
+		F9424F822863613A00D4D0CD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F812863613A00D4D0CD /* LoadingViewController.swift */; };
+		F9424F842863626500D4D0CD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F832863626500D4D0CD /* LoadingView.swift */; };
+		F9424F862863645D00D4D0CD /* FullScreenLoadingPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F852863645D00D4D0CD /* FullScreenLoadingPresenting.swift */; };
 		F942C22E285D8384005E7374 /* CircleArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C22D285D8384005E7374 /* CircleArticleItem.swift */; };
 		F942C230285D8391005E7374 /* CircleArticleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C22F285D8391005E7374 /* CircleArticleItemViewModel.swift */; };
 		F942C232285D8B6D005E7374 /* ArticleTagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C231285D8B6D005E7374 /* ArticleTagItem.swift */; };
@@ -20,6 +31,7 @@
 		F942C238285DB8C0005E7374 /* CircleArticleTagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C237285DB8C0005E7374 /* CircleArticleTagItem.swift */; };
 		F942C23A285DB8CC005E7374 /* CircleArticleTagItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C239285DB8CC005E7374 /* CircleArticleTagItemViewModel.swift */; };
 		F942C23C285DCD8D005E7374 /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C23B285DCD8D005E7374 /* DynamicCollectionView.swift */; };
+		F942C240285EF847005E7374 /* RestRequestVisitorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942C23F285EF847005E7374 /* RestRequestVisitorType.swift */; };
 		F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973DE45282F93730075FDC2 /* MainViewController.swift */; };
 		F973DE49282F96190075FDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F973DE47282F96180075FDC2 /* LaunchScreen.storyboard */; };
 		F973DE51282F9E470075FDC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F973DE53282F9E470075FDC2 /* Localizable.strings */; };
@@ -55,6 +67,20 @@
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */; };
 		F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */; };
+		F99CE5802862C23A0026FEA3 /* RegisterReSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */; };
+		F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */; };
+		F99CE5842862C62F0026FEA3 /* RegisterSendSMSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */; };
+		F99CE5862862C6960026FEA3 /* RegisterReSendSMSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5852862C6960026FEA3 /* RegisterReSendSMSRequest.swift */; };
+		F99CE5882862C72C0026FEA3 /* RegisterVerifyPhoneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5872862C72C0026FEA3 /* RegisterVerifyPhoneRequest.swift */; };
+		F99CE58D2862D00F0026FEA3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE58C2862D00F0026FEA3 /* APIClient.swift */; };
+		F99CE5902862D0970026FEA3 /* MoyaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE58F2862D0970026FEA3 /* MoyaClient.swift */; };
+		F99CE5932862D0E70026FEA3 /* RestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5922862D0E70026FEA3 /* RestTarget.swift */; };
+		F99CE5952862D1220026FEA3 /* RestTargetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5942862D1220026FEA3 /* RestTargetConfiguration.swift */; };
+		F99CE5972862D2140026FEA3 /* RequestURLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5962862D2140026FEA3 /* RequestURLVisitor.swift */; };
+		F99CE5992862D2E50026FEA3 /* RequestPathVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5982862D2E50026FEA3 /* RequestPathVisitor.swift */; };
+		F99CE59B2862D3BB0026FEA3 /* RequestMethodVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59A2862D3BB0026FEA3 /* RequestMethodVisitor.swift */; };
+		F99CE59D2862D4500026FEA3 /* RequestTaskVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59C2862D4500026FEA3 /* RequestTaskVisitor.swift */; };
+		F99CE59F2862D6980026FEA3 /* RequestHeaderVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59E2862D6980026FEA3 /* RequestHeaderVisitor.swift */; };
 		F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */; };
 		F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */; };
 		F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */; };
@@ -86,6 +112,9 @@
 		F9A1D79228585FC600A15BEF /* CircleContentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D79128585FC600A15BEF /* CircleContentCellViewModel.swift */; };
 		F9A1D7982858E46B00A15BEF /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7972858E46B00A15BEF /* CircleViewController.swift */; };
 		F9A1D79A2858E59000A15BEF /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D7992858E59000A15BEF /* CircleViewModel.swift */; };
+		F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464A2862AAA000559F18 /* RegisterRequest.swift */; };
+		F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464C2862AB2B00559F18 /* RestRequestType.swift */; };
+		F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -150,6 +179,17 @@
 		64781D00285A13C20075BC09 /* CircleArticleBaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleBaseItem.swift; sourceTree = "<group>"; };
 		64781D02285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleBaseItemViewModel.swift; sourceTree = "<group>"; };
 		820ED9B00609B359E48ECD0E /* Pods-MetaCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaCircle.debug.xcconfig"; path = "Target Support Files/Pods-MetaCircle/Pods-MetaCircle.debug.xcconfig"; sourceTree = "<group>"; };
+		F9424F712862D9C500D4D0CD /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		F9424F732862E99B00D4D0CD /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
+		F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFetchable.swift; sourceTree = "<group>"; };
+		F9424F7728634E5700D4D0CD /* UserSessionRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRequestManager.swift; sourceTree = "<group>"; };
+		F9424F7928634E8700D4D0CD /* EnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentManager.swift; sourceTree = "<group>"; };
+		F9424F7B28634F3D00D4D0CD /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F9424F7D2863507700D4D0CD /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		F9424F7F286356F600D4D0CD /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
+		F9424F812863613A00D4D0CD /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F9424F832863626500D4D0CD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F9424F852863645D00D4D0CD /* FullScreenLoadingPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenLoadingPresenting.swift; sourceTree = "<group>"; };
 		F942C22D285D8384005E7374 /* CircleArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleItem.swift; sourceTree = "<group>"; };
 		F942C22F285D8391005E7374 /* CircleArticleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleItemViewModel.swift; sourceTree = "<group>"; };
 		F942C231285D8B6D005E7374 /* ArticleTagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTagItem.swift; sourceTree = "<group>"; };
@@ -158,6 +198,7 @@
 		F942C237285DB8C0005E7374 /* CircleArticleTagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTagItem.swift; sourceTree = "<group>"; };
 		F942C239285DB8CC005E7374 /* CircleArticleTagItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTagItemViewModel.swift; sourceTree = "<group>"; };
 		F942C23B285DCD8D005E7374 /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
+		F942C23F285EF847005E7374 /* RestRequestVisitorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestVisitorType.swift; sourceTree = "<group>"; };
 		F973DE45282F93730075FDC2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F973DE52282F9E470075FDC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F973DE54282F9E4A0075FDC2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -193,6 +234,20 @@
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItemViewModel.swift; sourceTree = "<group>"; };
 		F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItem.swift; sourceTree = "<group>"; };
+		F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReSendMailRequest.swift; sourceTree = "<group>"; };
+		F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerifyMailRequest.swift; sourceTree = "<group>"; };
+		F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendSMSRequest.swift; sourceTree = "<group>"; };
+		F99CE5852862C6960026FEA3 /* RegisterReSendSMSRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReSendSMSRequest.swift; sourceTree = "<group>"; };
+		F99CE5872862C72C0026FEA3 /* RegisterVerifyPhoneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerifyPhoneRequest.swift; sourceTree = "<group>"; };
+		F99CE58C2862D00F0026FEA3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F99CE58F2862D0970026FEA3 /* MoyaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaClient.swift; sourceTree = "<group>"; };
+		F99CE5922862D0E70026FEA3 /* RestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTarget.swift; sourceTree = "<group>"; };
+		F99CE5942862D1220026FEA3 /* RestTargetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTargetConfiguration.swift; sourceTree = "<group>"; };
+		F99CE5962862D2140026FEA3 /* RequestURLVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestURLVisitor.swift; sourceTree = "<group>"; };
+		F99CE5982862D2E50026FEA3 /* RequestPathVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPathVisitor.swift; sourceTree = "<group>"; };
+		F99CE59A2862D3BB0026FEA3 /* RequestMethodVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodVisitor.swift; sourceTree = "<group>"; };
+		F99CE59C2862D4500026FEA3 /* RequestTaskVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTaskVisitor.swift; sourceTree = "<group>"; };
+		F99CE59E2862D6980026FEA3 /* RequestHeaderVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderVisitor.swift; sourceTree = "<group>"; };
 		F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewController.swift; sourceTree = "<group>"; };
 		F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewModel.swift; sourceTree = "<group>"; };
 		F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
@@ -224,6 +279,9 @@
 		F9A1D79128585FC600A15BEF /* CircleContentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleContentCellViewModel.swift; sourceTree = "<group>"; };
 		F9A1D7972858E46B00A15BEF /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		F9A1D7992858E59000A15BEF /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		F9A2464A2862AAA000559F18 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		F9A2464C2862AB2B00559F18 /* RestRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestType.swift; sourceTree = "<group>"; };
+		F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendMailRequest.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +406,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F942C23D285EF816005E7374 /* RestRequestType */ = {
+			isa = PBXGroup;
+			children = (
+				F942C23E285EF839005E7374 /* Visitor */,
+				F9A2464C2862AB2B00559F18 /* RestRequestType.swift */,
+				F9A2464E2862B98700559F18 /* Register */,
+			);
+			path = RestRequestType;
+			sourceTree = "<group>";
+		};
+		F942C23E285EF839005E7374 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				F942C23F285EF847005E7374 /* RestRequestVisitorType.swift */,
+				F99CE5962862D2140026FEA3 /* RequestURLVisitor.swift */,
+				F99CE5982862D2E50026FEA3 /* RequestPathVisitor.swift */,
+				F99CE59A2862D3BB0026FEA3 /* RequestMethodVisitor.swift */,
+				F99CE59E2862D6980026FEA3 /* RequestHeaderVisitor.swift */,
+				F99CE59C2862D4500026FEA3 /* RequestTaskVisitor.swift */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
 		F973DE43282F91FC0075FDC2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,10 +483,52 @@
 			children = (
 				F976C027283E91820087567C /* MainAppService.swift */,
 				F976C029283E941A0087567C /* PreferenceManager.swift */,
+				F9424F732862E99B00D4D0CD /* EnvironmentConfiguration.swift */,
+				F9424F7928634E8700D4D0CD /* EnvironmentManager.swift */,
 				F976C02B283E94780087567C /* UserDefaultsStore.swift */,
 				F976C02E283E99E80087567C /* UserDefaultsStore+Preference.swift */,
+				F9424F7728634E5700D4D0CD /* UserSessionRequestManager.swift */,
+				F9424F7F286356F600D4D0CD /* UserSessionManager.swift */,
+				F9424F7D2863507700D4D0CD /* KeychainStore.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		F99CE58A2862CFD70026FEA3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F99CE58B2862CFF30026FEA3 /* Client */,
+				F99CE58E2862D06D0026FEA3 /* Restful */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F99CE58B2862CFF30026FEA3 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				F99CE58C2862D00F0026FEA3 /* APIClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		F99CE58E2862D06D0026FEA3 /* Restful */ = {
+			isa = PBXGroup;
+			children = (
+				F99CE58F2862D0970026FEA3 /* MoyaClient.swift */,
+				F99CE5912862D0DC0026FEA3 /* Model */,
+			);
+			path = Restful;
+			sourceTree = "<group>";
+		};
+		F99CE5912862D0DC0026FEA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F99CE5922862D0E70026FEA3 /* RestTarget.swift */,
+				F99CE5942862D1220026FEA3 /* RestTargetConfiguration.swift */,
+				F942C23D285EF816005E7374 /* RestRequestType */,
+				F9424F7B28634F3D00D4D0CD /* UserProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F9A1D74E284DBD2C00A15BEF /* CircleCreate */ = {
@@ -451,6 +574,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F9A2464E2862B98700559F18 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */,
+				F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */,
+				F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */,
+				F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */,
+				F99CE5852862C6960026FEA3 /* RegisterReSendSMSRequest.swift */,
+				F99CE5872862C72C0026FEA3 /* RegisterVerifyPhoneRequest.swift */,
+				F9A2464A2862AAA000559F18 /* RegisterRequest.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		F9CDD193282F88CD002CEEEA = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +618,7 @@
 				F9D6BB3528340FA4005D57F2 /* Component */,
 				F9D6BB272832AA9F005D57F2 /* Utils */,
 				F9A1D75D28508E0700A15BEF /* Model */,
+				F99CE58A2862CFD70026FEA3 /* DataSource */,
 			);
 			path = MetaCircle;
 			sourceTree = "<group>";
@@ -524,7 +662,11 @@
 				F9D6BB38283411F1005D57F2 /* BaseViewController.swift */,
 				F9D6BB3A28341837005D57F2 /* TopGradientViewController.swift */,
 				F976C032283E9E260087567C /* NavigationController.swift */,
+				F9424F712862D9C500D4D0CD /* Globals.swift */,
 				F9EBD2DE283FC9E000172508 /* GlobalVariables.swift */,
+				F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */,
+				F9424F812863613A00D4D0CD /* LoadingViewController.swift */,
+				F9424F852863645D00D4D0CD /* FullScreenLoadingPresenting.swift */,
 				F9D87F6C284666510033343F /* View */,
 			);
 			path = Common;
@@ -615,6 +757,7 @@
 		F9D87F6C284666510033343F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9424F832863626500D4D0CD /* LoadingView.swift */,
 				F9D87F6A2846664A0033343F /* TableViewCell.swift */,
 				F9A1D7572850788300A15BEF /* CollectionViewCell.swift */,
 			);
@@ -650,7 +793,7 @@
 				F9CDD198282F88CD002CEEEA /* Sources */,
 				F9CDD199282F88CD002CEEEA /* Frameworks */,
 				F9CDD19A282F88CD002CEEEA /* Resources */,
-				88BEE5A08B396867278D9D32 /* [CP] Embed Pods Frameworks */,
+				0AB0BDB87A19F66C82D2BC04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -733,7 +876,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		88BEE5A08B396867278D9D32 /* [CP] Embed Pods Frameworks */ = {
+		0AB0BDB87A19F66C82D2BC04 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -802,18 +945,23 @@
 			files = (
 				F976C02F283E99E80087567C /* UserDefaultsStore+Preference.swift in Sources */,
 				F976C02C283E94780087567C /* UserDefaultsStore.swift in Sources */,
+				F99CE5842862C62F0026FEA3 /* RegisterSendSMSRequest.swift in Sources */,
 				F9A1D7982858E46B00A15BEF /* CircleViewController.swift in Sources */,
 				F942C236285DAED7005E7374 /* LeftAlignedFlowLayout.swift in Sources */,
 				F976C033283E9E260087567C /* NavigationController.swift in Sources */,
 				F9EBD2F02843CFCB00172508 /* CircleListViewModel.swift in Sources */,
+				F99CE59B2862D3BB0026FEA3 /* RequestMethodVisitor.swift in Sources */,
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
 				F9D87F7028466C440033343F /* CircleMainCell.swift in Sources */,
 				F9A1D7612850908D00A15BEF /* TempTopicModel.swift in Sources */,
+				F9424F742862E99B00D4D0CD /* EnvironmentConfiguration.swift in Sources */,
 				F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */,
+				F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */,
 				F9A1D78228577AD900A15BEF /* CircleContentCategoryCell.swift in Sources */,
 				F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */,
 				F9A1D7792852F62000A15BEF /* CircleContentBaseCellViewModel.swift in Sources */,
 				F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */,
+				F99CE5882862C72C0026FEA3 /* RegisterVerifyPhoneRequest.swift in Sources */,
 				F976C028283E91820087567C /* MainAppService.swift in Sources */,
 				F976C01D283E80000087567C /* PhoneSceneCoordinator.swift in Sources */,
 				F976C01B283E78C80087567C /* Scene.swift in Sources */,
@@ -822,12 +970,16 @@
 				F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */,
 				F976C019283E76DC0087567C /* SceneTransition.swift in Sources */,
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
+				F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */,
+				F99CE5972862D2140026FEA3 /* RequestURLVisitor.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
 				F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */,
 				F9A1D7642850FE1100A15BEF /* TopicFeatureViewController.swift in Sources */,
 				F9D87F722849DC520033343F /* CircleCreateViewController.swift in Sources */,
 				F9EBD2EE2843CEB800172508 /* CircleListViewController.swift in Sources */,
 				F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */,
+				F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */,
+				F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
@@ -839,21 +991,30 @@
 				64781CFF285A0B790075BC09 /* CircleArticleHeaderItemViewModel.swift in Sources */,
 				F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */,
 				F9D6BB3D28341AC0005D57F2 /* UIView+Factory.swift in Sources */,
+				F99CE5932862D0E70026FEA3 /* RestTarget.swift in Sources */,
 				F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */,
+				F9424F80286356F700D4D0CD /* UserSessionManager.swift in Sources */,
 				F976C021283E89CB0087567C /* PhoneRootViewController.swift in Sources */,
 				F9D6BB39283411F1005D57F2 /* BaseViewController.swift in Sources */,
 				F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */,
 				F973DE642830B84C0075FDC2 /* HomeViewController.swift in Sources */,
 				F9D6BB292832B487005D57F2 /* Int+DataSize.swift in Sources */,
+				F9424F7628634CB000D4D0CD /* ServerDateFetchable.swift in Sources */,
 				F9A1D7732852EBE000A15BEF /* CircleContentBaseCell.swift in Sources */,
 				F9A1D76B2851056D00A15BEF /* TopicFeatureItemViewModel.swift in Sources */,
+				F9424F722862D9C500D4D0CD /* Globals.swift in Sources */,
 				F9A1D76C2851056D00A15BEF /* TopicFeatureItem.swift in Sources */,
 				F9A1D78428577B1E00A15BEF /* CircleContentCategoryCellViewModel.swift in Sources */,
 				F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */,
 				F9A1D76F2852619A00A15BEF /* CircleContentViewController.swift in Sources */,
 				F9A1D7752852EC0400A15BEF /* CircleContentTopCellViewModel.swift in Sources */,
+				F99CE59D2862D4500026FEA3 /* RequestTaskVisitor.swift in Sources */,
+				F9424F7C28634F3D00D4D0CD /* UserProfile.swift in Sources */,
 				F9A1D79028585FB900A15BEF /* CircleContentCell.swift in Sources */,
+				F99CE59F2862D6980026FEA3 /* RequestHeaderVisitor.swift in Sources */,
+				F9424F7A28634E8700D4D0CD /* EnvironmentManager.swift in Sources */,
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
+				F99CE5902862D0970026FEA3 /* MoyaClient.swift in Sources */,
 				64781D01285A13C20075BC09 /* CircleArticleBaseItem.swift in Sources */,
 				F9A1D78C2858235A00A15BEF /* CircleContentPinItem.swift in Sources */,
 				F9A1D7662850FE1F00A15BEF /* TopicFeatureViewModel.swift in Sources */,
@@ -862,6 +1023,7 @@
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
 				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
+				F9424F7E2863507700D4D0CD /* KeychainStore.swift in Sources */,
 				F976C01F283E88300087567C /* Extension+Array.swift in Sources */,
 				F9EBD2E1283FCB2B00172508 /* BirthTextField.swift in Sources */,
 				F9EBD2EA2843435000172508 /* CircleMainViewModel.swift in Sources */,
@@ -874,19 +1036,25 @@
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
 				F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */,
+				F942C240285EF847005E7374 /* RestRequestVisitorType.swift in Sources */,
 				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
 				F942C23A285DB8CC005E7374 /* CircleArticleTagItemViewModel.swift in Sources */,
 				64781D03285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift in Sources */,
 				F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */,
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
+				F99CE5992862D2E50026FEA3 /* RequestPathVisitor.swift in Sources */,
 				F973DE682830BD110075FDC2 /* CircleMainViewController.swift in Sources */,
 				F9A1D78A2857A4DF00A15BEF /* TempCircleContentModel.swift in Sources */,
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
+				F9424F7828634E5700D4D0CD /* UserSessionRequestManager.swift in Sources */,
 				F942C23C285DCD8D005E7374 /* DynamicCollectionView.swift in Sources */,
 				F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */,
 				F9A1D7712852619F00A15BEF /* CircleContentViewModel.swift in Sources */,
+				F9424F822863613A00D4D0CD /* LoadingViewController.swift in Sources */,
 				F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */,
+				F99CE5802862C23A0026FEA3 /* RegisterReSendMailRequest.swift in Sources */,
 				F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */,
+				F99CE5952862D1220026FEA3 /* RestTargetConfiguration.swift in Sources */,
 				F973DE662830BD040075FDC2 /* PublicViewController.swift in Sources */,
 				F9D87F6E284668CA0033343F /* CircleMainCellViewModel.swift in Sources */,
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
@@ -896,6 +1064,7 @@
 				F9A1D7772852F5D300A15BEF /* CircleContentTopCell.swift in Sources */,
 				F9A1D7582850788300A15BEF /* CollectionViewCell.swift in Sources */,
 				F9A1D79228585FC600A15BEF /* CircleContentCellViewModel.swift in Sources */,
+				F99CE5862862C6960026FEA3 /* RegisterReSendSMSRequest.swift in Sources */,
 				F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */,
 				F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */,
 				F942C238285DB8C0005E7374 /* CircleArticleTagItem.swift in Sources */,
@@ -904,6 +1073,9 @@
 				F942C234285D8BCE005E7374 /* ArticleTagItemViewModel.swift in Sources */,
 				F942C22E285D8384005E7374 /* CircleArticleItem.swift in Sources */,
 				F976C00D2838C9D10087567C /* RegisterViewModel.swift in Sources */,
+				F9424F862863645D00D4D0CD /* FullScreenLoadingPresenting.swift in Sources */,
+				F99CE58D2862D00F0026FEA3 /* APIClient.swift in Sources */,
+				F9424F842863626500D4D0CD /* LoadingView.swift in Sources */,
 				F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

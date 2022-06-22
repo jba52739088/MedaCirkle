@@ -24,7 +24,7 @@ class MainViewController: UITabBarController {
     super.viewDidAppear(animated)
     self.tabBar.isTranslucent = false
 
-          sceneCoordinator.transit(to: .circle(CircleViewModel(data: tempCircleModel)), by: .overFullScreen, completion: nil)
+//          sceneCoordinator.transit(to: .circle(CircleViewModel(data: tempCircleModel)), by: .overFullScreen, completion: nil)
 
 //    if !AppDelegate.shared.didShowInrto {
 //      sceneCoordinator.transit(to: .leading, by: .overFullScreen, completion: nil)

@@ -7,8 +7,12 @@
 
 import UIKit
 import TinyConstraints
+import RxSwift
+import RxCocoa
 
 class RegisterViewController: TopGradientViewController {
+
+  var loadingVC: LoadingViewController = LoadingViewController()
 
   private let backButton = UIButton().then {
     $0.setImage(R.image.icon_arrow_left_w10_h16(), for: .normal)
@@ -184,6 +188,7 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: midView)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
+      $0.txtField.keyboardType = .asciiCapable
     }
 
     pwdTxtField.do {
@@ -192,6 +197,7 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: mailTxtField, offset: 1)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
+      $0.txtField.keyboardType = .asciiCapable
     }
 
     rePwdTxtField.do {
@@ -200,20 +206,22 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: pwdTxtField, offset: 15)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
+      $0.txtField.keyboardType = .asciiCapable
     }
 
     submitButton.do {
       view.addSubview($0)
       $0.width(240)
       $0.height(44)
-      $0.backgroundColor = .btnGray
+//      $0.backgroundColor = .btnGray
       $0.topToBottom(of: rePwdTxtField, offset: 15)
       $0.centerXToSuperview()
       $0.layer.cornerRadius = 22
       $0.layer.masksToBounds = true
       $0.addTarget(self, action: #selector(didTapSubmit), for: .touchUpInside)
+      $0.setBackgroundImage(UIImage.withColor(.btnBlue), for: .normal)
+      $0.setBackgroundImage(UIImage.withColor(.btnGray), for: .disabled)
     }
-
   }
 
   private func bindViewModel() {
@@ -234,6 +242,19 @@ class RegisterViewController: TopGradientViewController {
     submitButton.setAttributedTitle(viewModel.enableLoginAttributedString, for: .normal)
     submitButton.setAttributedTitle(viewModel.disableLoginAttributedString, for: .disabled)
     submitButton.isEnabled = false
+
+    Observable.combineLatest(mailTxtField.txtField.rx.text.orEmpty,
+                             pwdTxtField.txtField.rx.text.orEmpty,
+                             rePwdTxtField.txtField.rx.text.orEmpty) {
+      mailTxt, pwdTxt, rePwdTxt -> Bool in
+      if mailTxt != "" &&  pwdTxt != "" &&  rePwdTxt != "" {
+        return pwdTxt != rePwdTxt ? false : true
+      }
+      return false
+    }
+    .map { $0 }
+    .bind(to: submitButton.rx.isEnabled)
+    .disposed(by: disposeBag)
   }
 
   @objc
@@ -271,5 +292,23 @@ class RegisterViewController: TopGradientViewController {
   @objc
   private func didTapSubmit() {
     print("didTapSubmit")
+
+    showLoading()
+    
+    MainAppService.shared
+      .userSessionRequestManager
+      .registerSendMail(mail: "jba52739088@gmail.com", password: "qwerty123")
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading()
+        print("reponseData: \(reponseData)")
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
   }
 }
+
+extension RegisterViewController: FullScreenLoadingPresenting { }

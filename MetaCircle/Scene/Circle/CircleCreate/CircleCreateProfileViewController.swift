@@ -172,7 +172,7 @@ class CircleCreateProfileViewController: BaseViewController {
 
 //  private func configTextViewEvent() {
 //    textView.rx.didBeginEditing
-//      .observe(on: MainScheduler.instance)
+//      .observeOn(MainScheduler.instance)
 //      .subscribe(onNext: { [weak self] in
 //        guard let self = self else { return }
 //        if self.textView.attributedText == self.viewModel.feedbackPlaceholderAttributedString {
@@ -183,7 +183,7 @@ class CircleCreateProfileViewController: BaseViewController {
 //      .disposed(by: disposeBag)
 //
 //    textView.rx.didChange
-//      .observe(on: MainScheduler.instance)
+//      .observeOn(MainScheduler.instance)
 //      .subscribe(onNext: { [weak self] in
 //        guard let self = self else { return }
 //
@@ -191,7 +191,7 @@ class CircleCreateProfileViewController: BaseViewController {
 //      .disposed(by: disposeBag)
 //
 //    textView.rx.text.orEmpty.changed
-//      .observe(on: MainScheduler.instance)
+//      .observeOn(MainScheduler.instance)
 //      .subscribe(onNext: { [weak self] _ in
 //        guard let self = self else { return }
 //        self.configSubmitButtonState()

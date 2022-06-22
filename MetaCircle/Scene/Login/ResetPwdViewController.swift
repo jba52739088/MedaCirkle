@@ -112,7 +112,7 @@ class ResetPwdViewController: TopGradientViewController {
 
     pwdTextField.txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
-      .observe(on: MainScheduler.instance)
+      .observeOn(MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.submitButton.isEnabled = true
