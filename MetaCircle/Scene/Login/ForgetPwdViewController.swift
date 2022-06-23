@@ -101,7 +101,7 @@ class ForgetPwdViewController: TopGradientViewController {
 
     phoneTextField.txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.submitButton.isEnabled = true
@@ -121,7 +121,7 @@ extension ForgetPwdViewController {
 
   @objc func didTapSubmitButton() {
     print("didTapSubmitButton")
-    sceneCoordinator.transit(to: .verify(VerifyViewModel(theme: VerifyViewModel.Theme(pageType: .Phone))), by: .overFullScreen, completion: nil)
+//    sceneCoordinator.transit(to: .verify(VerifyViewModel(theme: VerifyViewModel.Theme(pageType: .Phone))), by: .overFullScreen, completion: nil)
   }
 
 }

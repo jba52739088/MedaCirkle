@@ -53,7 +53,7 @@ class CircleArticleTagItem: CircleArticleBaseItem {
     guard let viewModel = viewModel as? CircleArticleTagItemViewModel else { return }
 
     viewModel.itemRelay
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .bind(to: collectionView.rx.items) { (collectionView, row, element) in
         let indexPath = IndexPath(row: row, section: 0)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ArticleTagItem
@@ -64,7 +64,7 @@ class CircleArticleTagItem: CircleArticleBaseItem {
 
 
     collectionView.rx.observe(CGSize.self , "contentSize")
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { _contentSize in
         self.layoutIfNeeded()
       }).disposed(by: disposeBag)

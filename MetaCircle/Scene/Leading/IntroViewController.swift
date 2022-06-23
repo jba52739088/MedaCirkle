@@ -100,7 +100,7 @@ class IntroViewController: BaseViewController {
     bindViewModel()
 
     IntroViewController.dismissIntroRelay
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: {[weak self] _ in
         guard let self = self else { return }
         self.dismiss(animated: false)

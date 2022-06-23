@@ -198,7 +198,7 @@ class TitleTextField: UIView {
 
     txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.txtBgView.applyGradient(isVertical: false, colorArray: [.tabbarGradientYellow, .tabbarGradientPurple, .tabbarGradientBlue])
@@ -208,7 +208,7 @@ class TitleTextField: UIView {
 
     txtField.rx.controlEvent(.editingDidEnd)
       .asObservable()
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         self.txtBgView.removeGradient()

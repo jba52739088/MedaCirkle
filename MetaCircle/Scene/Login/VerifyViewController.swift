@@ -11,6 +11,8 @@ import RxCocoa
 
 class VerifyViewController: TopGradientViewController {
 
+  var loadingVC: LoadingViewController = LoadingViewController()
+
   /// 重新傳送驗證碼
   private let titleLabel = UILabel().then { $0.numberOfLines = 0 }
   private let subtitleLabel = UILabel().then { $0.numberOfLines = 0 }
@@ -30,7 +32,7 @@ class VerifyViewController: TopGradientViewController {
 
   /// Mail, Phone
   private let verityContainer = UIView()
-  private var codeViews: [UIView] = []
+  private var codeViews: [NumberTextField] = []
 
   /// PhoneEntry
   private let phoneContainer = UIView()
@@ -43,6 +45,7 @@ class VerifyViewController: TopGradientViewController {
   private let birthTextField = BirthTextField()
 
   let viewModel: VerifyViewModel
+  var code: String = ""
 
   init(_ viewModel: VerifyViewModel) {
     self.viewModel = viewModel
@@ -62,7 +65,6 @@ class VerifyViewController: TopGradientViewController {
 
     configView()
     bindViewModel()
-    configHintTimer()
   }
 
   private func configView() {
@@ -71,28 +73,60 @@ class VerifyViewController: TopGradientViewController {
       setVerifyMailView()
     case .PhoneEntry:
       setVerifyPhoneView()
-    case .Succeed:
+    case .VerifySucceed:
       setVerifySucceedView()
     }
   }
 
   private func bindViewModel() {
+    var userInfo: String = ""
+    let countDown: Int = Int(viewModel.data.cooldown) ?? 0
+    if let mailData = viewModel.data as? VerifyMailModel {
+      userInfo = mailData.mail
+    } else if let phoneData = viewModel.data as? VerifyPhoneModel {
+      userInfo = phoneData.phone
+    }
+
     titleLabel.attributedText = viewModel.titleAttributedString
     subtitleLabel.attributedText = viewModel.subtitleAttributedString
-    infoLabel.attributedText = viewModel.infoAttributedString(info: "bpo26693@jeoce.com")
+    infoLabel.attributedText = viewModel.infoAttributedString(info: userInfo)
     phoneTextField.placeholder = viewModel.phonePlaceholderAttributedString
     nameTextField.title = viewModel.nameAttributedString
     genderTextField.title = viewModel.genderAttributedString
     genderTextField.placeholder = viewModel.genderPlaceholderAttributedString
     birthTextField.title = viewModel.birthAttributedString
     birthTextField.placeholder = viewModel.birthPlaceholderAttributedString
+    configHintTimer(second: countDown)
+
+    if (viewModel.theme.type == .Mail ||  viewModel.theme.type == .Phone) && codeViews.count == 5 {
+      Observable.combineLatest(codeViews[0].txtField.rx.text.orEmpty,
+                               codeViews[1].txtField.rx.text.orEmpty,
+                               codeViews[2].txtField.rx.text.orEmpty,
+                               codeViews[3].txtField.rx.text.orEmpty,
+                               codeViews[4].txtField.rx.text.orEmpty) {
+        txt1, txt2, txt3, txt4, txt5 -> Bool in
+        if txt1 != "" &&  txt2 != "" &&  txt3 != "" && txt4 != "" && txt5 != "" {
+          self.code = txt1 + txt2 + txt3 + txt4 + txt5
+          return true
+        }
+        return false
+      }
+      .map { $0 }
+      .bind(to: confirmButton.rx.isEnabled)
+      .disposed(by: disposeBag)
+    } else if viewModel.theme.type == .PhoneEntry {
+      phoneTextField.txtField.rx.text.orEmpty
+      .map { $0 != "" }
+      .bind(to: confirmButton.rx.isEnabled)
+      .disposed(by: disposeBag)
+    }
   }
 
-  private func configHintTimer() {
+  private func configHintTimer(second: Int) {
     self.hintLabel.attributedText = self.viewModel.hintAttributedString(info: "05:00")
     self.hintLabel.isHidden = false
     self.hintResendLabel.isHidden = true
-    let countdown = 10
+    let countdown = second - 1
     Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
       .map { countdown - $0 }
       .takeUntil(.inclusive, predicate: { $0 == 0 })
@@ -327,14 +361,99 @@ private extension VerifyViewController {
   @objc
   private func didTapConfirmButton() {
     print("didTapConfirmButton")
-    sceneCoordinator.transit(to: .resetPassword, by: .overFullScreen, completion: nil)
+
+    if viewModel.theme.type == .Mail,
+       let data = viewModel.data as? VerifyMailModel {
+      self.showLoading()
+      MainAppService.shared
+        .userSessionRequestManager
+        .registerVerifyMail(token: data.token, code: self.code)
+        .observe(on: MainScheduler.instance)
+        .do(onSuccess: ({ [weak self] reponseData in
+          self?.hideLoading(completion: {
+            let token = reponseData?.token ?? ""
+            let cooldown = reponseData?.cooldown ?? ""
+            let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
+                                     theme: VerifyViewModel.Theme(pageType: .PhoneEntry))
+            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+          })
+        }), onError: ({ [weak self] error in
+          self?.hideLoading()
+          print("error: \(error)")
+        }))
+        .subscribe()
+        .disposed(by: disposeBag)
+    } else if viewModel.theme.type == .PhoneEntry {
+      self.showLoading()
+      let userPhone = self.phoneTextField.txtField.text ?? ""
+      MainAppService.shared
+        .userSessionRequestManager
+        .registerSendSMS(mobile: userPhone, token: viewModel.data.token)
+        .observe(on: MainScheduler.instance)
+        .do(onSuccess: ({ [weak self] reponseData in
+          self?.hideLoading(completion: {
+            let token = reponseData?.token ?? ""
+            let cooldown = reponseData?.cooldown ?? ""
+            let vm = VerifyViewModel(data: VerifyPhoneModel(phone: userPhone, token: token, cooldown: cooldown),
+                                     theme: VerifyViewModel.Theme(pageType: .Phone))
+            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+          })
+        }), onError: ({ [weak self] error in
+          self?.hideLoading()
+          print("error: \(error)")
+        }))
+        .subscribe()
+        .disposed(by: disposeBag)
+    } else if viewModel.theme.type == .Phone,
+              let data = viewModel.data as? VerifyPhoneModel {
+      self.showLoading()
+      MainAppService.shared
+        .userSessionRequestManager
+        .registerVerifyPhone(token: data.token, code: self.code)
+        .observe(on: MainScheduler.instance)
+        .do(onSuccess: ({ [weak self] reponseData in
+          self?.hideLoading(completion: {
+            let token = reponseData?.token ?? ""
+            let cooldown = reponseData?.cooldown ?? ""
+            let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
+                                     theme: VerifyViewModel.Theme(pageType: .VerifySucceed))
+            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+          })
+        }), onError: ({ [weak self] error in
+          self?.hideLoading()
+          print("error: \(error)")
+        }))
+        .subscribe()
+        .disposed(by: disposeBag)
+      }
+//    sceneCoordinator.transit(to: .resetPassword, by: .overFullScreen, completion: nil)
   }
 
   @objc
   private func didTapReSendButton() {
     print("didTapReSendButton")
-    self.configHintTimer()
-    self.confirmButton.isEnabled = true
+    if viewModel.theme.type == .Mail,
+       let data = viewModel.data as? VerifyMailModel {
+      self.showLoading()
+      MainAppService.shared
+        .userSessionRequestManager
+        .registerReSendMail(token: data.token)
+        .observe(on: MainScheduler.instance)
+        .do(onSuccess: ({ [weak self] reponseData in
+          self?.hideLoading(completion: {
+            self?.viewModel.data.token = reponseData?.token ?? ""
+            let cooldown = reponseData?.cooldown ?? ""
+            let second = Int(cooldown) ?? 0
+            self?.configHintTimer(second: second)
+          })
+        }), onError: ({ [weak self] error in
+          self?.hideLoading()
+          print("error: \(error)")
+        }))
+        .subscribe()
+        .disposed(by: disposeBag)
+    }
+//    self.confirmButton.isEnabled = true
   }
 
   /// time formate
@@ -347,3 +466,5 @@ private extension VerifyViewController {
   }
 }
 
+//MARK: FullScreenLoadingPresenting
+extension VerifyViewController: FullScreenLoadingPresenting { }

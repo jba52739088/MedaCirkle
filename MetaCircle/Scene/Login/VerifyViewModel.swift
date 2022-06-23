@@ -8,7 +8,6 @@
 import UIKit
 import SwiftRichString
 
-
 class VerifyViewModel {
 
   struct Theme {
@@ -18,9 +17,11 @@ class VerifyViewModel {
     }
   }
 
+  var data: VerifyModel
   let theme: Theme
-  init(theme: Theme) {
+  init(data: VerifyModel, theme: Theme) {
     self.theme = theme
+    self.data = data
   }
 
   var titleAttributedString: NSAttributedString {
@@ -86,7 +87,7 @@ extension VerifyViewModel.Theme {
     case Mail
     case PhoneEntry
     case Phone
-    case Succeed
+    case VerifySucceed
 
     var title: String {
       switch self{
@@ -94,7 +95,7 @@ extension VerifyViewModel.Theme {
         return R.string.localizable.verify_vc_mail_title()
       case .PhoneEntry, .Phone:
         return R.string.localizable.verify_vc_phone_title()
-      case .Succeed:
+      case .VerifySucceed:
         return R.string.localizable.verify_vc_succeed_title()
       }
     }
@@ -105,8 +106,17 @@ extension VerifyViewModel.Theme {
         return R.string.localizable.verify_vc_subtitle()
       case .PhoneEntry:
         return R.string.localizable.verify_vc_phone_subtitle()
-      case .Succeed:
+      case .VerifySucceed:
         return R.string.localizable.verify_vc_succeed_subtitle()
+      }
+    }
+
+    var isVerifySucceed: Bool {
+      switch self {
+      case .VerifySucceed:
+        return true
+      default:
+        return false
       }
     }
   }
@@ -122,9 +132,9 @@ extension VerifyViewModel.Theme {
 
   var subtitleTextStyle: StyleProtocol {
     Style {
-      $0.font = type == .Succeed ? R.font.notoSansTCMedium(size: 22) : R.font.promptRegular(size: 16)
-      $0.maximumLineHeight = type == .Succeed ? 33 : 26
-      $0.minimumLineHeight = type == .Succeed ? 33 : 26
+      $0.font = type.isVerifySucceed ? R.font.notoSansTCMedium(size: 22) : R.font.promptRegular(size: 16)
+      $0.maximumLineHeight = type.isVerifySucceed ? 33 : 26
+      $0.minimumLineHeight = type.isVerifySucceed ? 33 : 26
       $0.color = UIColor.black
     }
   }

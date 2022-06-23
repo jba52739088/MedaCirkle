@@ -300,7 +300,13 @@ class RegisterViewController: TopGradientViewController {
       .registerSendMail(mail: "jba52739088@gmail.com", password: "qwerty123")
       .observe(on: MainScheduler.instance)
       .do(onSuccess: ({ [weak self] reponseData in
-        self?.hideLoading()
+        self?.hideLoading(completion: {
+          let token = reponseData?.token ?? ""
+          let cooldown = reponseData?.cooldown ?? ""
+          let vm = VerifyViewModel(data: VerifyMailModel(mail: "jba52739088@gmail.com", token: token, cooldown: cooldown),
+                                   theme: VerifyViewModel.Theme(pageType: .Mail))
+          sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+        })
         print("reponseData: \(reponseData)")
       }), onError: ({ [weak self] error in
         self?.hideLoading()
@@ -311,4 +317,5 @@ class RegisterViewController: TopGradientViewController {
   }
 }
 
+//MARK: FullScreenLoadingPresenting
 extension RegisterViewController: FullScreenLoadingPresenting { }
