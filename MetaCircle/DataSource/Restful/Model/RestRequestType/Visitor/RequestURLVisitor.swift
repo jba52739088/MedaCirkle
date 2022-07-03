@@ -13,32 +13,17 @@ struct RequestURLVisitor: RestRequestVisitorType {
 
   let configuration: RestTargetConfiguration
 
-  func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
+  //MARK: Login
+  func forLogin(_ request: LoginRequest) -> ResultType { configuration.restAPIUrl }
+  func forLogout(_ request: LogoutRequest) -> ResultType { configuration.restAPIUrl }
 
-  func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
-
-  func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
-
-  func forRegisterSendSMS(_ request: RegisterSendSMSRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
-
-  func forRegisterReSendSMS(_ request: RegisterReSendSMSRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
-
-  func forRegisterVerifyPhone(_ request: RegisterVerifyPhoneRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
-
-  func forRegister(_ request: RegisterRequest) -> ResultType {
-    return configuration.restAPIUrl
-  }
+  //MARK: Register
+  func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegisterSendSMS(_ request: RegisterSendSMSRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegisterReSendSMS(_ request: RegisterReSendSMSRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegisterVerifyPhone(_ request: RegisterVerifyPhoneRequest) -> ResultType { configuration.restAPIUrl }
+  func forRegister(_ request: RegisterRequest) -> ResultType { configuration.restAPIUrl }
 }
 

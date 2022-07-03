@@ -17,33 +17,23 @@ struct RequestHeaderVisitor: RestRequestVisitorType {
      "Accept-Encoding": "gzip, deflate, br",
      "Connection": "keep-alive"]
   }
-
-  func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType {
-    defaultHeader
+  var tokenHeader: [String: String] {
+    var header = defaultHeader
+    header["Authorization"] = "Bearer \(MainAppService.shared.userSessionRequestManager.currentToken ?? "")"
+    return header
   }
 
-  func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType {
-    defaultHeader
-  }
+  //MARK: Login
+  func forLogin(_ request: LoginRequest) -> ResultType { defaultHeader }
+  func forLogout(_ request: LogoutRequest) -> ResultType { tokenHeader }
 
-  func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType {
-    defaultHeader
-  }
-
-  func forRegisterSendSMS(_ request: RegisterSendSMSRequest) -> ResultType {
-    defaultHeader
-  }
-
-  func forRegisterReSendSMS(_ request: RegisterReSendSMSRequest) -> ResultType {
-    defaultHeader
-  }
-
-  func forRegisterVerifyPhone(_ request: RegisterVerifyPhoneRequest) -> ResultType {
-    defaultHeader
-  }
-
-  func forRegister(_ request: RegisterRequest) -> ResultType {
-    defaultHeader
-  }
+  //MARK: Register
+  func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType { defaultHeader }
+  func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType { defaultHeader }
+  func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType { defaultHeader }
+  func forRegisterSendSMS(_ request: RegisterSendSMSRequest) -> ResultType { defaultHeader }
+  func forRegisterReSendSMS(_ request: RegisterReSendSMSRequest) -> ResultType { defaultHeader }
+  func forRegisterVerifyPhone(_ request: RegisterVerifyPhoneRequest) -> ResultType { defaultHeader }
+  func forRegister(_ request: RegisterRequest) -> ResultType { defaultHeader }
 
 }

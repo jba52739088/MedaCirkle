@@ -7,12 +7,17 @@
 
 import UIKit
 import SwiftRichString
-
+import RxSwift
 
 class LoginViewModel {
   struct Theme {}
 
   let theme = Theme()
+  var disposeBag = DisposeBag()
+
+  deinit {
+    disposeBag = DisposeBag()
+  }
 
   var registerAttributedString: NSAttributedString {
     return R.string.localizable.login_vc_register_label()
@@ -86,6 +91,10 @@ class LoginViewModel {
 
   func errorAttributedString(error string: String) -> NSAttributedString {
     return string.set(style: theme.errorTextStyle)
+  }
+
+  func doLogin(mail: String, password: String) {
+
   }
 
 }

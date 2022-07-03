@@ -12,7 +12,17 @@ struct RequestPathVisitor: RestRequestVisitorType {
   typealias ResultType = String
 
   let configuration: RestTargetConfiguration
+  
+  //MARK: Login
+  func forLogin(_ request: LoginRequest) -> ResultType {
+    "api/login"
+  }
 
+  func forLogout(_ request: LogoutRequest) -> ResultType {
+    "api/logout"
+  }
+
+  //MARK: Register
   func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType {
     "api/register/send-mail"
   }

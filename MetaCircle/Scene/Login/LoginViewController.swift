@@ -7,8 +7,11 @@
 
 import UIKit
 import TinyConstraints
+import RxSwift
 
 class LoginViewController: TopGradientViewController {
+
+  var loadingVC: LoadingViewController = LoadingViewController()
 
   private let backButton = UIButton().then {
     $0.setImage(R.image.icon_arrow_left_w10_h16(), for: .normal)
@@ -94,6 +97,10 @@ class LoginViewController: TopGradientViewController {
 
     configView()
     bindViewModel()
+  }
+
+  deinit {
+    disposeBag = DisposeBag()
   }
 
   private func configView() {
@@ -231,7 +238,7 @@ class LoginViewController: TopGradientViewController {
     forgetButton.setAttributedTitle(viewModel.forgetPwdAttributedString, for: .normal)
     loginButton.setAttributedTitle(viewModel.enableLoginAttributedString, for: .normal)
     loginButton.setAttributedTitle(viewModel.disableLoginAttributedString, for: .disabled)
-    loginButton.isEnabled = false
+//    loginButton.isEnabled = false
   }
 
   @objc
@@ -269,5 +276,31 @@ class LoginViewController: TopGradientViewController {
   @objc
   private func didTapLogin() {
     print("didTapLogin")
+
+    showLoading()
+
+    MainAppService.shared
+      .userSessionRequestManager
+      .login(mail: "jba52739088@gmail.com", password: "qwerty123")
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading(completion: {
+          if reponseData?.success ?? false {
+            MainAppService.shared.userSessionRequestManager.currentToken = reponseData?.token
+//            sceneCoordinator.transit(to: .home, by: .root, completion: nil)
+            sceneCoordinator.transit(to: .home, by: .root) {
+              MainAppService.shared.registerCompletedRelay.accept(())
+            }
+          }
+        })
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
   }
 }
+
+//MARK: FullScreenLoadingPresenting
+extension LoginViewController: FullScreenLoadingPresenting { }

@@ -8,9 +8,13 @@
 import Moya
 
 struct RequestMethodVisitor: RestRequestVisitorType {
-
   typealias ResultType = Moya.Method
+  
+  //MARK: Login
+  func forLogin(_ request: LoginRequest) -> ResultType { .post }
+  func forLogout(_ request: LogoutRequest) -> ResultType { .post }
 
+  //MARK: Register
   func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType { .post }
   func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType { .post }
   func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType { .post }

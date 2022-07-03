@@ -25,6 +25,18 @@ class UserSessionRequestManager {
     apiClient = dataLoader()
   }
 
+  //MARK: Login
+  func login(mail: String, password: String) -> Single<LoginResponse?> {
+    let request = LoginRequest(mail: mail, password: password)
+    return apiClient.send(request: request).asSingle()
+  }
+
+  func logout() -> Single<LoginResponse?> {
+    let request = LogoutRequest()
+    return apiClient.send(request: request).asSingle()
+  }
+
+  //MARK: Register
   func registerSendMail(mail: String, password: String) -> Single<LoginResponse?> {
     let request = RegisterSendMailRequest(mail: mail, password: password)
     return apiClient.send(request: request).asSingle()

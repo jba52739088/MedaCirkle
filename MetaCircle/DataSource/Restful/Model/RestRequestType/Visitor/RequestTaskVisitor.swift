@@ -13,6 +13,18 @@ struct RequestTaskVisitor: RestRequestVisitorType {
 
   let configuration: RestTargetConfiguration
 
+  //MARK: Login
+  func forLogin(_ request: LoginRequest) -> ResultType {
+    let params: [String: String] = [
+      "mail": request.mail,
+      "password": request.password
+    ]
+    return .requestJSONEncodable(params)
+  }
+
+  func forLogout(_ request: LogoutRequest) -> ResultType { .requestPlain }
+
+  //MARK: Register
   func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType {
     let params: [String: String] = [
       "mail": request.mail,

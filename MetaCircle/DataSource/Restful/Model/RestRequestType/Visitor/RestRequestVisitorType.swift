@@ -10,8 +10,9 @@ import Foundation
 public protocol RestRequestVisitorType {
   associatedtype ResultType
 
-  //MARK: Register
+  //MARK: Login
   func forLogin(_ request: LoginRequest) -> ResultType
+  func forLogout(_ request: LogoutRequest) -> ResultType
 
   //MARK: Register
   func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType

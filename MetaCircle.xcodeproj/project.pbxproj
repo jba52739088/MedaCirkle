@@ -118,6 +118,7 @@
 		F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464A2862AAA000559F18 /* RegisterRequest.swift */; };
 		F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464C2862AB2B00559F18 /* RestRequestType.swift */; };
 		F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */; };
+		F9A5BAD728716ECD009604ED /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAD628716ECD009604ED /* LogoutRequest.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -288,6 +289,7 @@
 		F9A2464A2862AAA000559F18 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		F9A2464C2862AB2B00559F18 /* RestRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestType.swift; sourceTree = "<group>"; };
 		F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendMailRequest.swift; sourceTree = "<group>"; };
+		F9A5BAD628716ECD009604ED /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				F97C1147286E161E002ED6A8 /* LoginRequest.swift */,
+				F9A5BAD628716ECD009604ED /* LogoutRequest.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1005,6 +1008,7 @@
 				F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */,
 				F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */,
 				F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */,
+				F9A5BAD728716ECD009604ED /* LogoutRequest.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
