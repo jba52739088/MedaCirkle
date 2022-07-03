@@ -7,6 +7,7 @@
 
 import UIKit
 import TinyConstraints
+import RxSwift
 
 class MainViewController: UITabBarController {
 
@@ -14,10 +15,26 @@ class MainViewController: UITabBarController {
     $0.translatesAutoresizingMaskIntoConstraints = false
   }
 
+  var disposeBag = DisposeBag()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupVCs()
     configTabbar()
+
+    MainAppService.shared.registerCompletedRelay
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        guard let self = self else { return }
+        self.view.showToast(text: "歡迎來到Meta Circle，快來探索神奇的世界吧！")
+    }).disposed(by: disposeBag)
+
+    MainAppService.shared.currentTokenDidChangeRelay
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        guard let self = self else { return }
+        self.setupVCs()
+    }).disposed(by: disposeBag)
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -94,7 +111,7 @@ extension MainViewController {
       case .Message:
         return R.string.localizable.tool_bar_message()
       case .Member:
-        return R.string.localizable.tool_bar_member()
+        return MainAppService.shared.isLogin ? R.string.localizable.tool_bar_member() : R.string.localizable.tool_bar_login()
       }
     }
 

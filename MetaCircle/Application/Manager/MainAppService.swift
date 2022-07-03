@@ -16,9 +16,12 @@ class MainAppService: NSObject, ApplicationService {
 
   static let shared = MainAppService()
 
+  var isLogin: Bool { return userSessionRequestManager.currentToken != nil && userSessionRequestManager.currentToken != "" }
   let userSessionRequestManager = UserSessionRequestManager(userSessionManager: UserSessionManager.shared)
   let preferenceManager = PreferenceManager(dataSource: UserDefaultsStore.shared)
   private let isSetupCompletedRelay = BehaviorRelay<Bool>(value: false)
+  let registerCompletedRelay = PublishRelay<Void>()
+  let currentTokenDidChangeRelay = PublishRelay<Void>()
 
   var isSetupCompleted: Bool {
     get { isSetupCompletedRelay.value }

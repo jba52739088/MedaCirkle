@@ -64,6 +64,8 @@
 		F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C030283E9C8E0087567C /* Scene+ViewController.swift */; };
 		F976C033283E9E260087567C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C032283E9E260087567C /* NavigationController.swift */; };
 		F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C034283EA1730087567C /* Extension+UINavigationController.swift */; };
+		F97C1145286E15D1002ED6A8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C1144286E15D1002ED6A8 /* LoginResponse.swift */; };
+		F97C1148286E161E002ED6A8 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C1147286E161E002ED6A8 /* LoginRequest.swift */; };
 		F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9B284C502B00337F30 /* NormalTextField.swift */; };
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */; };
@@ -232,6 +234,8 @@
 		F976C030283E9C8E0087567C /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
 		F976C032283E9E260087567C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F976C034283EA1730087567C /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
+		F97C1144286E15D1002ED6A8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		F97C1147286E161E002ED6A8 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F9941E9B284C502B00337F30 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItemViewModel.swift; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 				F942C23E285EF839005E7374 /* Visitor */,
 				F9A2464C2862AB2B00559F18 /* RestRequestType.swift */,
 				F9A2464E2862B98700559F18 /* Register */,
+				F97C1146286E15F5002ED6A8 /* Login */,
 			);
 			path = RestRequestType;
 			sourceTree = "<group>";
@@ -461,7 +466,7 @@
 				F973DE632830B84C0075FDC2 /* HomeViewController.swift */,
 				F973DE652830BD030075FDC2 /* PublicViewController.swift */,
 				F973DE692830BD1C0075FDC2 /* MassageViewController.swift */,
-				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
+				F97C1143286DF136002ED6A8 /* Member */,
 				F9D6BB3428340EEB005D57F2 /* Login */,
 				F9EBD2E82842AA3F00172508 /* Circle */,
 			);
@@ -496,6 +501,22 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		F97C1143286DF136002ED6A8 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		F97C1146286E15F5002ED6A8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F97C1147286E161E002ED6A8 /* LoginRequest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F99CE58A2862CFD70026FEA3 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +548,7 @@
 			children = (
 				F99CE5922862D0E70026FEA3 /* RestTarget.swift */,
 				F99CE5942862D1220026FEA3 /* RestTargetConfiguration.swift */,
+				F97C1144286E15D1002ED6A8 /* LoginResponse.swift */,
 				F942C23D285EF816005E7374 /* RestRequestType */,
 				F9424F7B28634F3D00D4D0CD /* UserProfile.swift */,
 			);
@@ -1080,6 +1102,8 @@
 				F99CE58D2862D00F0026FEA3 /* APIClient.swift in Sources */,
 				F9424F842863626500D4D0CD /* LoadingView.swift in Sources */,
 				F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */,
+				F97C1148286E161E002ED6A8 /* LoginRequest.swift in Sources */,
+				F97C1145286E15D1002ED6A8 /* LoginResponse.swift in Sources */,
 				F9424F8828636F5200D4D0CD /* VerifyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

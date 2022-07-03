@@ -19,7 +19,7 @@ public struct RegisterReSendMailRequest: DeserializableRequestType {
     return visitor.forRegisterReSendMail(self)
   }
 
-  public func map(response: Response) throws -> RegisterResponse? {
-    try response.map(RegisterResponse.self)
+  public func map(response: Response) throws -> LoginResponse? {
+    try response.map(LoginResponse.self)
   }
 }

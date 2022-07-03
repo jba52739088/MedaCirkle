@@ -10,7 +10,8 @@
 "tool_bar_circle" = "圈圈";
 "tool_bar_home" = "探索";
 "tool_bar_message" = "私訊";
-"tool_bar_member" = "登入";
+"tool_bar_login" = "登入";
+"tool_bar_member" = "會員";
 "leading_ready_to_begin" = "準備開始";
 "leading_skip" = "略過";
 "leading_tutorial_feature_text_1" = "也可以經營\n自己的粉絲圈";

@@ -21,8 +21,8 @@ public struct RegisterVerifyPhoneRequest: DeserializableRequestType {
     return visitor.forRegisterVerifyPhone(self)
   }
 
-  public func map(response: Response) throws -> RegisterResponse? {
-    try response.map(RegisterResponse.self)
+  public func map(response: Response) throws -> LoginResponse? {
+    try response.map(LoginResponse.self)
   }
 }
 

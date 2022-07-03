@@ -119,6 +119,8 @@ class VerifyViewController: TopGradientViewController {
       .map { $0 != "" }
       .bind(to: confirmButton.rx.isEnabled)
       .disposed(by: disposeBag)
+    } else {
+      confirmButton.isEnabled = true
     }
   }
 
@@ -349,6 +351,17 @@ private extension VerifyViewController {
       $0.trailingToSuperview(offset: 38)
     }
 
+    confirmButton = .normalSubmitButton(title: R.string.localizable.confirm(),target: self, action: #selector(didTapConfirmButton))
+
+    confirmButton.do {
+      succeedContainer.addSubview($0)
+      $0.height(44)
+      $0.width(240)
+      $0.centerXToSuperview()
+      $0.bottomToSuperview(offset: -47, usingSafeArea: true)
+      $0.layer.cornerRadius = 22
+      $0.layer.masksToBounds = true
+    }
 
   }
 
@@ -362,70 +375,15 @@ private extension VerifyViewController {
   private func didTapConfirmButton() {
     print("didTapConfirmButton")
 
-    if viewModel.theme.type == .Mail,
-       let data = viewModel.data as? VerifyMailModel {
-      self.showLoading()
-      MainAppService.shared
-        .userSessionRequestManager
-        .registerVerifyMail(token: data.token, code: self.code)
-        .observe(on: MainScheduler.instance)
-        .do(onSuccess: ({ [weak self] reponseData in
-          self?.hideLoading(completion: {
-            let token = reponseData?.token ?? ""
-            let cooldown = reponseData?.cooldown ?? ""
-            let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
-                                     theme: VerifyViewModel.Theme(pageType: .PhoneEntry))
-            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
-          })
-        }), onError: ({ [weak self] error in
-          self?.hideLoading()
-          print("error: \(error)")
-        }))
-        .subscribe()
-        .disposed(by: disposeBag)
+    if viewModel.theme.type == .Mail, let data = viewModel.data as? VerifyMailModel {
+      self.verifyMail(data)
     } else if viewModel.theme.type == .PhoneEntry {
-      self.showLoading()
-      let userPhone = self.phoneTextField.txtField.text ?? ""
-      MainAppService.shared
-        .userSessionRequestManager
-        .registerSendSMS(mobile: userPhone, token: viewModel.data.token)
-        .observe(on: MainScheduler.instance)
-        .do(onSuccess: ({ [weak self] reponseData in
-          self?.hideLoading(completion: {
-            let token = reponseData?.token ?? ""
-            let cooldown = reponseData?.cooldown ?? ""
-            let vm = VerifyViewModel(data: VerifyPhoneModel(phone: userPhone, token: token, cooldown: cooldown),
-                                     theme: VerifyViewModel.Theme(pageType: .Phone))
-            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
-          })
-        }), onError: ({ [weak self] error in
-          self?.hideLoading()
-          print("error: \(error)")
-        }))
-        .subscribe()
-        .disposed(by: disposeBag)
-    } else if viewModel.theme.type == .Phone,
-              let data = viewModel.data as? VerifyPhoneModel {
-      self.showLoading()
-      MainAppService.shared
-        .userSessionRequestManager
-        .registerVerifyPhone(token: data.token, code: self.code)
-        .observe(on: MainScheduler.instance)
-        .do(onSuccess: ({ [weak self] reponseData in
-          self?.hideLoading(completion: {
-            let token = reponseData?.token ?? ""
-            let cooldown = reponseData?.cooldown ?? ""
-            let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
-                                     theme: VerifyViewModel.Theme(pageType: .VerifySucceed))
-            sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
-          })
-        }), onError: ({ [weak self] error in
-          self?.hideLoading()
-          print("error: \(error)")
-        }))
-        .subscribe()
-        .disposed(by: disposeBag)
-      }
+      self.sendSMS()
+    } else if viewModel.theme.type == .Phone, let data = viewModel.data as? VerifyPhoneModel {
+      self.verifyPhone(data)
+    } else if viewModel.theme.type == .VerifySucceed {
+      self.registerLastStep()
+    }
 //    sceneCoordinator.transit(to: .resetPassword, by: .overFullScreen, completion: nil)
   }
 
@@ -454,6 +412,103 @@ private extension VerifyViewController {
         .disposed(by: disposeBag)
     }
 //    self.confirmButton.isEnabled = true
+  }
+
+  private func verifyMail(_ data: VerifyMailModel) {
+    self.showLoading()
+    MainAppService.shared
+      .userSessionRequestManager
+      .registerVerifyMail(token: data.token, code: self.code)
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading(completion: {
+          let token = reponseData?.token ?? ""
+          let cooldown = reponseData?.cooldown ?? ""
+          let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
+                                   theme: VerifyViewModel.Theme(pageType: .PhoneEntry))
+          sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+        })
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
+  }
+
+  private func sendSMS() {
+    self.showLoading()
+    let userPhone = self.phoneTextField.txtField.text ?? ""
+    MainAppService.shared
+      .userSessionRequestManager
+      .registerSendSMS(mobile: userPhone, token: viewModel.data.token)
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading(completion: {
+          let token = reponseData?.token ?? ""
+          let cooldown = reponseData?.cooldown ?? ""
+          let vm = VerifyViewModel(data: VerifyPhoneModel(phone: userPhone, token: token, cooldown: cooldown),
+                                   theme: VerifyViewModel.Theme(pageType: .Phone))
+          sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+        })
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
+  }
+
+  private func verifyPhone(_ data: VerifyPhoneModel) {
+    self.showLoading()
+    MainAppService.shared
+      .userSessionRequestManager
+      .registerVerifyPhone(token: data.token, code: self.code)
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading(completion: {
+          let token = reponseData?.token ?? ""
+          let cooldown = reponseData?.cooldown ?? ""
+          let vm = VerifyViewModel(data: VerifyModel(token: token, cooldown: cooldown),
+                                   theme: VerifyViewModel.Theme(pageType: .VerifySucceed))
+          sceneCoordinator.transit(to: Scene.verify(vm), by: .overFullScreen, completion: nil)
+        })
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
+  }
+
+  private func registerLastStep() {
+    self.showLoading()
+    let userName = "Vincent"
+    let userGender = "1"
+    let userBirth = "1991-03-03"
+//    let userName = self.nameTextField.txtField.text ?? ""
+//    let userGender = self.genderTextField.txtField.text ?? ""
+//    let userBirth = self.birthTextField.txtField.text ?? ""
+    MainAppService.shared
+      .userSessionRequestManager
+      .register(token: viewModel.data.token, name: userName, gender: userGender, birthday: userBirth)
+      .observe(on: MainScheduler.instance)
+      .do(onSuccess: ({ [weak self] reponseData in
+        self?.hideLoading(completion: {
+          if reponseData?.success ?? false {
+            MainAppService.shared.userSessionRequestManager.currentToken = reponseData?.token
+//            sceneCoordinator.transit(to: .home, by: .root, completion: nil)
+            sceneCoordinator.transit(to: .home, by: .root) {
+              MainAppService.shared.registerCompletedRelay.accept(())
+            }
+          }
+        })
+      }), onError: ({ [weak self] error in
+        self?.hideLoading()
+        print("error: \(error)")
+      }))
+      .subscribe()
+      .disposed(by: disposeBag)
   }
 
   /// time formate

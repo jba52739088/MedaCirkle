@@ -1429,7 +1429,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 131 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 132 localization keys.
     struct localizable {
       /// en translation: <b>%@</b>人
       ///
@@ -1699,6 +1699,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_create_vc_circle_verify_cancel = Rswift.StringResource(key: "circle_create_vc_circle_verify_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 會員
+      ///
+      /// Locales: en, zh-Hant
+      static let tool_bar_member = Rswift.StringResource(key: "tool_bar_member", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 檔案
       ///
       /// Locales: en, zh-Hant
@@ -1766,7 +1770,7 @@ struct R: Rswift.Validatable {
       /// en translation: 登入
       ///
       /// Locales: en, zh-Hant
-      static let tool_bar_member = Rswift.StringResource(key: "tool_bar_member", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let tool_bar_login = Rswift.StringResource(key: "tool_bar_login", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 相簿
       ///
       /// Locales: en, zh-Hant
@@ -2969,6 +2973,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_create_vc_circle_verify_cancel", bundle: bundle, comment: "")
       }
 
+      /// en translation: 會員
+      ///
+      /// Locales: en, zh-Hant
+      static func tool_bar_member(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("tool_bar_member", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "tool_bar_member"
+        }
+
+        return NSLocalizedString("tool_bar_member", bundle: bundle, comment: "")
+      }
+
       /// en translation: 檔案
       ///
       /// Locales: en, zh-Hant
@@ -3212,16 +3231,16 @@ struct R: Rswift.Validatable {
       /// en translation: 登入
       ///
       /// Locales: en, zh-Hant
-      static func tool_bar_member(preferredLanguages: [String]? = nil) -> String {
+      static func tool_bar_login(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("tool_bar_member", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("tool_bar_login", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "tool_bar_member"
+          return "tool_bar_login"
         }
 
-        return NSLocalizedString("tool_bar_member", bundle: bundle, comment: "")
+        return NSLocalizedString("tool_bar_login", bundle: bundle, comment: "")
       }
 
       /// en translation: 相簿

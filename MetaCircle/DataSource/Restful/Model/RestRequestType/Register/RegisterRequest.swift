@@ -25,20 +25,8 @@ public struct RegisterRequest: DeserializableRequestType {
     return visitor.forRegister(self)
   }
 
-  public func map(response: Response) throws -> RegisterResponse? {
-    try response.map(RegisterResponse.self)
+  public func map(response: Response) throws -> LoginResponse? {
+    try response.map(LoginResponse.self)
   }
 }
 
-// MARK: - RegisterResponse
-public struct RegisterResponse: Decodable {
-  public var success: Bool?
-  public var token, cooldown, type, error: String?
-  public var message: String?
-  public var errors: [Error]?
-
-  // MARK: - Error
-  public struct Error: Decodable {
-    public var name, message, type: String?
-  }
-}

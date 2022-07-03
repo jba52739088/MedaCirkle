@@ -11,6 +11,9 @@ public protocol RestRequestVisitorType {
   associatedtype ResultType
 
   //MARK: Register
+  func forLogin(_ request: LoginRequest) -> ResultType
+
+  //MARK: Register
   func forRegisterSendMail(_ request: RegisterSendMailRequest) -> ResultType
   func forRegisterReSendMail(_ request: RegisterReSendMailRequest) -> ResultType
   func forRegisterVerifyMail(_ request: RegisterVerifyMailRequest) -> ResultType

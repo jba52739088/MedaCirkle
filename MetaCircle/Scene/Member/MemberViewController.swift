@@ -12,7 +12,9 @@ class MemberViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configView()
-    sceneCoordinator.transit(to: .login, by: .overFullScreen, completion: nil)
+    if !MainAppService.shared.isLogin {
+      sceneCoordinator.transit(to: .login, by: .overFullScreen, completion: nil)
+    }
 
   }
 

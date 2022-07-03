@@ -37,7 +37,7 @@ enum SceneTransitionOption {
 
 extension SceneTransition {
   static let overFullScreen = SceneTransition.customModal(transition: nil, presentationStyle: .overFullScreen, animated: false)
-  static let root = SceneTransition.root(shouldDismissPresented: (true, true))
+  static let root = SceneTransition.root(shouldDismissPresented: (true, false))
 }
 
 extension SceneTransition {
