@@ -66,6 +66,10 @@
 		F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976C034283EA1730087567C /* Extension+UINavigationController.swift */; };
 		F97C1145286E15D1002ED6A8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C1144286E15D1002ED6A8 /* LoginResponse.swift */; };
 		F97C1148286E161E002ED6A8 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C1147286E161E002ED6A8 /* LoginRequest.swift */; };
+		F98705CB287326ED008C407A /* LoginRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98705CA287326ED008C407A /* LoginRouting.swift */; };
+		F98705CD28733A51008C407A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98705CC28733A51008C407A /* Profile.swift */; };
+		F98705D02873456B008C407A /* MemberProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98705CF2873456B008C407A /* MemberProfileCell.swift */; };
+		F98705D228734593008C407A /* MemberProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98705D128734593008C407A /* MemberProfileCellViewModel.swift */; };
 		F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9B284C502B00337F30 /* NormalTextField.swift */; };
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */; };
@@ -119,6 +123,9 @@
 		F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464C2862AB2B00559F18 /* RestRequestType.swift */; };
 		F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */; };
 		F9A5BAD728716ECD009604ED /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAD628716ECD009604ED /* LogoutRequest.swift */; };
+		F9A5BAD9287180A0009604ED /* MemberInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */; };
+		F9A5BADB287180C2009604ED /* MemberInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */; };
+		F9A5BADD2871F922009604ED /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADC2871F922009604ED /* ProfileResponse.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -237,6 +244,10 @@
 		F976C034283EA1730087567C /* Extension+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigationController.swift"; sourceTree = "<group>"; };
 		F97C1144286E15D1002ED6A8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		F97C1147286E161E002ED6A8 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		F98705CA287326ED008C407A /* LoginRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouting.swift; sourceTree = "<group>"; };
+		F98705CC28733A51008C407A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F98705CF2873456B008C407A /* MemberProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileCell.swift; sourceTree = "<group>"; };
+		F98705D128734593008C407A /* MemberProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileCellViewModel.swift; sourceTree = "<group>"; };
 		F9941E9B284C502B00337F30 /* NormalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTextField.swift; sourceTree = "<group>"; };
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItemViewModel.swift; sourceTree = "<group>"; };
@@ -290,6 +301,9 @@
 		F9A2464C2862AB2B00559F18 /* RestRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestType.swift; sourceTree = "<group>"; };
 		F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendMailRequest.swift; sourceTree = "<group>"; };
 		F9A5BAD628716ECD009604ED /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
+		F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoCell.swift; sourceTree = "<group>"; };
+		F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoCellViewModel.swift; sourceTree = "<group>"; };
+		F9A5BADC2871F922009604ED /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -507,6 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
+				F98705CE28733F09008C407A /* View */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -518,6 +533,17 @@
 				F9A5BAD628716ECD009604ED /* LogoutRequest.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F98705CE28733F09008C407A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F98705CF2873456B008C407A /* MemberProfileCell.swift */,
+				F98705D128734593008C407A /* MemberProfileCellViewModel.swift */,
+				F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */,
+				F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F99CE58A2862CFD70026FEA3 /* DataSource */ = {
@@ -552,8 +578,10 @@
 				F99CE5922862D0E70026FEA3 /* RestTarget.swift */,
 				F99CE5942862D1220026FEA3 /* RestTargetConfiguration.swift */,
 				F97C1144286E15D1002ED6A8 /* LoginResponse.swift */,
+				F9A5BADC2871F922009604ED /* ProfileResponse.swift */,
 				F942C23D285EF816005E7374 /* RestRequestType */,
 				F9424F7B28634F3D00D4D0CD /* UserProfile.swift */,
+				F98705CC28733A51008C407A /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -695,6 +723,7 @@
 				F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */,
 				F9424F812863613A00D4D0CD /* LoadingViewController.swift */,
 				F9424F852863645D00D4D0CD /* FullScreenLoadingPresenting.swift */,
+				F98705CA287326ED008C407A /* LoginRouting.swift */,
 				F9D87F6C284666510033343F /* View */,
 			);
 			path = Common;
@@ -1019,6 +1048,7 @@
 				F942C232285D8B6D005E7374 /* ArticleTagItem.swift in Sources */,
 				64781CFF285A0B790075BC09 /* CircleArticleHeaderItemViewModel.swift in Sources */,
 				F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */,
+				F9A5BADB287180C2009604ED /* MemberInfoCellViewModel.swift in Sources */,
 				F9D6BB3D28341AC0005D57F2 /* UIView+Factory.swift in Sources */,
 				F99CE5932862D0E70026FEA3 /* RestTarget.swift in Sources */,
 				F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */,
@@ -1041,6 +1071,7 @@
 				F9424F7C28634F3D00D4D0CD /* UserProfile.swift in Sources */,
 				F9A1D79028585FB900A15BEF /* CircleContentCell.swift in Sources */,
 				F99CE59F2862D6980026FEA3 /* RequestHeaderVisitor.swift in Sources */,
+				F9A5BAD9287180A0009604ED /* MemberInfoCell.swift in Sources */,
 				F9424F7A28634E8700D4D0CD /* EnvironmentManager.swift in Sources */,
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
 				F99CE5902862D0970026FEA3 /* MoyaClient.swift in Sources */,
@@ -1060,6 +1091,7 @@
 				F9A1D77B2853228300A15BEF /* SubscribeStateButton.swift in Sources */,
 				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
 				F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */,
+				F98705D02873456B008C407A /* MemberProfileCell.swift in Sources */,
 				F9A1D75C28507AE400A15BEF /* TopicItemViewModel.swift in Sources */,
 				F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */,
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
@@ -1067,13 +1099,17 @@
 				F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */,
 				F942C240285EF847005E7374 /* RestRequestVisitorType.swift in Sources */,
 				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
+				F9A5BADD2871F922009604ED /* ProfileResponse.swift in Sources */,
 				F942C23A285DB8CC005E7374 /* CircleArticleTagItemViewModel.swift in Sources */,
 				64781D03285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift in Sources */,
 				F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */,
+				F98705CB287326ED008C407A /* LoginRouting.swift in Sources */,
 				F9D6BB3228340BA5005D57F2 /* LoginViewController.swift in Sources */,
 				F99CE5992862D2E50026FEA3 /* RequestPathVisitor.swift in Sources */,
 				F973DE682830BD110075FDC2 /* CircleMainViewController.swift in Sources */,
 				F9A1D78A2857A4DF00A15BEF /* TempCircleContentModel.swift in Sources */,
+				F98705CD28733A51008C407A /* Profile.swift in Sources */,
+				F98705D228734593008C407A /* MemberProfileCellViewModel.swift in Sources */,
 				F9D6BB7E28356A1E005D57F2 /* TitleTextField.swift in Sources */,
 				F9424F7828634E5700D4D0CD /* UserSessionRequestManager.swift in Sources */,
 				F942C23C285DCD8D005E7374 /* DynamicCollectionView.swift in Sources */,
@@ -1260,7 +1296,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 284Y9W6F8Y;
+				DEVELOPMENT_TEAM = 2345S78GFH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetaCircle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1268,13 +1304,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shuei3BeiBaBa.app.metacircle.dev.MetaCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradchao.app.metacircle.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1291,7 +1328,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 284Y9W6F8Y;
+				DEVELOPMENT_TEAM = 2345S78GFH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetaCircle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1299,13 +1336,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shuei3BeiBaBa.app.metacircle.dev.MetaCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradchao.app.metacircle.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

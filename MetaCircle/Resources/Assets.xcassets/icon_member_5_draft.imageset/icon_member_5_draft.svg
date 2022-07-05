@@ -1,0 +1,18 @@
+<svg id="icon_member_5_draft" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4330" data-name="Rectangle 4330" width="10.602" height="8.908" fill="#5a5c5f"/>
+    </clipPath>
+  </defs>
+  <rect id="bg" width="22" height="22" fill="#abffff" opacity="0"/>
+  <path id="Path_9913" data-name="Path 9913" d="M14.715,14.893v2.195a1.924,1.924,0,0,1-1.924,1.924H2.424A1.924,1.924,0,0,1,.5,17.087V2.424A1.924,1.924,0,0,1,2.424.5H12.791a1.924,1.924,0,0,1,1.924,1.924V5.017" transform="translate(1 1.244)" fill="none" stroke="#5a5c5f" stroke-linecap="round" stroke-width="1.5"/>
+  <g id="Group_7003" data-name="Group 7003" transform="translate(10.658 6.545)">
+    <g id="Group_7002" data-name="Group 7002" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Path_9914" data-name="Path 9914" d="M6.556,1.688,1.22,5.939.031,8.6a.26.26,0,0,0,.107.352.263.263,0,0,0,.192.021l2.824-.627L8.447,4.13Z" transform="translate(0 -0.075)" fill="#5a5c5f"/>
+      <path id="Path_9915" data-name="Path 9915" d="M10.742,1.388,9.883.319A.86.86,0,0,0,8.676.188l-1.153.921L9.41,3.551l1.2-.96a.86.86,0,0,0,.132-1.207" transform="translate(-0.33 0)" fill="#5a5c5f"/>
+    </g>
+  </g>
+  <line id="Line_407" data-name="Line 407" x2="6" transform="translate(5 6.5)" fill="none" stroke="#5a5c5f" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_408" data-name="Line 408" x2="3" transform="translate(5 10.5)" fill="none" stroke="#5a5c5f" stroke-linecap="round" stroke-width="1.5"/>
+  <line id="Line_409" data-name="Line 409" x2="3" transform="translate(5 14.5)" fill="none" stroke="#5a5c5f" stroke-linecap="round" stroke-width="1.5"/>
+</svg>

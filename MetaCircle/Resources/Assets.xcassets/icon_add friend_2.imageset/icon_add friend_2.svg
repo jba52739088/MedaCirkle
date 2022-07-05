@@ -1,0 +1,13 @@
+<svg id="icon_add_friend_2" data-name="icon_add friend_2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_add_friend" data-name="icon_add friend">
+    <rect id="Rectangle_4052" data-name="Rectangle 4052" width="20" height="20" fill="none"/>
+    <g id="Group_5802" data-name="Group 5802" transform="translate(0.481 1.144)">
+      <path id="Path_9262" data-name="Path 9262" d="M9.526,10.159a4.1,4.1,0,1,0-4.1-4.1A4.1,4.1,0,0,0,9.526,10.159Zm0-6.867A2.765,2.765,0,1,1,6.761,6.06,2.765,2.765,0,0,1,9.526,3.292Z" transform="translate(-2.469 -1.956)" fill="#fff"/>
+      <path id="Path_9264" data-name="Path 9264" d="M14.057,20.5A7,7,0,0,0,8.173,17.1C4.218,17.1,1,20.654,1,25.026a.668.668,0,1,0,1.336,0c0-3.636,2.618-6.591,5.837-6.591s5.837,2.957,5.837,6.593a.668.668,0,1,0,1.336,0,8.561,8.561,0,0,0-.676-3.34C14.464,21.167,14.2,20.807,14.057,20.5Z" transform="translate(-1 -7.985)" fill="#fff"/>
+      <g id="Group_6481" data-name="Group 6481" transform="translate(12.023 4.258)">
+        <rect id="Rectangle_4053" data-name="Rectangle 4053" width="7.014" height="1.503" rx="0.751" transform="translate(0 2.755)" fill="#fff"/>
+        <rect id="Rectangle_4054" data-name="Rectangle 4054" width="7.014" height="1.503" rx="0.751" transform="translate(4.258) rotate(90)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

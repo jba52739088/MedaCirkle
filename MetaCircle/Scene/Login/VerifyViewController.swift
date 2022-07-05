@@ -489,26 +489,8 @@ private extension VerifyViewController {
 //    let userName = self.nameTextField.txtField.text ?? ""
 //    let userGender = self.genderTextField.txtField.text ?? ""
 //    let userBirth = self.birthTextField.txtField.text ?? ""
-    MainAppService.shared
-      .userSessionRequestManager
-      .register(token: viewModel.data.token, name: userName, gender: userGender, birthday: userBirth)
-      .observe(on: MainScheduler.instance)
-      .do(onSuccess: ({ [weak self] reponseData in
-        self?.hideLoading(completion: {
-          if reponseData?.success ?? false {
-            MainAppService.shared.userSessionRequestManager.currentToken = reponseData?.token
-//            sceneCoordinator.transit(to: .home, by: .root, completion: nil)
-            sceneCoordinator.transit(to: .home, by: .root) {
-              MainAppService.shared.registerCompletedRelay.accept(())
-            }
-          }
-        })
-      }), onError: ({ [weak self] error in
-        self?.hideLoading()
-        print("error: \(error)")
-      }))
-      .subscribe()
-      .disposed(by: disposeBag)
+
+    self.doRegisterAndLogin(token: viewModel.data.token, name: userName, gender: userGender, birthday: userBirth)
   }
 
   /// time formate
@@ -523,3 +505,19 @@ private extension VerifyViewController {
 
 //MARK: FullScreenLoadingPresenting
 extension VerifyViewController: FullScreenLoadingPresenting { }
+
+//MARK: LoginRouting
+extension VerifyViewController: LoginRouting {
+
+  func loginSucceed(in vc: UIViewController) {
+    self.hideLoading {
+      sceneCoordinator.transit(to: .home, by: .root) {
+        MainAppService.shared.registerCompletedRelay.accept(())
+      }
+    }
+  }
+
+  func loginFailed(in vc: UIViewController, errorCode: String?, errorMessage: String?) {
+    self.hideLoading()
+  }
+}

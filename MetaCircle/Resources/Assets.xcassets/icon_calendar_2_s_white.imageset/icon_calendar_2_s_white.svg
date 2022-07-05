@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_calendar_2_s_white" transform="translate(-2 -2)">
+    <g id="bg" transform="translate(2 2)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Group_6460" data-name="Group 6460" transform="translate(-249 -201.875)">
+      <g id="Rectangle_4058" data-name="Rectangle 4058" transform="translate(251 206.042)" fill="none" stroke="#fff" stroke-width="1.5">
+        <rect width="20" height="16.622" rx="3.5" stroke="none"/>
+        <rect x="0.75" y="0.75" width="18.5" height="15.122" rx="2.75" fill="none"/>
+      </g>
+      <line id="Line_166" data-name="Line 166" x2="16.719" transform="translate(252.714 211.074)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_168" data-name="Line 168" x2="1.693" transform="translate(254.864 214.626)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_171" data-name="Line 171" x2="1.693" transform="translate(254.864 217.57)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_169" data-name="Line 169" x2="1.693" transform="translate(259.844 214.626)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_172" data-name="Line 172" x2="1.693" transform="translate(259.844 217.57)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_170" data-name="Line 170" x2="1.693" transform="translate(264.825 214.626)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_173" data-name="Line 173" y2="3.134" transform="translate(256.5 205.069)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_174" data-name="Line 174" y2="3.134" transform="translate(265.69 205.069)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

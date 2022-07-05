@@ -11,6 +11,8 @@ import RxSwift
 
 class MainViewController: UITabBarController {
 
+  var loadingVC: LoadingViewController = LoadingViewController()
+
   let topLine = UIView().then {
     $0.translatesAutoresizingMaskIntoConstraints = false
   }
@@ -21,6 +23,11 @@ class MainViewController: UITabBarController {
     super.viewDidLoad()
     setupVCs()
     configTabbar()
+
+    if let username = MainAppService.shared.preferenceManager.lastUsername,
+       let password = MainAppService.shared.preferenceManager.lastPassword {
+      self.doLogin(mail: username, password: password)
+    }
 
     MainAppService.shared.registerCompletedRelay
       .observe(on: MainScheduler.instance)
@@ -76,6 +83,7 @@ class MainViewController: UITabBarController {
     viewControllers = BarPageType.allCases.map({
       self.createNavController(for: $0)
     })
+    self.selectedIndex = 2
   }
 
   private func createNavController(for pageType: BarPageType) -> UIViewController {
@@ -160,4 +168,18 @@ extension MainViewController {
       }
     }
   }
+}
+
+//MARK: FullScreenLoadingPresenting
+extension MainViewController: FullScreenLoadingPresenting { }
+
+//MARK: LoginRouting
+extension MainViewController: LoginRouting {
+  
+  func loginSucceed(in vc: UIViewController) {
+
+      self.setupVCs()
+  }
+
+  func loginFailed(in vc: UIViewController, errorCode: String?, errorMessage: String?) { }
 }

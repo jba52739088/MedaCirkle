@@ -278,29 +278,25 @@ class LoginViewController: TopGradientViewController {
     print("didTapLogin")
 
     showLoading()
-
-    MainAppService.shared
-      .userSessionRequestManager
-      .login(mail: "jba52739088@gmail.com", password: "qwerty123")
-      .observe(on: MainScheduler.instance)
-      .do(onSuccess: ({ [weak self] reponseData in
-        self?.hideLoading(completion: {
-          if reponseData?.success ?? false {
-            MainAppService.shared.userSessionRequestManager.currentToken = reponseData?.token
-//            sceneCoordinator.transit(to: .home, by: .root, completion: nil)
-            sceneCoordinator.transit(to: .home, by: .root) {
-              MainAppService.shared.registerCompletedRelay.accept(())
-            }
-          }
-        })
-      }), onError: ({ [weak self] error in
-        self?.hideLoading()
-        print("error: \(error)")
-      }))
-      .subscribe()
-      .disposed(by: disposeBag)
+    self.doLogin(mail: "jba52739088@gmail.com", password: "qwerty123")
   }
 }
 
 //MARK: FullScreenLoadingPresenting
 extension LoginViewController: FullScreenLoadingPresenting { }
+
+//MARK: LoginRouting
+extension LoginViewController: LoginRouting {
+
+  func loginSucceed(in vc: UIViewController) {
+    self.hideLoading {
+      sceneCoordinator.transit(to: .home, by: .root) {
+        MainAppService.shared.registerCompletedRelay.accept(())
+      }
+    }
+  }
+
+  func loginFailed(in vc: UIViewController, errorCode: String?, errorMessage: String?) {
+    self.hideLoading()
+  }
+}

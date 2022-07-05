@@ -19,6 +19,7 @@ class MemberViewController: UIViewController {
   }
   let searchBtn: UIButton = UIView.searchBarButton()
   let bellBtn: UIButton = UIView.bellButton()
+  let tableView = UITableView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -69,6 +70,17 @@ class MemberViewController: UIViewController {
       $0.height(26)
       $0.centerY(to: logoImgView)
       $0.rightToLeft(of: bellBtn, offset: -17)
+    }
+
+    tableView.do {
+      mainContain.addSubview($0)
+      $0.backgroundColor = .clear
+      $0.topToSuperview()
+      $0.leadingToSuperview()
+      $0.rightToSuperview(offset: -24)
+      $0.bottomToSuperview(offset: 24)
+      $0.separatorColor = .clear
+      $0.register(CircleMainCell.self, forCellReuseIdentifier: "Cell")
     }
   }
 

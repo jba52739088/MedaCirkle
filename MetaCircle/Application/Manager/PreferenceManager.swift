@@ -14,6 +14,8 @@ import RxCocoa
 
 protocol PreferenceDataSource {
   var welcomePageDone: Bool { get set }
+  var lastUsername: String? { get set }
+  var lastPassword: String? { get set }
 }
 
 class PreferenceManager {
@@ -27,5 +29,23 @@ class PreferenceManager {
   var welcomePageDone: Bool {
     get { return dataSource.welcomePageDone }
     set { dataSource.welcomePageDone = newValue }
+  }
+
+  var lastUsername: String? {
+    get {
+      return dataSource.lastUsername
+    }
+    set {
+      dataSource.lastUsername = newValue
+    }
+  }
+
+  var lastPassword: String? {
+    get {
+      return dataSource.lastPassword
+    }
+    set {
+      dataSource.lastPassword = newValue
+    }
   }
 }

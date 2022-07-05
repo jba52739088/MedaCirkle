@@ -1,0 +1,19 @@
+<svg id="icon_member_11_help" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4334" data-name="Rectangle 4334" width="22" height="22" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_7031" data-name="Group 7031" opacity="0" style="mix-blend-mode: normal;isolation: isolate">
+    <g id="Group_7027" data-name="Group 7027">
+      <g id="Group_7026" data-name="Group 7026" clip-path="url(#clip-path)">
+        <rect id="Rectangle_4333" data-name="Rectangle 4333" width="22" height="22" fill="#abffff"/>
+      </g>
+    </g>
+  </g>
+  <g id="Group_7032" data-name="Group 7032" transform="translate(712.745 -2046)">
+    <circle id="Ellipse_202" data-name="Ellipse 202" cx="8.754" cy="8.754" r="8.754" transform="translate(-710.5 2048)" fill="none" stroke="#5a5c5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="Ellipse_203" data-name="Ellipse 203" cx="1.5" cy="1.5" r="1.5" transform="translate(-703 2052)" fill="#5a5c5f"/>
+    <rect id="Rectangle_4336" data-name="Rectangle 4336" width="3" height="7" rx="1.5" transform="translate(-703 2056)" fill="#5a5c5f"/>
+  </g>
+</svg>

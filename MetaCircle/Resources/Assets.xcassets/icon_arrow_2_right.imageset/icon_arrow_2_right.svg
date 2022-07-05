@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-  <g id="icon_arrow_2_right" transform="translate(14) rotate(90)">
-    <g id="Rectangle_4050" data-name="Rectangle 4050" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
-      <rect width="14" height="14" stroke="none"/>
-      <rect x="0.5" y="0.5" width="13" height="13" fill="none"/>
-    </g>
-    <path id="Path_9302" data-name="Path 9302" d="M180.412,968.775l2.779,2.675,2.087,2.009-4.867,4.267" transform="translate(-175.702 -966.275)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+<svg id="icon_arrow_2_right" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="Rectangle_4050" data-name="Rectangle 4050" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="14" height="14" stroke="none"/>
+    <rect x="0.5" y="0.5" width="13" height="13" fill="none"/>
   </g>
+  <path id="Path_9302" data-name="Path 9302" d="M180.412,968.775l2.779,2.675,2.087,2.009-4.867,4.267" transform="translate(-175.702 -966.275)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
 </svg>
