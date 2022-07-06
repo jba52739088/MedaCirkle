@@ -106,12 +106,12 @@ extension UIView {
 
 //MARK: Shadow
 extension UIView {
-  func addShadow(location: VerticalLocation, color: UIColor = .black, opacity: Float = 0.5, radius: CGFloat = 5.0) {
+  func addShadow(location: VerticalLocation, color: UIColor = .black, opacity: Float = 0.5, radius: CGFloat = 5.0, height: CGFloat = 4) {
     switch location {
     case .bottom:
-      addShadow(offset: CGSize(width: 0, height: 4), color: color, opacity: opacity, radius: radius - 4)
+      addShadow(offset: CGSize(width: 0, height: height), color: color, opacity: opacity, radius: radius - height)
     case .top:
-      addShadow(offset: CGSize(width: 0, height: -4), color: color, opacity: opacity, radius: radius - 4)
+      addShadow(offset: CGSize(width: 0, height: -height), color: color, opacity: opacity, radius: radius - height)
     }
   }
 

@@ -1582,7 +1582,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 133 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 148 localization keys.
     struct localizable {
       /// en translation: <b>%@</b>人
       ///
@@ -1628,6 +1628,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_create_vc_circle_verify_known_button = Rswift.StringResource(key: "circle_create_vc_circle_verify_known_button", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 互動記錄
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_history = Rswift.StringResource(key: "member_list_item_history", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 介紹你的圈圈，讓圈友了解圈圈內容。
       ///
       /// Locales: en, zh-Hant
@@ -1723,6 +1727,10 @@ struct R: Rswift.Validatable {
       /// en translation: 圈圈
       ///
       /// Locales: en, zh-Hant
+      static let member_info_circle_title = Rswift.StringResource(key: "member_info_circle_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 圈圈
+      ///
+      /// Locales: en, zh-Hant
       static let tool_bar_circle = Rswift.StringResource(key: "tool_bar_circle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 圈圈名稱
       ///
@@ -1732,6 +1740,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_create_vc_circle_profile_avatar = Rswift.StringResource(key: "circle_create_vc_circle_profile_avatar", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 圈幣
+      ///
+      /// Locales: en, zh-Hant
+      static let member_info_coin_title = Rswift.StringResource(key: "member_info_coin_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 多樣的編輯工具， 讓你進行創作。
       ///
       /// Locales: en, zh-Hant
@@ -1772,6 +1784,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let topic_options_selected_count = Rswift.StringResource(key: "topic_options_selected_count", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 帳號管理
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_account = Rswift.StringResource(key: "member_list_item_account", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 建立
       ///
       /// Locales: en, zh-Hant
@@ -1808,6 +1824,22 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_vc_created = Rswift.StringResource(key: "circle_vc_created", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我的收藏
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_bookmark = Rswift.StringResource(key: "member_list_item_bookmark", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我的聲量
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_volume = Rswift.StringResource(key: "member_list_item_volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我的興趣話題
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_bigcircle = Rswift.StringResource(key: "member_list_item_bigcircle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我的錢包
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_wallet = Rswift.StringResource(key: "member_list_item_wallet", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 或
       ///
       /// Locales: en, zh-Hant
@@ -1820,6 +1852,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let forgetPwd_vc_phone_title = Rswift.StringResource(key: "forgetPwd_vc_phone_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 打賞記錄
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_gift = Rswift.StringResource(key: "member_list_item_gift", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 排序
       ///
       /// Locales: en, zh-Hant
@@ -1844,6 +1880,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let leading_tutorial_feature_text_2 = Rswift.StringResource(key: "leading_tutorial_feature_text_2", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 支援與幫助
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_help = Rswift.StringResource(key: "member_list_item_help", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 是否要為圈圈正名？
       ///
       /// Locales: en, zh-Hant
@@ -1856,6 +1896,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let tool_bar_member = Rswift.StringResource(key: "tool_bar_member", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 朋友
+      ///
+      /// Locales: en, zh-Hant
+      static let member_info_friend_title = Rswift.StringResource(key: "member_info_friend_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 檔案
       ///
       /// Locales: en, zh-Hant
@@ -1924,6 +1968,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let tool_bar_login = Rswift.StringResource(key: "tool_bar_login", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 登出
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_logout = Rswift.StringResource(key: "member_list_item_logout", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 相簿
       ///
       /// Locales: en, zh-Hant
@@ -1988,6 +2036,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_content_category_forum = Rswift.StringResource(key: "circle_content_category_forum", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 設定
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_setting = Rswift.StringResource(key: "member_list_item_setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 設定密碼
       ///
       /// Locales: en, zh-Hant
@@ -2024,6 +2076,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_gender_placeholder = Rswift.StringResource(key: "verify_vc_gender_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 貼文草稿
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_draft = Rswift.StringResource(key: "member_list_item_draft", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 贊助
       ///
       /// Locales: en, zh-Hant
@@ -2044,6 +2100,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let login_vc_login_mail_placeholder = Rswift.StringResource(key: "login_vc_login_mail_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 追蹤Tag管理
+      ///
+      /// Locales: en, zh-Hant
+      static let member_list_item_tag = Rswift.StringResource(key: "member_list_item_tag", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 選擇生日
       ///
       /// Locales: en, zh-Hant
@@ -2282,6 +2342,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_create_vc_circle_verify_known_button", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 互動記錄
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_history(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_history", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_history"
+        }
+
+        return NSLocalizedString("member_list_item_history", bundle: bundle, comment: "")
       }
 
       /// en translation: 介紹你的圈圈，讓圈友了解圈圈內容。
@@ -2634,6 +2709,21 @@ struct R: Rswift.Validatable {
       /// en translation: 圈圈
       ///
       /// Locales: en, zh-Hant
+      static func member_info_circle_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_info_circle_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_info_circle_title"
+        }
+
+        return NSLocalizedString("member_info_circle_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 圈圈
+      ///
+      /// Locales: en, zh-Hant
       static func tool_bar_circle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("tool_bar_circle", bundle: hostingBundle, comment: "")
@@ -2674,6 +2764,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_create_vc_circle_profile_avatar", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 圈幣
+      ///
+      /// Locales: en, zh-Hant
+      static func member_info_coin_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_info_coin_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_info_coin_title"
+        }
+
+        return NSLocalizedString("member_info_coin_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 多樣的編輯工具， 讓你進行創作。
@@ -2830,6 +2935,21 @@ struct R: Rswift.Validatable {
         return String(format: format, locale: locale, value1)
       }
 
+      /// en translation: 帳號管理
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_account(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_account", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_account"
+        }
+
+        return NSLocalizedString("member_list_item_account", bundle: bundle, comment: "")
+      }
+
       /// en translation: 建立
       ///
       /// Locales: en, zh-Hant
@@ -2965,6 +3085,66 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_vc_created", bundle: bundle, comment: "")
       }
 
+      /// en translation: 我的收藏
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_bookmark(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_bookmark", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_bookmark"
+        }
+
+        return NSLocalizedString("member_list_item_bookmark", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 我的聲量
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_volume(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_volume", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_volume"
+        }
+
+        return NSLocalizedString("member_list_item_volume", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 我的興趣話題
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_bigcircle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_bigcircle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_bigcircle"
+        }
+
+        return NSLocalizedString("member_list_item_bigcircle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 我的錢包
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_wallet(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_wallet", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_wallet"
+        }
+
+        return NSLocalizedString("member_list_item_wallet", bundle: bundle, comment: "")
+      }
+
       /// en translation: 或
       ///
       /// Locales: en, zh-Hant
@@ -3008,6 +3188,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("forgetPwd_vc_phone_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 打賞記錄
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_gift(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_gift", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_gift"
+        }
+
+        return NSLocalizedString("member_list_item_gift", bundle: bundle, comment: "")
       }
 
       /// en translation: 排序
@@ -3100,6 +3295,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("leading_tutorial_feature_text_2", bundle: bundle, comment: "")
       }
 
+      /// en translation: 支援與幫助
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_help(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_help", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_help"
+        }
+
+        return NSLocalizedString("member_list_item_help", bundle: bundle, comment: "")
+      }
+
       /// en translation: 是否要為圈圈正名？
       ///
       /// Locales: en, zh-Hant
@@ -3143,6 +3353,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("tool_bar_member", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 朋友
+      ///
+      /// Locales: en, zh-Hant
+      static func member_info_friend_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_info_friend_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_info_friend_title"
+        }
+
+        return NSLocalizedString("member_info_friend_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 檔案
@@ -3400,6 +3625,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("tool_bar_login", bundle: bundle, comment: "")
       }
 
+      /// en translation: 登出
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_logout(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_logout", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_logout"
+        }
+
+        return NSLocalizedString("member_list_item_logout", bundle: bundle, comment: "")
+      }
+
       /// en translation: 相簿
       ///
       /// Locales: en, zh-Hant
@@ -3640,6 +3880,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_content_category_forum", bundle: bundle, comment: "")
       }
 
+      /// en translation: 設定
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_setting(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_setting", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_setting"
+        }
+
+        return NSLocalizedString("member_list_item_setting", bundle: bundle, comment: "")
+      }
+
       /// en translation: 設定密碼
       ///
       /// Locales: en, zh-Hant
@@ -3775,6 +4030,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("verify_vc_gender_placeholder", bundle: bundle, comment: "")
       }
 
+      /// en translation: 貼文草稿
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_draft(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_draft", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_draft"
+        }
+
+        return NSLocalizedString("member_list_item_draft", bundle: bundle, comment: "")
+      }
+
       /// en translation: 贊助
       ///
       /// Locales: en, zh-Hant
@@ -3848,6 +4118,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("login_vc_login_mail_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 追蹤Tag管理
+      ///
+      /// Locales: en, zh-Hant
+      static func member_list_item_tag(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("member_list_item_tag", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "member_list_item_tag"
+        }
+
+        return NSLocalizedString("member_list_item_tag", bundle: bundle, comment: "")
       }
 
       /// en translation: 選擇生日

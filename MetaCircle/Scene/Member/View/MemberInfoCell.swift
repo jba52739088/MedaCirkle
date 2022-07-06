@@ -8,7 +8,7 @@
 import UIKit
 import TinyConstraints
 
-class MemberInfoCell: TableViewCell<MemberInfoCellViewModel> {
+class MemberInfoCell: MemberCell {
   let container = UIView().then {
     $0.backgroundColor = .clear
   }
@@ -45,7 +45,7 @@ class MemberInfoCell: TableViewCell<MemberInfoCellViewModel> {
 
   let coinButton = UIButton(type: .custom)
   let friendButton = UIButton(type: .custom)
-  let circleFriendButton = UIButton(type: .custom)
+  let circleButton = UIButton(type: .custom)
 
   override func setup() {
     self.backgroundColor = .clear
@@ -61,33 +61,146 @@ class MemberInfoCell: TableViewCell<MemberInfoCellViewModel> {
       $0.bottomToSuperview(offset: -8)
     }
 
+    let friendView = UIView()
+    friendView.do {
+      container.addSubview($0)
+      $0.centerXToSuperview()
+      $0.topToSuperview()
+      $0.height(74)
+      $0.width(99)
+      $0.layer.cornerRadius = 10
+      $0.layer.masksToBounds = true
+    }
 
+    friendButton.do {
+      friendView.addSubview($0)
+      $0.setBackgroundImage(R.image.userItemBg(), for: .normal)
+      $0.topToSuperview()
+      $0.leftToSuperview()
+      $0.rightToSuperview()
+      $0.bottomToSuperview()
+    }
+
+    let friendImage = UIImageView()
+    friendImage.do {
+      friendView.addSubview($0)
+      $0.height(22)
+      $0.width(22)
+      $0.topToSuperview(offset: 9)
+      $0.leftToSuperview(offset: 20)
+      $0.image = R.image.icon_friends_line()
+    }
+
+    friendLabel.do {
+      friendView.addSubview($0)
+      $0.centerY(to: friendImage)
+      $0.leftToRight(of: friendImage, offset: 5)
+    }
+
+    friendCountLabel.do {
+      friendView.addSubview($0)
+      $0.centerXToSuperview()
+      $0.topToBottom(of: friendLabel, offset: 3)
+    }
+
+    let coinView = UIView()
+    coinView.do {
+      container.addSubview($0)
+      $0.rightToLeft(of: friendView, offset: -15)
+      $0.topToSuperview()
+      $0.height(74)
+      $0.width(99)
+      $0.layer.cornerRadius = 10
+      $0.layer.masksToBounds = true
+    }
+
+    coinButton.do {
+      coinView.addSubview($0)
+      $0.setBackgroundImage(R.image.userItemBg(), for: .normal)
+      $0.topToSuperview()
+      $0.leftToSuperview()
+      $0.rightToSuperview()
+      $0.bottomToSuperview()
+    }
+
+    let coinImage = UIImageView()
+    coinImage.do {
+      coinView.addSubview($0)
+      $0.height(22)
+      $0.width(22)
+      $0.topToSuperview(offset: 9)
+      $0.leftToSuperview(offset: 20)
+      $0.image = R.image.icon_coin_22()
+    }
+
+    coinLabel.do {
+      coinView.addSubview($0)
+      $0.centerY(to: coinImage)
+      $0.leftToRight(of: coinImage, offset: 5)
+    }
+
+    coinCountLabel.do {
+      coinView.addSubview($0)
+      $0.centerXToSuperview()
+      $0.topToBottom(of: coinLabel, offset: 3)
+    }
+
+    let circleView = UIView()
+    circleView.do {
+      container.addSubview($0)
+      $0.leftToRight(of: friendView, offset: 15)
+      $0.topToSuperview()
+      $0.height(74)
+      $0.width(99)
+      $0.layer.cornerRadius = 10
+      $0.layer.masksToBounds = true
+    }
+
+    circleButton.do {
+      circleView.addSubview($0)
+      $0.setBackgroundImage(R.image.userItemBg(), for: .normal)
+      $0.topToSuperview()
+      $0.leftToSuperview()
+      $0.rightToSuperview()
+      $0.bottomToSuperview()
+    }
+
+    let circleImage = UIImageView()
+    circleImage.do {
+      circleView.addSubview($0)
+      $0.height(22)
+      $0.width(22)
+      $0.topToSuperview(offset: 9)
+      $0.leftToSuperview(offset: 20)
+      $0.image = R.image.icon_member_20_circle()
+    }
+
+    circleLabel.do {
+      circleView.addSubview($0)
+      $0.centerY(to: circleImage)
+      $0.leftToRight(of: circleImage, offset: 5)
+    }
+
+    circleCountLabel.do {
+      circleView.addSubview($0)
+      $0.centerXToSuperview()
+      $0.topToBottom(of: circleLabel, offset: 3)
+    }
   }
 
   override func layoutSubviews() {
     super.layoutSubviews()
-//    avatarImgView.layer.cornerRadius = 35
-//    avatarImgView.layer.masksToBounds = true
-//    avatarImgView.layer.borderWidth = 6
-//    avatarImgView.layer.borderColor = UIColor.white.cgColor
-//    avatarImgView.addShadow(location: .bottom)
-//    editButton.layer.cornerRadius = 15
-//    editButton.layer.masksToBounds = true
-//    editButton.layer.borderWidth = 1
-//    editButton.layer.borderColor = UIColor.tappableText.cgColor
-//    calendarButton.layer.cornerRadius = 18
-//    calendarButton.layer.masksToBounds = true
-//    addFriendButton.layer.cornerRadius = 18
-//    addFriendButton.layer.masksToBounds = true
 
   }
 
-  override func didUpdate(viewModel: MemberInfoCellViewModel?) {
-    guard let viewModel = viewModel else { return }
-//    avatarImgView.image = viewModel.avatar
-//    nickNameLabel.attributedText = viewModel.nickNameAttributedString
-//    nameLabel.attributedText = viewModel.nameAttributedString
-//    editButton.setAttributedTitle(viewModel.editAttributedString, for: .normal)
+  override func didUpdate(viewModel: MemberCellViewModel?) {
+    guard let viewModel = viewModel as? MemberInfoCellViewModel else { return }
+    coinLabel.attributedText = viewModel.coinTitleAttributedString
+    friendLabel.attributedText = viewModel.friendTitleAttributedString
+    circleLabel.attributedText = viewModel.circleTitleAttributedString
+    coinCountLabel.attributedText = viewModel.coinCountTitleAttributedString
+    friendCountLabel.attributedText = viewModel.friendCountTitleAttributedString
+    circleCountLabel.attributedText = viewModel.circleCountTitleAttributedString
   }
 }
 

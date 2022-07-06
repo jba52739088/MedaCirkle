@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import SwiftRichString
 
-class MemberProfileCellViewModel: TableViewCellViewModel {
+class MemberProfileCellViewModel: MemberCellViewModel {
 
   struct Theme {
     init() {
@@ -23,9 +23,10 @@ class MemberProfileCellViewModel: TableViewCellViewModel {
   init(profile: Profile, theme: Theme = Theme()) {
     self.profile = profile
     self.theme = theme
+    super.init(type: .profile)
   }
 
-  func cellHeight() -> CGFloat {
+  override func cellHeight() -> CGFloat {
     return 150.f
   }
 
@@ -44,8 +45,8 @@ class MemberProfileCellViewModel: TableViewCellViewModel {
   }
 
   var editAttributedString: NSAttributedString {
-    return (profile.name ?? "")
-      .set(style: theme.nickNameTextStyle)
+    return R.string.localizable.member_profile_edit_file()
+      .set(style: theme.editTextStyle)
   }
 
 

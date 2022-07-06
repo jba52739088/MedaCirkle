@@ -134,7 +134,7 @@ extension MainViewController {
       case .Message:
         return MassageViewController()
       case .Member:
-        return MemberViewController()
+        return MemberViewController(MemberViewModel())
       }
     }
 

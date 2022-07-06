@@ -129,6 +129,11 @@
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
+		F9CFD96A28748C0600708A26 /* MemberListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CFD96928748C0600708A26 /* MemberListItemCellViewModel.swift */; };
+		F9CFD96C28749FD400708A26 /* MemberListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CFD96B28749FD400708A26 /* MemberListItemCell.swift */; };
+		F9CFD96E2874A5C300708A26 /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CFD96D2874A5C300708A26 /* MemberViewModel.swift */; };
+		F9CFD9702874ADCC00708A26 /* MemberCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CFD96F2874ADCC00708A26 /* MemberCellViewModel.swift */; };
+		F9CFD9722874ADD600708A26 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CFD9712874ADD600708A26 /* MemberCell.swift */; };
 		F9D6BB262832AA9B005D57F2 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB252832AA9B005D57F2 /* LayoutAnchor.swift */; };
 		F9D6BB292832B487005D57F2 /* Int+DataSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB282832B487005D57F2 /* Int+DataSize.swift */; };
 		F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB2B2833BF45005D57F2 /* TopicViewController.swift */; };
@@ -309,6 +314,11 @@
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9CDD1AD282F88D0002CEEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9CFD96928748C0600708A26 /* MemberListItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListItemCellViewModel.swift; sourceTree = "<group>"; };
+		F9CFD96B28749FD400708A26 /* MemberListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListItemCell.swift; sourceTree = "<group>"; };
+		F9CFD96D2874A5C300708A26 /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
+		F9CFD96F2874ADCC00708A26 /* MemberCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellViewModel.swift; sourceTree = "<group>"; };
+		F9CFD9712874ADD600708A26 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		F9D6BB252832AA9B005D57F2 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
 		F9D6BB282832B487005D57F2 /* Int+DataSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DataSize.swift"; sourceTree = "<group>"; };
 		F9D6BB2B2833BF45005D57F2 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
@@ -521,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
+				F9CFD96D2874A5C300708A26 /* MemberViewModel.swift */,
 				F98705CE28733F09008C407A /* View */,
 			);
 			path = Member;
@@ -538,10 +549,14 @@
 		F98705CE28733F09008C407A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9CFD9712874ADD600708A26 /* MemberCell.swift */,
+				F9CFD96F2874ADCC00708A26 /* MemberCellViewModel.swift */,
 				F98705CF2873456B008C407A /* MemberProfileCell.swift */,
 				F98705D128734593008C407A /* MemberProfileCellViewModel.swift */,
 				F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */,
 				F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */,
+				F9CFD96B28749FD400708A26 /* MemberListItemCell.swift */,
+				F9CFD96928748C0600708A26 /* MemberListItemCellViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1043,6 +1058,7 @@
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
 				F976C0132839D8AF0087567C /* VerifyViewModel.swift in Sources */,
 				F9EBD2DB283FBB9200172508 /* ForgetPwdViewModel.swift in Sources */,
+				F9CFD96C28749FD400708A26 /* MemberListItemCell.swift in Sources */,
 				F9A1D78628579EDD00A15BEF /* CircleContentPinCell.swift in Sources */,
 				F9D6BB262832AA9B005D57F2 /* LayoutAnchor.swift in Sources */,
 				F942C232285D8B6D005E7374 /* ArticleTagItem.swift in Sources */,
@@ -1065,6 +1081,7 @@
 				F9A1D76C2851056D00A15BEF /* TopicFeatureItem.swift in Sources */,
 				F9A1D78428577B1E00A15BEF /* CircleContentCategoryCellViewModel.swift in Sources */,
 				F9D6BB2C2833BF45005D57F2 /* TopicViewController.swift in Sources */,
+				F9CFD9702874ADCC00708A26 /* MemberCellViewModel.swift in Sources */,
 				F9A1D76F2852619A00A15BEF /* CircleContentViewController.swift in Sources */,
 				F9A1D7752852EC0400A15BEF /* CircleContentTopCellViewModel.swift in Sources */,
 				F99CE59D2862D4500026FEA3 /* RequestTaskVisitor.swift in Sources */,
@@ -1082,6 +1099,7 @@
 				F942C230285D8391005E7374 /* CircleArticleItemViewModel.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
 				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
+				F9CFD96A28748C0600708A26 /* MemberListItemCellViewModel.swift in Sources */,
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
 				F9424F7E2863507700D4D0CD /* KeychainStore.swift in Sources */,
 				F976C01F283E88300087567C /* Extension+Array.swift in Sources */,
@@ -1090,6 +1108,7 @@
 				64781CFD285A0B320075BC09 /* CircleArticleHeaderItem.swift in Sources */,
 				F9A1D77B2853228300A15BEF /* SubscribeStateButton.swift in Sources */,
 				F976C023283E8A160087567C /* UIViewController+Reactive.swift in Sources */,
+				F9CFD96E2874A5C300708A26 /* MemberViewModel.swift in Sources */,
 				F9D87F6B2846664A0033343F /* TableViewCell.swift in Sources */,
 				F98705D02873456B008C407A /* MemberProfileCell.swift in Sources */,
 				F9A1D75C28507AE400A15BEF /* TopicItemViewModel.swift in Sources */,
@@ -1141,6 +1160,7 @@
 				F9424F862863645D00D4D0CD /* FullScreenLoadingPresenting.swift in Sources */,
 				F99CE58D2862D00F0026FEA3 /* APIClient.swift in Sources */,
 				F9424F842863626500D4D0CD /* LoadingView.swift in Sources */,
+				F9CFD9722874ADD600708A26 /* MemberCell.swift in Sources */,
 				F976C025283E8C890087567C /* UIViewController+ChildTransition.swift in Sources */,
 				F97C1148286E161E002ED6A8 /* LoginRequest.swift in Sources */,
 				F97C1145286E15D1002ED6A8 /* LoginResponse.swift in Sources */,
