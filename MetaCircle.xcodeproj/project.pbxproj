@@ -12,6 +12,12 @@
 		64781D01285A13C20075BC09 /* CircleArticleBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64781D00285A13C20075BC09 /* CircleArticleBaseItem.swift */; };
 		64781D03285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64781D02285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift */; };
 		E7E36455985BF0938CB3EF3F /* Pods_MetaCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F48190C9A2F31C65421B61 /* Pods_MetaCircle.framework */; };
+		F933D7CE2885A44500D182D9 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933D7CD2885A44500D182D9 /* Extension+UIButton.swift */; };
+		F933D7D02885A46400D182D9 /* ButtonRightImageLeftTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933D7CF2885A46400D182D9 /* ButtonRightImageLeftTitle.swift */; };
+		F933D7D22885A97700D182D9 /* UIPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933D7D12885A97700D182D9 /* UIPlaceholderTextView.swift */; };
+		F937F459287F399900167BFF /* NSAttributedString+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937F458287F399900167BFF /* NSAttributedString+Size.swift */; };
+		F937F45B2880706000167BFF /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937F45A2880706000167BFF /* EditProfileViewController.swift */; };
+		F937F45D2880706B00167BFF /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937F45C2880706B00167BFF /* EditProfileViewModel.swift */; };
 		F9424F722862D9C500D4D0CD /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F712862D9C500D4D0CD /* Globals.swift */; };
 		F9424F742862E99B00D4D0CD /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F732862E99B00D4D0CD /* EnvironmentConfiguration.swift */; };
 		F9424F7628634CB000D4D0CD /* ServerDateFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */; };
@@ -74,6 +80,8 @@
 		F9941E9E284CF79600337F30 /* PrivacyCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */; };
 		F9953F07285A271500746F59 /* CircleArticleTitleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */; };
 		F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */; };
+		F99607E92887202800798399 /* EditWebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607E82887202800798399 /* EditWebSiteViewController.swift */; };
+		F99607EB2887203400798399 /* EditWebSiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607EA2887203400798399 /* EditWebSiteViewModel.swift */; };
 		F99CE5802862C23A0026FEA3 /* RegisterReSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */; };
 		F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */; };
 		F99CE5842862C62F0026FEA3 /* RegisterSendSMSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */; };
@@ -88,6 +96,14 @@
 		F99CE59B2862D3BB0026FEA3 /* RequestMethodVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59A2862D3BB0026FEA3 /* RequestMethodVisitor.swift */; };
 		F99CE59D2862D4500026FEA3 /* RequestTaskVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59C2862D4500026FEA3 /* RequestTaskVisitor.swift */; };
 		F99CE59F2862D6980026FEA3 /* RequestHeaderVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE59E2862D6980026FEA3 /* RequestHeaderVisitor.swift */; };
+		F99D2207287DB537007F605D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D2206287DB537007F605D /* ProfileViewController.swift */; };
+		F99D2209287DB548007F605D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D2208287DB548007F605D /* ProfileViewModel.swift */; };
+		F99D220B287DBD6D007F605D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D220A287DBD6D007F605D /* ProfileCell.swift */; };
+		F99D220D287DBD75007F605D /* ProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D220C287DBD75007F605D /* ProfileCellViewModel.swift */; };
+		F99D220F287DC35A007F605D /* ProfileHeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D220E287DC35A007F605D /* ProfileHeaderCellViewModel.swift */; };
+		F99D2211287DC369007F605D /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D2210287DC369007F605D /* ProfileHeaderCell.swift */; };
+		F99D2213287DC37A007F605D /* ProfileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D2212287DC37A007F605D /* ProfileItemCell.swift */; };
+		F99D2215287DC388007F605D /* ProfileItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D2214287DC388007F605D /* ProfileItemCellViewModel.swift */; };
 		F9A1D751284E43A300A15BEF /* CircleCreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */; };
 		F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */; };
 		F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */; };
@@ -195,6 +211,12 @@
 		64781D00285A13C20075BC09 /* CircleArticleBaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleBaseItem.swift; sourceTree = "<group>"; };
 		64781D02285A13D00075BC09 /* CircleArticleBaseItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleBaseItemViewModel.swift; sourceTree = "<group>"; };
 		820ED9B00609B359E48ECD0E /* Pods-MetaCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaCircle.debug.xcconfig"; path = "Target Support Files/Pods-MetaCircle/Pods-MetaCircle.debug.xcconfig"; sourceTree = "<group>"; };
+		F933D7CD2885A44500D182D9 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
+		F933D7CF2885A46400D182D9 /* ButtonRightImageLeftTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRightImageLeftTitle.swift; sourceTree = "<group>"; };
+		F933D7D12885A97700D182D9 /* UIPlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlaceholderTextView.swift; sourceTree = "<group>"; };
+		F937F458287F399900167BFF /* NSAttributedString+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Size.swift"; sourceTree = "<group>"; };
+		F937F45A2880706000167BFF /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		F937F45C2880706B00167BFF /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		F9424F712862D9C500D4D0CD /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		F9424F732862E99B00D4D0CD /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
 		F9424F7528634CB000D4D0CD /* ServerDateFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFetchable.swift; sourceTree = "<group>"; };
@@ -257,6 +279,8 @@
 		F9941E9D284CF79600337F30 /* PrivacyCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyCheckBoxView.swift; sourceTree = "<group>"; };
 		F9953F06285A271400746F59 /* CircleArticleTitleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItemViewModel.swift; sourceTree = "<group>"; };
 		F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItem.swift; sourceTree = "<group>"; };
+		F99607E82887202800798399 /* EditWebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebSiteViewController.swift; sourceTree = "<group>"; };
+		F99607EA2887203400798399 /* EditWebSiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebSiteViewModel.swift; sourceTree = "<group>"; };
 		F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReSendMailRequest.swift; sourceTree = "<group>"; };
 		F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerifyMailRequest.swift; sourceTree = "<group>"; };
 		F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendSMSRequest.swift; sourceTree = "<group>"; };
@@ -271,6 +295,14 @@
 		F99CE59A2862D3BB0026FEA3 /* RequestMethodVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodVisitor.swift; sourceTree = "<group>"; };
 		F99CE59C2862D4500026FEA3 /* RequestTaskVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTaskVisitor.swift; sourceTree = "<group>"; };
 		F99CE59E2862D6980026FEA3 /* RequestHeaderVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderVisitor.swift; sourceTree = "<group>"; };
+		F99D2206287DB537007F605D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F99D2208287DB548007F605D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F99D220A287DBD6D007F605D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		F99D220C287DBD75007F605D /* ProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellViewModel.swift; sourceTree = "<group>"; };
+		F99D220E287DC35A007F605D /* ProfileHeaderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCellViewModel.swift; sourceTree = "<group>"; };
+		F99D2210287DC369007F605D /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		F99D2212287DC37A007F605D /* ProfileItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemCell.swift; sourceTree = "<group>"; };
+		F99D2214287DC388007F605D /* ProfileItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemCellViewModel.swift; sourceTree = "<group>"; };
 		F9A1D74F284E43A300A15BEF /* CircleCreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewController.swift; sourceTree = "<group>"; };
 		F9A1D750284E43A300A15BEF /* CircleCreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCreateProfileViewModel.swift; sourceTree = "<group>"; };
 		F9A1D753284FB23A00A15BEF /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
@@ -532,6 +564,12 @@
 			children = (
 				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
 				F9CFD96D2874A5C300708A26 /* MemberViewModel.swift */,
+				F99D2206287DB537007F605D /* ProfileViewController.swift */,
+				F99D2208287DB548007F605D /* ProfileViewModel.swift */,
+				F937F45A2880706000167BFF /* EditProfileViewController.swift */,
+				F937F45C2880706B00167BFF /* EditProfileViewModel.swift */,
+				F99607E82887202800798399 /* EditWebSiteViewController.swift */,
+				F99607EA2887203400798399 /* EditWebSiteViewModel.swift */,
 				F98705CE28733F09008C407A /* View */,
 			);
 			path = Member;
@@ -557,6 +595,12 @@
 				F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */,
 				F9CFD96B28749FD400708A26 /* MemberListItemCell.swift */,
 				F9CFD96928748C0600708A26 /* MemberListItemCellViewModel.swift */,
+				F99D220A287DBD6D007F605D /* ProfileCell.swift */,
+				F99D220C287DBD75007F605D /* ProfileCellViewModel.swift */,
+				F99D2210287DC369007F605D /* ProfileHeaderCell.swift */,
+				F99D220E287DC35A007F605D /* ProfileHeaderCellViewModel.swift */,
+				F99D2212287DC37A007F605D /* ProfileItemCell.swift */,
+				F99D2214287DC388007F605D /* ProfileItemCellViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -705,9 +749,11 @@
 				F976C01E283E88300087567C /* Extension+Array.swift */,
 				F976C034283EA1730087567C /* Extension+UINavigationController.swift */,
 				F9EBD2EB28434AC100172508 /* Extension+UIImage.swift */,
+				F933D7CD2885A44500D182D9 /* Extension+UIButton.swift */,
 				F9D6BB3C28341AC0005D57F2 /* UIView+Factory.swift */,
 				F976C022283E8A160087567C /* UIViewController+Reactive.swift */,
 				F976C024283E8C890087567C /* UIViewController+ChildTransition.swift */,
+				F937F458287F399900167BFF /* NSAttributedString+Size.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -775,6 +821,8 @@
 				F942C233285D8BCE005E7374 /* ArticleTagItemViewModel.swift */,
 				F942C235285DAED7005E7374 /* LeftAlignedFlowLayout.swift */,
 				F942C23B285DCD8D005E7374 /* DynamicCollectionView.swift */,
+				F933D7CF2885A46400D182D9 /* ButtonRightImageLeftTitle.swift */,
+				F933D7D12885A97700D182D9 /* UIPlaceholderTextView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1023,6 +1071,7 @@
 				F976C033283E9E260087567C /* NavigationController.swift in Sources */,
 				F9EBD2F02843CFCB00172508 /* CircleListViewModel.swift in Sources */,
 				F99CE59B2862D3BB0026FEA3 /* RequestMethodVisitor.swift in Sources */,
+				F99607E92887202800798399 /* EditWebSiteViewController.swift in Sources */,
 				F973DE59282FA1990075FDC2 /* IntroViewController.swift in Sources */,
 				F9D87F7028466C440033343F /* CircleMainCell.swift in Sources */,
 				F9A1D7612850908D00A15BEF /* TempTopicModel.swift in Sources */,
@@ -1044,16 +1093,19 @@
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */,
 				F99CE5972862D2140026FEA3 /* RequestURLVisitor.swift in Sources */,
+				F937F45B2880706000167BFF /* EditProfileViewController.swift in Sources */,
 				F9D6BB3028340304005D57F2 /* Extension+UIView.swift in Sources */,
 				F9EBD2EC28434AC100172508 /* Extension+UIImage.swift in Sources */,
 				F9A1D7642850FE1100A15BEF /* TopicFeatureViewController.swift in Sources */,
 				F9D87F722849DC520033343F /* CircleCreateViewController.swift in Sources */,
 				F9EBD2EE2843CEB800172508 /* CircleListViewController.swift in Sources */,
 				F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */,
+				F99D2213287DC37A007F605D /* ProfileItemCell.swift in Sources */,
 				F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */,
 				F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */,
 				F9A5BAD728716ECD009604ED /* LogoutRequest.swift in Sources */,
 				F976C015283C78F70087567C /* Extension+String.swift in Sources */,
+				F99607EB2887203400798399 /* EditWebSiteViewModel.swift in Sources */,
 				F973DE46282F93730075FDC2 /* MainViewController.swift in Sources */,
 				F9D6BB2E2833EE7E005D57F2 /* Colors.swift in Sources */,
 				F976C0132839D8AF0087567C /* VerifyViewModel.swift in Sources */,
@@ -1066,7 +1118,9 @@
 				F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */,
 				F9A5BADB287180C2009604ED /* MemberInfoCellViewModel.swift in Sources */,
 				F9D6BB3D28341AC0005D57F2 /* UIView+Factory.swift in Sources */,
+				F99D220B287DBD6D007F605D /* ProfileCell.swift in Sources */,
 				F99CE5932862D0E70026FEA3 /* RestTarget.swift in Sources */,
+				F933D7D22885A97700D182D9 /* UIPlaceholderTextView.swift in Sources */,
 				F9D6BB76283499D5005D57F2 /* LoginViewModel.swift in Sources */,
 				F9424F80286356F700D4D0CD /* UserSessionManager.swift in Sources */,
 				F976C021283E89CB0087567C /* PhoneRootViewController.swift in Sources */,
@@ -1077,6 +1131,7 @@
 				F9424F7628634CB000D4D0CD /* ServerDateFetchable.swift in Sources */,
 				F9A1D7732852EBE000A15BEF /* CircleContentBaseCell.swift in Sources */,
 				F9A1D76B2851056D00A15BEF /* TopicFeatureItemViewModel.swift in Sources */,
+				F99D2207287DB537007F605D /* ProfileViewController.swift in Sources */,
 				F9424F722862D9C500D4D0CD /* Globals.swift in Sources */,
 				F9A1D76C2851056D00A15BEF /* TopicFeatureItem.swift in Sources */,
 				F9A1D78428577B1E00A15BEF /* CircleContentCategoryCellViewModel.swift in Sources */,
@@ -1096,6 +1151,8 @@
 				F9A1D78C2858235A00A15BEF /* CircleContentPinItem.swift in Sources */,
 				F9A1D7662850FE1F00A15BEF /* TopicFeatureViewModel.swift in Sources */,
 				F9A1D79A2858E59000A15BEF /* CircleViewModel.swift in Sources */,
+				F99D220F287DC35A007F605D /* ProfileHeaderCellViewModel.swift in Sources */,
+				F99D2211287DC369007F605D /* ProfileHeaderCell.swift in Sources */,
 				F942C230285D8391005E7374 /* CircleArticleItemViewModel.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
 				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
@@ -1116,6 +1173,7 @@
 				F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */,
 				F976C02A283E941A0087567C /* PreferenceManager.swift in Sources */,
 				F9D87F742849DC5B0033343F /* CircleCreateViewModel.swift in Sources */,
+				F933D7CE2885A44500D182D9 /* Extension+UIButton.swift in Sources */,
 				F942C240285EF847005E7374 /* RestRequestVisitorType.swift in Sources */,
 				F976C0112839D8A20087567C /* VerifyViewController.swift in Sources */,
 				F9A5BADD2871F922009604ED /* ProfileResponse.swift in Sources */,
@@ -1135,7 +1193,9 @@
 				F9A1D754284FB23A00A15BEF /* IntroViewModel.swift in Sources */,
 				F9A1D7712852619F00A15BEF /* CircleContentViewModel.swift in Sources */,
 				F9424F822863613A00D4D0CD /* LoadingViewController.swift in Sources */,
+				F99D220D287DBD75007F605D /* ProfileCellViewModel.swift in Sources */,
 				F9EBD2D9283FBB8900172508 /* ForgetPwdViewController.swift in Sources */,
+				F937F459287F399900167BFF /* NSAttributedString+Size.swift in Sources */,
 				F99CE5802862C23A0026FEA3 /* RegisterReSendMailRequest.swift in Sources */,
 				F9EBD2DF283FC9E000172508 /* GlobalVariables.swift in Sources */,
 				F99CE5952862D1220026FEA3 /* RestTargetConfiguration.swift in Sources */,
@@ -1144,13 +1204,17 @@
 				F973DE56282F9F1A0075FDC2 /* R.generated.swift in Sources */,
 				F9A1D78828579EEC00A15BEF /* CircleContentPinCellViewModel.swift in Sources */,
 				F9A1D756285039F100A15BEF /* TopicViewModel.swift in Sources */,
+				F933D7D02885A46400D182D9 /* ButtonRightImageLeftTitle.swift in Sources */,
 				F9941E9C284C502B00337F30 /* NormalTextField.swift in Sources */,
 				F9A1D7772852F5D300A15BEF /* CircleContentTopCell.swift in Sources */,
+				F937F45D2880706B00167BFF /* EditProfileViewModel.swift in Sources */,
 				F9A1D7582850788300A15BEF /* CollectionViewCell.swift in Sources */,
 				F9A1D79228585FC600A15BEF /* CircleContentCellViewModel.swift in Sources */,
+				F99D2209287DB548007F605D /* ProfileViewModel.swift in Sources */,
 				F99CE5862862C6960026FEA3 /* RegisterReSendSMSRequest.swift in Sources */,
 				F976C031283E9C8E0087567C /* Scene+ViewController.swift in Sources */,
 				F9EBD2E72841D35800172508 /* ResetPwdViewModel.swift in Sources */,
+				F99D2215287DC388007F605D /* ProfileItemCellViewModel.swift in Sources */,
 				F942C238285DB8C0005E7374 /* CircleArticleTagItem.swift in Sources */,
 				F9A1D78E2858237000A15BEF /* CircleContentPinItemViewModel.swift in Sources */,
 				F9A1D75F28508E5E00A15BEF /* TempCircleModel.swift in Sources */,

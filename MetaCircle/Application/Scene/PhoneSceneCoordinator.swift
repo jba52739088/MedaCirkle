@@ -223,7 +223,14 @@ internal class PhoneSceneCoordinator: SceneCoordinator {
     // Current view controller is lost if a presented SFSafariViewController is dismissed
     recalibrate()
 
-    completion()
+    if let cur = currentViewController {
+      cur.present(viewController, animated: animated, completion: {
+        self.currentViewController = PhoneSceneCoordinator.activeViewController(for: viewController)
+        completion()
+      })
+    } else {
+      completion()
+    }
   }
 
   private func _pushTransition(to viewController: UIViewController, animated: Bool, completion: @escaping (() -> Void)) {

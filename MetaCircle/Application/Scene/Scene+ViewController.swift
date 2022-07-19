@@ -54,6 +54,12 @@ extension Scene {
       return  CircleContentViewController(vm)
     case let .circle(vm):
       return CircleViewController()
+    case let .memberProfile(vm):
+      return ProfileViewController(vm)
+    case .editProfile:
+      return EditProfileViewController()
+    case .editWebsite:
+      return EditWebSiteViewController()
     }
   }
 }

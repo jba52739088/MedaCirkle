@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="193" height="193" viewBox="0 0 193 193">
+  <defs>
+    <filter id="istockphoto-1193624445-612x612" x="0" y="0" width="193" height="193" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dd4b9b"/>
+      <stop offset="1" stop-color="#35c4f3"/>
+    </linearGradient>
+    <filter id="Ellipse_185" x="101.5" y="94.5" width="70" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="圈圈頭像" transform="translate(1231.5 1457.5)">
+    <g id="Group_7632" data-name="Group 7632" transform="translate(-1322 -1523)">
+      <g transform="matrix(1, 0, 0, 1, 90.5, 65.5)" filter="url(#istockphoto-1193624445-612x612)">
+        <g id="istockphoto-1193624445-612x612-2" data-name="istockphoto-1193624445-612x612" transform="translate(46.5 34.5)" fill="#e5eefc" stroke="#fff" stroke-width="9">
+          <circle cx="50" cy="50" r="50" stroke="none"/>
+          <circle cx="50" cy="50" r="54.5" fill="none"/>
+        </g>
+      </g>
+      <g id="icon_圈圈頭像" transform="translate(168 132)">
+        <g id="bg" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+          <rect width="38" height="37" stroke="none"/>
+          <rect x="0.5" y="0.5" width="37" height="36" fill="none"/>
+        </g>
+        <path id="Union_21" data-name="Union 21" d="M97.3,6451.494c0-7.145-5.294-12.956-11.8-12.956s-11.8,5.808-11.8,12.954a1.35,1.35,0,0,1-2.7,0c0-8.595,6.5-15.58,14.5-15.584a14.235,14.235,0,0,1,11.894,6.7c.284.6.822,1.3,1.238,2.329a16.442,16.442,0,0,1,1.368,6.562,1.351,1.351,0,0,1-2.7,0Zm-20.324-25.429a8.294,8.294,0,1,1,8.289,8.057A8.173,8.173,0,0,1,76.976,6426.065Zm2.7,0a5.593,5.593,0,1,0,5.591-5.438A5.514,5.514,0,0,0,79.674,6426.065Z" transform="translate(-66.501 -6416.905)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Group_8549" data-name="Group 8549" transform="translate(-1365 -1554)">
+      <g transform="matrix(1, 0, 0, 1, 133.5, 96.5)" filter="url(#Ellipse_185)">
+        <circle id="Ellipse_185-2" data-name="Ellipse 185" cx="20" cy="20" r="20" transform="translate(116.5 104.5)" fill="#fff" opacity="0.9"/>
+      </g>
+      <g id="icon_camera" transform="translate(260 211)">
+        <rect id="Rectangle_4055" data-name="Rectangle 4055" width="20" height="20" fill="none"/>
+        <g id="Group_6496" data-name="Group 6496" transform="translate(9631 12300)">
+          <g id="Group_6493" data-name="Group 6493" transform="translate(-9631 -12298)">
+            <path id="Path_9300" data-name="Path 9300" d="M17.609,49.887H15.522L14.37,48.147A2.4,2.4,0,0,0,12.391,47.1H7.609A2.4,2.4,0,0,0,5.63,48.147L4.478,49.887H2.391A2.384,2.384,0,0,0,0,52.278v8.435A2.384,2.384,0,0,0,2.391,63.1H17.609A2.384,2.384,0,0,0,20,60.713V52.278A2.384,2.384,0,0,0,17.609,49.887ZM10,61.147a5.38,5.38,0,1,1,5.391-5.37A5.39,5.39,0,0,1,10,61.147Z" transform="translate(0 -47.104)"/>
+          </g>
+          <g id="Group_6495" data-name="Group 6495" transform="translate(-9624.5 -12292.7)">
+            <path id="Path_9301" data-name="Path 9301" d="M168.364,180.736a3.5,3.5,0,1,0,3.5,3.487A3.513,3.513,0,0,0,168.364,180.736Z" transform="translate(-164.864 -180.836)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

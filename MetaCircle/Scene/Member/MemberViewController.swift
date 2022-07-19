@@ -139,5 +139,16 @@ class MemberViewController: BaseViewController {
         return UITableViewCell()
       }
       .disposed(by: disposeBag)
+
+    Observable
+      .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(MemberCellViewModel.self))
+      .bind { [unowned self] indexPath, model in
+//        self.tableView.deselectRow(at: indexPath, animated: true)
+        print("Selected " + model.type.title + " at \(indexPath)")
+//        sceneCoordinator.transit(to: .circleContent(CircleContentViewModel(type: .Created)), by: .automatic, completion: nil)
+//        self.navigationController?.pushViewController(Scene.memberProfile(ProfileViewModel(profile: tempProfile)).viewController(), animated: true)
+        sceneCoordinator.transit(to: .memberProfile(ProfileViewModel(profile: tempProfile)), by: .present(transitionStyle: .coverVertical, animated: true), completion: nil)
+      }
+      .disposed(by: disposeBag)
   }
 }

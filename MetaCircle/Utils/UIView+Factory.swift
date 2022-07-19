@@ -121,6 +121,44 @@ extension UIView {
     backButton.addNormalTouch(target, action: action)
     return backButton
   }
+
+  static func editPenButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = UIButton(type: .custom).then {
+      $0.setImage(R.image.icon_edit(), for: .normal)
+      $0.imageView?.contentMode = .scaleAspectFit
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
+  static func titleSwitchButton(target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let backButton = ButtonRightImageLeftTitle(type: .custom).then {
+      $0.setImage(R.image.switch_off(), for: .normal)
+      $0.setImage(R.image.switch_on(), for: .selected)
+      $0.imageView?.contentMode = .scaleAspectFit
+      $0.setAttributedTitle(R.string.localizable.profile_edit_public().set(style: UIView.titleSwitchTextStyle), for: .normal)
+    }
+    backButton.addNormalTouch(target, action: action)
+    return backButton
+  }
+
+  static func normalConfirmButton(title: String? = nil, target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let button = UIButton(type: .custom)
+    let _title = title ?? R.string.localizable.confirm()
+    button.setAttributedTitle(_title.set(style: UIView.enableLoginTextStyle), for: .normal)
+    button.addNormalTouch(target, action: action)
+    button.setBackgroundColor(.btnBlue, forState: .normal)
+    return button
+  }
+
+  static func normalCancelButton(title: String? = nil, target: Any? = nil,  action: Selector? = nil) -> UIButton {
+    let button = UIButton(type: .custom)
+    let _title = title ?? R.string.localizable.confirm()
+    button.setAttributedTitle(_title.set(style: UIView.normalCancelTextStyle), for: .normal)
+    button.addNormalTouch(target, action: action)
+    button.setBackgroundColor(.clear, forState: .normal)
+    return button
+  }
 }
 
 // MARK: - Buttons
@@ -156,6 +194,24 @@ extension UIView {
       $0.maximumLineHeight = 25
       $0.minimumLineHeight = 25
       $0.color = UIColor.placeholderColor
+    }
+  }
+
+  static var normalCancelTextStyle: StyleProtocol {
+    Style {
+      $0.font = R.font.notoSansTCRegular(size: 17)
+      $0.maximumLineHeight = 25
+      $0.minimumLineHeight = 25
+      $0.color = UIColor.tappableText
+    }
+  }
+
+  static var titleSwitchTextStyle: StyleProtocol {
+    Style {
+      $0.font = R.font.promptRegular(size: 16)
+      $0.maximumLineHeight = 24
+      $0.minimumLineHeight = 25
+      $0.color = UIColor.normalText
     }
   }
 }

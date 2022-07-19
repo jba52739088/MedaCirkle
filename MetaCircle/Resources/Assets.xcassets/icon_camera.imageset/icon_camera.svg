@@ -1,0 +1,11 @@
+<svg id="icon_camera" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <rect id="Rectangle_4055" data-name="Rectangle 4055" width="20" height="20" fill="none"/>
+  <g id="Group_6496" data-name="Group 6496" transform="translate(9631 12300)">
+    <g id="Group_6493" data-name="Group 6493" transform="translate(-9631 -12298)">
+      <path id="Path_9300" data-name="Path 9300" d="M17.609,49.887H15.522L14.37,48.147A2.4,2.4,0,0,0,12.391,47.1H7.609A2.4,2.4,0,0,0,5.63,48.147L4.478,49.887H2.391A2.384,2.384,0,0,0,0,52.278v8.435A2.384,2.384,0,0,0,2.391,63.1H17.609A2.384,2.384,0,0,0,20,60.713V52.278A2.384,2.384,0,0,0,17.609,49.887ZM10,61.147a5.38,5.38,0,1,1,5.391-5.37A5.39,5.39,0,0,1,10,61.147Z" transform="translate(0 -47.104)"/>
+    </g>
+    <g id="Group_6495" data-name="Group 6495" transform="translate(-9624.5 -12292.7)">
+      <path id="Path_9301" data-name="Path 9301" d="M168.364,180.736a3.5,3.5,0,1,0,3.5,3.487A3.513,3.513,0,0,0,168.364,180.736Z" transform="translate(-164.864 -180.836)"/>
+    </g>
+  </g>
+</svg>
