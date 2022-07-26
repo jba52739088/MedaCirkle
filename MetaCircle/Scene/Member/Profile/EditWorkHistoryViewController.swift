@@ -1,8 +1,8 @@
 //
-//  EditEducationViewController.swift
+//  EditWorkHistoryViewController.swift
 //  MetaCircle
 //
-//  Created by 黃恩祐 on 2022/7/21.
+//  Created by 黃恩祐 on 2022/7/27.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-class EditEducationViewController: BaseViewController {
+class EditWorkHistoryViewController: BaseViewController {
 
   private let topView = UIView().then {
     $0.backgroundColor = .clear
@@ -23,44 +23,17 @@ class EditEducationViewController: BaseViewController {
     $0.translatesAutoresizingMaskIntoConstraints = false
   }
   private let hintTitleLabel = UILabel()
-  private let infoTitleLabel = UILabel()
-  let levelTextField = NormalTextField()
-  let nameTextField = MetaTextField()
-  private let dateTitleLabel = UILabel()
-  let dateStartTextField = BirthTextField()
-  let dateEndTextField = BirthTextField()
-  private let statusTitleLabel = UILabel()
-  private let graduatedButton = UIButton(type: .custom).then {
-    let studyStatus = EditEducationViewModel.StudyStatus.graduated
-    $0.tag = studyStatus.tag
-    $0.setAttributedTitle(studyStatus.titleAttributedString, for: .normal)
-    $0.setImage(R.image.radio_button_1(), for: .normal)
-    $0.setImage(R.image.radio_button_1_selected(), for: .selected)
-    $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-    $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
+  let companyTextField = NormalTextField()
+  let positionTextField = MetaTextField()
+  let locationTextField = MetaTextField()
+  let dateStartTextField = BirthTextField(withTitle: true)
+  private let stillButton = UIButton(type: .custom).then {
+    $0.setImage(R.image.checkbox(), for: .normal)
+    $0.setImage(R.image.checkbox_selected(), for: .selected)
+    $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 9)
+    $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 9, bottom: 0, right: -9)
     $0.height(25)
   }
-  private let noncompletionButton = UIButton(type: .custom).then {
-    let studyStatus = EditEducationViewModel.StudyStatus.noncompletion
-    $0.tag = studyStatus.tag
-    $0.setAttributedTitle(studyStatus.titleAttributedString, for: .normal)
-    $0.setImage(R.image.radio_button_1(), for: .normal)
-    $0.setImage(R.image.radio_button_1_selected(), for: .selected)
-    $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-    $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-    $0.height(25)
-  }
-  private let studyingButton = UIButton(type: .custom).then {
-    let studyStatus = EditEducationViewModel.StudyStatus.studying
-    $0.tag = studyStatus.tag
-    $0.setAttributedTitle(studyStatus.titleAttributedString, for: .normal)
-    $0.setImage(R.image.radio_button_1(), for: .normal)
-    $0.setImage(R.image.radio_button_1_selected(), for: .selected)
-    $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-    $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-    $0.height(25)
-  }
-  let majorTextField = NormalTextField()
   private let detailTitleLabel = UILabel()
   let textView = UIPlaceholderTextView().then {
     $0.backgroundColor = .textFieldNormalBg
@@ -70,9 +43,9 @@ class EditEducationViewController: BaseViewController {
   private lazy var confirmButton: UIButton = .normalConfirmButton(title: R.string.localizable.profile_edit_save(), target: self, action:  #selector(didTapConfirmButton))
   private lazy var resetButton: UIButton = .normalConfirmButton(title: R.string.localizable.profile_edit_reset(), target: self, action:  #selector(didTapResetButton))
 
-  let viewModel: EditEducationViewModel
+  let viewModel: EditWorkHistoryViewModel
 
-  init(_ viewModel: EditEducationViewModel = EditEducationViewModel()) {
+  init(_ viewModel: EditWorkHistoryViewModel = EditWorkHistoryViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
@@ -143,94 +116,52 @@ class EditEducationViewController: BaseViewController {
       $0.numberOfLines = 0
     }
 
-    infoTitleLabel.do {
+    companyTextField.do {
       contentView.addSubview($0)
       $0.topToBottom(of: hintTitleLabel, offset: 35)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
     }
 
-    levelTextField.do {
+    positionTextField.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: infoTitleLabel, offset: 10)
+      $0.topToBottom(of: companyTextField, offset: 10)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
     }
 
-    nameTextField.do {
+    locationTextField.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: levelTextField, offset: 10)
+      $0.topToBottom(of: positionTextField, offset: 10)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
-    }
-
-    dateTitleLabel.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: nameTextField, offset: 10)
-      $0.leadingToSuperview()
-      $0.trailingToSuperview()
-    }
-
-    let dateView = UIView()
-    dateView.do {
-      contentView.addSubview($0)
-      $0.leadingToSuperview()
-      $0.trailingToSuperview()
-      $0.height(44)
-      $0.topToBottom(of: dateTitleLabel, offset: 6)
     }
 
     dateStartTextField.do {
-      dateView.addSubview($0)
-      $0.topToSuperview()
-      $0.bottomToSuperview()
-      $0.leadingToSuperview()
-    }
-
-    dateEndTextField.do {
-      dateView.addSubview($0)
-      $0.topToSuperview()
-      $0.bottomToSuperview()
-      $0.trailingToSuperview()
-      $0.width(to: dateStartTextField)
-      $0.leftToRight(of: dateStartTextField, offset: 15)
-    }
-
-    statusTitleLabel.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: dateView, offset: 15)
+      $0.topToBottom(of: locationTextField, offset: 44)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
     }
 
-    let statusStackView = UIStackView(arrangedSubviews: [graduatedButton, noncompletionButton, studyingButton])
-    statusStackView.do {
+    stillButton.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: statusTitleLabel, offset: 10)
+      $0.topToBottom(of: dateStartTextField, offset: 10)
       $0.leftToSuperview()
       $0.rightToSuperview(relation: .equalOrLess)
       $0.height(25)
-      $0.distribution = .equalSpacing
-      $0.spacing = 30
-    }
-
-    majorTextField.do {
-      contentView.addSubview($0)
-      $0.topToBottom(of: statusStackView, offset: 40)
-      $0.leadingToSuperview()
-      $0.trailingToSuperview()
     }
 
     detailTitleLabel.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: majorTextField, offset: 40)
+      $0.topToBottom(of: stillButton, offset: 44)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
     }
 
     textView.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: detailTitleLabel, offset: 26)
+      $0.topToBottom(of: detailTitleLabel, offset: 10)
       $0.leadingToSuperview()
       $0.trailingToSuperview()
       $0.height(144)
@@ -274,16 +205,13 @@ class EditEducationViewController: BaseViewController {
   private func bindViewModel() {
     titleLabel.attributedText = viewModel.titleAttributedString
     hintTitleLabel.attributedText = viewModel.hintAttributedString
-    infoTitleLabel.attributedText = viewModel.infoTitleAttributedString
-    levelTextField.title = viewModel.levelTitleAttributedString
-    levelTextField.placeholder = viewModel.levelPlacehodlerAttributedString
-    nameTextField.placeholder = viewModel.namePlacehodlerAttributedString
-    dateTitleLabel.attributedText = viewModel.dateTitleAttributedString
-    dateStartTextField.placeholder = viewModel.dateStartAttributedString
-    dateEndTextField.placeholder = viewModel.dateEndAttributedString
-    statusTitleLabel.attributedText = viewModel.statusTitleAttributedString
-    majorTextField.title = viewModel.majorTitleAttributedString
-    majorTextField.placeholder = viewModel.majorPlaceholderAttributedString
+    companyTextField.title = viewModel.postitonTitleAttributedString
+    companyTextField.placeholder = viewModel.cpmpanyPlacehodlerAttributedString
+    positionTextField.placeholder = viewModel.positionPlacehodlerAttributedString
+    locationTextField.placeholder = viewModel.locationPlacehodlerAttributedString
+    dateStartTextField.title = viewModel.durationTitleAttributedString
+    dateStartTextField.placeholder = viewModel.datePlacehodlerAttributedString
+    stillButton.setAttributedTitle(viewModel.stillDoingAttributedString, for: .normal)
     detailTitleLabel.attributedText = viewModel.introTitleAttributedString
     textView.placeholder = R.string.localizable.profile_edit_education_intro_placeholder()
   }
@@ -308,4 +236,5 @@ class EditEducationViewController: BaseViewController {
 
   }
 }
+
 

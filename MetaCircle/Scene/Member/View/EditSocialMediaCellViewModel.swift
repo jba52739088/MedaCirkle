@@ -33,7 +33,7 @@ class EditSocialMediaCellViewModel: TableViewCellViewModel {
   }
 
   var buttonAttributedString: NSAttributedString {
-    return R.string.localizable.profile_website_edit_social_media_add()
+    return R.string.localizable.profile_edit_social_media_add()
       .set(style: theme.buttonTextStyle)
   }
 

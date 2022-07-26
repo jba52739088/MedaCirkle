@@ -149,6 +149,8 @@
 		F9A5BADB287180C2009604ED /* MemberInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */; };
 		F9A5BADD2871F922009604ED /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADC2871F922009604ED /* ProfileResponse.swift */; };
 		F9AF9CD1289040BA00A37BCF /* MetaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF9CD0289040BA00A37BCF /* MetaTextField.swift */; };
+		F9AF9CD32890596A00A37BCF /* EditWorkHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF9CD22890596A00A37BCF /* EditWorkHistoryViewController.swift */; };
+		F9AF9CD52890597400A37BCF /* EditWorkHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF9CD42890597400A37BCF /* EditWorkHistoryViewModel.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -355,6 +357,8 @@
 		F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoCellViewModel.swift; sourceTree = "<group>"; };
 		F9A5BADC2871F922009604ED /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		F9AF9CD0289040BA00A37BCF /* MetaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTextField.swift; sourceTree = "<group>"; };
+		F9AF9CD22890596A00A37BCF /* EditWorkHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkHistoryViewController.swift; sourceTree = "<group>"; };
+		F9AF9CD42890597400A37BCF /* EditWorkHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkHistoryViewModel.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -727,6 +731,8 @@
 				F99607EE2887ADAE00798399 /* EditSocialMediaViewModel.swift */,
 				F9A31CC12889960A004516C4 /* EditEducationViewController.swift */,
 				F9A31CC328899615004516C4 /* EditEducationViewModel.swift */,
+				F9AF9CD22890596A00A37BCF /* EditWorkHistoryViewController.swift */,
+				F9AF9CD42890597400A37BCF /* EditWorkHistoryViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1111,6 +1117,7 @@
 				F99607EF2887ADAE00798399 /* EditSocialMediaViewModel.swift in Sources */,
 				F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */,
 				F9A1D78228577AD900A15BEF /* CircleContentCategoryCell.swift in Sources */,
+				F9AF9CD52890597400A37BCF /* EditWorkHistoryViewModel.swift in Sources */,
 				F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */,
 				F9A1D7792852F62000A15BEF /* CircleContentBaseCellViewModel.swift in Sources */,
 				F976C00B2838C9C70087567C /* RegisterViewController.swift in Sources */,
@@ -1176,6 +1183,7 @@
 				F99CE59D2862D4500026FEA3 /* RequestTaskVisitor.swift in Sources */,
 				F9424F7C28634F3D00D4D0CD /* UserProfile.swift in Sources */,
 				F9A1D79028585FB900A15BEF /* CircleContentCell.swift in Sources */,
+				F9AF9CD32890596A00A37BCF /* EditWorkHistoryViewController.swift in Sources */,
 				F99CE59F2862D6980026FEA3 /* RequestHeaderVisitor.swift in Sources */,
 				F9A5BAD9287180A0009604ED /* MemberInfoCell.swift in Sources */,
 				F9424F7A28634E8700D4D0CD /* EnvironmentManager.swift in Sources */,

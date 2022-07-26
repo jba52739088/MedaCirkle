@@ -26,6 +26,7 @@ internal enum Scene {
   case editWebsite
   case editSocialMedia
   case editEducation
+  case editWorkHistory
 //  #if DEBUG
 //  case debug
 //  #endif
@@ -50,7 +51,8 @@ extension Scene: Equatable {
       (.editProfile, .editProfile),
       (.editWebsite, .editWebsite),
       (.editSocialMedia, .editSocialMedia),
-      (.editEducation, .editEducation):
+      (.editEducation, .editEducation),
+      (.editWorkHistory, .editWorkHistory):
       return true
       //    case let (.section(s1, _, _), .section(s2, _, _)):
       //      return s1.isEqualTo(s2)

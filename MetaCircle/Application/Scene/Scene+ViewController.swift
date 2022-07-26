@@ -64,6 +64,8 @@ extension Scene {
       return EditSocialMediaViewController()
     case .editEducation:
       return EditEducationViewController()
+    case .editWorkHistory:
+      return EditWorkHistoryViewController()
     }
   }
 }

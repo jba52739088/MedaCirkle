@@ -1753,7 +1753,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 195 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 221 localization keys.
     struct localizable {
       /// en translation: 
       ///
@@ -1798,7 +1798,7 @@ struct R: Rswift.Validatable {
       /// en translation: 主修
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_major = Rswift.StringResource(key: "profile_website_edit_education_major", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_major = Rswift.StringResource(key: "profile_edit_education_major", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 也可以經營 自己的粉絲圈
       ///
       /// Locales: en, zh-Hant
@@ -1815,6 +1815,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_create_vc_circle_profile_placeholder = Rswift.StringResource(key: "circle_create_vc_circle_profile_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 仍在職
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_still_doing = Rswift.StringResource(key: "profile_edit_work_history_still_doing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 以 Facebook 登入
       ///
       /// Locales: en, zh-Hant
@@ -1899,6 +1903,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let profile_edit_save = Rswift.StringResource(key: "profile_edit_save", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 公司名稱
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_company_name = Rswift.StringResource(key: "profile_edit_work_history_company_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 公司職務資訊
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_position_title = Rswift.StringResource(key: "profile_edit_work_history_position_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 公告
       ///
       /// Locales: en, zh-Hant
@@ -1967,6 +1979,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let member_info_coin_title = Rswift.StringResource(key: "member_info_coin_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 地點，例：台北市、英國...
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_experience_location = Rswift.StringResource(key: "profile_edit_work_careerBreak_experience_location", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 基本資料
       ///
       /// Locales: en, zh-Hant
@@ -1974,7 +1990,7 @@ struct R: Rswift.Validatable {
       /// en translation: 填寫學歷除了讓其他圈友更加了解你，更容易讓同學校 / 學科 / 領域的人搜尋到你。
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_hint = Rswift.StringResource(key: "profile_website_edit_education_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_hint = Rswift.StringResource(key: "profile_edit_education_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 多樣的編輯工具， 讓你進行創作。
       ///
       /// Locales: en, zh-Hant
@@ -1994,15 +2010,15 @@ struct R: Rswift.Validatable {
       /// en translation: 學校名稱
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_school_name = Rswift.StringResource(key: "profile_website_edit_education_school_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_school_name = Rswift.StringResource(key: "profile_edit_education_school_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 學歷基本資料
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_info_title = Rswift.StringResource(key: "profile_website_edit_education_info_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_info_title = Rswift.StringResource(key: "profile_edit_education_info_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 學歷說明
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_intro_title = Rswift.StringResource(key: "profile_website_edit_education_intro_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_intro_title = Rswift.StringResource(key: "profile_edit_education_intro_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 寄出認證信
       ///
       /// Locales: en, zh-Hant
@@ -2014,23 +2030,43 @@ struct R: Rswift.Validatable {
       /// en translation: 專業技能
       ///
       /// Locales: en, zh-Hant
+      static let profile_edit_work_skill_title = Rswift.StringResource(key: "profile_edit_work_skill_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 專業技能
+      ///
+      /// Locales: en, zh-Hant
       static let profile_list_item_skills = Rswift.StringResource(key: "profile_list_item_skills", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 就學中
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_studying = Rswift.StringResource(key: "profile_website_edit_education_studying", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_studying = Rswift.StringResource(key: "profile_edit_education_studying", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 就學狀態
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_status = Rswift.StringResource(key: "profile_website_edit_education_status", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_status = Rswift.StringResource(key: "profile_edit_education_status", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 就讀時間
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_date = Rswift.StringResource(key: "profile_website_edit_education_date", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_date = Rswift.StringResource(key: "profile_edit_education_date", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 工作地點
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_location = Rswift.StringResource(key: "profile_edit_work_history_location", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 工作期間
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_duration_title = Rswift.StringResource(key: "profile_edit_work_history_duration_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 工作經驗
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_title = Rswift.StringResource(key: "profile_edit_work_history_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 工作經驗
       ///
       /// Locales: en, zh-Hant
       static let profile_list_item_workHistory = Rswift.StringResource(key: "profile_list_item_workHistory", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 工作說明
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_intro = Rswift.StringResource(key: "profile_edit_work_history_intro", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 已加入
       ///
       /// Locales: en, zh-Hant
@@ -2079,10 +2115,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_gender = Rswift.StringResource(key: "verify_vc_gender", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 您可以填寫一些成功的專案，或是職務的工作內容。
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_intro_placeholder = Rswift.StringResource(key: "profile_edit_work_history_intro_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 您可以填寫特別傑出的成續或經歷，為自己加分!
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_intro_placeholder = Rswift.StringResource(key: "profile_website_edit_education_intro_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_intro_placeholder = Rswift.StringResource(key: "profile_edit_education_intro_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 您可以填寫特殊的經驗，或是這段期間心目中的感受。
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_intro_placeholder = Rswift.StringResource(key: "profile_edit_work_careerBreak_intro_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
       ///
       /// Locales: en, zh-Hant
@@ -2099,6 +2143,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let profile_list_item_circle = Rswift.StringResource(key: "profile_list_item_circle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 我的技能 :
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_skill_skills_title = Rswift.StringResource(key: "profile_edit_work_skill_skills_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 我的收藏
       ///
       /// Locales: en, zh-Hant
@@ -2147,6 +2195,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let member_list_item_gift = Rswift.StringResource(key: "member_list_item_gift", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 技能名稱
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_skill_skills_placeholder = Rswift.StringResource(key: "profile_edit_work_skill_skills_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 排序
       ///
       /// Locales: en, zh-Hant
@@ -2178,19 +2230,23 @@ struct R: Rswift.Validatable {
       /// en translation: 教育程度
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_level = Rswift.StringResource(key: "profile_website_edit_education_level", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_level = Rswift.StringResource(key: "profile_edit_education_level", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 教育背景
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_education_title = Rswift.StringResource(key: "profile_edit_education_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 教育背景
       ///
       /// Locales: en, zh-Hant
       static let profile_list_item_education = Rswift.StringResource(key: "profile_list_item_education", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
-      /// en translation: 教育背景
-      ///
-      /// Locales: en, zh-Hant
-      static let profile_website_edit_education_title = Rswift.StringResource(key: "profile_website_edit_education_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 新增
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_social_media_add = Rswift.StringResource(key: "profile_website_edit_social_media_add", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_social_media_add = Rswift.StringResource(key: "profile_edit_social_media_add", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 新增專業技能，能夠找尋到更多符合你的興趣、專長的圈圈。
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_skill_hint = Rswift.StringResource(key: "profile_edit_work_skill_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 是否要為圈圈正名？
       ///
       /// Locales: en, zh-Hant
@@ -2262,7 +2318,7 @@ struct R: Rswift.Validatable {
       /// en translation: 畢業
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_graduate = Rswift.StringResource(key: "profile_website_edit_education_graduate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_graduate = Rswift.StringResource(key: "profile_edit_education_graduate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 略過
       ///
       /// Locales: en, zh-Hant
@@ -2291,6 +2347,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let member_list_item_logout = Rswift.StringResource(key: "member_list_item_logout", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 目前正處於職涯空檔
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_ing = Rswift.StringResource(key: "profile_edit_work_careerBreak_ing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 相簿
       ///
       /// Locales: en, zh-Hant
@@ -2310,7 +2370,7 @@ struct R: Rswift.Validatable {
       /// en translation: 科系名稱
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_department_name = Rswift.StringResource(key: "profile_website_edit_education_department_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_department_name = Rswift.StringResource(key: "profile_edit_education_department_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 立即註冊
       ///
       /// Locales: en, zh-Hant
@@ -2334,7 +2394,23 @@ struct R: Rswift.Validatable {
       /// en translation: 結束
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_end = Rswift.StringResource(key: "profile_website_edit_education_end", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_end = Rswift.StringResource(key: "profile_edit_education_end", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 結束
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_end = Rswift.StringResource(key: "profile_edit_work_careerBreak_end", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 經歷期間
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_duration_title = Rswift.StringResource(key: "profile_edit_work_careerBreak_duration_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 經歷說明
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_intro_title = Rswift.StringResource(key: "profile_edit_work_careerBreak_intro_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 經歷類型
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_experience_title = Rswift.StringResource(key: "profile_edit_work_careerBreak_experience_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 網址
       ///
       /// Locales: en, zh-Hant
@@ -2355,6 +2431,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_content_category_pin = Rswift.StringResource(key: "circle_content_category_pin", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 職位
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_postiton = Rswift.StringResource(key: "profile_edit_work_history_postiton", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 職涯空檔
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_title = Rswift.StringResource(key: "profile_edit_work_careerBreak_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 職涯空檔
       ///
       /// Locales: en, zh-Hant
@@ -2362,7 +2446,7 @@ struct R: Rswift.Validatable {
       /// en translation: 肄業
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_quit = Rswift.StringResource(key: "profile_website_edit_education_quit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_quit = Rswift.StringResource(key: "profile_edit_education_quit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 至少3項
       ///
       /// Locales: en, zh-Hant
@@ -2418,11 +2502,15 @@ struct R: Rswift.Validatable {
       /// en translation: 請選擇
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_please_select = Rswift.StringResource(key: "profile_website_edit_education_please_select", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_please_select = Rswift.StringResource(key: "profile_edit_education_please_select", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 請選擇
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_gender_placeholder = Rswift.StringResource(key: "verify_vc_gender_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 讓圈友們更加了解你，並且讓同公司 / 專業領域的人更容易搜尋到你。
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_hint = Rswift.StringResource(key: "profile_edit_work_history_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 貼文草稿
       ///
       /// Locales: en, zh-Hant
@@ -2459,6 +2547,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let verify_vc_birth_selection = Rswift.StringResource(key: "verify_vc_birth_selection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 選擇類型
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_experience_placeholder = Rswift.StringResource(key: "profile_edit_work_careerBreak_experience_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 邀請
       ///
       /// Locales: en, zh-Hant
@@ -2494,7 +2586,15 @@ struct R: Rswift.Validatable {
       /// en translation: 開始
       ///
       /// Locales: en, zh-Hant
-      static let profile_website_edit_education_start = Rswift.StringResource(key: "profile_website_edit_education_start", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      static let profile_edit_education_start = Rswift.StringResource(key: "profile_edit_education_start", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 開始
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_start = Rswift.StringResource(key: "profile_edit_work_careerBreak_start", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 開始時間
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_history_duration_placeholder = Rswift.StringResource(key: "profile_edit_work_history_duration_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 開始體驗
       ///
       /// Locales: en, zh-Hant
@@ -2503,6 +2603,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hant
       static let circle_content_read_more = Rswift.StringResource(key: "circle_content_read_more", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
+      /// en translation: 除了工作發展外的特殊經歷使人與眾不同，分享你獨一無二的精彩人生。
+      ///
+      /// Locales: en, zh-Hant
+      static let profile_edit_work_careerBreak_hint = Rswift.StringResource(key: "profile_edit_work_careerBreak_hint", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant"], comment: nil)
       /// en translation: 隱私設定
       ///
       /// Locales: en, zh-Hant
@@ -2691,16 +2795,16 @@ struct R: Rswift.Validatable {
       /// en translation: 主修
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_major(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_major(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_major", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_major", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_major"
+          return "profile_edit_education_major"
         }
 
-        return NSLocalizedString("profile_website_edit_education_major", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_major", bundle: bundle, comment: "")
       }
 
       /// en translation: 也可以經營 自己的粉絲圈
@@ -2761,6 +2865,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_create_vc_circle_profile_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 仍在職
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_still_doing(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_still_doing", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_still_doing"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_still_doing", bundle: bundle, comment: "")
       }
 
       /// en translation: 以 Facebook 登入
@@ -3078,6 +3197,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("profile_edit_save", bundle: bundle, comment: "")
       }
 
+      /// en translation: 公司名稱
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_company_name(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_company_name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_company_name"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_company_name", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 公司職務資訊
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_position_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_position_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_position_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_position_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 公告
       ///
       /// Locales: en, zh-Hant
@@ -3335,6 +3484,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("member_info_coin_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: 地點，例：台北市、英國...
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_experience_location(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_experience_location", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_experience_location"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_experience_location", bundle: bundle, comment: "")
+      }
+
       /// en translation: 基本資料
       ///
       /// Locales: en, zh-Hant
@@ -3353,16 +3517,16 @@ struct R: Rswift.Validatable {
       /// en translation: 填寫學歷除了讓其他圈友更加了解你，更容易讓同學校 / 學科 / 領域的人搜尋到你。
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_hint(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_hint(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_hint", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_hint", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_hint"
+          return "profile_edit_education_hint"
         }
 
-        return NSLocalizedString("profile_website_edit_education_hint", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_hint", bundle: bundle, comment: "")
       }
 
       /// en translation: 多樣的編輯工具， 讓你進行創作。
@@ -3428,46 +3592,46 @@ struct R: Rswift.Validatable {
       /// en translation: 學校名稱
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_school_name(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_school_name(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_school_name", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_school_name", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_school_name"
+          return "profile_edit_education_school_name"
         }
 
-        return NSLocalizedString("profile_website_edit_education_school_name", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_school_name", bundle: bundle, comment: "")
       }
 
       /// en translation: 學歷基本資料
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_info_title(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_info_title(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_info_title", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_info_title", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_info_title"
+          return "profile_edit_education_info_title"
         }
 
-        return NSLocalizedString("profile_website_edit_education_info_title", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_info_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 學歷說明
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_intro_title(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_intro_title(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_intro_title", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_intro_title", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_intro_title"
+          return "profile_edit_education_intro_title"
         }
 
-        return NSLocalizedString("profile_website_edit_education_intro_title", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_intro_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 寄出認證信
@@ -3503,6 +3667,21 @@ struct R: Rswift.Validatable {
       /// en translation: 專業技能
       ///
       /// Locales: en, zh-Hant
+      static func profile_edit_work_skill_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_skill_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_skill_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_skill_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 專業技能
+      ///
+      /// Locales: en, zh-Hant
       static func profile_list_item_skills(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("profile_list_item_skills", bundle: hostingBundle, comment: "")
@@ -3518,46 +3697,91 @@ struct R: Rswift.Validatable {
       /// en translation: 就學中
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_studying(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_studying(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_studying", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_studying", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_studying"
+          return "profile_edit_education_studying"
         }
 
-        return NSLocalizedString("profile_website_edit_education_studying", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_studying", bundle: bundle, comment: "")
       }
 
       /// en translation: 就學狀態
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_status(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_status(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_status", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_status", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_status"
+          return "profile_edit_education_status"
         }
 
-        return NSLocalizedString("profile_website_edit_education_status", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_status", bundle: bundle, comment: "")
       }
 
       /// en translation: 就讀時間
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_date(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_date(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_date", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_date", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_date"
+          return "profile_edit_education_date"
         }
 
-        return NSLocalizedString("profile_website_edit_education_date", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_date", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 工作地點
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_location(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_location", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_location"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_location", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 工作期間
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_duration_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_duration_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_duration_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_duration_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 工作經驗
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 工作經驗
@@ -3573,6 +3797,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("profile_list_item_workHistory", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 工作說明
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_intro(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_intro", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_intro"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_intro", bundle: bundle, comment: "")
       }
 
       /// en translation: 已加入
@@ -3759,19 +3998,49 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("verify_vc_gender", bundle: bundle, comment: "")
       }
 
-      /// en translation: 您可以填寫特別傑出的成續或經歷，為自己加分!
+      /// en translation: 您可以填寫一些成功的專案，或是職務的工作內容。
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_intro_placeholder(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_work_history_intro_placeholder(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_intro_placeholder", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_work_history_intro_placeholder", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_intro_placeholder"
+          return "profile_edit_work_history_intro_placeholder"
         }
 
-        return NSLocalizedString("profile_website_edit_education_intro_placeholder", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_work_history_intro_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 您可以填寫特別傑出的成續或經歷，為自己加分!
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_education_intro_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_education_intro_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_education_intro_placeholder"
+        }
+
+        return NSLocalizedString("profile_edit_education_intro_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 您可以填寫特殊的經驗，或是這段期間心目中的感受。
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_intro_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_intro_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_intro_placeholder"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_intro_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 您的密碼必須包含英文、數字 <b>8-20</b> 個字元
@@ -3832,6 +4101,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("profile_list_item_circle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 我的技能 :
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_skill_skills_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_skill_skills_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_skill_skills_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_skill_skills_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 我的收藏
@@ -4014,6 +4298,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("member_list_item_gift", bundle: bundle, comment: "")
       }
 
+      /// en translation: 技能名稱
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_skill_skills_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_skill_skills_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_skill_skills_placeholder"
+        }
+
+        return NSLocalizedString("profile_edit_work_skill_skills_placeholder", bundle: bundle, comment: "")
+      }
+
       /// en translation: 排序
       ///
       /// Locales: en, zh-Hant
@@ -4122,16 +4421,31 @@ struct R: Rswift.Validatable {
       /// en translation: 教育程度
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_level(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_level(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_level", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_level", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_level"
+          return "profile_edit_education_level"
         }
 
-        return NSLocalizedString("profile_website_edit_education_level", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_level", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 教育背景
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_education_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_education_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_education_title"
+        }
+
+        return NSLocalizedString("profile_edit_education_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 教育背景
@@ -4149,34 +4463,34 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("profile_list_item_education", bundle: bundle, comment: "")
       }
 
-      /// en translation: 教育背景
-      ///
-      /// Locales: en, zh-Hant
-      static func profile_website_edit_education_title(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_title", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_title"
-        }
-
-        return NSLocalizedString("profile_website_edit_education_title", bundle: bundle, comment: "")
-      }
-
       /// en translation: 新增
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_social_media_add(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_social_media_add(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_social_media_add", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_social_media_add", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_social_media_add"
+          return "profile_edit_social_media_add"
         }
 
-        return NSLocalizedString("profile_website_edit_social_media_add", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_social_media_add", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 新增專業技能，能夠找尋到更多符合你的興趣、專長的圈圈。
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_skill_hint(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_skill_hint", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_skill_hint"
+        }
+
+        return NSLocalizedString("profile_edit_work_skill_hint", bundle: bundle, comment: "")
       }
 
       /// en translation: 是否要為圈圈正名？
@@ -4437,16 +4751,16 @@ struct R: Rswift.Validatable {
       /// en translation: 畢業
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_graduate(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_graduate(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_graduate", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_graduate", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_graduate"
+          return "profile_edit_education_graduate"
         }
 
-        return NSLocalizedString("profile_website_edit_education_graduate", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_graduate", bundle: bundle, comment: "")
       }
 
       /// en translation: 略過
@@ -4554,6 +4868,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("member_list_item_logout", bundle: bundle, comment: "")
       }
 
+      /// en translation: 目前正處於職涯空檔
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_ing(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_ing", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_ing"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_ing", bundle: bundle, comment: "")
+      }
+
       /// en translation: 相簿
       ///
       /// Locales: en, zh-Hant
@@ -4617,16 +4946,16 @@ struct R: Rswift.Validatable {
       /// en translation: 科系名稱
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_department_name(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_department_name(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_department_name", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_department_name", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_department_name"
+          return "profile_edit_education_department_name"
         }
 
-        return NSLocalizedString("profile_website_edit_education_department_name", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_department_name", bundle: bundle, comment: "")
       }
 
       /// en translation: 立即註冊
@@ -4707,16 +5036,76 @@ struct R: Rswift.Validatable {
       /// en translation: 結束
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_end(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_end(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_end", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_end", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_end"
+          return "profile_edit_education_end"
         }
 
-        return NSLocalizedString("profile_website_edit_education_end", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_end", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 結束
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_end(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_end", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_end"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_end", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 經歷期間
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_duration_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_duration_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_duration_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_duration_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 經歷說明
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_intro_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_intro_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_intro_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_intro_title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 經歷類型
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_experience_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_experience_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_experience_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_experience_title", bundle: bundle, comment: "")
       }
 
       /// en translation: 網址
@@ -4794,6 +5183,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("circle_content_category_pin", bundle: bundle, comment: "")
       }
 
+      /// en translation: 職位
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_postiton(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_postiton", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_postiton"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_postiton", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 職涯空檔
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_title"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: 職涯空檔
       ///
       /// Locales: en, zh-Hant
@@ -4812,16 +5231,16 @@ struct R: Rswift.Validatable {
       /// en translation: 肄業
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_quit(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_quit(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_quit", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_quit", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_quit"
+          return "profile_edit_education_quit"
         }
 
-        return NSLocalizedString("profile_website_edit_education_quit", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_quit", bundle: bundle, comment: "")
       }
 
       /// en translation: 至少3項
@@ -5022,16 +5441,16 @@ struct R: Rswift.Validatable {
       /// en translation: 請選擇
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_please_select(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_please_select(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_please_select", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_please_select", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_please_select"
+          return "profile_edit_education_please_select"
         }
 
-        return NSLocalizedString("profile_website_edit_education_please_select", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_please_select", bundle: bundle, comment: "")
       }
 
       /// en translation: 請選擇
@@ -5047,6 +5466,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("verify_vc_gender_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 讓圈友們更加了解你，並且讓同公司 / 專業領域的人更容易搜尋到你。
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_hint(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_hint", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_hint"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_hint", bundle: bundle, comment: "")
       }
 
       /// en translation: 貼文草稿
@@ -5184,6 +5618,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("verify_vc_birth_selection", bundle: bundle, comment: "")
       }
 
+      /// en translation: 選擇類型
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_experience_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_experience_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_experience_placeholder"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_experience_placeholder", bundle: bundle, comment: "")
+      }
+
       /// en translation: 邀請
       ///
       /// Locales: en, zh-Hant
@@ -5309,16 +5758,46 @@ struct R: Rswift.Validatable {
       /// en translation: 開始
       ///
       /// Locales: en, zh-Hant
-      static func profile_website_edit_education_start(preferredLanguages: [String]? = nil) -> String {
+      static func profile_edit_education_start(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("profile_website_edit_education_start", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("profile_edit_education_start", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "profile_website_edit_education_start"
+          return "profile_edit_education_start"
         }
 
-        return NSLocalizedString("profile_website_edit_education_start", bundle: bundle, comment: "")
+        return NSLocalizedString("profile_edit_education_start", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 開始
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_start(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_start", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_start"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_start", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 開始時間
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_history_duration_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_history_duration_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_history_duration_placeholder"
+        }
+
+        return NSLocalizedString("profile_edit_work_history_duration_placeholder", bundle: bundle, comment: "")
       }
 
       /// en translation: 開始體驗
@@ -5349,6 +5828,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("circle_content_read_more", bundle: bundle, comment: "")
+      }
+
+      /// en translation: 除了工作發展外的特殊經歷使人與眾不同，分享你獨一無二的精彩人生。
+      ///
+      /// Locales: en, zh-Hant
+      static func profile_edit_work_careerBreak_hint(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile_edit_work_careerBreak_hint", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile_edit_work_careerBreak_hint"
+        }
+
+        return NSLocalizedString("profile_edit_work_careerBreak_hint", bundle: bundle, comment: "")
       }
 
       /// en translation: 隱私設定
