@@ -234,7 +234,7 @@ class LoginViewController: TopGradientViewController {
     pwdTxtField.title = viewModel.passwordAttributedString
     pwdTxtField.placeholder = viewModel.passwordPlaceholderAttributedString
     pwdTxtField.errorString = viewModel.errorAttributedString(error: "不是有效的電子郵件")
-    pwdTxtField.txtField.isSecureTextEntry = true
+    pwdTxtField.txtField.txtField.isSecureTextEntry = true
     forgetButton.setAttributedTitle(viewModel.forgetPwdAttributedString, for: .normal)
     loginButton.setAttributedTitle(viewModel.enableLoginAttributedString, for: .normal)
     loginButton.setAttributedTitle(viewModel.disableLoginAttributedString, for: .disabled)

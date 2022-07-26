@@ -60,6 +60,10 @@ extension Scene {
       return EditProfileViewController()
     case .editWebsite:
       return EditWebSiteViewController()
+    case .editSocialMedia:
+      return EditSocialMediaViewController()
+    case .editEducation:
+      return EditEducationViewController()
     }
   }
 }

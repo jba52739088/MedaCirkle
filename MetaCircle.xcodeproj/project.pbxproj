@@ -82,6 +82,10 @@
 		F9953F09285A286B00746F59 /* CircleArticleTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */; };
 		F99607E92887202800798399 /* EditWebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607E82887202800798399 /* EditWebSiteViewController.swift */; };
 		F99607EB2887203400798399 /* EditWebSiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607EA2887203400798399 /* EditWebSiteViewModel.swift */; };
+		F99607ED2887ADA500798399 /* EditSocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607EC2887ADA500798399 /* EditSocialMediaViewController.swift */; };
+		F99607EF2887ADAE00798399 /* EditSocialMediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607EE2887ADAE00798399 /* EditSocialMediaViewModel.swift */; };
+		F99607F12887AFD800798399 /* EditSocialMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607F02887AFD800798399 /* EditSocialMediaCell.swift */; };
+		F99607F32887AFE000798399 /* EditSocialMediaCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99607F22887AFE000798399 /* EditSocialMediaCellViewModel.swift */; };
 		F99CE5802862C23A0026FEA3 /* RegisterReSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */; };
 		F99CE5822862C34A0026FEA3 /* RegisterVerifyMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */; };
 		F99CE5842862C62F0026FEA3 /* RegisterSendSMSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */; };
@@ -138,10 +142,13 @@
 		F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464A2862AAA000559F18 /* RegisterRequest.swift */; };
 		F9A2464D2862AB2B00559F18 /* RestRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464C2862AB2B00559F18 /* RestRequestType.swift */; };
 		F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */; };
+		F9A31CC22889960A004516C4 /* EditEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A31CC12889960A004516C4 /* EditEducationViewController.swift */; };
+		F9A31CC428899615004516C4 /* EditEducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A31CC328899615004516C4 /* EditEducationViewModel.swift */; };
 		F9A5BAD728716ECD009604ED /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAD628716ECD009604ED /* LogoutRequest.swift */; };
 		F9A5BAD9287180A0009604ED /* MemberInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */; };
 		F9A5BADB287180C2009604ED /* MemberInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */; };
 		F9A5BADD2871F922009604ED /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BADC2871F922009604ED /* ProfileResponse.swift */; };
+		F9AF9CD1289040BA00A37BCF /* MetaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF9CD0289040BA00A37BCF /* MetaTextField.swift */; };
 		F9CDD1A0282F88CD002CEEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */; };
 		F9CDD1A4282F88CD002CEEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD1A3282F88CD002CEEEA /* ViewController.swift */; };
 		F9CDD1A9282F88D0002CEEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD1A8282F88D0002CEEEA /* Assets.xcassets */; };
@@ -281,6 +288,10 @@
 		F9953F08285A286B00746F59 /* CircleArticleTitleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArticleTitleItem.swift; sourceTree = "<group>"; };
 		F99607E82887202800798399 /* EditWebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebSiteViewController.swift; sourceTree = "<group>"; };
 		F99607EA2887203400798399 /* EditWebSiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebSiteViewModel.swift; sourceTree = "<group>"; };
+		F99607EC2887ADA500798399 /* EditSocialMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSocialMediaViewController.swift; sourceTree = "<group>"; };
+		F99607EE2887ADAE00798399 /* EditSocialMediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSocialMediaViewModel.swift; sourceTree = "<group>"; };
+		F99607F02887AFD800798399 /* EditSocialMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSocialMediaCell.swift; sourceTree = "<group>"; };
+		F99607F22887AFE000798399 /* EditSocialMediaCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSocialMediaCellViewModel.swift; sourceTree = "<group>"; };
 		F99CE57F2862C23A0026FEA3 /* RegisterReSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReSendMailRequest.swift; sourceTree = "<group>"; };
 		F99CE5812862C34A0026FEA3 /* RegisterVerifyMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerifyMailRequest.swift; sourceTree = "<group>"; };
 		F99CE5832862C62F0026FEA3 /* RegisterSendSMSRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendSMSRequest.swift; sourceTree = "<group>"; };
@@ -337,10 +348,13 @@
 		F9A2464A2862AAA000559F18 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		F9A2464C2862AB2B00559F18 /* RestRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestType.swift; sourceTree = "<group>"; };
 		F9A2464F2862B9D500559F18 /* RegisterSendMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSendMailRequest.swift; sourceTree = "<group>"; };
+		F9A31CC12889960A004516C4 /* EditEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEducationViewController.swift; sourceTree = "<group>"; };
+		F9A31CC328899615004516C4 /* EditEducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEducationViewModel.swift; sourceTree = "<group>"; };
 		F9A5BAD628716ECD009604ED /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		F9A5BAD8287180A0009604ED /* MemberInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoCell.swift; sourceTree = "<group>"; };
 		F9A5BADA287180C2009604ED /* MemberInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoCellViewModel.swift; sourceTree = "<group>"; };
 		F9A5BADC2871F922009604ED /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		F9AF9CD0289040BA00A37BCF /* MetaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTextField.swift; sourceTree = "<group>"; };
 		F9CDD19C282F88CD002CEEEA /* MetaCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CDD19F282F88CD002CEEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CDD1A3282F88CD002CEEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -564,12 +578,7 @@
 			children = (
 				F973DE6B2830BD300075FDC2 /* MemberViewController.swift */,
 				F9CFD96D2874A5C300708A26 /* MemberViewModel.swift */,
-				F99D2206287DB537007F605D /* ProfileViewController.swift */,
-				F99D2208287DB548007F605D /* ProfileViewModel.swift */,
-				F937F45A2880706000167BFF /* EditProfileViewController.swift */,
-				F937F45C2880706B00167BFF /* EditProfileViewModel.swift */,
-				F99607E82887202800798399 /* EditWebSiteViewController.swift */,
-				F99607EA2887203400798399 /* EditWebSiteViewModel.swift */,
+				F9A31CC528899720004516C4 /* Profile */,
 				F98705CE28733F09008C407A /* View */,
 			);
 			path = Member;
@@ -601,6 +610,8 @@
 				F99D220E287DC35A007F605D /* ProfileHeaderCellViewModel.swift */,
 				F99D2212287DC37A007F605D /* ProfileItemCell.swift */,
 				F99D2214287DC388007F605D /* ProfileItemCellViewModel.swift */,
+				F99607F02887AFD800798399 /* EditSocialMediaCell.swift */,
+				F99607F22887AFE000798399 /* EditSocialMediaCellViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -701,6 +712,23 @@
 				F9A2464A2862AAA000559F18 /* RegisterRequest.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		F9A31CC528899720004516C4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F99D2206287DB537007F605D /* ProfileViewController.swift */,
+				F99D2208287DB548007F605D /* ProfileViewModel.swift */,
+				F937F45A2880706000167BFF /* EditProfileViewController.swift */,
+				F937F45C2880706B00167BFF /* EditProfileViewModel.swift */,
+				F99607E82887202800798399 /* EditWebSiteViewController.swift */,
+				F99607EA2887203400798399 /* EditWebSiteViewModel.swift */,
+				F99607EC2887ADA500798399 /* EditSocialMediaViewController.swift */,
+				F99607EE2887ADAE00798399 /* EditSocialMediaViewModel.swift */,
+				F9A31CC12889960A004516C4 /* EditEducationViewController.swift */,
+				F9A31CC328899615004516C4 /* EditEducationViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F9CDD193282F88CD002CEEEA = {
@@ -823,6 +851,7 @@
 				F942C23B285DCD8D005E7374 /* DynamicCollectionView.swift */,
 				F933D7CF2885A46400D182D9 /* ButtonRightImageLeftTitle.swift */,
 				F933D7D12885A97700D182D9 /* UIPlaceholderTextView.swift */,
+				F9AF9CD0289040BA00A37BCF /* MetaTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1076,7 +1105,10 @@
 				F9D87F7028466C440033343F /* CircleMainCell.swift in Sources */,
 				F9A1D7612850908D00A15BEF /* TempTopicModel.swift in Sources */,
 				F9424F742862E99B00D4D0CD /* EnvironmentConfiguration.swift in Sources */,
+				F9A31CC428899615004516C4 /* EditEducationViewModel.swift in Sources */,
 				F9EBD2E52841D34E00172508 /* ResetPwdViewController.swift in Sources */,
+				F9A31CC22889960A004516C4 /* EditEducationViewController.swift in Sources */,
+				F99607EF2887ADAE00798399 /* EditSocialMediaViewModel.swift in Sources */,
 				F9A2464B2862AAA000559F18 /* RegisterRequest.swift in Sources */,
 				F9A1D78228577AD900A15BEF /* CircleContentCategoryCell.swift in Sources */,
 				F9EBD2E3283FD7FA00172508 /* BirthSelectionView.swift in Sources */,
@@ -1089,7 +1121,9 @@
 				F976C00F28394FBA0087567C /* NumberTextField.swift in Sources */,
 				F973DE6A2830BD1C0075FDC2 /* MassageViewController.swift in Sources */,
 				F9A1D752284E43A300A15BEF /* CircleCreateProfileViewModel.swift in Sources */,
+				F9AF9CD1289040BA00A37BCF /* MetaTextField.swift in Sources */,
 				F976C019283E76DC0087567C /* SceneTransition.swift in Sources */,
+				F99607F12887AFD800798399 /* EditSocialMediaCell.swift in Sources */,
 				F976C035283EA1730087567C /* Extension+UINavigationController.swift in Sources */,
 				F9A246502862B9D500559F18 /* RegisterSendMailRequest.swift in Sources */,
 				F99CE5972862D2140026FEA3 /* RequestURLVisitor.swift in Sources */,
@@ -1146,6 +1180,7 @@
 				F9A5BAD9287180A0009604ED /* MemberInfoCell.swift in Sources */,
 				F9424F7A28634E8700D4D0CD /* EnvironmentManager.swift in Sources */,
 				F973DE6C2830BD300075FDC2 /* MemberViewController.swift in Sources */,
+				F99607ED2887ADA500798399 /* EditSocialMediaViewController.swift in Sources */,
 				F99CE5902862D0970026FEA3 /* MoyaClient.swift in Sources */,
 				64781D01285A13C20075BC09 /* CircleArticleBaseItem.swift in Sources */,
 				F9A1D78C2858235A00A15BEF /* CircleContentPinItem.swift in Sources */,
@@ -1156,6 +1191,7 @@
 				F942C230285D8391005E7374 /* CircleArticleItemViewModel.swift in Sources */,
 				F9D6BB3B28341837005D57F2 /* TopGradientViewController.swift in Sources */,
 				F9A1D75A28507ADA00A15BEF /* TopicItem.swift in Sources */,
+				F99607F32887AFE000798399 /* EditSocialMediaCellViewModel.swift in Sources */,
 				F9CFD96A28748C0600708A26 /* MemberListItemCellViewModel.swift in Sources */,
 				F976C017283E76A60087567C /* SceneCoordinator.swift in Sources */,
 				F9424F7E2863507700D4D0CD /* KeychainStore.swift in Sources */,

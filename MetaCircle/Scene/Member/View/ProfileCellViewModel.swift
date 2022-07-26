@@ -56,6 +56,10 @@ enum ProfileListItem: CaseIterable {
       return .editProfile
     case .website:
       return .editWebsite
+    case .socialMedia:
+      return .editSocialMedia
+    case .education:
+      return .editEducation
     default:
       return .editProfile
     }

@@ -8,8 +8,6 @@
 import UIKit
 import TinyConstraints
 import Then
-import RxSwift
-import RxCocoa
 
 class TitleTextField: UIView {
 
@@ -21,7 +19,7 @@ class TitleTextField: UIView {
   
   var placeholder: NSAttributedString? {
     didSet {
-      txtField.attributedPlaceholder = placeholder
+      txtField.placeholder = placeholder
     }
   }
 
@@ -48,19 +46,7 @@ class TitleTextField: UIView {
     $0.numberOfLines = 1
   }
 
-  private let txtBgView = UIView().then {
-    $0.backgroundColor = .textFieldNormalBg
-  }
-
-  private(set) var txtView = UIView().then {
-    $0.backgroundColor = .clear
-  }
-
-  private(set) var eyeButton = UIButton(type: .custom)
-
-  private(set) var txtField = UITextField().then {
-    $0.borderStyle = .none
-  }
+  private(set) var txtField = MetaTextField()
 
   private let hintView = UIView().then {
     $0.backgroundColor = .clear
@@ -77,7 +63,6 @@ class TitleTextField: UIView {
   }
 
   let withTitle: Bool
-  private var disposeBag = DisposeBag()
 
   init(withTitle: Bool = true) {
     self.withTitle = withTitle
@@ -88,14 +73,10 @@ class TitleTextField: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  deinit {
-    disposeBag = DisposeBag()
-  }
 
   override func layoutSubviews() {
     super.layoutSubviews()
     setupViews()
-    configFieldEvent()
   }
 
   func setupViews() {
@@ -108,7 +89,7 @@ class TitleTextField: UIView {
       $0.height(withTitle ? 22 : 0)
     }
 
-    txtBgView.do {
+    txtField.do {
       self.addSubview($0)
       $0.height(44)
       $0.topToBottom(of: titleLabel, offset: withTitle ? 5 : 0)
@@ -116,53 +97,13 @@ class TitleTextField: UIView {
       $0.rightToSuperview()
       $0.layer.cornerRadius = 15
       $0.layer.masksToBounds = true
-    }
-
-    txtView.do {
-      txtBgView.addSubview($0)
-      $0.topToSuperview(offset: 2)
-      $0.bottomToSuperview(offset: -2)
-      $0.leftToSuperview(offset: 2)
-      $0.rightToSuperview(offset: -2)
-      $0.layer.cornerRadius = 13
-      $0.layer.masksToBounds = true
-    }
-
-    if showEye {
-      eyeButton.do {
-        txtView.addSubview($0)
-        $0.height(20)
-        $0.width(20)
-        $0.rightToSuperview(offset: -17)
-        $0.centerYToSuperview()
-        $0.setImage(R.image.icon_eyes_2(), for: .normal)
-        $0.setImage(R.image.icon_eyes_3(), for: .selected)
-        $0.addTarget(self, action: #selector(onClickEyeButton(_:)), for: .touchUpInside)
-      }
-    } else {
-      eyeButton.removeFromSuperview()
-    }
-
-
-    txtField.do {
-      txtView.addSubview($0)
-      $0.topToSuperview(offset: 9.5)
-      $0.leftToSuperview(offset: 17)
-      if showEye {
-        $0.rightToLeft(of: eyeButton, offset: -10)
-      } else {
-        $0.rightToSuperview(offset: 17)
-      }
-      $0.bottomToSuperview(offset: -9.5)
-      $0.textAlignment = .left
-      $0.contentVerticalAlignment = .center
-      $0.isSecureTextEntry = showEye && !eyeButton.isSelected
+      $0.showButton = showEye
     }
 
     hintView.do {
       self.addSubview($0)
       $0.height(20)
-      $0.topToBottom(of: txtView, offset: 4)
+      $0.topToBottom(of: txtField, offset: 4)
       $0.leftToSuperview()
       $0.rightToSuperview()
       $0.bottomToSuperview()
@@ -192,35 +133,5 @@ class TitleTextField: UIView {
     }
 
     errorImgView.isHidden = errorString == nil
-  }
-
-  func configFieldEvent() {
-
-    txtField.rx.controlEvent(.editingDidBegin)
-      .asObservable()
-      .observe(on: MainScheduler.instance)
-      .subscribe(onNext: { [weak self] in
-        guard let self = self else { return }
-        self.txtBgView.applyGradient(isVertical: false, colorArray: [.tabbarGradientYellow, .tabbarGradientPurple, .tabbarGradientBlue])
-        self.txtView.backgroundColor = .white
-      })
-      .disposed(by: disposeBag)
-
-    txtField.rx.controlEvent(.editingDidEnd)
-      .asObservable()
-      .observe(on: MainScheduler.instance)
-      .subscribe(onNext: { [weak self] in
-        guard let self = self else { return }
-        self.txtBgView.removeGradient()
-        self.txtBgView.backgroundColor = .textFieldNormalBg
-        self.txtView.backgroundColor = .clear
-      })
-      .disposed(by: disposeBag)
-  }
-
-  @objc
-  func onClickEyeButton(_ sender: UIButton) {
-    sender.isSelected = !sender.isSelected
-    txtField.isSecureTextEntry = !sender.isSelected
   }
 }

@@ -110,7 +110,7 @@ class ResetPwdViewController: TopGradientViewController {
     pwdTextField.hintString = viewModel.pwdHintAttributedString
     rePwdTextField.placeholder = viewModel.rePwdPlaceholderAttributedString
 
-    pwdTextField.txtField.rx.controlEvent(.editingDidBegin)
+    pwdTextField.txtField.txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
       .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in

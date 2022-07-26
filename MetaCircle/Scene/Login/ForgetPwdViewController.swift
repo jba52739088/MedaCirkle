@@ -99,7 +99,7 @@ class ForgetPwdViewController: TopGradientViewController {
     birthTextField.title = viewModel.birthAttributedString
     birthTextField.placeholder = viewModel.birthPlaceholderAttributedString
 
-    phoneTextField.txtField.rx.controlEvent(.editingDidBegin)
+    phoneTextField.txtField.txtField.rx.controlEvent(.editingDidBegin)
       .asObservable()
       .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in

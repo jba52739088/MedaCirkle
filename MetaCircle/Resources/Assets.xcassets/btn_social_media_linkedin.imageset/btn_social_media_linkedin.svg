@@ -1,0 +1,15 @@
+<svg id="btn_社群_linkedin" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <circle id="Ellipse_183" data-name="Ellipse 183" cx="20" cy="20" r="20" fill="#e5eefc" opacity="0.7"/>
+  <g id="icon_social_media_linkedIn" transform="translate(10 10)">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="linkedin">
+        <rect id="background" width="20" height="20" rx="2.8" fill="#0077b5"/>
+        <g id="icon" transform="translate(3.795 3.75)">
+          <path id="Path_10265" data-name="Path 10265" d="M36.809,34.7A1.7,1.7,0,1,1,35.1,33,1.7,1.7,0,0,1,36.809,34.7Z" transform="translate(-33.4 -33)" fill="#fff"/>
+          <path id="Path_10266" data-name="Path 10266" d="M39.4,69.7v7.531a.422.422,0,0,1-.422.424h-1.8a.422.422,0,0,1-.423-.423V69.7a.423.423,0,0,1,.423-.423h1.8A.423.423,0,0,1,39.4,69.7Z" transform="translate(-36.378 -65.157)" fill="#fff"/>
+          <path id="Path_10267" data-name="Path 10267" d="M78.671,72.648v3.645a.387.387,0,0,1-.389.389H76.351a.388.388,0,0,1-.389-.389V72.761c0-.527.155-2.309-1.378-2.309-1.187,0-1.43,1.219-1.477,1.767v4.075a.389.389,0,0,1-.383.389H70.857a.388.388,0,0,1-.388-.389v-7.6a.388.388,0,0,1,.388-.389h1.866a.389.389,0,0,1,.389.389v.657A2.645,2.645,0,0,1,75.6,68.18C78.689,68.18,78.671,71.064,78.671,72.648Z" transform="translate(-66.257 -64.182)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

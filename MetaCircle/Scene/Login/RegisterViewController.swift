@@ -188,7 +188,7 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: midView)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
-      $0.txtField.keyboardType = .asciiCapable
+      $0.txtField.txtField.keyboardType = .asciiCapable
     }
 
     pwdTxtField.do {
@@ -197,7 +197,7 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: mailTxtField, offset: 1)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
-      $0.txtField.keyboardType = .asciiCapable
+      $0.txtField.txtField.keyboardType = .asciiCapable
     }
 
     rePwdTxtField.do {
@@ -206,7 +206,7 @@ class RegisterViewController: TopGradientViewController {
       $0.topToBottom(of: pwdTxtField, offset: 15)
       $0.leadingToSuperview(offset: 38)
       $0.trailingToSuperview(offset: 38)
-      $0.txtField.keyboardType = .asciiCapable
+      $0.txtField.txtField.keyboardType = .asciiCapable
     }
 
     submitButton.do {
@@ -236,16 +236,16 @@ class RegisterViewController: TopGradientViewController {
     pwdTxtField.title = viewModel.passwordAttributedString
     pwdTxtField.placeholder = viewModel.passwordPlaceholderAttributedString
     pwdTxtField.hintString = viewModel.passwordHintAttributedString
-    pwdTxtField.txtField.isSecureTextEntry = true
+    pwdTxtField.txtField.txtField.isSecureTextEntry = true
     rePwdTxtField.placeholder = viewModel.rePasswordPlaceholderAttributedString
-    rePwdTxtField.txtField.isSecureTextEntry = true
+    rePwdTxtField.txtField.txtField.isSecureTextEntry = true
     submitButton.setAttributedTitle(viewModel.enableLoginAttributedString, for: .normal)
     submitButton.setAttributedTitle(viewModel.disableLoginAttributedString, for: .disabled)
     submitButton.isEnabled = false
 
-    Observable.combineLatest(mailTxtField.txtField.rx.text.orEmpty,
-                             pwdTxtField.txtField.rx.text.orEmpty,
-                             rePwdTxtField.txtField.rx.text.orEmpty) {
+    Observable.combineLatest(mailTxtField.txtField.txtField.rx.text.orEmpty,
+                             pwdTxtField.txtField.txtField.rx.text.orEmpty,
+                             rePwdTxtField.txtField.txtField.rx.text.orEmpty) {
       mailTxt, pwdTxt, rePwdTxt -> Bool in
       if mailTxt != "" &&  pwdTxt != "" &&  rePwdTxt != "" {
         return pwdTxt != rePwdTxt ? false : true

@@ -28,8 +28,10 @@ class EditProfileViewController: BaseViewController {
   private lazy var namePublicSwitch: UIButton = .titleSwitchButton(target: self, action: #selector(didTapSwitch(_:)))
   let genderTextField = NormalTextField()
   private lazy var genderPublicSwitch: UIButton = .titleSwitchButton(target: self, action: #selector(didTapSwitch(_:)))
-  private let birthTextField = BirthTextField()
-  private let birthHintLabel = UILabel()
+  private let birthTextField = BirthTextField(withTitle: true)
+  private let birthHintLabel = UILabel().then {
+    $0.numberOfLines = 0
+  }
   private lazy var birthPublicSwitch: UIButton = .titleSwitchButton(target: self, action: #selector(didTapSwitch(_:)))
   private let introTitleLabel = UILabel()
   let textView = UIPlaceholderTextView().then {
@@ -151,9 +153,16 @@ class EditProfileViewController: BaseViewController {
       $0.trailingToSuperview(offset: 38)
     }
 
+    birthHintLabel.do {
+      contentView.addSubview($0)
+      $0.topToBottom(of: birthTextField, offset: 5)
+      $0.leadingToSuperview(offset: 48)
+      $0.trailingToSuperview(offset: 48)
+    }
+
     birthPublicSwitch.do {
       contentView.addSubview($0)
-      $0.topToBottom(of: birthTextField, offset: 0)
+      $0.topToBottom(of: birthHintLabel, offset: 0)
       $0.trailingToSuperview(offset: 38)
     }
 
@@ -218,7 +227,7 @@ class EditProfileViewController: BaseViewController {
     genderTextField.title = viewModel.genderTitleAttributedString
     birthTextField.title = viewModel.birthTitleAttributedString
     birthTextField.placeholder = viewModel.birthPlaceholderAttributedString
-    birthTextField.hintString = viewModel.birthHintAttributedString
+    birthHintLabel.attributedText = viewModel.birthHintAttributedString
     introTitleLabel.attributedText = viewModel.introTitleAttributedString
     textView.placeholder = R.string.localizable.profile_edit_intro_placeHolder()
   }

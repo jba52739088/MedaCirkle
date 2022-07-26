@@ -9,14 +9,32 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BirthTextField: TitleTextField {
+class BirthTextField: UIView {
 
+  var title: NSAttributedString? {
+    didSet {
+      titleLabel.attributedText = title
+    }
+  }
+
+  var placeholder: NSAttributedString? {
+    didSet {
+      txtField.placeholder = placeholder
+    }
+  }
+
+  private let titleLabel = UILabel().then {
+    $0.numberOfLines = 1
+  }
+  private(set) var txtField = MetaTextField()
+  
+  private let hasTitle: Bool
   private var disposeBag = DisposeBag()
   private var birthSelectionView: BirthSelectionView?
 
-  override init(withTitle: Bool = true) {
-    super.init(withTitle: withTitle)
-    self.showEye = true
+  init(withTitle: Bool = false) {
+    self.hasTitle = withTitle
+    super.init(frame: .zero)
     subscribe()
   }
 
@@ -28,47 +46,68 @@ class BirthTextField: TitleTextField {
     disposeBag = DisposeBag()
   }
 
-  override func setupViews() {
-    super.setupViews()
-    
-    txtField.delegate = self
-    txtField.keyboardType = .numberPad
-    txtField.isSecureTextEntry = false
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setupViews()
+  }
 
-    eyeButton.do {
+  func setupViews() {
+    backgroundColor = .clear
+    titleLabel.do {
+      self.addSubview($0)
+      $0.topToSuperview()
+      $0.leftToSuperview()
+      $0.height(hasTitle ? 22 : 0)
+    }
+
+    txtField.do {
+      self.addSubview($0)
+      $0.height(44)
+      $0.topToBottom(of: titleLabel, offset: hasTitle ? 5 : 0)
+      $0.leftToSuperview()
+      $0.rightToSuperview()
+      $0.bottomToSuperview()
+      $0.layer.cornerRadius = 15
+      $0.layer.masksToBounds = true
+      $0.showButton = true
+      $0.txtField.delegate = self
+      $0.txtField.keyboardType = .numberPad
+      $0.txtField.isSecureTextEntry = false
+    }
+
+    txtField.fieldButton.do {
       $0.height(20)
       $0.width(21)
       $0.rightToSuperview(offset: -17)
       $0.centerYToSuperview()
       $0.setImage(R.image.icon_calendar_1(), for: .normal)
-      $0.removeTarget(self, action: #selector(onClickEyeButton(_:)), for: .touchUpInside)
       $0.addTarget(self, action: #selector(onClickBirthButton), for: .touchUpInside)
     }
   }
 
   private func subscribe() {
 
-    txtField.rx.text.orEmpty.changed
+    txtField.txtField.rx.text.orEmpty.changed
       .asObservable()
       .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
         if $0 == "" || $0 == "YYYY /  MM /  DD /" {
-          self.txtField.text = "YYYY /  MM /  DD /"
-          self.txtField.textColor = .placeholderColor
-          self.txtField.setCursor(position: $0.count)
+          self.txtField.txtField.text = "YYYY /  MM /  DD /"
+          self.txtField.txtField.textColor = .placeholderColor
+          self.txtField.txtField.setCursor(position: $0.count)
         }
       })
       .disposed(by: disposeBag)
 
-    txtField.rx.controlEvent(.editingDidEnd)
+    txtField.txtField.rx.controlEvent(.editingDidEnd)
       .asObservable()
       .observe(on: MainScheduler.instance)
       .subscribe(onNext: { [weak self] in
         guard let self = self else { return }
-        if self.txtField.text == ""
-            || self.txtField.text == "YYYY /  MM /  DD /" {
-          self.txtField.text = ""
+        if self.txtField.txtField.text == ""
+            || self.txtField.txtField.text == "YYYY /  MM /  DD /" {
+          self.txtField.txtField.text = ""
         }
       })
       .disposed(by: disposeBag)

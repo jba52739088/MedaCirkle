@@ -115,7 +115,7 @@ class VerifyViewController: TopGradientViewController {
       .bind(to: confirmButton.rx.isEnabled)
       .disposed(by: disposeBag)
     } else if viewModel.theme.type == .PhoneEntry {
-      phoneTextField.txtField.rx.text.orEmpty
+      phoneTextField.txtField.txtField.rx.text.orEmpty
       .map { $0 != "" }
       .bind(to: confirmButton.rx.isEnabled)
       .disposed(by: disposeBag)
@@ -438,7 +438,7 @@ private extension VerifyViewController {
 
   private func sendSMS() {
     self.showLoading()
-    let userPhone = self.phoneTextField.txtField.text ?? ""
+    let userPhone = self.phoneTextField.txtField.txtField.text ?? ""
     MainAppService.shared
       .userSessionRequestManager
       .registerSendSMS(mobile: userPhone, token: viewModel.data.token)

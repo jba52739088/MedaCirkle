@@ -29,6 +29,7 @@ extension UIColor {
   static let textFieldError = "#D93F21".color
   static let placeholderColor = "#838588".color
   static let hintTextGray = "#5A5C5F".color
+  static let hintTextGray2 = "#838588".color
   static let categoryTextGray = "#5A5C5F".color
   static let badgeRed = "#FF0001".color
   static let disableBtn = "#CDCFD2".color

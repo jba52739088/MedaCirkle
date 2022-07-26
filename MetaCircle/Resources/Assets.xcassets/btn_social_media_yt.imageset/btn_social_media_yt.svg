@@ -1,0 +1,11 @@
+<svg id="btn_社群_yt" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <circle id="Ellipse_183" data-name="Ellipse 183" cx="20" cy="20" r="20" fill="#e5eefc" opacity="0.7"/>
+  <g id="youtube" transform="translate(10 10)">
+    <rect id="Rectangle_4285" data-name="Rectangle 4285" width="20" height="20" fill="none"/>
+    <g id="Group_6919" data-name="Group 6919" transform="translate(1 4)">
+      <g id="_x30_2.YouTube_1_">
+        <path id="Icon_23_" d="M24.595,21.411H13.405A3.4,3.4,0,0,0,10,24.816v6.055a3.4,3.4,0,0,0,3.405,3.405H24.595A3.405,3.405,0,0,0,28,30.871V24.816a3.4,3.4,0,0,0-3.405-3.405ZM16.629,30.6V25.084l4.742,2.765Z" transform="translate(-10 -21.411)" fill="red"/>
+      </g>
+    </g>
+  </g>
+</svg>

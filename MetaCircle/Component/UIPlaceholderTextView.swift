@@ -43,6 +43,7 @@ import SwiftRichString
       placeholderLabel = UILabel()
       placeholderLabel!.do {
         self.addSubview($0)
+        $0.numberOfLines = 0
         $0.topToSuperview(offset: 13)
         $0.leftToSuperview(offset: 22)
         $0.rightToSuperview(offset: -22)

@@ -57,7 +57,7 @@ class EditProfileViewModel {
 
   var birthTitleAttributedString: NSAttributedString {
     return "生日"
-      .set(style: theme.txtFieldTitleTextStyle)
+      .set(style: theme.birthHintTextStyle)
   }
 
   var birthPlaceholderAttributedString: NSAttributedString {
@@ -112,6 +112,15 @@ extension EditProfileViewModel.Theme {
       $0.maximumLineHeight = 26
       $0.minimumLineHeight = 26
       $0.color = UIColor.placeholderColor
+    }
+  }
+
+  var birthHintTextStyle: StyleProtocol {
+    Style {
+      $0.font = R.font.promptRegular(size: 15)
+      $0.maximumLineHeight = 22
+      $0.minimumLineHeight = 22
+      $0.color = UIColor.textFieldTitle
     }
   }
 }
